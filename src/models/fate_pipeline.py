@@ -10,6 +10,7 @@ import anndata
 import click
 import numpy as np
 import pandas as pd
+from statsmodels.stats.multitest import fdrcorrection
 from tqdm.auto import tqdm
 
 from src.features.gene_kd import build_gene_kd_matrix
@@ -126,7 +127,7 @@ def run_day_gene_fate_regressions(
     -------
     pd.DataFrame
         Regression results with columns: gene, fate, day, beta_kd, t_kd, p_kd,
-        is_ntc.
+        is_ntc, and p_adj_kd (Benjamini-Hochberg corrected p-value).
     """
     covar_df, fate_df, guide_df, day_series = _build_base_frames(
         adata,
@@ -176,6 +177,10 @@ def run_day_gene_fate_regressions(
 
     results_df = pd.DataFrame(all_results)
     results_df["is_ntc"] = results_df["gene"].isin(non_targeting_genes)
+
+    if not results_df.empty:
+        _, results_df["p_adj_kd"] = fdrcorrection(results_df["p_kd"])
+
     return results_df
 
 
