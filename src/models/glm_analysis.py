@@ -51,7 +51,7 @@ def fit_glm_for_gene_fate(
     )
 
     model = sm.OLS(y, design)
-    fit = model.fit()
+    fit = model.fit(cov_type="HC3")
 
     beta_kd = float(fit.params["KD"])
     t_kd = float(fit.tvalues["KD"])
