@@ -1,4 +1,4 @@
-fateDE
+fate_programDE
 ==============================
 
 Quantify DE effects of CRISPRi gene KD on fate probabilities
