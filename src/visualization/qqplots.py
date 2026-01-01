@@ -140,16 +140,24 @@ def plot_qq_by_day_and_fate(
             else:
                 plt.close(ax.figure)
 
+
 @click.command()
 @click.argument("results_path", type=click.Path(exists=True))
-@click.option("--fates", "-f", multiple=True, help="Fates to plot (can be specified multiple times).")
+@click.option(
+    "--fates",
+    "-f",
+    multiple=True,
+    help="Fates to plot (can be specified multiple times).",
+)
 @click.option("--save-dir", "-s", type=click.Path(), help="Directory to save plots.")
 @click.option("--show/--no-show", default=True, help="Show plots interactively.")
 def main(results_path, fates, save_dir, show):
     """
     Generate QQ plots from regression results.
     """
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    )
     logger = logging.getLogger(__name__)
 
     logger.info(f"Loading results from {results_path}")
@@ -167,4 +175,3 @@ def main(results_path, fates, save_dir, show):
 
 if __name__ == "__main__":
     main()
-
