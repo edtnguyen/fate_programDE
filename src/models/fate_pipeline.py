@@ -340,7 +340,7 @@ def run_day_gene_fate_regressions_guide_agg(
         is_ntc = meta_day["target_gene"].isin(ntc_set)
         n_ntc = int(is_ntc.sum())
         if n_ntc == 0:
-            print(f"No NC guides at{day_value}")
+            print(f"No NC guides at {day_value}")
             continue
 
         unique_genes = meta_day.loc[~is_ntc, "target_gene"].dropna().unique()
