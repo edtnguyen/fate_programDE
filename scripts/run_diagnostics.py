@@ -136,7 +136,9 @@ def _estimate_mean_loglik(
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
-    delta_core = construct_delta_core(sigma_guide=samples["sigma_guide"], u=samples["u"])
+    delta_core = construct_delta_core(
+        sigma_guide=samples["sigma_guide"], u=samples["u"]
+    )
     delta = add_zero_guide_row(delta_core)
 
     logliks = []

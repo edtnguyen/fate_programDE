@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Optional, Sequence, TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional, Sequence
 
 import numpy as np
 import pandas as pd
@@ -105,7 +105,9 @@ def compute_linear_predictor(
     if day_t.ndim != 1 or rep_t.ndim != 1:
         raise ValueError("day_t and rep_t must be 1D tensors")
 
-    beta_t = build_guide_effects(theta_t=theta_t, delta_t=delta_t, gene_of_guide_t=gene_of_guide_t)
+    beta_t = build_guide_effects(
+        theta_t=theta_t, delta_t=delta_t, gene_of_guide_t=gene_of_guide_t
+    )
 
     alpha_by_cell = alpha_t[:, day_t].transpose(0, 1)
     b_by_cell = b_t[:, rep_t].transpose(0, 1)
@@ -227,9 +229,7 @@ def fate_model(
         fate_names, ref_fate=ref_fate
     )
     if p_t.ndim != 2 or p_t.shape[1] != len(fate_names):
-        raise ValueError(
-            f"p_t must be (N,{len(fate_names)}) ordered as {fate_names}"
-        )
+        raise ValueError(f"p_t must be (N,{len(fate_names)}) ordered as {fate_names}")
     if day_t.ndim != 1 or rep_t.ndim != 1 or k_t.ndim != 1:
         raise ValueError("day_t, rep_t, and k_t must be 1D tensors")
     if guide_ids_t.shape != mask_t.shape:
@@ -248,7 +248,9 @@ def fate_model(
     )
     alpha = pyro.sample(
         "alpha",
-        dist.Normal(torch.zeros((fstar, D), device=device), sigma_alpha.unsqueeze(-1)).to_event(2),
+        dist.Normal(
+            torch.zeros((fstar, D), device=device), sigma_alpha.unsqueeze(-1)
+        ).to_event(2),
     )
 
     sigma_rep = pyro.sample(
@@ -256,7 +258,9 @@ def fate_model(
     )
     b = pyro.sample(
         "b",
-        dist.Normal(torch.zeros((fstar, R), device=device), sigma_rep.unsqueeze(-1)).to_event(2),
+        dist.Normal(
+            torch.zeros((fstar, R), device=device), sigma_rep.unsqueeze(-1)
+        ).to_event(2),
     )
 
     sigma_gamma = pyro.sample(
@@ -268,9 +272,7 @@ def fate_model(
     )
 
     tau = pyro.sample("tau", dist.HalfNormal(s_tau).expand([fstar]).to_event(1))
-    z0 = pyro.sample(
-        "z0", dist.Normal(0.0, 1.0).expand([L, fstar]).to_event(2)
-    )
+    z0 = pyro.sample("z0", dist.Normal(0.0, 1.0).expand([L, fstar]).to_event(2))
 
     sigma_time = pyro.sample(
         "sigma_time", dist.HalfNormal(s_time).expand([fstar]).to_event(1)
@@ -289,9 +291,7 @@ def fate_model(
     sigma_guide = pyro.sample(
         "sigma_guide", dist.HalfNormal(s_guide).expand([fstar]).to_event(1)
     )
-    u = pyro.sample(
-        "u", dist.Normal(0.0, 1.0).expand([G, fstar]).to_event(2)
-    )
+    u = pyro.sample("u", dist.Normal(0.0, 1.0).expand([G, fstar]).to_event(2))
     delta_core = construct_delta_core(sigma_guide=sigma_guide, u=u)
     delta = add_zero_guide_row(delta_core)
 
@@ -488,15 +488,11 @@ def export_gene_summary_for_ash(
         Gene-level summary table, optionally written to ``out_csv`` when provided.
     """
     if len(gene_names) != L:
-        raise ValueError(
-            f"gene_names length {len(gene_names)} does not match L={L}"
-        )
+        raise ValueError(f"gene_names length {len(gene_names)} does not match L={L}")
     if D <= 0 or L <= 0:
         raise ValueError("L and D must be positive integers")
 
-    _, non_ref_fates, _, _ = resolve_fate_names(
-        fate_names, ref_fate=ref_fate
-    )
+    _, non_ref_fates, _, _ = resolve_fate_names(fate_names, ref_fate=ref_fate)
     if contrast_fate == ref_fate:
         raise ValueError("contrast_fate must differ from ref_fate")
     if contrast_fate not in non_ref_fates:

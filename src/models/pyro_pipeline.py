@@ -11,8 +11,6 @@ if TYPE_CHECKING:
     import torch
 
 
-
-
 def make_k_centered(cell_df: pd.DataFrame, mask: np.ndarray) -> np.ndarray:
     """
     Center guide counts within day.
@@ -70,4 +68,3 @@ def to_torch(
     mask_t = torch.tensor(mask, dtype=torch.float32, device=device)
     gene_of_guide_t = torch.tensor(gene_of_guide, dtype=torch.long, device=device)
     return p_t, day_t, rep_t, guide_ids_t, mask_t, gene_of_guide_t
-
