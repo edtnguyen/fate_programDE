@@ -359,9 +359,56 @@ def reconstruct_theta_samples(
     Returns
     -------
     np.ndarray
-        Array of sampled theta values (shape to be defined in implementation).
+        Array of sampled theta values with shape (S, L+1, F*, D).
     """
-    raise NotImplementedError("Posterior sampling stub; implementation pending.")
+    import torch
+    from pyro.infer import Predictive
+
+    if D <= 0 or L <= 0:
+        raise ValueError("L and D must be positive integers")
+    if num_draws <= 0:
+        raise ValueError("num_draws must be a positive integer")
+
+    p_t, day_t, rep_t, k_t, guide_ids_t, mask_t, gene_of_guide_t = model_args
+    G = int(gene_of_guide_t.shape[0] - 1)
+    R = int(rep_t.max().item() + 1)
+    Kmax = int(guide_ids_t.shape[1])
+
+    return_sites = ("tau", "z0", "sigma_time", "eps")
+    predictive = Predictive(guide, num_samples=num_draws, return_sites=return_sites)
+    samples = predictive(
+        p_t,
+        day_t,
+        rep_t,
+        k_t,
+        guide_ids_t,
+        mask_t,
+        gene_of_guide_t,
+        L=L,
+        G=G,
+        D=D,
+        R=R,
+        Kmax=Kmax,
+    )
+
+    tau = samples["tau"]
+    z0 = samples["z0"]
+    sigma_time = samples["sigma_time"]
+    fstar = tau.shape[-1]
+
+    theta0 = tau[:, None, :] * z0
+    if D > 1:
+        eps = samples["eps"]
+        increments = sigma_time[:, None, :, None] * eps
+        theta_rest = torch.cumsum(increments, dim=-1) + theta0[..., None]
+        theta_core = torch.cat([theta0[..., None], theta_rest], dim=-1)
+    else:
+        theta_core = theta0[..., None]
+
+    zeros = torch.zeros((num_draws, 1, fstar, D), device=theta_core.device)
+    theta = torch.cat([zeros, theta_core], dim=1)
+
+    return theta.detach().cpu().numpy()
 
 
 def export_gene_summary_for_ash(
@@ -384,4 +431,52 @@ def export_gene_summary_for_ash(
     pd.DataFrame
         Gene-level summary table written to ``out_csv``.
     """
-    raise NotImplementedError("Gene summary export stub; implementation pending.")
+    if len(gene_names) != L:
+        raise ValueError(
+            f"gene_names length {len(gene_names)} does not match L={L}"
+        )
+    if D <= 0 or L <= 0:
+        raise ValueError("L and D must be positive integers")
+
+    theta_samples = reconstruct_theta_samples(
+        guide=guide,
+        model_args=model_args,
+        L=L,
+        D=D,
+        num_draws=num_draws,
+    )
+
+    mes_samples = theta_samples[:, 1:, 0, :]
+
+    if weights is None:
+        weights_arr = np.asarray(day_cell_counts, dtype=np.float64)
+        if weights_arr.shape[0] != D:
+            raise ValueError("day_cell_counts length must match D")
+        weight_sum = weights_arr.sum()
+        if weight_sum <= 0:
+            raise ValueError("day_cell_counts must sum to a positive value")
+        weights_arr = weights_arr / weight_sum
+    else:
+        weights_arr = np.asarray(weights, dtype=np.float64)
+        if weights_arr.shape[0] != D:
+            raise ValueError("weights length must match D")
+        weight_sum = weights_arr.sum()
+        if weight_sum <= 0:
+            raise ValueError("weights must sum to a positive value")
+        weights_arr = weights_arr / weight_sum
+
+    weighted = np.tensordot(mes_samples, weights_arr, axes=([2], [0]))
+    betahat = weighted.mean(axis=0)
+    sebetahat = weighted.std(axis=0, ddof=1)
+
+    summary_df = pd.DataFrame(
+        {
+            "gene": list(gene_names),
+            "betahat": betahat,
+            "sebetahat": sebetahat,
+        }
+    )
+    for d in range(D):
+        summary_df[f"w{d}"] = float(weights_arr[d])
+    summary_df.to_csv(out_csv, index=False)
+    return summary_df

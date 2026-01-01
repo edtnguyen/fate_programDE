@@ -1,0 +1,51 @@
+adata_path: data/adata.h5ad
+
+# Where are CellRank fate probabilities stored?
+fate_prob_key: lineages_fwd
+
+# Fate order in that matrix / dataframe:
+fates: ["EC", "MES", "NEU"]
+
+# Guide matrix key
+guide_key: guide
+covar_key: covar
+rep_key: rep
+day_key: day
+
+# Guide-to-gene mapping file (must align with guide columns)
+# Required columns:
+#   guide_name, gene_name, is_ntc (0/1)
+guide_map_csv: data/guide_map.csv
+
+# Output dir
+out_dir: out_fate_pipeline
+
+# Model sizes
+Kmax: 20
+D: 4
+R: 2
+
+# SVI
+batch_size: 8192
+lr: 1e-3
+clip_norm: 5.0
+num_steps: 5000
+num_posterior_draws: 1000
+seed: 0
+
+# Across-day summary weights:
+# If null -> weights proportional to day cell counts after filtering
+weights: null
+
+# ash thresholds for final "hit" label
+lfsr_thresh: 0.05
+qvalue_thresh: 0.10
+
+# Diagnostics (step 13)
+diagnostics_holdout_frac: 0.1
+diagnostics_num_steps: 1000
+diagnostics_num_draws: 25
+diagnostics_run_permutation: false
+diagnostics_perm_steps: 500
+diagnostics_perm_draws: 25
+diagnostics_seed: 0
