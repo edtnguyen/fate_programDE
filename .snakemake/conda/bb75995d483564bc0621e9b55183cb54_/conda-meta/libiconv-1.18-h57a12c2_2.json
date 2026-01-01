@@ -1,0 +1,103 @@
+{
+  "name": "libiconv",
+  "version": "1.18",
+  "build": "h57a12c2_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libiconv-1.18-h57a12c2_2.conda",
+  "md5": "210a85a1119f97ea7887188d176db135",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libiconv-1.18-h57a12c2_2.conda",
+  "sha256": "a1c8cecdf9966921e13f0ae921309a1f415dfbd2b791f2117cf7e8f5e61a48b6",
+  "depends": [
+    "__osx >=10.13"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.1-only",
+  "timestamp": 1754908900000,
+  "size": 737846,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libiconv-1.18-h57a12c2_2.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libiconv-1.18-h57a12c2_2",
+  "files": [
+    "include/iconv.h",
+    "include/libcharset.h",
+    "include/localcharset.h",
+    "lib/libcharset.1.dylib",
+    "lib/libcharset.a",
+    "lib/libcharset.dylib",
+    "lib/libiconv.2.dylib",
+    "lib/libiconv.a",
+    "lib/libiconv.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/iconv.h",
+        "path_type": "hardlink",
+        "sha256": "e60b919d6ce6474ca5f9866486f5780a0ff3dab951facb8836908dfd486e2e81",
+        "size_in_bytes": 9663,
+        "sha256_in_prefix": "e60b919d6ce6474ca5f9866486f5780a0ff3dab951facb8836908dfd486e2e81"
+      },
+      {
+        "_path": "include/libcharset.h",
+        "path_type": "hardlink",
+        "sha256": "180d05ba6adb348e150c6973ab795fe422da0b05e09f8ba7c369746ed1901702",
+        "size_in_bytes": 1510,
+        "sha256_in_prefix": "180d05ba6adb348e150c6973ab795fe422da0b05e09f8ba7c369746ed1901702"
+      },
+      {
+        "_path": "include/localcharset.h",
+        "path_type": "hardlink",
+        "sha256": "67f01a81a41eab468313b34fb153aa11fe273b829c529e3a820a3877438d20e4",
+        "size_in_bytes": 6338,
+        "sha256_in_prefix": "67f01a81a41eab468313b34fb153aa11fe273b829c529e3a820a3877438d20e4"
+      },
+      {
+        "_path": "lib/libcharset.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "e240eaf3d3073ca3058ed43c2deb21b7f87681630a568bdd9f4f90da18a6f0fd",
+        "size_in_bytes": 12784,
+        "sha256_in_prefix": "e240eaf3d3073ca3058ed43c2deb21b7f87681630a568bdd9f4f90da18a6f0fd"
+      },
+      {
+        "_path": "lib/libcharset.a",
+        "path_type": "hardlink",
+        "sha256": "c8734131060e76a0d1ef1c05938bcf483d5033ba2916681da20e50b318761370",
+        "size_in_bytes": 2816,
+        "sha256_in_prefix": "c8734131060e76a0d1ef1c05938bcf483d5033ba2916681da20e50b318761370"
+      },
+      {
+        "_path": "lib/libcharset.dylib",
+        "path_type": "softlink",
+        "sha256": "e240eaf3d3073ca3058ed43c2deb21b7f87681630a568bdd9f4f90da18a6f0fd",
+        "size_in_bytes": 12784
+      },
+      {
+        "_path": "lib/libiconv.2.dylib",
+        "path_type": "hardlink",
+        "sha256": "93067c47b029bac5d727c04de1392e4fcb5fb69ca616eefdde9e0954ff2891f8",
+        "size_in_bytes": 1148200,
+        "sha256_in_prefix": "93067c47b029bac5d727c04de1392e4fcb5fb69ca616eefdde9e0954ff2891f8"
+      },
+      {
+        "_path": "lib/libiconv.a",
+        "path_type": "hardlink",
+        "sha256": "187d3ad3b61499372b10b9c3277459a6076905291ef7cb50c95e1ef333c95d38",
+        "size_in_bytes": 1192584,
+        "sha256_in_prefix": "187d3ad3b61499372b10b9c3277459a6076905291ef7cb50c95e1ef333c95d38"
+      },
+      {
+        "_path": "lib/libiconv.dylib",
+        "path_type": "softlink",
+        "sha256": "93067c47b029bac5d727c04de1392e4fcb5fb69ca616eefdde9e0954ff2891f8",
+        "size_in_bytes": 1148200
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libiconv-1.18-h57a12c2_2",
+    "type": 1
+  }
+}

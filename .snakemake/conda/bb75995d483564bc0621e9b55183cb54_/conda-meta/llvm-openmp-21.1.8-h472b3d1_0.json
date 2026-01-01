@@ -1,0 +1,83 @@
+{
+  "name": "llvm-openmp",
+  "version": "21.1.8",
+  "build": "h472b3d1_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "llvm-openmp-21.1.8-h472b3d1_0.conda",
+  "md5": "e2d811e9f464dd67398b4ce1f9c7c872",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/llvm-openmp-21.1.8-h472b3d1_0.conda",
+  "sha256": "2a41885f44cbc1546ff26369924b981efa37a29d20dc5445b64539ba240739e6",
+  "depends": [
+    "__osx >=10.13"
+  ],
+  "constrains": [
+    "openmp 21.1.8|21.1.8.*",
+    "intel-openmp <0.0a0"
+  ],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1765965194000,
+  "size": 311405,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/llvm-openmp-21.1.8-h472b3d1_0.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/llvm-openmp-21.1.8-h472b3d1_0",
+  "files": [
+    "include/omp-tools.h",
+    "include/omp.h",
+    "include/ompt.h",
+    "include/ompx.h",
+    "lib/libiomp5.dylib",
+    "lib/libomp.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/omp-tools.h",
+        "path_type": "hardlink",
+        "sha256": "4876d0addcf2783953a6d0aeed8efc495ff0476b6a5784ca6e43bdd1c62df5be",
+        "size_in_bytes": 52077,
+        "sha256_in_prefix": "4876d0addcf2783953a6d0aeed8efc495ff0476b6a5784ca6e43bdd1c62df5be"
+      },
+      {
+        "_path": "include/omp.h",
+        "path_type": "hardlink",
+        "sha256": "3f9f6217b1edfdfd7487e84b2f62ee7742793e56cf447b54ee20bb5930b35ed3",
+        "size_in_bytes": 25839,
+        "sha256_in_prefix": "3f9f6217b1edfdfd7487e84b2f62ee7742793e56cf447b54ee20bb5930b35ed3"
+      },
+      {
+        "_path": "include/ompt.h",
+        "path_type": "hardlink",
+        "sha256": "4876d0addcf2783953a6d0aeed8efc495ff0476b6a5784ca6e43bdd1c62df5be",
+        "size_in_bytes": 52077,
+        "sha256_in_prefix": "4876d0addcf2783953a6d0aeed8efc495ff0476b6a5784ca6e43bdd1c62df5be"
+      },
+      {
+        "_path": "include/ompx.h",
+        "path_type": "hardlink",
+        "sha256": "a84d0460771cec5695ce16fc8698bddf3276a1908a372087b3f6aa60782acf88",
+        "size_in_bytes": 7720,
+        "sha256_in_prefix": "a84d0460771cec5695ce16fc8698bddf3276a1908a372087b3f6aa60782acf88"
+      },
+      {
+        "_path": "lib/libiomp5.dylib",
+        "path_type": "softlink",
+        "sha256": "dbab26c5ea89aa83ea8ce7d7501036c67ed0bb1cf99f8a63e3c1fbccf6f50f67",
+        "size_in_bytes": 847928
+      },
+      {
+        "_path": "lib/libomp.dylib",
+        "path_type": "hardlink",
+        "sha256": "dbab26c5ea89aa83ea8ce7d7501036c67ed0bb1cf99f8a63e3c1fbccf6f50f67",
+        "size_in_bytes": 847928,
+        "sha256_in_prefix": "dbab26c5ea89aa83ea8ce7d7501036c67ed0bb1cf99f8a63e3c1fbccf6f50f67"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/llvm-openmp-21.1.8-h472b3d1_0",
+    "type": 1
+  }
+}

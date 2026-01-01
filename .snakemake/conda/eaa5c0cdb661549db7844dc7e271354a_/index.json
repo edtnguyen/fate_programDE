@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "intel_301",
+  "build_number": 301,
+  "depends": [
+    "mkl 2020.4 intel_301",
+    "mkl-include 2020.4 intel_301"
+  ],
+  "license": "Intel End User License Agreement for Developer Tools",
+  "name": "mkl-devel",
+  "platform": "osx",
+  "subdir": "osx-64",
+  "timestamp": 1601329171750,
+  "version": "2020.4"
+}

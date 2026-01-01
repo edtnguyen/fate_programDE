@@ -1,0 +1,52 @@
+{
+  "name": "liblapacke",
+  "version": "3.9.0",
+  "build": "8_mkl",
+  "build_number": 8,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "liblapacke-3.9.0-8_mkl.tar.bz2",
+  "md5": "62a05e34236dc4b52951c56dbbfdf936",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/liblapacke-3.9.0-8_mkl.tar.bz2",
+  "sha256": "a3b87357c68f45aafedf338f5d519590dc3f6379cc7621485eebc165471042c2",
+  "depends": [
+    "libblas 3.9.0 8_mkl",
+    "libcblas 3.9.0 8_mkl",
+    "liblapack 3.9.0 8_mkl"
+  ],
+  "constrains": [
+    "blas * mkl"
+  ],
+  "track_features": "blas_mkl",
+  "license": "BSD-3-Clause",
+  "timestamp": 1612394136000,
+  "size": 11620,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/liblapacke-3.9.0-8_mkl",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/liblapacke-3.9.0-8_mkl",
+  "files": [
+    "lib/liblapacke.3.dylib",
+    "lib/liblapacke.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/liblapacke.3.dylib",
+        "path_type": "softlink",
+        "sha256": "8d3f431d502d55de969ff7ebefec98794fde225ad80a60920f9e5ef75244f737",
+        "size_in_bytes": 10057136
+      },
+      {
+        "_path": "lib/liblapacke.dylib",
+        "path_type": "softlink",
+        "sha256": "8d3f431d502d55de969ff7ebefec98794fde225ad80a60920f9e5ef75244f737",
+        "size_in_bytes": 10057136
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/liblapacke-3.9.0-8_mkl",
+    "type": 1
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "name": "donfig",
+  "version": "0.8.1.post1",
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "donfig-0.8.1.post1-pyhd8ed1ab_1.conda",
+  "md5": "c56a7fa5597ad78b62e1f5d21f7f8b8f",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/donfig-0.8.1.post1-pyhd8ed1ab_1.conda",
+  "sha256": "d58e97d418f71703e822c422af5b9c431e3621a0ecdc8b0334c1ca33e076dfe7",
+  "depends": [
+    "python >=3.9",
+    "pyyaml"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "MIT",
+  "package_type": "noarch_python",
+  "timestamp": 1734368817000,
+  "size": 22491,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/donfig-0.8.1.post1-pyhd8ed1ab_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/donfig-0.8.1.post1-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/AUTHORS.md",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/LICENSE.txt",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/METADATA",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/RECORD",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/WHEEL",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/donfig-0.8.1.post1.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/donfig/__init__.py",
+    "lib/python3.11/site-packages/donfig/_lock.py",
+    "lib/python3.11/site-packages/donfig/config_obj.py",
+    "lib/python3.11/site-packages/donfig/tests/__init__.py",
+    "lib/python3.11/site-packages/donfig/tests/test_config.py",
+    "lib/python3.11/site-packages/donfig/tests/test_lock.py",
+    "lib/python3.11/site-packages/donfig/utils.py",
+    "lib/python3.11/site-packages/donfig/version.py",
+    "lib/python3.11/site-packages/donfig/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/__pycache__/_lock.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/__pycache__/config_obj.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/tests/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/tests/__pycache__/test_config.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/tests/__pycache__/test_lock.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/__pycache__/utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/donfig/__pycache__/version.cpython-311.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/AUTHORS.md",
+        "path_type": "hardlink",
+        "sha256": "9a9d4f7f2055a0fde981a0d75fe0231bf7c31c565254175946cdec969515f3f6",
+        "size_in_bytes": 671,
+        "sha256_in_prefix": "9a9d4f7f2055a0fde981a0d75fe0231bf7c31c565254175946cdec969515f3f6"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "c29730b23ddc3e2e7cc6f181ddfb56e781d11e856c20d635a5f01dc8bdb643c6",
+        "size_in_bytes": 1119,
+        "sha256_in_prefix": "c29730b23ddc3e2e7cc6f181ddfb56e781d11e856c20d635a5f01dc8bdb643c6"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f893f32fc228aa64fb21fc0c468d44dd029e5df712f3ed53e0f908e68fca4b51",
+        "size_in_bytes": 4948,
+        "sha256_in_prefix": "f893f32fc228aa64fb21fc0c468d44dd029e5df712f3ed53e0f908e68fca4b51"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "0da507d4889c7b57a0e71f3539b85eb1c23977a749c88d92903fd439967388da",
+        "size_in_bytes": 1809,
+        "sha256_in_prefix": "0da507d4889c7b57a0e71f3539b85eb1c23977a749c88d92903fd439967388da"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "a46ae3b8fe1f16332b811e8e1b73ec7022e692c0e14d7bc3a68117b01252b686",
+        "size_in_bytes": 102,
+        "sha256_in_prefix": "a46ae3b8fe1f16332b811e8e1b73ec7022e692c0e14d7bc3a68117b01252b686"
+      },
+      {
+        "_path": "site-packages/donfig-0.8.1.post1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "8b8f0de2b0c47d9cc9e753e416f678aae7771f5005a029cdf012361fdb8383ae",
+        "size_in_bytes": 7,
+        "sha256_in_prefix": "8b8f0de2b0c47d9cc9e753e416f678aae7771f5005a029cdf012361fdb8383ae"
+      },
+      {
+        "_path": "site-packages/donfig/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "af5d6c31eca5f6902748c78176c4baa4d2e4bbf560c205811708691cc58fb61a",
+        "size_in_bytes": 142,
+        "sha256_in_prefix": "af5d6c31eca5f6902748c78176c4baa4d2e4bbf560c205811708691cc58fb61a"
+      },
+      {
+        "_path": "site-packages/donfig/_lock.py",
+        "path_type": "hardlink",
+        "sha256": "9d5b4a7755bd18c993b6b9f0fb0420b8cd51dcad339e52b952efa9094a79ba56",
+        "size_in_bytes": 3425,
+        "sha256_in_prefix": "9d5b4a7755bd18c993b6b9f0fb0420b8cd51dcad339e52b952efa9094a79ba56"
+      },
+      {
+        "_path": "site-packages/donfig/config_obj.py",
+        "path_type": "hardlink",
+        "sha256": "3c220d0f93b7ddf542e9575dfb9f59d84236af60cc94cf9a374720741fe93410",
+        "size_in_bytes": 24644,
+        "sha256_in_prefix": "3c220d0f93b7ddf542e9575dfb9f59d84236af60cc94cf9a374720741fe93410"
+      },
+      {
+        "_path": "site-packages/donfig/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/donfig/tests/test_config.py",
+        "path_type": "hardlink",
+        "sha256": "e89ab64d6822d12a58aa11e873fd477160189c3c277766fed500acacf09998f4",
+        "size_in_bytes": 19003,
+        "sha256_in_prefix": "e89ab64d6822d12a58aa11e873fd477160189c3c277766fed500acacf09998f4"
+      },
+      {
+        "_path": "site-packages/donfig/tests/test_lock.py",
+        "path_type": "hardlink",
+        "sha256": "a102b0b4b3f9826e88f2b4594c0d870752f669d7353a4cbe6b2df8810dd40ae3",
+        "size_in_bytes": 2567,
+        "sha256_in_prefix": "a102b0b4b3f9826e88f2b4594c0d870752f669d7353a4cbe6b2df8810dd40ae3"
+      },
+      {
+        "_path": "site-packages/donfig/utils.py",
+        "path_type": "hardlink",
+        "sha256": "c95e43d5ea87315e7409bc2037d0341e58cd5a08556678d3d70e29121d768bec",
+        "size_in_bytes": 1732,
+        "sha256_in_prefix": "c95e43d5ea87315e7409bc2037d0341e58cd5a08556678d3d70e29121d768bec"
+      },
+      {
+        "_path": "site-packages/donfig/version.py",
+        "path_type": "hardlink",
+        "sha256": "dd425cbb4c1da7c91d0a28a53610576b2497edac46c089c5ebb87fb645474d71",
+        "size_in_bytes": 503,
+        "sha256_in_prefix": "dd425cbb4c1da7c91d0a28a53610576b2497edac46c089c5ebb87fb645474d71"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/__pycache__/_lock.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/__pycache__/config_obj.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/tests/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/tests/__pycache__/test_config.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/tests/__pycache__/test_lock.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/__pycache__/utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/donfig/__pycache__/version.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/donfig-0.8.1.post1-pyhd8ed1ab_1",
+    "type": 1
+  }
+}

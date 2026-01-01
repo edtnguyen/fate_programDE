@@ -1,0 +1,126 @@
+{
+  "name": "libaec",
+  "version": "1.1.4",
+  "build": "ha6bc127_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libaec-1.1.4-ha6bc127_0.conda",
+  "md5": "1a768b826dfc68e07786788d98babfc3",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libaec-1.1.4-ha6bc127_0.conda",
+  "sha256": "f4fe00ef0df58b670696c62f2ec3f6484431acbf366ecfbcb71141c81439e331",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=18"
+  ],
+  "constrains": [],
+  "license": "BSD-2-Clause",
+  "timestamp": 1749993664000,
+  "size": 30034,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libaec-1.1.4-ha6bc127_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libaec-1.1.4-ha6bc127_0",
+  "files": [
+    "include/libaec.h",
+    "include/szlib.h",
+    "lib/cmake/libaec/libaec-config-version.cmake",
+    "lib/cmake/libaec/libaec-config.cmake",
+    "lib/cmake/libaec/libaec-targets-release.cmake",
+    "lib/cmake/libaec/libaec-targets.cmake",
+    "lib/libaec.0.1.4.dylib",
+    "lib/libaec.0.dylib",
+    "lib/libaec.dylib",
+    "lib/libsz.2.0.1.dylib",
+    "lib/libsz.2.dylib",
+    "lib/libsz.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/libaec.h",
+        "path_type": "hardlink",
+        "sha256": "b0a605fd39e70dd907b8aa743866936ef57544502a4dfdee58e048cd4fabd04f",
+        "size_in_bytes": 6629,
+        "sha256_in_prefix": "b0a605fd39e70dd907b8aa743866936ef57544502a4dfdee58e048cd4fabd04f"
+      },
+      {
+        "_path": "include/szlib.h",
+        "path_type": "hardlink",
+        "sha256": "70cd48f31444734c04a45f7f569f1494b5bddaa098035477ce5334eec678fb6d",
+        "size_in_bytes": 2670,
+        "sha256_in_prefix": "70cd48f31444734c04a45f7f569f1494b5bddaa098035477ce5334eec678fb6d"
+      },
+      {
+        "_path": "lib/cmake/libaec/libaec-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "eb0eaf46407c528dc76c9073e9bb48988287adb75154d133eb9d7548d3eadd03",
+        "size_in_bytes": 2762,
+        "sha256_in_prefix": "eb0eaf46407c528dc76c9073e9bb48988287adb75154d133eb9d7548d3eadd03"
+      },
+      {
+        "_path": "lib/cmake/libaec/libaec-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "9007091516e12932d6a6a41fbc5a4d9a5887f951bf78777285d51847ae2d4801",
+        "size_in_bytes": 4031,
+        "sha256_in_prefix": "9007091516e12932d6a6a41fbc5a4d9a5887f951bf78777285d51847ae2d4801"
+      },
+      {
+        "_path": "lib/cmake/libaec/libaec-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "006be0ce59f63a4f4dc6715427cc3b46984abd172889a7d63576de62d34eac7d",
+        "size_in_bytes": 1368,
+        "sha256_in_prefix": "006be0ce59f63a4f4dc6715427cc3b46984abd172889a7d63576de62d34eac7d"
+      },
+      {
+        "_path": "lib/cmake/libaec/libaec-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "b5b245923a6c939b8515af4007f8aeb9ce36f71f7bbeaa6a9ecaa88c9ccc5127",
+        "size_in_bytes": 5023,
+        "sha256_in_prefix": "b5b245923a6c939b8515af4007f8aeb9ce36f71f7bbeaa6a9ecaa88c9ccc5127"
+      },
+      {
+        "_path": "lib/libaec.0.1.4.dylib",
+        "path_type": "hardlink",
+        "sha256": "b5ccb95a4a966a1d4199475b4814fb71b4ba47c5103c0bb686b9f190ba088236",
+        "size_in_bytes": 36008,
+        "sha256_in_prefix": "b5ccb95a4a966a1d4199475b4814fb71b4ba47c5103c0bb686b9f190ba088236"
+      },
+      {
+        "_path": "lib/libaec.0.dylib",
+        "path_type": "softlink",
+        "sha256": "b5ccb95a4a966a1d4199475b4814fb71b4ba47c5103c0bb686b9f190ba088236",
+        "size_in_bytes": 36008
+      },
+      {
+        "_path": "lib/libaec.dylib",
+        "path_type": "softlink",
+        "sha256": "b5ccb95a4a966a1d4199475b4814fb71b4ba47c5103c0bb686b9f190ba088236",
+        "size_in_bytes": 36008
+      },
+      {
+        "_path": "lib/libsz.2.0.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "35dec1e2b745d5038d543d6b64879c979ce8f66727bba02f3867530b6f18d2b9",
+        "size_in_bytes": 40392,
+        "sha256_in_prefix": "35dec1e2b745d5038d543d6b64879c979ce8f66727bba02f3867530b6f18d2b9"
+      },
+      {
+        "_path": "lib/libsz.2.dylib",
+        "path_type": "softlink",
+        "sha256": "35dec1e2b745d5038d543d6b64879c979ce8f66727bba02f3867530b6f18d2b9",
+        "size_in_bytes": 40392
+      },
+      {
+        "_path": "lib/libsz.dylib",
+        "path_type": "softlink",
+        "sha256": "35dec1e2b745d5038d543d6b64879c979ce8f66727bba02f3867530b6f18d2b9",
+        "size_in_bytes": 40392
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libaec-1.1.4-ha6bc127_0",
+    "type": 1
+  }
+}

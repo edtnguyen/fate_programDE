@@ -1,0 +1,227 @@
+{
+  "name": "libgfortran-devel_osx-64",
+  "version": "14.3.0",
+  "build": "h660b60f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "libgfortran-devel_osx-64-14.3.0-h660b60f_1.conda",
+  "md5": "731190552d91ade042ddf897cfb361aa",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/libgfortran-devel_osx-64-14.3.0-h660b60f_1.conda",
+  "sha256": "b60e918409b71302ee61b61080b1b254a902c03fbcbb415c81925dc016c5990e",
+  "depends": [],
+  "constrains": [],
+  "noarch": "generic",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "package_type": "noarch_generic",
+  "timestamp": 1756238221000,
+  "size": 551342,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libgfortran-devel_osx-64-14.3.0-h660b60f_1.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libgfortran-devel_osx-64-14.3.0-h660b60f_1",
+  "files": [
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crt3.o",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crtfastmath.o",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crttme.o",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crttms.o",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/ieee_arithmetic.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/ieee_exceptions.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/ieee_features.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib.f90",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib.h",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib_kinds.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc.f90",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc_kinds.mod",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc_lib.h",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/include/ISO_Fortran_binding.h",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libcaf_single.a",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libemutls_w.a",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgcc.a",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgcc_eh.a",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgcov.a",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgfortran.spec",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgomp.spec",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libheapt_w.a"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crt3.o",
+        "path_type": "hardlink",
+        "sha256": "7456b1157312c8eec4944067976e5669bc3080f814ebcb2c70c857187b01c398",
+        "size_in_bytes": 3840,
+        "sha256_in_prefix": "7456b1157312c8eec4944067976e5669bc3080f814ebcb2c70c857187b01c398"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crtfastmath.o",
+        "path_type": "hardlink",
+        "sha256": "678b193e2a872f1514f29828853ecc5608f06aef53e2c3f73d5d0d2bd8bdea02",
+        "size_in_bytes": 2552,
+        "sha256_in_prefix": "678b193e2a872f1514f29828853ecc5608f06aef53e2c3f73d5d0d2bd8bdea02"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crttme.o",
+        "path_type": "hardlink",
+        "sha256": "fcbb5f07c5bc1ee8a3b976847798ce33976b9a4579bac267e3aaebc12f60eec3",
+        "size_in_bytes": 2104,
+        "sha256_in_prefix": "fcbb5f07c5bc1ee8a3b976847798ce33976b9a4579bac267e3aaebc12f60eec3"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/crttms.o",
+        "path_type": "hardlink",
+        "sha256": "a1cb28782d760e146283d6e31ef78dcd176f37558791c0d3ea3a5fcab640816c",
+        "size_in_bytes": 1832,
+        "sha256_in_prefix": "a1cb28782d760e146283d6e31ef78dcd176f37558791c0d3ea3a5fcab640816c"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/ieee_arithmetic.mod",
+        "path_type": "hardlink",
+        "sha256": "6d4e11e6a1535f83d13caaed6b5a290b0a68ede6bca53a536759f47795248747",
+        "size_in_bytes": 13489,
+        "sha256_in_prefix": "6d4e11e6a1535f83d13caaed6b5a290b0a68ede6bca53a536759f47795248747"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/ieee_exceptions.mod",
+        "path_type": "hardlink",
+        "sha256": "0db1111ac75aefbbbfee73bf9a30caaf5bbd9613fb6a11b21917a86a19f41e06",
+        "size_in_bytes": 2327,
+        "sha256_in_prefix": "0db1111ac75aefbbbfee73bf9a30caaf5bbd9613fb6a11b21917a86a19f41e06"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/ieee_features.mod",
+        "path_type": "hardlink",
+        "sha256": "b12b86c5637e8d19321436ae2d3a8ccfcbba4d690d58fb1ed97a46b6bb92a962",
+        "size_in_bytes": 1069,
+        "sha256_in_prefix": "b12b86c5637e8d19321436ae2d3a8ccfcbba4d690d58fb1ed97a46b6bb92a962"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib.f90",
+        "path_type": "hardlink",
+        "sha256": "36b7bb20a98576fd37d9793a996560532f055c4f54e075c0a94d0e30e63744b6",
+        "size_in_bytes": 36469,
+        "sha256_in_prefix": "36b7bb20a98576fd37d9793a996560532f055c4f54e075c0a94d0e30e63744b6"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib.h",
+        "path_type": "hardlink",
+        "sha256": "6f64e719ce10e82db00e0c7270631ffc6be8f020d7df37021b1ad616219477ea",
+        "size_in_bytes": 21411,
+        "sha256_in_prefix": "6f64e719ce10e82db00e0c7270631ffc6be8f020d7df37021b1ad616219477ea"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib.mod",
+        "path_type": "hardlink",
+        "sha256": "d0e73da8b031b43094d3f753c755fe5a66ed3096e071daa4d0e322542dbfdcf6",
+        "size_in_bytes": 8429,
+        "sha256_in_prefix": "d0e73da8b031b43094d3f753c755fe5a66ed3096e071daa4d0e322542dbfdcf6"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/omp_lib_kinds.mod",
+        "path_type": "hardlink",
+        "sha256": "df2b81c51896f62b42bd852d8e570b54753a37e1d5828949c5fdbdf434f592c3",
+        "size_in_bytes": 2656,
+        "sha256_in_prefix": "df2b81c51896f62b42bd852d8e570b54753a37e1d5828949c5fdbdf434f592c3"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc.f90",
+        "path_type": "hardlink",
+        "sha256": "19f2442b00707a691f982229d2aac29c9668a9c69bcb1b1373f6eb0faa690ef0",
+        "size_in_bytes": 54797,
+        "sha256_in_prefix": "19f2442b00707a691f982229d2aac29c9668a9c69bcb1b1373f6eb0faa690ef0"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc.mod",
+        "path_type": "hardlink",
+        "sha256": "a5abac72cd02bb9fd340d5bb9c44d03c0c0e5e1bd384b9562cef1f02ba079dc3",
+        "size_in_bytes": 4552,
+        "sha256_in_prefix": "a5abac72cd02bb9fd340d5bb9c44d03c0c0e5e1bd384b9562cef1f02ba079dc3"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc_kinds.mod",
+        "path_type": "hardlink",
+        "sha256": "2ffb450d95aa2f75cbc40b9abb3939176e1e3ad640df1c1ede9cfcd216fbfd83",
+        "size_in_bytes": 711,
+        "sha256_in_prefix": "2ffb450d95aa2f75cbc40b9abb3939176e1e3ad640df1c1ede9cfcd216fbfd83"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/finclude/openacc_lib.h",
+        "path_type": "hardlink",
+        "sha256": "49a2b805a673a5860caa8db933ca2e1562d475183e642ce79ca8998a41b8132d",
+        "size_in_bytes": 23318,
+        "sha256_in_prefix": "49a2b805a673a5860caa8db933ca2e1562d475183e642ce79ca8998a41b8132d"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/include/ISO_Fortran_binding.h",
+        "path_type": "hardlink",
+        "sha256": "2f122da8a6fd6811ca6979f6c1d753b381b2ea853210588220acb6600293ba5a",
+        "size_in_bytes": 13156,
+        "sha256_in_prefix": "2f122da8a6fd6811ca6979f6c1d753b381b2ea853210588220acb6600293ba5a"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libcaf_single.a",
+        "path_type": "hardlink",
+        "sha256": "1d823ec2dcf5700b8bffd33717f4bf91e8c12df853f5e1fec345150d317d0c21",
+        "size_in_bytes": 51376,
+        "sha256_in_prefix": "1d823ec2dcf5700b8bffd33717f4bf91e8c12df853f5e1fec345150d317d0c21"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libemutls_w.a",
+        "path_type": "hardlink",
+        "sha256": "142b27fa9a7ae7ce6954c1a3b864c8b124a2ebacb1da0a3fdfdb360fa3c83e90",
+        "size_in_bytes": 21608,
+        "sha256_in_prefix": "142b27fa9a7ae7ce6954c1a3b864c8b124a2ebacb1da0a3fdfdb360fa3c83e90"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgcc.a",
+        "path_type": "hardlink",
+        "sha256": "7315adc49ec8d8158045c075aacc27d04d215f85242fd01006614966cf88856b",
+        "size_in_bytes": 1213328,
+        "sha256_in_prefix": "7315adc49ec8d8158045c075aacc27d04d215f85242fd01006614966cf88856b"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgcc_eh.a",
+        "path_type": "hardlink",
+        "sha256": "0905a893c467195cd02c02ec287d6930cdaff6d91b1c87232b5d267d3bfb26a0",
+        "size_in_bytes": 312712,
+        "sha256_in_prefix": "0905a893c467195cd02c02ec287d6930cdaff6d91b1c87232b5d267d3bfb26a0"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgcov.a",
+        "path_type": "hardlink",
+        "sha256": "c0d11ac6df9610e787c0548c40f2774aa550df6aa5fd55e45188f34ce5316c40",
+        "size_in_bytes": 268544,
+        "sha256_in_prefix": "c0d11ac6df9610e787c0548c40f2774aa550df6aa5fd55e45188f34ce5316c40"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgfortran.spec",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/gfortran_impl_osx-64_1756229148070/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "ab255483091109eb7e0c31639a9e7d1cfaca1009852a5e6cdd15ccec61008b07",
+        "size_in_bytes": 467,
+        "sha256_in_prefix": "796bd2814e76b7300356a8c155c0d258dc9bdcff78d97472899120fe98e15797"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libgomp.spec",
+        "path_type": "hardlink",
+        "sha256": "1745a1f1bfd4f9db9eabaf769f6ae7f109b8d200633dcf127b19df324eb1db52",
+        "size_in_bytes": 169,
+        "sha256_in_prefix": "1745a1f1bfd4f9db9eabaf769f6ae7f109b8d200633dcf127b19df324eb1db52"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/libheapt_w.a",
+        "path_type": "hardlink",
+        "sha256": "ac8e9793bb221c04ad2cc9da00f651dcd0cb4ef280622e41f33e114100959c60",
+        "size_in_bytes": 10296,
+        "sha256_in_prefix": "ac8e9793bb221c04ad2cc9da00f651dcd0cb4ef280622e41f33e114100959c60"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libgfortran-devel_osx-64-14.3.0-h660b60f_1",
+    "type": 1
+  }
+}

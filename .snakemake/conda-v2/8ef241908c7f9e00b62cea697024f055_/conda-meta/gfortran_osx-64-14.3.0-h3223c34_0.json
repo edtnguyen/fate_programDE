@@ -1,0 +1,105 @@
+{
+  "name": "gfortran_osx-64",
+  "version": "14.3.0",
+  "build": "h3223c34_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "gfortran_osx-64-14.3.0-h3223c34_0.conda",
+  "md5": "979b3c36c57d31e1112fa1b1aec28e02",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/gfortran_osx-64-14.3.0-h3223c34_0.conda",
+  "sha256": "14014ad4d46e894645979cbad42dd509482172095c756bdb5474918e0638bd57",
+  "depends": [
+    "cctools_osx-64",
+    "clang",
+    "clang_osx-64",
+    "gfortran_impl_osx-64 14.3.0",
+    "ld64_osx-64",
+    "libgfortran",
+    "libgfortran-devel_osx-64 14.3.0",
+    "libgfortran5 >=14.3.0"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
+  "timestamp": 1751220493000,
+  "size": 35767,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/gfortran_osx-64-14.3.0-h3223c34_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/gfortran_osx-64-14.3.0-h3223c34_0",
+  "files": [
+    "etc/conda/activate.d/activate-gfortran_osx-64.sh",
+    "etc/conda/deactivate.d/deactivate-gfortran_osx-64.sh",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/ar",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/as",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/clang",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/ld",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/nm",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/ranlib",
+    "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/strip"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/activate-gfortran_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "42939769e0f5ee9e591218bc4367eb1159fb80bb6f01039d9084e94bba6046d7",
+        "size_in_bytes": 4680,
+        "sha256_in_prefix": "42939769e0f5ee9e591218bc4367eb1159fb80bb6f01039d9084e94bba6046d7"
+      },
+      {
+        "_path": "etc/conda/deactivate.d/deactivate-gfortran_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "39a7110506e75a93cfec2c84139652dfd8942da763bfc06cd2a6173baf6fdc1e",
+        "size_in_bytes": 4746,
+        "sha256_in_prefix": "39a7110506e75a93cfec2c84139652dfd8942da763bfc06cd2a6173baf6fdc1e"
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/ar",
+        "path_type": "softlink",
+        "sha256": "90f4b3274794b1d909aab8ad50a1c90c2ca6f750ad0ff0583bedc06d255c3561",
+        "size_in_bytes": 37776
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/as",
+        "path_type": "softlink",
+        "sha256": "b883c2301ef35dd8695c81c1c8fd075c1fa4f782bdfeaf77b2ee67fbd6efb2f5",
+        "size_in_bytes": 33960
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/clang",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/ld",
+        "path_type": "softlink",
+        "sha256": "83c49482261834a4feaa59d64d643d32877e45fe17e87331dbd6ecaea2df420b",
+        "size_in_bytes": 5377136
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/nm",
+        "path_type": "softlink",
+        "sha256": "0f86111fc114a0d619e12c5fa43524f956ca670f5163445a3b34f16b938b26e1",
+        "size_in_bytes": 178184
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/ranlib",
+        "path_type": "softlink",
+        "sha256": "55d049e7d2ec493658975a8297d3335ce01e084d22a8f5c35a9808e28e7f7206",
+        "size_in_bytes": 203160
+      },
+      {
+        "_path": "lib/gcc/x86_64-apple-darwin13.4.0/14.3.0/strip",
+        "path_type": "softlink",
+        "sha256": "2be28682fee4af4ed01a0bb30a5327b8d775d174f7289623bf8589aa279ea8ec",
+        "size_in_bytes": 237368
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/gfortran_osx-64-14.3.0-h3223c34_0",
+    "type": 1
+  }
+}

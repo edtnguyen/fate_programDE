@@ -1,0 +1,296 @@
+{
+  "name": "r-mixsqp",
+  "version": "0.3_54",
+  "build": "r45hefbd7a6_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "r-mixsqp-0.3_54-r45hefbd7a6_4.conda",
+  "md5": "5f0da720d4b43b7c0a31a3ff7355a45c",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/r-mixsqp-0.3_54-r45hefbd7a6_4.conda",
+  "sha256": "26b5a292e11160ab91a81f466ae7efdce8d9078d981f414a50edba51da3b1756",
+  "depends": [
+    "__osx >=10.13",
+    "libblas >=3.9.0,<4.0a0",
+    "libcxx >=19",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.5,<4.6.0a0",
+    "r-irlba",
+    "r-rcpp >=0.12.15",
+    "r-rcpparmadillo"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1757866448000,
+  "size": 205869,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/r-mixsqp-0.3_54-r45hefbd7a6_4",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/r-mixsqp-0.3_54-r45hefbd7a6_4",
+  "files": [
+    "lib/R/library/mixsqp/CITATION",
+    "lib/R/library/mixsqp/DESCRIPTION",
+    "lib/R/library/mixsqp/INDEX",
+    "lib/R/library/mixsqp/LICENSE",
+    "lib/R/library/mixsqp/Meta/Rd.rds",
+    "lib/R/library/mixsqp/Meta/data.rds",
+    "lib/R/library/mixsqp/Meta/features.rds",
+    "lib/R/library/mixsqp/Meta/hsearch.rds",
+    "lib/R/library/mixsqp/Meta/links.rds",
+    "lib/R/library/mixsqp/Meta/nsInfo.rds",
+    "lib/R/library/mixsqp/Meta/package.rds",
+    "lib/R/library/mixsqp/Meta/vignette.rds",
+    "lib/R/library/mixsqp/NAMESPACE",
+    "lib/R/library/mixsqp/R/mixsqp",
+    "lib/R/library/mixsqp/R/mixsqp.rdb",
+    "lib/R/library/mixsqp/R/mixsqp.rdx",
+    "lib/R/library/mixsqp/code/test.rmosek.R",
+    "lib/R/library/mixsqp/data/Rdata.rdb",
+    "lib/R/library/mixsqp/data/Rdata.rds",
+    "lib/R/library/mixsqp/data/Rdata.rdx",
+    "lib/R/library/mixsqp/doc/index.html",
+    "lib/R/library/mixsqp/doc/mixsqp-intro.R",
+    "lib/R/library/mixsqp/doc/mixsqp-intro.Rmd",
+    "lib/R/library/mixsqp/doc/mixsqp-intro.html",
+    "lib/R/library/mixsqp/help/AnIndex",
+    "lib/R/library/mixsqp/help/aliases.rds",
+    "lib/R/library/mixsqp/help/mixsqp.rdb",
+    "lib/R/library/mixsqp/help/mixsqp.rdx",
+    "lib/R/library/mixsqp/help/paths.rds",
+    "lib/R/library/mixsqp/html/00Index.html",
+    "lib/R/library/mixsqp/html/R.css",
+    "lib/R/library/mixsqp/libs/mixsqp.so"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/mixsqp/CITATION",
+        "path_type": "hardlink",
+        "sha256": "29aac07d6ecbd42696aebd1ef7af5dfd9532fd3cd80a7f7f810a410edfad0b76",
+        "size_in_bytes": 1136,
+        "sha256_in_prefix": "29aac07d6ecbd42696aebd1ef7af5dfd9532fd3cd80a7f7f810a410edfad0b76"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "483e7ed1dc781c7bdc45217ef47e05c1cbebd01881b23fff0e55f3076e29c87f",
+        "size_in_bytes": 2132,
+        "sha256_in_prefix": "483e7ed1dc781c7bdc45217ef47e05c1cbebd01881b23fff0e55f3076e29c87f"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f5780a946914c3bf040391d9a7ece81340050eac3f8b6fc7fef3d164d399b046",
+        "size_in_bytes": 511,
+        "sha256_in_prefix": "f5780a946914c3bf040391d9a7ece81340050eac3f8b6fc7fef3d164d399b046"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "640c58c22aa10e0777a4b95486f6d518ceaba5ce8fc3dff6c405b227f5e82601",
+        "size_in_bytes": 101,
+        "sha256_in_prefix": "640c58c22aa10e0777a4b95486f6d518ceaba5ce8fc3dff6c405b227f5e82601"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "803d773c0e034f3e6a93cf3a8845564605c86abdac6a3b6e2f256c4793aa1109",
+        "size_in_bytes": 503,
+        "sha256_in_prefix": "803d773c0e034f3e6a93cf3a8845564605c86abdac6a3b6e2f256c4793aa1109"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "0610de00fe9764cd24071bafefb44586c4c270a55fbd5811da050f9335eca4a6",
+        "size_in_bytes": 122,
+        "sha256_in_prefix": "0610de00fe9764cd24071bafefb44586c4c270a55fbd5811da050f9335eca4a6"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a25ebbed4e949e74698118be7f6c5cf980be1213016b221d0b56d1a8ee76bc94",
+        "size_in_bytes": 524,
+        "sha256_in_prefix": "a25ebbed4e949e74698118be7f6c5cf980be1213016b221d0b56d1a8ee76bc94"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "fc02553b53e5b9ea93ccb959f6cae76770fc08da1174385673b6876836498ebc",
+        "size_in_bytes": 199,
+        "sha256_in_prefix": "fc02553b53e5b9ea93ccb959f6cae76770fc08da1174385673b6876836498ebc"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "65b6a89dcefb3dee611b352bbbaf42cae37a4b6ad7b593ac448d5c43fc422142",
+        "size_in_bytes": 331,
+        "sha256_in_prefix": "65b6a89dcefb3dee611b352bbbaf42cae37a4b6ad7b593ac448d5c43fc422142"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "46f4878ab69d424ee2ca4e3fb4f87f8146c5bac75fa63f12bd2169e770467e9d",
+        "size_in_bytes": 1605,
+        "sha256_in_prefix": "46f4878ab69d424ee2ca4e3fb4f87f8146c5bac75fa63f12bd2169e770467e9d"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "77bf425d58e565b095a7ae56aab219f50bb21b55101028b1c5491b3b82fe7c21",
+        "size_in_bytes": 200,
+        "sha256_in_prefix": "77bf425d58e565b095a7ae56aab219f50bb21b55101028b1c5491b3b82fe7c21"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "f08af336cf04b16a31a590b142577bfe3f1d3404bc7619777720cc98fb0f3774",
+        "size_in_bytes": 332,
+        "sha256_in_prefix": "f08af336cf04b16a31a590b142577bfe3f1d3404bc7619777720cc98fb0f3774"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/R/mixsqp",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/R/mixsqp.rdb",
+        "path_type": "hardlink",
+        "sha256": "41f36791761d34579f6d6fcca49229bfa0f7f8730a5f79954c5e8f762863f8cd",
+        "size_in_bytes": 29827,
+        "sha256_in_prefix": "41f36791761d34579f6d6fcca49229bfa0f7f8730a5f79954c5e8f762863f8cd"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/R/mixsqp.rdx",
+        "path_type": "hardlink",
+        "sha256": "8dde1cad34cd7067ead716fb648196258c6663e6a28a9c3490aa50ba139e3ac0",
+        "size_in_bytes": 655,
+        "sha256_in_prefix": "8dde1cad34cd7067ead716fb648196258c6663e6a28a9c3490aa50ba139e3ac0"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/code/test.rmosek.R",
+        "path_type": "hardlink",
+        "sha256": "e05b2051d5cee656f09c0f38129e4ff5b70962d497ef257e430bd2b5bdca950e",
+        "size_in_bytes": 505,
+        "sha256_in_prefix": "e05b2051d5cee656f09c0f38129e4ff5b70962d497ef257e430bd2b5bdca950e"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "8245ab8b76233002ab54df06efb356a51c167994ee6717388117cd6d462851f5",
+        "size_in_bytes": 17555,
+        "sha256_in_prefix": "8245ab8b76233002ab54df06efb356a51c167994ee6717388117cd6d462851f5"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "b9a935dfd5f0d5f43ebf19d0f853736ce44a84ad62948948b9999cac262a093a",
+        "size_in_bytes": 78,
+        "sha256_in_prefix": "b9a935dfd5f0d5f43ebf19d0f853736ce44a84ad62948948b9999cac262a093a"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "3c6a9123a295e7df457ec84ecbbbc416acfb9765293f12300e7120bee4a02a02",
+        "size_in_bytes": 145,
+        "sha256_in_prefix": "3c6a9123a295e7df457ec84ecbbbc416acfb9765293f12300e7120bee4a02a02"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "83c3d446ee8466de0c17d2afc79be5bc7a71707602f1b6a0b071dda658d0eba1",
+        "size_in_bytes": 1398,
+        "sha256_in_prefix": "83c3d446ee8466de0c17d2afc79be5bc7a71707602f1b6a0b071dda658d0eba1"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/doc/mixsqp-intro.R",
+        "path_type": "hardlink",
+        "sha256": "8d3d6f80948af88583f4987cfac96acc07e610fbe07e43aa8cf92c2b56772e7a",
+        "size_in_bytes": 994,
+        "sha256_in_prefix": "8d3d6f80948af88583f4987cfac96acc07e610fbe07e43aa8cf92c2b56772e7a"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/doc/mixsqp-intro.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3df541651d4ebd80fd8861a5671bd593941de595200d95872d03017d82ddcbbf",
+        "size_in_bytes": 3202,
+        "sha256_in_prefix": "3df541651d4ebd80fd8861a5671bd593941de595200d95872d03017d82ddcbbf"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/doc/mixsqp-intro.html",
+        "path_type": "hardlink",
+        "sha256": "8a445e233175561ba8d03e7312d80219e88060f290930aa6a57989d3e0e7e50d",
+        "size_in_bytes": 62542,
+        "sha256_in_prefix": "8a445e233175561ba8d03e7312d80219e88060f290930aa6a57989d3e0e7e50d"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "f28c890bbc35bcbdaefc3d9fd7318730b175fdae77898903d225ce307fe5fabe",
+        "size_in_bytes": 144,
+        "sha256_in_prefix": "f28c890bbc35bcbdaefc3d9fd7318730b175fdae77898903d225ce307fe5fabe"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "26d12b3a8ac3a95069cdf55a774adeef50c2cf8816941c807cf66dbc9a986754",
+        "size_in_bytes": 152,
+        "sha256_in_prefix": "26d12b3a8ac3a95069cdf55a774adeef50c2cf8816941c807cf66dbc9a986754"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/help/mixsqp.rdb",
+        "path_type": "hardlink",
+        "sha256": "7898b8f8f5b04be4bcb21f77e5dd42e4b1040f63686bb807520bd3517a4cb944",
+        "size_in_bytes": 23523,
+        "sha256_in_prefix": "7898b8f8f5b04be4bcb21f77e5dd42e4b1040f63686bb807520bd3517a4cb944"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/help/mixsqp.rdx",
+        "path_type": "hardlink",
+        "sha256": "6c3dd3aca4f0fd2dda29973d7224de4ebcffc1ebb38bc2a0586d1b5e2c5f4047",
+        "size_in_bytes": 278,
+        "sha256_in_prefix": "6c3dd3aca4f0fd2dda29973d7224de4ebcffc1ebb38bc2a0586d1b5e2c5f4047"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "db33ab43534b10ff2a67f40b0d9b449573ebf338041739b4dfe6b6a587c5d6c7",
+        "size_in_bytes": 201,
+        "sha256_in_prefix": "db33ab43534b10ff2a67f40b0d9b449573ebf338041739b4dfe6b6a587c5d6c7"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "cf2df4ef0638860fc3b62561039c07f6c4bd294ee798fadf75c82a77769dcac2",
+        "size_in_bytes": 2093,
+        "sha256_in_prefix": "cf2df4ef0638860fc3b62561039c07f6c4bd294ee798fadf75c82a77769dcac2"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      {
+        "_path": "lib/R/library/mixsqp/libs/mixsqp.so",
+        "path_type": "hardlink",
+        "sha256": "1747fd509d8a491b9de75c6e27688beb149db896b109b7d054c7a04f0fbc0ade",
+        "size_in_bytes": 252768,
+        "sha256_in_prefix": "1747fd509d8a491b9de75c6e27688beb149db896b109b7d054c7a04f0fbc0ade"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/r-mixsqp-0.3_54-r45hefbd7a6_4",
+    "type": 1
+  }
+}

@@ -12,6 +12,103 @@ import scipy.sparse as sp
 
 logger = logging.getLogger(__name__)
 
+_INT_CFG_KEYS = {
+    "Kmax",
+    "D",
+    "R",
+    "batch_size",
+    "num_steps",
+    "num_posterior_draws",
+    "seed",
+    "bootstrap_reps",
+    "bootstrap_num_steps",
+    "bootstrap_num_draws",
+    "bootstrap_seed",
+    "diagnostics_num_steps",
+    "diagnostics_num_draws",
+    "diagnostics_perm_steps",
+    "diagnostics_perm_draws",
+    "diagnostics_seed",
+    "sanity_num_draws",
+}
+_FLOAT_CFG_KEYS = {
+    "lr",
+    "clip_norm",
+    "bootstrap_frac",
+    "lfsr_thresh",
+    "qvalue_thresh",
+    "diagnostics_holdout_frac",
+    "sanity_min_abs_effect",
+}
+
+
+def _coerce_int(cfg: dict, key: str) -> None:
+    if key not in cfg:
+        return
+    val = cfg[key]
+    if val is None:
+        return
+    if isinstance(val, bool):
+        raise ValueError(f"Config '{key}' must be an int, got bool.")
+    if isinstance(val, (np.integer, int)):
+        cfg[key] = int(val)
+        return
+    if isinstance(val, (np.floating, float)):
+        if not float(val).is_integer():
+            raise ValueError(f"Config '{key}' must be an int, got {val}.")
+        cfg[key] = int(val)
+        return
+    if isinstance(val, str):
+        try:
+            val_f = float(val)
+        except ValueError as exc:
+            raise ValueError(f"Config '{key}' must be an int, got '{val}'.") from exc
+        if not val_f.is_integer():
+            raise ValueError(f"Config '{key}' must be an int, got '{val}'.")
+        cfg[key] = int(val_f)
+        return
+    raise ValueError(f"Config '{key}' must be an int, got {type(val)}.")
+
+
+def _coerce_float(cfg: dict, key: str) -> None:
+    if key not in cfg:
+        return
+    val = cfg[key]
+    if val is None:
+        return
+    if isinstance(val, bool):
+        raise ValueError(f"Config '{key}' must be a float, got bool.")
+    if isinstance(val, (np.floating, float, np.integer, int)):
+        cfg[key] = float(val)
+        return
+    if isinstance(val, str):
+        try:
+            cfg[key] = float(val)
+        except ValueError as exc:
+            raise ValueError(f"Config '{key}' must be a float, got '{val}'.") from exc
+        return
+    raise ValueError(f"Config '{key}' must be a float, got {type(val)}.")
+
+
+def normalize_config(cfg: dict) -> dict:
+    """
+    Coerce numeric config fields loaded from YAML into proper types.
+    """
+    cfg = dict(cfg)
+    for key in _INT_CFG_KEYS:
+        _coerce_int(cfg, key)
+    for key in _FLOAT_CFG_KEYS:
+        _coerce_float(cfg, key)
+
+    weights = cfg.get("weights", None)
+    if weights is not None:
+        if isinstance(weights, (list, tuple, np.ndarray)):
+            cfg["weights"] = [float(w) for w in weights]
+        else:
+            raise ValueError("Config 'weights' must be a list of floats or null.")
+
+    return cfg
+
 
 def parse_day_to_int(day_series: pd.Series, D: int) -> np.ndarray:
     """

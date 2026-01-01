@@ -1,0 +1,66 @@
+{
+  "name": "mpc",
+  "version": "1.3.1",
+  "build": "h9d8efa1_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "mpc-1.3.1-h9d8efa1_1.conda",
+  "md5": "0520855aaae268ea413d6bc913f1384c",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/mpc-1.3.1-h9d8efa1_1.conda",
+  "sha256": "dcf91571da6c2f0db96d43a1b639047def05a0e1b6436d42c9129ab14af47b10",
+  "depends": [
+    "__osx >=10.13",
+    "gmp >=6.3.0,<7.0a0",
+    "mpfr >=4.2.1,<5.0a0"
+  ],
+  "constrains": [],
+  "license": "LGPL-3.0-or-later",
+  "timestamp": 1725629348000,
+  "size": 107774,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/mpc-1.3.1-h9d8efa1_1.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/mpc-1.3.1-h9d8efa1_1",
+  "files": [
+    "include/mpc.h",
+    "lib/libmpc.3.dylib",
+    "lib/libmpc.dylib",
+    "share/info/mpc.info"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/mpc.h",
+        "path_type": "hardlink",
+        "sha256": "bca641f4c59f5303d3212650cc00fec0ee2659a220067535dee9029761e83849",
+        "size_in_bytes": 16949,
+        "sha256_in_prefix": "bca641f4c59f5303d3212650cc00fec0ee2659a220067535dee9029761e83849"
+      },
+      {
+        "_path": "lib/libmpc.3.dylib",
+        "path_type": "hardlink",
+        "sha256": "f17421ac25fc0187ff985d3658f70cd62e2091840b8f613114fd52b979809d41",
+        "size_in_bytes": 111256,
+        "sha256_in_prefix": "f17421ac25fc0187ff985d3658f70cd62e2091840b8f613114fd52b979809d41"
+      },
+      {
+        "_path": "lib/libmpc.dylib",
+        "path_type": "softlink",
+        "sha256": "f17421ac25fc0187ff985d3658f70cd62e2091840b8f613114fd52b979809d41",
+        "size_in_bytes": 111256
+      },
+      {
+        "_path": "share/info/mpc.info",
+        "path_type": "hardlink",
+        "sha256": "319e0e3b83e1b8d10b908281d6c7cd3ed8179526472be88a34a5f1558305cc7d",
+        "size_in_bytes": 113709,
+        "sha256_in_prefix": "319e0e3b83e1b8d10b908281d6c7cd3ed8179526472be88a34a5f1558305cc7d"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/mpc-1.3.1-h9d8efa1_1",
+    "type": 1
+  }
+}

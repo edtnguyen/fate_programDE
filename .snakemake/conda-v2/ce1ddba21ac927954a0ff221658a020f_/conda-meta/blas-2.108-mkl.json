@@ -1,0 +1,37 @@
+{
+  "name": "blas",
+  "version": "2.108",
+  "build": "mkl",
+  "build_number": 8,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "blas-2.108-mkl.tar.bz2",
+  "md5": "abecb239a7aa7fd233697c7bb063bee9",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/blas-2.108-mkl.tar.bz2",
+  "sha256": "026cf5e3af9c3987261eb1f41c7a99667fce73b03ddf2a8041490831ef9d6e51",
+  "depends": [
+    "blas-devel 3.9.0 8_mkl",
+    "libblas 3.9.0 8_mkl",
+    "libcblas 3.9.0 8_mkl",
+    "libgfortran >=5",
+    "libgfortran5 >=9.3.0",
+    "liblapack 3.9.0 8_mkl",
+    "liblapacke 3.9.0 8_mkl"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1612394298000,
+  "size": 12124,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/blas-2.108-mkl",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/blas-2.108-mkl",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/blas-2.108-mkl",
+    "type": 1
+  }
+}

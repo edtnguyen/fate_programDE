@@ -1,0 +1,104 @@
+{
+  "name": "libnghttp2",
+  "version": "1.67.0",
+  "build": "h3338091_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libnghttp2-1.67.0-h3338091_0.conda",
+  "md5": "e7630cef881b1174d40f3e69a883e55f",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libnghttp2-1.67.0-h3338091_0.conda",
+  "sha256": "c48d7e1cc927aef83ff9c48ae34dd1d7495c6ccc1edc4a3a6ba6aff1624be9ac",
+  "depends": [
+    "__osx >=10.13",
+    "c-ares >=1.34.5,<2.0a0",
+    "libcxx >=19",
+    "libev >=4.33,<4.34.0a0",
+    "libev >=4.33,<5.0a0",
+    "libzlib >=1.3.1,<2.0a0",
+    "openssl >=3.5.2,<4.0a0"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1756835898000,
+  "size": 605680,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libnghttp2-1.67.0-h3338091_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libnghttp2-1.67.0-h3338091_0",
+  "files": [
+    "bin/nghttp",
+    "bin/nghttpd",
+    "bin/nghttpx",
+    "include/nghttp2/nghttp2.h",
+    "include/nghttp2/nghttp2ver.h",
+    "lib/libnghttp2.14.dylib",
+    "lib/libnghttp2.dylib",
+    "lib/pkgconfig/libnghttp2.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/nghttp",
+        "path_type": "hardlink",
+        "sha256": "ef17195c42cacb82b41356d0ae777f20a91e1928f4cb587bb1cb9a2464625f15",
+        "size_in_bytes": 356184,
+        "sha256_in_prefix": "ef17195c42cacb82b41356d0ae777f20a91e1928f4cb587bb1cb9a2464625f15"
+      },
+      {
+        "_path": "bin/nghttpd",
+        "path_type": "hardlink",
+        "sha256": "9db6081091bd582de9e0d03c565c866a515f2abcdacdca1a6cb8cc296f998d1a",
+        "size_in_bytes": 340368,
+        "sha256_in_prefix": "9db6081091bd582de9e0d03c565c866a515f2abcdacdca1a6cb8cc296f998d1a"
+      },
+      {
+        "_path": "bin/nghttpx",
+        "path_type": "hardlink",
+        "sha256": "8e28a1473264867b67844a95cb788844c6f4778041da3d8e752c416024abf5f6",
+        "size_in_bytes": 1284232,
+        "sha256_in_prefix": "8e28a1473264867b67844a95cb788844c6f4778041da3d8e752c416024abf5f6"
+      },
+      {
+        "_path": "include/nghttp2/nghttp2.h",
+        "path_type": "hardlink",
+        "sha256": "d8b76c651ecae5137055ee9d31fc6a2f835e977347db6ca78592752f4439e8a2",
+        "size_in_bytes": 242354,
+        "sha256_in_prefix": "d8b76c651ecae5137055ee9d31fc6a2f835e977347db6ca78592752f4439e8a2"
+      },
+      {
+        "_path": "include/nghttp2/nghttp2ver.h",
+        "path_type": "hardlink",
+        "sha256": "917f300eeebe1f34e6b773aa46271e0947495d158ee16c9550ee086e8bf7bbd1",
+        "size_in_bytes": 1605,
+        "sha256_in_prefix": "917f300eeebe1f34e6b773aa46271e0947495d158ee16c9550ee086e8bf7bbd1"
+      },
+      {
+        "_path": "lib/libnghttp2.14.dylib",
+        "path_type": "hardlink",
+        "sha256": "d4dfa0a320cdc6ca3d08387161eb60bc80cc6534dc136ed9d42504ef53b3fb27",
+        "size_in_bytes": 176408,
+        "sha256_in_prefix": "d4dfa0a320cdc6ca3d08387161eb60bc80cc6534dc136ed9d42504ef53b3fb27"
+      },
+      {
+        "_path": "lib/libnghttp2.dylib",
+        "path_type": "softlink",
+        "sha256": "d4dfa0a320cdc6ca3d08387161eb60bc80cc6534dc136ed9d42504ef53b3fb27",
+        "size_in_bytes": 176408
+      },
+      {
+        "_path": "lib/pkgconfig/libnghttp2.pc",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/nghttp2_1756834937077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "20828daf1203750cfe098bcc30ea8787e718a19873e265677333f2434a58b36e",
+        "size_in_bytes": 1633,
+        "sha256_in_prefix": "a332f86c1c7b9143c2efe48522afc4aa40077c9fc33cacef957e1f4c28d86011"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libnghttp2-1.67.0-h3338091_0",
+    "type": 1
+  }
+}

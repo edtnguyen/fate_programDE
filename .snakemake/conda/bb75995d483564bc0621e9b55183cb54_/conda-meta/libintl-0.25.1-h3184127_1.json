@@ -1,0 +1,44 @@
+{
+  "name": "libintl",
+  "version": "0.25.1",
+  "build": "h3184127_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libintl-0.25.1-h3184127_1.conda",
+  "md5": "a8e54eefc65645193c46e8b180f62d22",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libintl-0.25.1-h3184127_1.conda",
+  "sha256": "8c352744517bc62d24539d1ecc813b9fdc8a785c780197c5f0b84ec5b0dfe122",
+  "depends": [
+    "__osx >=10.13",
+    "libiconv >=1.18,<2.0a0"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.1-or-later",
+  "timestamp": 1753343977000,
+  "size": 96909,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libintl-0.25.1-h3184127_1.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libintl-0.25.1-h3184127_1",
+  "files": [
+    "lib/libintl.8.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libintl.8.dylib",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/gettext-split_1753342474310/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "32ce6790b2a83eaf24e66f175ffc811b22f4179b3d46a205c995c59c9d58dcc0",
+        "size_in_bytes": 218184,
+        "sha256_in_prefix": "63e4c9acf21686491c0587494bbb9edf443e199355ab162308fd84de14881b80"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libintl-0.25.1-h3184127_1",
+    "type": 1
+  }
+}

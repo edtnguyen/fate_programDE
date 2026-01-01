@@ -1,0 +1,32 @@
+{
+  "name": "libcxx-devel",
+  "version": "21.1.8",
+  "build": "h7c275be_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libcxx-devel-21.1.8-h7c275be_0.conda",
+  "md5": "ce64822befb2d8719d2381efc74aa717",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libcxx-devel-21.1.8-h7c275be_0.conda",
+  "sha256": "291c5018c2a0fb7ae34d9d8cd0a179c7d6cbaafa42840a14342d295da832be54",
+  "depends": [
+    "libcxx >=21.1.8",
+    "libcxx-headers >=21.1.8,<21.1.9.0a0"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1765919669000,
+  "size": 21831,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libcxx-devel-21.1.8-h7c275be_0.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libcxx-devel-21.1.8-h7c275be_0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libcxx-devel-21.1.8-h7c275be_0",
+    "type": 1
+  }
+}

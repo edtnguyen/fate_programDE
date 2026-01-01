@@ -392,8 +392,6 @@ def fit_svi(
             guide_ids_t,
             mask_t,
             gene_of_guide_t,
-            fate_names=fate_names,
-            ref_fate=ref_fate,
             L=L,
             G=G,
             D=D,

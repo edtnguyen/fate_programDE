@@ -1,0 +1,7 @@
+{
+  "ce_improvement": 0.0037404918670653764,
+  "full_model_ce": 1.1459547233581544,
+  "holdout_frac": 0.1,
+  "nuisance_model_ce": 1.1496952152252198,
+  "num_test_cells": 1
+}

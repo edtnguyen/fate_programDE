@@ -1,0 +1,58 @@
+{
+  "name": "libxml2",
+  "version": "2.15.1",
+  "build": "h24ca049_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libxml2-2.15.1-h24ca049_1.conda",
+  "md5": "c58fc83257ad06634b9c935099ef2680",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libxml2-2.15.1-h24ca049_1.conda",
+  "sha256": "24ecb3a3eed2b17cec150714210067cafc522dec111750cbc44f5921df1ffec3",
+  "depends": [
+    "__osx >=10.13",
+    "icu >=78.1,<79.0a0",
+    "libiconv >=1.18,<2.0a0",
+    "liblzma >=5.8.1,<6.0a0",
+    "libxml2-16 2.15.1 he456531_1",
+    "libzlib >=1.3.1,<2.0a0"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1766327339000,
+  "size": 40016,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libxml2-2.15.1-h24ca049_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libxml2-2.15.1-h24ca049_1",
+  "files": [
+    "bin/xmlcatalog",
+    "bin/xmllint"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/xmlcatalog",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libxml2-split_1766326908261/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "bd393dcdf2c031125bd968b2779bb60c6d3c847913627f834438e3c14485afca",
+        "size_in_bytes": 19328,
+        "sha256_in_prefix": "5d11294cc78b3e78782dde7a2110713d8fe0be3f155845f9e5fad15cc4758a64"
+      },
+      {
+        "_path": "bin/xmllint",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libxml2-split_1766326908261/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "63afb301e2e7b0345486e28bc51dca0720217680c410d4138c997ec3e1d74503",
+        "size_in_bytes": 73296,
+        "sha256_in_prefix": "6d746d75ec93f1cde81d47f40b66fd89ddcd1efbbe5d37a7bc2f2ad70ba1ee2a"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libxml2-2.15.1-h24ca049_1",
+    "type": 1
+  }
+}

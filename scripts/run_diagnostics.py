@@ -22,7 +22,7 @@ import anndata as ad  # noqa: E402
 import torch  # noqa: E402
 from pyro.infer import Predictive  # noqa: E402
 
-from scripts.pyro_io import load_adata_inputs  # noqa: E402
+from scripts.pyro_io import load_adata_inputs, normalize_config  # noqa: E402
 from src.models.pyro_model import (  # noqa: E402
     add_zero_gene_row,
     add_zero_guide_row,
@@ -200,7 +200,7 @@ def main() -> None:
     )
     logger = logging.getLogger(__name__)
 
-    cfg = yaml.safe_load(open(args.config))
+    cfg = normalize_config(yaml.safe_load(open(args.config)))
     ref_fate = cfg.get("ref_fate", "EC")
     contrast_fate = cfg.get("contrast_fate", "MES")
     _, non_ref_fates, _, _ = resolve_fate_names(cfg["fates"], ref_fate=ref_fate)

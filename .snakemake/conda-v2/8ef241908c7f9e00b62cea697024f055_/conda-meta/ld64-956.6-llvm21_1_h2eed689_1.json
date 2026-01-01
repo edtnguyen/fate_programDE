@@ -1,0 +1,44 @@
+{
+  "name": "ld64",
+  "version": "956.6",
+  "build": "llvm21_1_h2eed689_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "ld64-956.6-llvm21_1_h2eed689_1.conda",
+  "md5": "f9a0023b37cacdd08f9dc52eb009fec8",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/ld64-956.6-llvm21_1_h2eed689_1.conda",
+  "sha256": "9664e94e2246b164253a5634ee970b09df45975c19b6d3d7e2cb3f4cb5626ff1",
+  "depends": [
+    "ld64_osx-64 956.6 llvm21_1_h2cc85ee_1",
+    "libllvm21 >=21.1.6,<21.2.0a0"
+  ],
+  "constrains": [
+    "cctools_osx-64 1030.6.3.*",
+    "cctools 1030.6.3.*"
+  ],
+  "license": "APSL-2.0",
+  "timestamp": 1764351856000,
+  "size": 21118,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/ld64-956.6-llvm21_1_h2eed689_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/ld64-956.6-llvm21_1_h2eed689_1",
+  "files": [
+    "bin/ld"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/ld",
+        "path_type": "softlink",
+        "sha256": "e2cc2a7fc971d00afd4c5eaeda57451455f5baa6d41035df53de40210948f21a",
+        "size_in_bytes": 5633352
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/ld64-956.6-llvm21_1_h2eed689_1",
+    "type": 1
+  }
+}

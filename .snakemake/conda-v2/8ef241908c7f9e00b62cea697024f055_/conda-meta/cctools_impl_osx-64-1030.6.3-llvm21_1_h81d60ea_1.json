@@ -1,0 +1,657 @@
+{
+  "name": "cctools_impl_osx-64",
+  "version": "1030.6.3",
+  "build": "llvm21_1_h81d60ea_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "cctools_impl_osx-64-1030.6.3-llvm21_1_h81d60ea_1.conda",
+  "md5": "eb134d33fe4a09baf34db99cf6aa26f0",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/cctools_impl_osx-64-1030.6.3-llvm21_1_h81d60ea_1.conda",
+  "sha256": "19f5a3f71906411c3248a7a25ca64eb6fdb62078bd03ec308f0c327169408be7",
+  "depends": [
+    "__osx >=10.13",
+    "ld64_osx-64 >=956.6,<956.7.0a0",
+    "libcxx",
+    "libllvm21 >=21.1.6,<21.2.0a0",
+    "libzlib >=1.3.1,<2.0a0",
+    "llvm-tools 21.1.*",
+    "sigtool"
+  ],
+  "constrains": [
+    "clang 21.1.*",
+    "cctools 1030.6.3.*",
+    "ld64 956.6.*"
+  ],
+  "license": "APSL-2.0",
+  "timestamp": 1764351834000,
+  "size": 743470,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/cctools_impl_osx-64-1030.6.3-llvm21_1_h81d60ea_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/cctools_impl_osx-64-1030.6.3-llvm21_1_h81d60ea_1",
+  "files": [
+    "bin/x86_64-apple-darwin13.4.0-ar",
+    "bin/x86_64-apple-darwin13.4.0-as",
+    "bin/x86_64-apple-darwin13.4.0-bitcode_strip",
+    "bin/x86_64-apple-darwin13.4.0-c++filt",
+    "bin/x86_64-apple-darwin13.4.0-check_dylib",
+    "bin/x86_64-apple-darwin13.4.0-checksyms",
+    "bin/x86_64-apple-darwin13.4.0-cmpdylib",
+    "bin/x86_64-apple-darwin13.4.0-codesign_allocate",
+    "bin/x86_64-apple-darwin13.4.0-ctf_insert",
+    "bin/x86_64-apple-darwin13.4.0-dsymutil",
+    "bin/x86_64-apple-darwin13.4.0-inout",
+    "bin/x86_64-apple-darwin13.4.0-install_name_tool",
+    "bin/x86_64-apple-darwin13.4.0-libtool",
+    "bin/x86_64-apple-darwin13.4.0-lipo",
+    "bin/x86_64-apple-darwin13.4.0-makerelocs",
+    "bin/x86_64-apple-darwin13.4.0-mtoc",
+    "bin/x86_64-apple-darwin13.4.0-mtor",
+    "bin/x86_64-apple-darwin13.4.0-nm",
+    "bin/x86_64-apple-darwin13.4.0-nmedit",
+    "bin/x86_64-apple-darwin13.4.0-otool",
+    "bin/x86_64-apple-darwin13.4.0-pagestuff",
+    "bin/x86_64-apple-darwin13.4.0-ranlib",
+    "bin/x86_64-apple-darwin13.4.0-redo_prebinding",
+    "bin/x86_64-apple-darwin13.4.0-seg_addr_table",
+    "bin/x86_64-apple-darwin13.4.0-seg_hack",
+    "bin/x86_64-apple-darwin13.4.0-segedit",
+    "bin/x86_64-apple-darwin13.4.0-size",
+    "bin/x86_64-apple-darwin13.4.0-strings",
+    "bin/x86_64-apple-darwin13.4.0-strip",
+    "bin/x86_64-apple-darwin13.4.0-vtool",
+    "share/man/man1/x86_64-apple-darwin13.4.0-as.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-bitcode_strip.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-check_dylib.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-checksyms.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-cmpdylib.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-codesign_allocate.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-ctf_insert.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-dyld.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-indr.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-install_name_tool.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-libtool.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-lipo.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-llvm-otool.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-mtoc.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-nm-classic.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-nm.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-nmedit.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-otool-classic.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-otool.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-pagestuff.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-ranlib.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-redo_prebinding.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-seg_addr_table.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-segedit.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-size-classic.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-size.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-strings.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-strip.1",
+    "share/man/man3/x86_64-apple-darwin13.4.0-NSModule.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-NSObjectFileImage.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-NSObjectFileImage_priv.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-arch.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-dyld.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-dyld_debug.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-end.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-get_end.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-getsectbyname.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-getsectbynamefromheader.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-getsectdata.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-getsectdatafromheader.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-getsegbyname.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-kld.3",
+    "share/man/man3/x86_64-apple-darwin13.4.0-redo_prebinding.3",
+    "share/man/man5/x86_64-apple-darwin13.4.0-Mach-O.5",
+    "share/man/man5/x86_64-apple-darwin13.4.0-a.out.5",
+    "share/man/man5/x86_64-apple-darwin13.4.0-ranlib.5",
+    "share/man/man5/x86_64-apple-darwin13.4.0-stab.5"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-ar",
+        "path_type": "hardlink",
+        "sha256": "9dba695eb59c3aa596448f1f92598ee7b1e718f7775c29b4174d8770683ab324",
+        "size_in_bytes": 37776,
+        "sha256_in_prefix": "9dba695eb59c3aa596448f1f92598ee7b1e718f7775c29b4174d8770683ab324"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-as",
+        "path_type": "hardlink",
+        "sha256": "be81eb88ae09ca870e38355f8c5a5f0790539f9291d167b14f81a58ec07ef210",
+        "size_in_bytes": 9120,
+        "sha256_in_prefix": "be81eb88ae09ca870e38355f8c5a5f0790539f9291d167b14f81a58ec07ef210"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-bitcode_strip",
+        "path_type": "hardlink",
+        "sha256": "1cef7da2b3ebedb2c58b0f6f8ef73a4d89128a83d7f658de56532febc741315c",
+        "size_in_bytes": 205184,
+        "sha256_in_prefix": "1cef7da2b3ebedb2c58b0f6f8ef73a4d89128a83d7f658de56532febc741315c"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-c++filt",
+        "path_type": "softlink",
+        "sha256": "f5f884974f243f89a86174b0fb8379cf8eb2ef13cfb48e86930844de07458a6d",
+        "size_in_bytes": 30752
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-check_dylib",
+        "path_type": "hardlink",
+        "sha256": "86f6d85e331cf488a7808a032189b98c43fd02ff8b6ea30867826656dc2a4d48",
+        "size_in_bytes": 158456,
+        "sha256_in_prefix": "86f6d85e331cf488a7808a032189b98c43fd02ff8b6ea30867826656dc2a4d48"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-checksyms",
+        "path_type": "hardlink",
+        "sha256": "9e41bf7fdf2fc015a24cc1255aba1ab1a4a5cca00475350315b8579ea5352164",
+        "size_in_bytes": 159072,
+        "sha256_in_prefix": "9e41bf7fdf2fc015a24cc1255aba1ab1a4a5cca00475350315b8579ea5352164"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-cmpdylib",
+        "path_type": "hardlink",
+        "sha256": "8e8d81cdf54ed08e144502fa31f1668e817f3e0df88b836fd6ab9ef399f70936",
+        "size_in_bytes": 158632,
+        "sha256_in_prefix": "8e8d81cdf54ed08e144502fa31f1668e817f3e0df88b836fd6ab9ef399f70936"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-codesign_allocate",
+        "path_type": "hardlink",
+        "sha256": "fdf2fa07e0800dfb952272e326f6073bee8a067c48cd7c2cc9555df2c3f17238",
+        "size_in_bytes": 196640,
+        "sha256_in_prefix": "fdf2fa07e0800dfb952272e326f6073bee8a067c48cd7c2cc9555df2c3f17238"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-ctf_insert",
+        "path_type": "hardlink",
+        "sha256": "ed0ffb1d01b9c4ce715fe148aab03690f2edf5e353153966c95e3fe4180c0abb",
+        "size_in_bytes": 195920,
+        "sha256_in_prefix": "ed0ffb1d01b9c4ce715fe148aab03690f2edf5e353153966c95e3fe4180c0abb"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-dsymutil",
+        "path_type": "softlink",
+        "sha256": "23b5c0b8cf7a7dcd8c486a81a233372342fdcecff2008edf11c0f68cb9678ebd",
+        "size_in_bytes": 470144
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-inout",
+        "path_type": "hardlink",
+        "sha256": "ddbb01346ed1bc43415350dc720778b0c7cf37403b07086d1b40ca3fa93bf5a8",
+        "size_in_bytes": 186360,
+        "sha256_in_prefix": "ddbb01346ed1bc43415350dc720778b0c7cf37403b07086d1b40ca3fa93bf5a8"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-install_name_tool",
+        "path_type": "hardlink",
+        "sha256": "9ce41095d36a0d6b11ed7050677ae3942418470b61e3cfae9cbbe08dcee08a7e",
+        "size_in_bytes": 200440,
+        "sha256_in_prefix": "9ce41095d36a0d6b11ed7050677ae3942418470b61e3cfae9cbbe08dcee08a7e"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-libtool",
+        "path_type": "hardlink",
+        "sha256": "c768b30680e21d6c29eb3f0183fa5e4f85c8ef1ff43c3cefab0d5afb97ffbfe9",
+        "size_in_bytes": 207720,
+        "sha256_in_prefix": "c768b30680e21d6c29eb3f0183fa5e4f85c8ef1ff43c3cefab0d5afb97ffbfe9"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-lipo",
+        "path_type": "hardlink",
+        "sha256": "29948125bc3f69997efd5582ed0b7e0a97dfff4f4c1113b7209c7b9f263b4090",
+        "size_in_bytes": 99096,
+        "sha256_in_prefix": "29948125bc3f69997efd5582ed0b7e0a97dfff4f4c1113b7209c7b9f263b4090"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-makerelocs",
+        "path_type": "hardlink",
+        "sha256": "589b61a88a7e60ef4ee33aa5d20b67030262aaddd2277af065099110a740da7e",
+        "size_in_bytes": 160536,
+        "sha256_in_prefix": "589b61a88a7e60ef4ee33aa5d20b67030262aaddd2277af065099110a740da7e"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-mtoc",
+        "path_type": "hardlink",
+        "sha256": "c61e87391b82046124d57e6c0e65f3aae4264b95c4fa2180c4b57301272f96be",
+        "size_in_bytes": 193960,
+        "sha256_in_prefix": "c61e87391b82046124d57e6c0e65f3aae4264b95c4fa2180c4b57301272f96be"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-mtor",
+        "path_type": "hardlink",
+        "sha256": "e782c4a6cf449fd153c492b25a42f70420e2cad6ee30ac2a3fea6483e172becd",
+        "size_in_bytes": 177688,
+        "sha256_in_prefix": "e782c4a6cf449fd153c492b25a42f70420e2cad6ee30ac2a3fea6483e172becd"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-nm",
+        "path_type": "hardlink",
+        "sha256": "c0a414d233cab59d670b1cad309b6520b2a995e71762bfe5372bb9907995cc8b",
+        "size_in_bytes": 178184,
+        "sha256_in_prefix": "c0a414d233cab59d670b1cad309b6520b2a995e71762bfe5372bb9907995cc8b"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-nmedit",
+        "path_type": "hardlink",
+        "sha256": "6f4058c49a6c81cf40982d4cc77402520d450b6ccde53b7a3f97f4172ab11c3c",
+        "size_in_bytes": 222040,
+        "sha256_in_prefix": "6f4058c49a6c81cf40982d4cc77402520d450b6ccde53b7a3f97f4172ab11c3c"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-otool",
+        "path_type": "hardlink",
+        "sha256": "2ff0316e34aeb003c1dba7b24c19115870dba9b366f714c2edcefd924171cce9",
+        "size_in_bytes": 649312,
+        "sha256_in_prefix": "2ff0316e34aeb003c1dba7b24c19115870dba9b366f714c2edcefd924171cce9"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-pagestuff",
+        "path_type": "hardlink",
+        "sha256": "c1db62b380e8f5c741e1f6b0578104e600698f3eb45e95b9f7f3ebe5b1d26d57",
+        "size_in_bytes": 171664,
+        "sha256_in_prefix": "c1db62b380e8f5c741e1f6b0578104e600698f3eb45e95b9f7f3ebe5b1d26d57"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-ranlib",
+        "path_type": "hardlink",
+        "sha256": "c1438ec340a8580cc3bd7083ddb8362fc44e8db1d96dc7eb3453788c7e155a97",
+        "size_in_bytes": 203168,
+        "sha256_in_prefix": "c1438ec340a8580cc3bd7083ddb8362fc44e8db1d96dc7eb3453788c7e155a97"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-redo_prebinding",
+        "path_type": "hardlink",
+        "sha256": "78099078323aed145069567075be2779746cba97975e75b93fddf578efdda90d",
+        "size_in_bytes": 254640,
+        "sha256_in_prefix": "78099078323aed145069567075be2779746cba97975e75b93fddf578efdda90d"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-seg_addr_table",
+        "path_type": "hardlink",
+        "sha256": "86c49e85059983de45f274bc510f507dbe92972cc2f2845eba8f9e656b731ee6",
+        "size_in_bytes": 192992,
+        "sha256_in_prefix": "86c49e85059983de45f274bc510f507dbe92972cc2f2845eba8f9e656b731ee6"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-seg_hack",
+        "path_type": "hardlink",
+        "sha256": "c1ac7dc619d63fca5c503a089191002e09cbda37c11fdae379101d37ac30f703",
+        "size_in_bytes": 178120,
+        "sha256_in_prefix": "c1ac7dc619d63fca5c503a089191002e09cbda37c11fdae379101d37ac30f703"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-segedit",
+        "path_type": "hardlink",
+        "sha256": "a11451d0a96cb1dd477717972ca8257b2a755092637d5bdd7f4aa24cc472f604",
+        "size_in_bytes": 65208,
+        "sha256_in_prefix": "a11451d0a96cb1dd477717972ca8257b2a755092637d5bdd7f4aa24cc472f604"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-size",
+        "path_type": "hardlink",
+        "sha256": "0b294cfde23320e87ecec61704adaf83dd3dee4d3c940662299bf4e4e9aa123a",
+        "size_in_bytes": 157856,
+        "sha256_in_prefix": "0b294cfde23320e87ecec61704adaf83dd3dee4d3c940662299bf4e4e9aa123a"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-strings",
+        "path_type": "hardlink",
+        "sha256": "0f2b39033a0ba3c483b4d6fd644e09320255c201f0f2d7b5dc1aedaf042c41d8",
+        "size_in_bytes": 158840,
+        "sha256_in_prefix": "0f2b39033a0ba3c483b4d6fd644e09320255c201f0f2d7b5dc1aedaf042c41d8"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-strip",
+        "path_type": "hardlink",
+        "sha256": "4f9a5634456362c134e26f0d7a05b74868ef13e2f4979bf62575ea64e794f9e9",
+        "size_in_bytes": 237352,
+        "sha256_in_prefix": "4f9a5634456362c134e26f0d7a05b74868ef13e2f4979bf62575ea64e794f9e9"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-vtool",
+        "path_type": "hardlink",
+        "sha256": "a59f53f3c2dbe01584cc9a0ef215aa578c6c76e74e25587e3764cb6e39d5b870",
+        "size_in_bytes": 80480,
+        "sha256_in_prefix": "a59f53f3c2dbe01584cc9a0ef215aa578c6c76e74e25587e3764cb6e39d5b870"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-as.1",
+        "path_type": "hardlink",
+        "sha256": "bdebac24f4765a770f089d0344baac2a788f6becd500de51c6bf048c920dc46c",
+        "size_in_bytes": 472,
+        "sha256_in_prefix": "bdebac24f4765a770f089d0344baac2a788f6becd500de51c6bf048c920dc46c"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-bitcode_strip.1",
+        "path_type": "hardlink",
+        "sha256": "f338c10834d8739de10a4eaaadf4112998b667e22656c212920cc7afb50cd73b",
+        "size_in_bytes": 1555,
+        "sha256_in_prefix": "f338c10834d8739de10a4eaaadf4112998b667e22656c212920cc7afb50cd73b"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-check_dylib.1",
+        "path_type": "hardlink",
+        "sha256": "d1f2e630737bbad6f31e9c5e617adfd872c561d964b52ea1db5cba2b32c7d952",
+        "size_in_bytes": 1540,
+        "sha256_in_prefix": "d1f2e630737bbad6f31e9c5e617adfd872c561d964b52ea1db5cba2b32c7d952"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-checksyms.1",
+        "path_type": "hardlink",
+        "sha256": "7a5771f4753aad13e3185f2730b36e9624f3ded1a2ef968b9e723fcba5cf8e03",
+        "size_in_bytes": 3902,
+        "sha256_in_prefix": "7a5771f4753aad13e3185f2730b36e9624f3ded1a2ef968b9e723fcba5cf8e03"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-cmpdylib.1",
+        "path_type": "hardlink",
+        "sha256": "3d73e40260baa0add96d5543e476eacd3ed553af2bf22c10a0c090a0327575cd",
+        "size_in_bytes": 2052,
+        "sha256_in_prefix": "3d73e40260baa0add96d5543e476eacd3ed553af2bf22c10a0c090a0327575cd"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-codesign_allocate.1",
+        "path_type": "hardlink",
+        "sha256": "47aed1e92f3fb848d329a581eae73b757771ae2450a704ff71e0251023eeb3b8",
+        "size_in_bytes": 1460,
+        "sha256_in_prefix": "47aed1e92f3fb848d329a581eae73b757771ae2450a704ff71e0251023eeb3b8"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-ctf_insert.1",
+        "path_type": "hardlink",
+        "sha256": "c6a40e63a2349f3db813bcc1b7dc26a7acccf4c51cea1844e90638abae1854ba",
+        "size_in_bytes": 891,
+        "sha256_in_prefix": "c6a40e63a2349f3db813bcc1b7dc26a7acccf4c51cea1844e90638abae1854ba"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-dyld.1",
+        "path_type": "hardlink",
+        "sha256": "fbf8a6f31c8e4e9911abd9190e79aa4c1d134874012a0d993e917c874df7c664",
+        "size_in_bytes": 8679,
+        "sha256_in_prefix": "fbf8a6f31c8e4e9911abd9190e79aa4c1d134874012a0d993e917c874df7c664"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-indr.1",
+        "path_type": "hardlink",
+        "sha256": "c5d0adb3dbd4831c85f70a5678ac219a6f05adcae2eac6c752f000d1736e205c",
+        "size_in_bytes": 1833,
+        "sha256_in_prefix": "c5d0adb3dbd4831c85f70a5678ac219a6f05adcae2eac6c752f000d1736e205c"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-install_name_tool.1",
+        "path_type": "hardlink",
+        "sha256": "673d42aa752b7142632c0ebd251d0f533eeceb33892ebf1d1ad05e0116d0fe8b",
+        "size_in_bytes": 1887,
+        "sha256_in_prefix": "673d42aa752b7142632c0ebd251d0f533eeceb33892ebf1d1ad05e0116d0fe8b"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-libtool.1",
+        "path_type": "hardlink",
+        "sha256": "a86c93eee697fc29328a7f17b3975c75b98dbaee22bb2f80a90ff927be9e6f43",
+        "size_in_bytes": 13627,
+        "sha256_in_prefix": "a86c93eee697fc29328a7f17b3975c75b98dbaee22bb2f80a90ff927be9e6f43"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-lipo.1",
+        "path_type": "hardlink",
+        "sha256": "ceaa0e53096f7217315c7890e0a63167599bdf761de950691c7bd0b88607ed54",
+        "size_in_bytes": 5465,
+        "sha256_in_prefix": "ceaa0e53096f7217315c7890e0a63167599bdf761de950691c7bd0b88607ed54"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-llvm-otool.1",
+        "path_type": "hardlink",
+        "sha256": "dceade52f34c32756103482f8572a6cde2e69531cf85fd34b2c2dcdc5bdeef09",
+        "size_in_bytes": 10312,
+        "sha256_in_prefix": "dceade52f34c32756103482f8572a6cde2e69531cf85fd34b2c2dcdc5bdeef09"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-mtoc.1",
+        "path_type": "hardlink",
+        "sha256": "eb32edb310a501332a5150bd1f6cb2870ce8a3b7e78ef36a7467c224b5650945",
+        "size_in_bytes": 1300,
+        "sha256_in_prefix": "eb32edb310a501332a5150bd1f6cb2870ce8a3b7e78ef36a7467c224b5650945"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-nm-classic.1",
+        "path_type": "hardlink",
+        "sha256": "9b2920213b6708fa60149893e368ea4253383f1a58428f53f8e9264ebb6a50a4",
+        "size_in_bytes": 14,
+        "sha256_in_prefix": "9b2920213b6708fa60149893e368ea4253383f1a58428f53f8e9264ebb6a50a4"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-nm.1",
+        "path_type": "hardlink",
+        "sha256": "b8dc0f61148a7fb5023f7ae0f37c9bb18908193f2d10d7b8c94360326eecb1df",
+        "size_in_bytes": 6087,
+        "sha256_in_prefix": "b8dc0f61148a7fb5023f7ae0f37c9bb18908193f2d10d7b8c94360326eecb1df"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-nmedit.1",
+        "path_type": "hardlink",
+        "sha256": "a8001afe1e901836906b7a0382ab525574fd7ba0cd77e944dc97a57bd74f50ac",
+        "size_in_bytes": 4515,
+        "sha256_in_prefix": "a8001afe1e901836906b7a0382ab525574fd7ba0cd77e944dc97a57bd74f50ac"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-otool-classic.1",
+        "path_type": "hardlink",
+        "sha256": "d394dd994259505236aeb626f98a60de00ce8b870351dfde6b029529157457a3",
+        "size_in_bytes": 7456,
+        "sha256_in_prefix": "d394dd994259505236aeb626f98a60de00ce8b870351dfde6b029529157457a3"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-otool.1",
+        "path_type": "hardlink",
+        "sha256": "9372fe97be9387d9bcd861d5becbc3b5c17d2b9f45cbad21b848b1ea33f30e62",
+        "size_in_bytes": 25,
+        "sha256_in_prefix": "9372fe97be9387d9bcd861d5becbc3b5c17d2b9f45cbad21b848b1ea33f30e62"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-pagestuff.1",
+        "path_type": "hardlink",
+        "sha256": "d5c39287a878105c9174f51f177bf93558789e1cf376f9ffac930d751b776a51",
+        "size_in_bytes": 1550,
+        "sha256_in_prefix": "d5c39287a878105c9174f51f177bf93558789e1cf376f9ffac930d751b776a51"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-ranlib.1",
+        "path_type": "hardlink",
+        "sha256": "9e5f2f8c55ef24dec5ef5ed53ac50e7ac6a18350de3432454f812462ab9cbea0",
+        "size_in_bytes": 19,
+        "sha256_in_prefix": "9e5f2f8c55ef24dec5ef5ed53ac50e7ac6a18350de3432454f812462ab9cbea0"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-redo_prebinding.1",
+        "path_type": "hardlink",
+        "sha256": "0d4b0a4eec44cb694c5dfe3914b69fbf8891db26c2b4f9b8e8db096ba01f3ece",
+        "size_in_bytes": 3878,
+        "sha256_in_prefix": "0d4b0a4eec44cb694c5dfe3914b69fbf8891db26c2b4f9b8e8db096ba01f3ece"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-seg_addr_table.1",
+        "path_type": "hardlink",
+        "sha256": "9610feebc44d37d4681aa8f5a55ddec6967ba06cea3b4dc1d607ec1ddb95e295",
+        "size_in_bytes": 6353,
+        "sha256_in_prefix": "9610feebc44d37d4681aa8f5a55ddec6967ba06cea3b4dc1d607ec1ddb95e295"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-segedit.1",
+        "path_type": "hardlink",
+        "sha256": "ff145882a987b37e5c115980d443189c28ad070f99a8eab121439f62a7904a3d",
+        "size_in_bytes": 2481,
+        "sha256_in_prefix": "ff145882a987b37e5c115980d443189c28ad070f99a8eab121439f62a7904a3d"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-size-classic.1",
+        "path_type": "hardlink",
+        "sha256": "03dfbe0e559122eb82284f7571ea901d5f70b644134fcba7d22b53ddb6c52b21",
+        "size_in_bytes": 16,
+        "sha256_in_prefix": "03dfbe0e559122eb82284f7571ea901d5f70b644134fcba7d22b53ddb6c52b21"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-size.1",
+        "path_type": "hardlink",
+        "sha256": "d142b8637b10e2cf345df0e9364fa8390f22ccb1ae9570af7a2588df63bc02d1",
+        "size_in_bytes": 1580,
+        "sha256_in_prefix": "d142b8637b10e2cf345df0e9364fa8390f22ccb1ae9570af7a2588df63bc02d1"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-strings.1",
+        "path_type": "hardlink",
+        "sha256": "528d4d0c44bff6cda27b95e6d13c6529c114387c300e1615b1cd524ac445609c",
+        "size_in_bytes": 4440,
+        "sha256_in_prefix": "528d4d0c44bff6cda27b95e6d13c6529c114387c300e1615b1cd524ac445609c"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-strip.1",
+        "path_type": "hardlink",
+        "sha256": "068121e655cf5413110acf4701018bf9225b2b474b2a006a3b18a9231fcbd5bb",
+        "size_in_bytes": 9201,
+        "sha256_in_prefix": "068121e655cf5413110acf4701018bf9225b2b474b2a006a3b18a9231fcbd5bb"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-NSModule.3",
+        "path_type": "hardlink",
+        "sha256": "e2f2addecf5d0e44d6a0aaaa7cdafcff0ea45ced4e96385fd555e626ccf8984d",
+        "size_in_bytes": 21850,
+        "sha256_in_prefix": "e2f2addecf5d0e44d6a0aaaa7cdafcff0ea45ced4e96385fd555e626ccf8984d"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-NSObjectFileImage.3",
+        "path_type": "hardlink",
+        "sha256": "3472cf054bde99f58d64178851d09561ef5f5144e9d1d99337a269455048d640",
+        "size_in_bytes": 5380,
+        "sha256_in_prefix": "3472cf054bde99f58d64178851d09561ef5f5144e9d1d99337a269455048d640"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-NSObjectFileImage_priv.3",
+        "path_type": "hardlink",
+        "sha256": "3f8bc4632ab26ab9f2b4397c02743350091fb8f5cff44d3594c1e3bb4e1c4a91",
+        "size_in_bytes": 1510,
+        "sha256_in_prefix": "3f8bc4632ab26ab9f2b4397c02743350091fb8f5cff44d3594c1e3bb4e1c4a91"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-arch.3",
+        "path_type": "hardlink",
+        "sha256": "0f579175793c43d1eb8d92248dad3afc3646549be9a697f31749d83916613ece",
+        "size_in_bytes": 8603,
+        "sha256_in_prefix": "0f579175793c43d1eb8d92248dad3afc3646549be9a697f31749d83916613ece"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-dyld.3",
+        "path_type": "hardlink",
+        "sha256": "3f08ffcca0fb3f04a66de6ce9e0b554d1a52dafdbfc329f81daae39e2b9f0655",
+        "size_in_bytes": 6267,
+        "sha256_in_prefix": "3f08ffcca0fb3f04a66de6ce9e0b554d1a52dafdbfc329f81daae39e2b9f0655"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-dyld_debug.3",
+        "path_type": "hardlink",
+        "sha256": "af34f84aa46bd8e08f07ef27291e1433a71f5e6351602fbd0c6e8a686af7684e",
+        "size_in_bytes": 12160,
+        "sha256_in_prefix": "af34f84aa46bd8e08f07ef27291e1433a71f5e6351602fbd0c6e8a686af7684e"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-end.3",
+        "path_type": "hardlink",
+        "sha256": "7201fad3c6e9e530dd62b103d5346c3659f10c6f5b51309b787b7a2f4379f714",
+        "size_in_bytes": 19,
+        "sha256_in_prefix": "7201fad3c6e9e530dd62b103d5346c3659f10c6f5b51309b787b7a2f4379f714"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-get_end.3",
+        "path_type": "hardlink",
+        "sha256": "5f0845cb48b05c4e1c8fddfab63675fa9d1c0769f4caad98cf808e7153f021fd",
+        "size_in_bytes": 2153,
+        "sha256_in_prefix": "5f0845cb48b05c4e1c8fddfab63675fa9d1c0769f4caad98cf808e7153f021fd"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-getsectbyname.3",
+        "path_type": "hardlink",
+        "sha256": "9b80cb5eaeeea9e300f8dd80971a266c54a2af268ccd137cd8769f3f59fc65cc",
+        "size_in_bytes": 2520,
+        "sha256_in_prefix": "9b80cb5eaeeea9e300f8dd80971a266c54a2af268ccd137cd8769f3f59fc65cc"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-getsectbynamefromheader.3",
+        "path_type": "hardlink",
+        "sha256": "c3e5368681599a86bd8f65e0b05b35b56b62730c875ee7f4a6e6c698e8b8252a",
+        "size_in_bytes": 25,
+        "sha256_in_prefix": "c3e5368681599a86bd8f65e0b05b35b56b62730c875ee7f4a6e6c698e8b8252a"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-getsectdata.3",
+        "path_type": "hardlink",
+        "sha256": "c3e5368681599a86bd8f65e0b05b35b56b62730c875ee7f4a6e6c698e8b8252a",
+        "size_in_bytes": 25,
+        "sha256_in_prefix": "c3e5368681599a86bd8f65e0b05b35b56b62730c875ee7f4a6e6c698e8b8252a"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-getsectdatafromheader.3",
+        "path_type": "hardlink",
+        "sha256": "c3e5368681599a86bd8f65e0b05b35b56b62730c875ee7f4a6e6c698e8b8252a",
+        "size_in_bytes": 25,
+        "sha256_in_prefix": "c3e5368681599a86bd8f65e0b05b35b56b62730c875ee7f4a6e6c698e8b8252a"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-getsegbyname.3",
+        "path_type": "hardlink",
+        "sha256": "5f26ccb63bc086647156308acc91774a1b7f79747c1c6c46088434163c35e92d",
+        "size_in_bytes": 940,
+        "sha256_in_prefix": "5f26ccb63bc086647156308acc91774a1b7f79747c1c6c46088434163c35e92d"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-kld.3",
+        "path_type": "hardlink",
+        "sha256": "bcd59fc0c10b4875b5637d2a358f8408e9b2b7090233e936eed46576ac70f4cb",
+        "size_in_bytes": 10203,
+        "sha256_in_prefix": "bcd59fc0c10b4875b5637d2a358f8408e9b2b7090233e936eed46576ac70f4cb"
+      },
+      {
+        "_path": "share/man/man3/x86_64-apple-darwin13.4.0-redo_prebinding.3",
+        "path_type": "hardlink",
+        "sha256": "e598f7627050209c60a88fefc00e245bc441b366504300353ce2ad7f58db1ea2",
+        "size_in_bytes": 10607,
+        "sha256_in_prefix": "e598f7627050209c60a88fefc00e245bc441b366504300353ce2ad7f58db1ea2"
+      },
+      {
+        "_path": "share/man/man5/x86_64-apple-darwin13.4.0-Mach-O.5",
+        "path_type": "hardlink",
+        "sha256": "137a470b42f1211bfddefcf79734d71fc2ca413f4cfb5b14c87645ccd5273d94",
+        "size_in_bytes": 2448,
+        "sha256_in_prefix": "137a470b42f1211bfddefcf79734d71fc2ca413f4cfb5b14c87645ccd5273d94"
+      },
+      {
+        "_path": "share/man/man5/x86_64-apple-darwin13.4.0-a.out.5",
+        "path_type": "hardlink",
+        "sha256": "29fc701d514c80afd4a1ec0b6eb6e1b5d5eee7c89f7af449d28eed4eba95dd7e",
+        "size_in_bytes": 18,
+        "sha256_in_prefix": "29fc701d514c80afd4a1ec0b6eb6e1b5d5eee7c89f7af449d28eed4eba95dd7e"
+      },
+      {
+        "_path": "share/man/man5/x86_64-apple-darwin13.4.0-ranlib.5",
+        "path_type": "hardlink",
+        "sha256": "21a1d59cc5920141c44f64a9cb3d1ef841f9c90ec41ebb84f492d4edc1ec39d8",
+        "size_in_bytes": 3350,
+        "sha256_in_prefix": "21a1d59cc5920141c44f64a9cb3d1ef841f9c90ec41ebb84f492d4edc1ec39d8"
+      },
+      {
+        "_path": "share/man/man5/x86_64-apple-darwin13.4.0-stab.5",
+        "path_type": "hardlink",
+        "sha256": "1eb7ea18d6e2fa05c395b2829008099360f8537034ed3e6151ac723b30a0f5d2",
+        "size_in_bytes": 7306,
+        "sha256_in_prefix": "1eb7ea18d6e2fa05c395b2829008099360f8537034ed3e6151ac723b30a0f5d2"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/cctools_impl_osx-64-1030.6.3-llvm21_1_h81d60ea_1",
+    "type": 1
+  }
+}

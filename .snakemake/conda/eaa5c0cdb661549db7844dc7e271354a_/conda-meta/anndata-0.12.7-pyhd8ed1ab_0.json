@@ -1,0 +1,784 @@
+{
+  "name": "anndata",
+  "version": "0.12.7",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "anndata-0.12.7-pyhd8ed1ab_0.conda",
+  "md5": "9df57a67e2515e4cde67a1d2e1d71b64",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/anndata-0.12.7-pyhd8ed1ab_0.conda",
+  "sha256": "f1834bab6d9d0e14520fcf7170193e34db98e04a2bac9d044a29c38839f24c78",
+  "depends": [
+    "array-api-compat >=1.7.1",
+    "h5py >=3.8",
+    "legacy-api-wrap",
+    "natsort",
+    "numpy >=1.26",
+    "packaging >=24.2",
+    "pandas >=2.1.0,!=2.1.2,<3",
+    "python >=3.11",
+    "scipy >=1.12",
+    "zarr >=2.18.7,!=3.0.*"
+  ],
+  "constrains": [
+    "dask >=2023.5.1,!=2024.8.*,!=2024.9.*,!=2025.2.*,!=2025.3.*,!=2025.4.*,!=2025.5.*,!=2025.6.*,!=2025.7.*,!=2025.8.*",
+    "xarray >=2025.06.1",
+    "pyarrow <21",
+    "awkward >=2.3.2"
+  ],
+  "noarch": "python",
+  "license": "BSD-3-Clause",
+  "package_type": "noarch_python",
+  "timestamp": 1765902473000,
+  "size": 135294,
+  "requested_spec": "anndata",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/anndata-0.12.7-pyhd8ed1ab_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/anndata-0.12.7-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/METADATA",
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/RECORD",
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/WHEEL",
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/anndata-0.12.7.dist-info/licenses/LICENSE",
+    "lib/python3.11/site-packages/anndata/__init__.py",
+    "lib/python3.11/site-packages/anndata/_core/__init__.py",
+    "lib/python3.11/site-packages/anndata/_core/access.py",
+    "lib/python3.11/site-packages/anndata/_core/aligned_df.py",
+    "lib/python3.11/site-packages/anndata/_core/aligned_mapping.py",
+    "lib/python3.11/site-packages/anndata/_core/anndata.py",
+    "lib/python3.11/site-packages/anndata/_core/extensions.py",
+    "lib/python3.11/site-packages/anndata/_core/file_backing.py",
+    "lib/python3.11/site-packages/anndata/_core/index.py",
+    "lib/python3.11/site-packages/anndata/_core/merge.py",
+    "lib/python3.11/site-packages/anndata/_core/raw.py",
+    "lib/python3.11/site-packages/anndata/_core/sparse_dataset.py",
+    "lib/python3.11/site-packages/anndata/_core/storage.py",
+    "lib/python3.11/site-packages/anndata/_core/views.py",
+    "lib/python3.11/site-packages/anndata/_core/xarray.py",
+    "lib/python3.11/site-packages/anndata/_io/__init__.py",
+    "lib/python3.11/site-packages/anndata/_io/h5ad.py",
+    "lib/python3.11/site-packages/anndata/_io/read.py",
+    "lib/python3.11/site-packages/anndata/_io/specs/__init__.py",
+    "lib/python3.11/site-packages/anndata/_io/specs/lazy_methods.py",
+    "lib/python3.11/site-packages/anndata/_io/specs/methods.py",
+    "lib/python3.11/site-packages/anndata/_io/specs/registry.py",
+    "lib/python3.11/site-packages/anndata/_io/utils.py",
+    "lib/python3.11/site-packages/anndata/_io/write.py",
+    "lib/python3.11/site-packages/anndata/_io/zarr.py",
+    "lib/python3.11/site-packages/anndata/_settings.py",
+    "lib/python3.11/site-packages/anndata/_settings.pyi",
+    "lib/python3.11/site-packages/anndata/_types.py",
+    "lib/python3.11/site-packages/anndata/_warnings.py",
+    "lib/python3.11/site-packages/anndata/abc.py",
+    "lib/python3.11/site-packages/anndata/compat/__init__.py",
+    "lib/python3.11/site-packages/anndata/experimental/__init__.py",
+    "lib/python3.11/site-packages/anndata/experimental/_dispatch_io.py",
+    "lib/python3.11/site-packages/anndata/experimental/backed/__init__.py",
+    "lib/python3.11/site-packages/anndata/experimental/backed/_compat.py",
+    "lib/python3.11/site-packages/anndata/experimental/backed/_io.py",
+    "lib/python3.11/site-packages/anndata/experimental/backed/_lazy_arrays.py",
+    "lib/python3.11/site-packages/anndata/experimental/merge.py",
+    "lib/python3.11/site-packages/anndata/experimental/multi_files/__init__.py",
+    "lib/python3.11/site-packages/anndata/experimental/multi_files/_anncollection.py",
+    "lib/python3.11/site-packages/anndata/experimental/pytorch/__init__.py",
+    "lib/python3.11/site-packages/anndata/experimental/pytorch/_annloader.py",
+    "lib/python3.11/site-packages/anndata/io.py",
+    "lib/python3.11/site-packages/anndata/logging.py",
+    "lib/python3.11/site-packages/anndata/tests/__init__.py",
+    "lib/python3.11/site-packages/anndata/tests/helpers.py",
+    "lib/python3.11/site-packages/anndata/types.py",
+    "lib/python3.11/site-packages/anndata/typing.py",
+    "lib/python3.11/site-packages/anndata/utils.py",
+    "lib/python3.11/site-packages/testing/anndata/__init__.py",
+    "lib/python3.11/site-packages/testing/anndata/_doctest.py",
+    "lib/python3.11/site-packages/testing/anndata/_pytest.py",
+    "lib/python3.11/site-packages/testing/anndata/py.typed",
+    "lib/python3.11/site-packages/anndata/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/access.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/aligned_df.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/aligned_mapping.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/anndata.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/extensions.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/file_backing.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/index.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/merge.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/raw.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/sparse_dataset.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/storage.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/views.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_core/__pycache__/xarray.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/__pycache__/h5ad.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/__pycache__/read.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/lazy_methods.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/methods.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/registry.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/__pycache__/utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/__pycache__/write.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/_io/__pycache__/zarr.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/_settings.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/_types.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/_warnings.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/abc.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/compat/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/__pycache__/_dispatch_io.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/_compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/_io.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/_lazy_arrays.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/__pycache__/merge.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/multi_files/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/multi_files/__pycache__/_anncollection.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/pytorch/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/experimental/pytorch/__pycache__/_annloader.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/io.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/logging.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/tests/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/tests/__pycache__/helpers.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/types.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/typing.cpython-311.pyc",
+    "lib/python3.11/site-packages/anndata/__pycache__/utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/anndata/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/anndata/__pycache__/_doctest.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/anndata/__pycache__/_pytest.cpython-311.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "2d080b316feaf50e15e24d3204da583423e73d2502c73cae6f0483c51fd1a931",
+        "size_in_bytes": 9939,
+        "sha256_in_prefix": "2d080b316feaf50e15e24d3204da583423e73d2502c73cae6f0483c51fd1a931"
+      },
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "7311ebed162932f5d8c5bb2f8c98567de59e9077824fb0f7178a4c1b7402b5db",
+        "size_in_bytes": 7863,
+        "sha256_in_prefix": "7311ebed162932f5d8c5bb2f8c98567de59e9077824fb0f7178a4c1b7402b5db"
+      },
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724"
+      },
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "154369495e45d0cde0891b736aeabfa76b5bc4815145483414fc1920a4bdfc4b",
+        "size_in_bytes": 103,
+        "sha256_in_prefix": "154369495e45d0cde0891b736aeabfa76b5bc4815145483414fc1920a4bdfc4b"
+      },
+      {
+        "_path": "site-packages/anndata-0.12.7.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "55cad7a0454c86d36ebccbca6063fe23994c4fca99ffa7457f6d9fb0bd7cd2a0",
+        "size_in_bytes": 1575,
+        "sha256_in_prefix": "55cad7a0454c86d36ebccbca6063fe23994c4fca99ffa7457f6d9fb0bd7cd2a0"
+      },
+      {
+        "_path": "site-packages/anndata/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "75a03363c186a2e27109edf42dcaf6a65f49c28d9d7065c73e2ed6c671e9b8e1",
+        "size_in_bytes": 1710,
+        "sha256_in_prefix": "75a03363c186a2e27109edf42dcaf6a65f49c28d9d7065c73e2ed6c671e9b8e1"
+      },
+      {
+        "_path": "site-packages/anndata/_core/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/anndata/_core/access.py",
+        "path_type": "hardlink",
+        "sha256": "a6db3b7c650a806640352b2efea000ecbd74a8733e8d3d7321e85b977e38d4e6",
+        "size_in_bytes": 873,
+        "sha256_in_prefix": "a6db3b7c650a806640352b2efea000ecbd74a8733e8d3d7321e85b977e38d4e6"
+      },
+      {
+        "_path": "site-packages/anndata/_core/aligned_df.py",
+        "path_type": "hardlink",
+        "sha256": "6ccf649041544512de50e50c93dd16c559d10be66c5c6103c77ea40e3e600bd2",
+        "size_in_bytes": 4278,
+        "sha256_in_prefix": "6ccf649041544512de50e50c93dd16c559d10be66c5c6103c77ea40e3e600bd2"
+      },
+      {
+        "_path": "site-packages/anndata/_core/aligned_mapping.py",
+        "path_type": "hardlink",
+        "sha256": "0585358ec94c58886d153b5431a5d8f190b2b74278fd9b094e68fa276c805d34",
+        "size_in_bytes": 14257,
+        "sha256_in_prefix": "0585358ec94c58886d153b5431a5d8f190b2b74278fd9b094e68fa276c805d34"
+      },
+      {
+        "_path": "site-packages/anndata/_core/anndata.py",
+        "path_type": "hardlink",
+        "sha256": "7bf2201e32295cf40f26a6a4787f376e5f10baef53d0dfbe31bfd01c835acafe",
+        "size_in_bytes": 79276,
+        "sha256_in_prefix": "7bf2201e32295cf40f26a6a4787f376e5f10baef53d0dfbe31bfd01c835acafe"
+      },
+      {
+        "_path": "site-packages/anndata/_core/extensions.py",
+        "path_type": "hardlink",
+        "sha256": "f51b21a3aaa7af73c91d42eb6068991c20629c165824aeb3c9fddc16c97f8016",
+        "size_in_bytes": 10425,
+        "sha256_in_prefix": "f51b21a3aaa7af73c91d42eb6068991c20629c165824aeb3c9fddc16c97f8016"
+      },
+      {
+        "_path": "site-packages/anndata/_core/file_backing.py",
+        "path_type": "hardlink",
+        "sha256": "e838417cb40f0c50e9a1eeb04a09ce16da42e079db87e52038f6eabd80f19bc8",
+        "size_in_bytes": 5603,
+        "sha256_in_prefix": "e838417cb40f0c50e9a1eeb04a09ce16da42e079db87e52038f6eabd80f19bc8"
+      },
+      {
+        "_path": "site-packages/anndata/_core/index.py",
+        "path_type": "hardlink",
+        "sha256": "1774d00546d6a6dd3d3dbe0ca7007bc5f088f6e3eebfb8ebab1f17ef80b05435",
+        "size_in_bytes": 13472,
+        "sha256_in_prefix": "1774d00546d6a6dd3d3dbe0ca7007bc5f088f6e3eebfb8ebab1f17ef80b05435"
+      },
+      {
+        "_path": "site-packages/anndata/_core/merge.py",
+        "path_type": "hardlink",
+        "sha256": "c05b14a2d1e742c9c5a7ce14a02a7bf17330df355fbd41f97888bef2191bef3a",
+        "size_in_bytes": 60880,
+        "sha256_in_prefix": "c05b14a2d1e742c9c5a7ce14a02a7bf17330df355fbd41f97888bef2191bef3a"
+      },
+      {
+        "_path": "site-packages/anndata/_core/raw.py",
+        "path_type": "hardlink",
+        "sha256": "c7f3f0c1a0d0b1c550385277f2417bb0d438ecbc68c294b7f21d9141f539670a",
+        "size_in_bytes": 7925,
+        "sha256_in_prefix": "c7f3f0c1a0d0b1c550385277f2417bb0d438ecbc68c294b7f21d9141f539670a"
+      },
+      {
+        "_path": "site-packages/anndata/_core/sparse_dataset.py",
+        "path_type": "hardlink",
+        "sha256": "47605e48b891122c24f4536374b091dd57db61ab73fbb04ad25d85f57a828939",
+        "size_in_bytes": 27280,
+        "sha256_in_prefix": "47605e48b891122c24f4536374b091dd57db61ab73fbb04ad25d85f57a828939"
+      },
+      {
+        "_path": "site-packages/anndata/_core/storage.py",
+        "path_type": "hardlink",
+        "sha256": "987ceaa7b60127eac6405ba5300c7ffc3f99ef2e289873f26f570fed8c5f6c51",
+        "size_in_bytes": 2555,
+        "sha256_in_prefix": "987ceaa7b60127eac6405ba5300c7ffc3f99ef2e289873f26f570fed8c5f6c51"
+      },
+      {
+        "_path": "site-packages/anndata/_core/views.py",
+        "path_type": "hardlink",
+        "sha256": "fad894c2e830d1b4585f37b0aee854d315d3ee79c32dd61fe028850722e5df8c",
+        "size_in_bytes": 15067,
+        "sha256_in_prefix": "fad894c2e830d1b4585f37b0aee854d315d3ee79c32dd61fe028850722e5df8c"
+      },
+      {
+        "_path": "site-packages/anndata/_core/xarray.py",
+        "path_type": "hardlink",
+        "sha256": "d1d7bc2bb6231bd9a74fe745491a31571830424b63ac623d9f9632fb56094878",
+        "size_in_bytes": 16624,
+        "sha256_in_prefix": "d1d7bc2bb6231bd9a74fe745491a31571830424b63ac623d9f9632fb56094878"
+      },
+      {
+        "_path": "site-packages/anndata/_io/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "19335e519f1df1a037b0ae0fdf7b7296321ceb429aa4b6e4a810ba275cb797d5",
+        "size_in_bytes": 346,
+        "sha256_in_prefix": "19335e519f1df1a037b0ae0fdf7b7296321ceb429aa4b6e4a810ba275cb797d5"
+      },
+      {
+        "_path": "site-packages/anndata/_io/h5ad.py",
+        "path_type": "hardlink",
+        "sha256": "253e43c535d789bcf68e1d668da401dffd1061d849de0bf821c58b3e3283f9dc",
+        "size_in_bytes": 13976,
+        "sha256_in_prefix": "253e43c535d789bcf68e1d668da401dffd1061d849de0bf821c58b3e3283f9dc"
+      },
+      {
+        "_path": "site-packages/anndata/_io/read.py",
+        "path_type": "hardlink",
+        "sha256": "67441d16469a5e61a8e5adb93bd37d123daff14edbf6857d526c3df18b41e6e0",
+        "size_in_bytes": 15950,
+        "sha256_in_prefix": "67441d16469a5e61a8e5adb93bd37d123daff14edbf6857d526c3df18b41e6e0"
+      },
+      {
+        "_path": "site-packages/anndata/_io/specs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "67a97cc6a6bb078f34537a6aacd220e3e7e152fa415bce70e310378b799a0143",
+        "size_in_bytes": 427,
+        "sha256_in_prefix": "67a97cc6a6bb078f34537a6aacd220e3e7e152fa415bce70e310378b799a0143"
+      },
+      {
+        "_path": "site-packages/anndata/_io/specs/lazy_methods.py",
+        "path_type": "hardlink",
+        "sha256": "6827669982eb38794cc93d7cb77b0b136239d58193fa30e76b61779bb6ff92fd",
+        "size_in_bytes": 13093,
+        "sha256_in_prefix": "6827669982eb38794cc93d7cb77b0b136239d58193fa30e76b61779bb6ff92fd"
+      },
+      {
+        "_path": "site-packages/anndata/_io/specs/methods.py",
+        "path_type": "hardlink",
+        "sha256": "6b099d6d43003fd5e3922779e8b01bc963507ca7023ab931d01790e820ca7a4e",
+        "size_in_bytes": 46422,
+        "sha256_in_prefix": "6b099d6d43003fd5e3922779e8b01bc963507ca7023ab931d01790e820ca7a4e"
+      },
+      {
+        "_path": "site-packages/anndata/_io/specs/registry.py",
+        "path_type": "hardlink",
+        "sha256": "e99fdf7e4dee3886a0cd13dc0c2bc4a2ccdc803f94de7f306271a23c0ef565e2",
+        "size_in_bytes": 17539,
+        "sha256_in_prefix": "e99fdf7e4dee3886a0cd13dc0c2bc4a2ccdc803f94de7f306271a23c0ef565e2"
+      },
+      {
+        "_path": "site-packages/anndata/_io/utils.py",
+        "path_type": "hardlink",
+        "sha256": "dcb836ed0d14a371d8973f7cd1b1b6634dbf54522dd0f89730d223fe8fa6802e",
+        "size_in_bytes": 9490,
+        "sha256_in_prefix": "dcb836ed0d14a371d8973f7cd1b1b6634dbf54522dd0f89730d223fe8fa6802e"
+      },
+      {
+        "_path": "site-packages/anndata/_io/write.py",
+        "path_type": "hardlink",
+        "sha256": "af9e70eb23c822e5122d6f70c982fc1a79331c741d031cbac62084c3d7000b7f",
+        "size_in_bytes": 4811,
+        "sha256_in_prefix": "af9e70eb23c822e5122d6f70c982fc1a79331c741d031cbac62084c3d7000b7f"
+      },
+      {
+        "_path": "site-packages/anndata/_io/zarr.py",
+        "path_type": "hardlink",
+        "sha256": "67df7a499f0b5751696bfabca3bd2f1e707334b38b9558e17ff46ce4433f4a5a",
+        "size_in_bytes": 5461,
+        "sha256_in_prefix": "67df7a499f0b5751696bfabca3bd2f1e707334b38b9558e17ff46ce4433f4a5a"
+      },
+      {
+        "_path": "site-packages/anndata/_settings.py",
+        "path_type": "hardlink",
+        "sha256": "03976e0390b6f92dafb763b9de45a90696ba3f2422e2a7c69b6e2776e754e9fb",
+        "size_in_bytes": 17603,
+        "sha256_in_prefix": "03976e0390b6f92dafb763b9de45a90696ba3f2422e2a7c69b6e2776e754e9fb"
+      },
+      {
+        "_path": "site-packages/anndata/_settings.pyi",
+        "path_type": "hardlink",
+        "sha256": "989410dc8eba637b2783c2befda1a362ea395283600b9b32c34cae35cd450035",
+        "size_in_bytes": 1643,
+        "sha256_in_prefix": "989410dc8eba637b2783c2befda1a362ea395283600b9b32c34cae35cd450035"
+      },
+      {
+        "_path": "site-packages/anndata/_types.py",
+        "path_type": "hardlink",
+        "sha256": "45b48de9d738e89daa0d367dcbd257af3a9fc21a025f9ccbd593c7ef04d0cab3",
+        "size_in_bytes": 5415,
+        "sha256_in_prefix": "45b48de9d738e89daa0d367dcbd257af3a9fc21a025f9ccbd593c7ef04d0cab3"
+      },
+      {
+        "_path": "site-packages/anndata/_warnings.py",
+        "path_type": "hardlink",
+        "sha256": "8855daf44ccfcae3dbcd1033a06d38a135c0ca39d78506b9cf100c65db062f03",
+        "size_in_bytes": 702,
+        "sha256_in_prefix": "8855daf44ccfcae3dbcd1033a06d38a135c0ca39d78506b9cf100c65db062f03"
+      },
+      {
+        "_path": "site-packages/anndata/abc.py",
+        "path_type": "hardlink",
+        "sha256": "8c6eb8939f5967d1df9fe416b7f6ed64bb85ede1affd8358c07f7559d6d1db8d",
+        "size_in_bytes": 1645,
+        "sha256_in_prefix": "8c6eb8939f5967d1df9fe416b7f6ed64bb85ede1affd8358c07f7559d6d1db8d"
+      },
+      {
+        "_path": "site-packages/anndata/compat/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f7af7a80774e533db22a287d7a9993f16192afa517d2923c749613aea9f44894",
+        "size_in_bytes": 14968,
+        "sha256_in_prefix": "f7af7a80774e533db22a287d7a9993f16192afa517d2923c749613aea9f44894"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a68948c6b88491bcb4884ab0f885e4533a7c934c29f76069618e3397806c1c7d",
+        "size_in_bytes": 1648,
+        "sha256_in_prefix": "a68948c6b88491bcb4884ab0f885e4533a7c934c29f76069618e3397806c1c7d"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/_dispatch_io.py",
+        "path_type": "hardlink",
+        "sha256": "81bf4951c812d5c204463c4cd4f0695835df3e42a031ebe82c5d1022765f0be8",
+        "size_in_bytes": 1858,
+        "sha256_in_prefix": "81bf4951c812d5c204463c4cd4f0695835df3e42a031ebe82c5d1022765f0be8"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/backed/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e1d73d33ffbf4a57d489d0eb6d6b7c3d1c83ffc6d88f2a4727ce88a5d4e11eeb",
+        "size_in_bytes": 230,
+        "sha256_in_prefix": "e1d73d33ffbf4a57d489d0eb6d6b7c3d1c83ffc6d88f2a4727ce88a5d4e11eeb"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/backed/_compat.py",
+        "path_type": "hardlink",
+        "sha256": "accec29d2244642928e703c11517ef640f592944a968e55c585cb9bb4f69d60a",
+        "size_in_bytes": 519,
+        "sha256_in_prefix": "accec29d2244642928e703c11517ef640f592944a968e55c585cb9bb4f69d60a"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/backed/_io.py",
+        "path_type": "hardlink",
+        "sha256": "60ce452fab0a74bc904c751ae37705d290cd6f28f6c43f57ee5cd48907ac576d",
+        "size_in_bytes": 6681,
+        "sha256_in_prefix": "60ce452fab0a74bc904c751ae37705d290cd6f28f6c43f57ee5cd48907ac576d"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/backed/_lazy_arrays.py",
+        "path_type": "hardlink",
+        "sha256": "f2f72eedeca8451973357c80cee634b3d0aa11908e018a19228fa223977bd7f8",
+        "size_in_bytes": 7805,
+        "sha256_in_prefix": "f2f72eedeca8451973357c80cee634b3d0aa11908e018a19228fa223977bd7f8"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/merge.py",
+        "path_type": "hardlink",
+        "sha256": "816052e074a41bc137b1e22cd804bb8eaa85734669e895bde0a5ad35702969f8",
+        "size_in_bytes": 24882,
+        "sha256_in_prefix": "816052e074a41bc137b1e22cd804bb8eaa85734669e895bde0a5ad35702969f8"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/multi_files/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4fb88d2e545b7be2a72d3de8ed36fbfe7138232fe12e41bae948c13af8f6063f",
+        "size_in_bytes": 107,
+        "sha256_in_prefix": "4fb88d2e545b7be2a72d3de8ed36fbfe7138232fe12e41bae948c13af8f6063f"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/multi_files/_anncollection.py",
+        "path_type": "hardlink",
+        "sha256": "45af00e0ccf215696277944977471cd9de1225e499d875f3de874a4aa01b0a1c",
+        "size_in_bytes": 35264,
+        "sha256_in_prefix": "45af00e0ccf215696277944977471cd9de1225e499d875f3de874a4aa01b0a1c"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/pytorch/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e02920ada84b3bc29cfacd9b9afea55507c3c5b3b7214c95d2fe328010e4b6d6",
+        "size_in_bytes": 95,
+        "sha256_in_prefix": "e02920ada84b3bc29cfacd9b9afea55507c3c5b3b7214c95d2fe328010e4b6d6"
+      },
+      {
+        "_path": "site-packages/anndata/experimental/pytorch/_annloader.py",
+        "path_type": "hardlink",
+        "sha256": "ee6a6c155e6f05fc4a2237b570f8da86d0d9e5a7e453e1faeb75c1e052619a89",
+        "size_in_bytes": 8075,
+        "sha256_in_prefix": "ee6a6c155e6f05fc4a2237b570f8da86d0d9e5a7e453e1faeb75c1e052619a89"
+      },
+      {
+        "_path": "site-packages/anndata/io.py",
+        "path_type": "hardlink",
+        "sha256": "0eb228f8553aa9badd9396952a850806832db5968ee5058fe1ba304bdc5a79b2",
+        "size_in_bytes": 698,
+        "sha256_in_prefix": "0eb228f8553aa9badd9396952a850806832db5968ee5058fe1ba304bdc5a79b2"
+      },
+      {
+        "_path": "site-packages/anndata/logging.py",
+        "path_type": "hardlink",
+        "sha256": "13a9e53e5f849b4c818cbe69f847101668474c8522ae19d96df5db42d49549e9",
+        "size_in_bytes": 1662,
+        "sha256_in_prefix": "13a9e53e5f849b4c818cbe69f847101668474c8522ae19d96df5db42d49549e9"
+      },
+      {
+        "_path": "site-packages/anndata/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/anndata/tests/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "04e4487926dc0f447f3c3ce2d48791db9da2b7e6aae9b2fc7c637e6c347e4352",
+        "size_in_bytes": 37689,
+        "sha256_in_prefix": "04e4487926dc0f447f3c3ce2d48791db9da2b7e6aae9b2fc7c637e6c347e4352"
+      },
+      {
+        "_path": "site-packages/anndata/types.py",
+        "path_type": "hardlink",
+        "sha256": "145df00e49ed97a26adf9974aff904113df79638fd2fba6622b52be7e30b02f1",
+        "size_in_bytes": 698,
+        "sha256_in_prefix": "145df00e49ed97a26adf9974aff904113df79638fd2fba6622b52be7e30b02f1"
+      },
+      {
+        "_path": "site-packages/anndata/typing.py",
+        "path_type": "hardlink",
+        "sha256": "b11880835e9ab239cac979352f806d296820c8730f2e8c57cf14c3997de2ecc6",
+        "size_in_bytes": 1555,
+        "sha256_in_prefix": "b11880835e9ab239cac979352f806d296820c8730f2e8c57cf14c3997de2ecc6"
+      },
+      {
+        "_path": "site-packages/anndata/utils.py",
+        "path_type": "hardlink",
+        "sha256": "db933d075aefdd9a87bf4652216a568c12d94a0e019ff92fd599df45982149a5",
+        "size_in_bytes": 14829,
+        "sha256_in_prefix": "db933d075aefdd9a87bf4652216a568c12d94a0e019ff92fd599df45982149a5"
+      },
+      {
+        "_path": "site-packages/testing/anndata/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/testing/anndata/_doctest.py",
+        "path_type": "hardlink",
+        "sha256": "41ec34374ccb2cd88f28dd422ee9ea6397138a714b684858e466a08987e6e8a2",
+        "size_in_bytes": 344,
+        "sha256_in_prefix": "41ec34374ccb2cd88f28dd422ee9ea6397138a714b684858e466a08987e6e8a2"
+      },
+      {
+        "_path": "site-packages/testing/anndata/_pytest.py",
+        "path_type": "hardlink",
+        "sha256": "0bf47e376c7d347299eba60b92f30b5a45d01b55a2a2e3a40672d0a58c7feb64",
+        "size_in_bytes": 3994,
+        "sha256_in_prefix": "0bf47e376c7d347299eba60b92f30b5a45d01b55a2a2e3a40672d0a58c7feb64"
+      },
+      {
+        "_path": "site-packages/testing/anndata/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/access.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/aligned_df.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/aligned_mapping.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/anndata.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/extensions.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/file_backing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/index.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/merge.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/raw.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/sparse_dataset.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/storage.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/views.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_core/__pycache__/xarray.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/__pycache__/h5ad.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/__pycache__/read.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/lazy_methods.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/methods.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/specs/__pycache__/registry.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/__pycache__/utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/__pycache__/write.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/_io/__pycache__/zarr.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/_settings.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/_types.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/_warnings.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/abc.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/compat/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/__pycache__/_dispatch_io.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/_compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/_io.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/backed/__pycache__/_lazy_arrays.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/__pycache__/merge.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/multi_files/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/multi_files/__pycache__/_anncollection.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/pytorch/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/experimental/pytorch/__pycache__/_annloader.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/io.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/logging.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/tests/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/tests/__pycache__/helpers.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/types.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/typing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/anndata/__pycache__/utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/anndata/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/anndata/__pycache__/_doctest.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/anndata/__pycache__/_pytest.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/anndata-0.12.7-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

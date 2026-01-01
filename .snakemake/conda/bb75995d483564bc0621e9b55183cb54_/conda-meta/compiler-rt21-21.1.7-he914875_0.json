@@ -1,0 +1,234 @@
+{
+  "name": "compiler-rt21",
+  "version": "21.1.7",
+  "build": "he914875_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "compiler-rt21-21.1.7-he914875_0.conda",
+  "md5": "a534bda29d938ef9ed3693144891fc3b",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/compiler-rt21-21.1.7-he914875_0.conda",
+  "sha256": "d6906225d20860fe95998f2f00f599cc9306759da7261d94017fc64c87daf647",
+  "depends": [
+    "__osx >=10.13",
+    "compiler-rt21_osx-64 21.1.7.*"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1764723968000,
+  "size": 98220,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/compiler-rt21-21.1.7-he914875_0.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/compiler-rt21-21.1.7-he914875_0",
+  "files": [
+    "lib/clang/21/include/fuzzer/FuzzedDataProvider.h",
+    "lib/clang/21/include/orc/c_api.h",
+    "lib/clang/21/include/profile/InstrProfData.inc",
+    "lib/clang/21/include/profile/instr_prof_interface.h",
+    "lib/clang/21/include/sanitizer/allocator_interface.h",
+    "lib/clang/21/include/sanitizer/asan_interface.h",
+    "lib/clang/21/include/sanitizer/common_interface_defs.h",
+    "lib/clang/21/include/sanitizer/coverage_interface.h",
+    "lib/clang/21/include/sanitizer/dfsan_interface.h",
+    "lib/clang/21/include/sanitizer/hwasan_interface.h",
+    "lib/clang/21/include/sanitizer/linux_syscall_hooks.h",
+    "lib/clang/21/include/sanitizer/lsan_interface.h",
+    "lib/clang/21/include/sanitizer/memprof_interface.h",
+    "lib/clang/21/include/sanitizer/msan_interface.h",
+    "lib/clang/21/include/sanitizer/netbsd_syscall_hooks.h",
+    "lib/clang/21/include/sanitizer/rtsan_interface.h",
+    "lib/clang/21/include/sanitizer/scudo_interface.h",
+    "lib/clang/21/include/sanitizer/tsan_interface.h",
+    "lib/clang/21/include/sanitizer/tsan_interface_atomic.h",
+    "lib/clang/21/include/sanitizer/ubsan_interface.h",
+    "lib/clang/21/include/xray/xray_interface.h",
+    "lib/clang/21/include/xray/xray_log_interface.h",
+    "lib/clang/21/include/xray/xray_records.h",
+    "lib/clang/21/share/asan_ignorelist.txt",
+    "lib/clang/21/share/cfi_ignorelist.txt"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/clang/21/include/fuzzer/FuzzedDataProvider.h",
+        "path_type": "hardlink",
+        "sha256": "895dc2aafb7ab1583c13d18b86e661960f24d87f4f48e54f98fa84aac410aa86",
+        "size_in_bytes": 16106,
+        "sha256_in_prefix": "895dc2aafb7ab1583c13d18b86e661960f24d87f4f48e54f98fa84aac410aa86"
+      },
+      {
+        "_path": "lib/clang/21/include/orc/c_api.h",
+        "path_type": "hardlink",
+        "sha256": "b8e48c108620e11f6f8a0c7f81af540b21e8365a2dd1b4170d74907f72bc5e73",
+        "size_in_bytes": 7008,
+        "sha256_in_prefix": "b8e48c108620e11f6f8a0c7f81af540b21e8365a2dd1b4170d74907f72bc5e73"
+      },
+      {
+        "_path": "lib/clang/21/include/profile/InstrProfData.inc",
+        "path_type": "hardlink",
+        "sha256": "37a627d226dfb3067c9fd971788cdbb92800f74001d4964c44c4bd389bf2e17a",
+        "size_in_bytes": 39222,
+        "sha256_in_prefix": "37a627d226dfb3067c9fd971788cdbb92800f74001d4964c44c4bd389bf2e17a"
+      },
+      {
+        "_path": "lib/clang/21/include/profile/instr_prof_interface.h",
+        "path_type": "hardlink",
+        "sha256": "e799e4872db5104692980bd2a7349d383d1dfeee9fe02eb3e5ede302dc23c7e0",
+        "size_in_bytes": 3137,
+        "sha256_in_prefix": "e799e4872db5104692980bd2a7349d383d1dfeee9fe02eb3e5ede302dc23c7e0"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/allocator_interface.h",
+        "path_type": "hardlink",
+        "sha256": "94be5aa9568359b0a1e331836221d05713d6810c28c6ed688d2aea6f3861348d",
+        "size_in_bytes": 4973,
+        "sha256_in_prefix": "94be5aa9568359b0a1e331836221d05713d6810c28c6ed688d2aea6f3861348d"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/asan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "a0845c4541636053d42ad6f7aafcba588f0ce054eb172c16faa1b7888f8b5f69",
+        "size_in_bytes": 13654,
+        "sha256_in_prefix": "a0845c4541636053d42ad6f7aafcba588f0ce054eb172c16faa1b7888f8b5f69"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/common_interface_defs.h",
+        "path_type": "hardlink",
+        "sha256": "c9b7f630c91170a6f5557cbc8752ee724fcf905dbd4eaa0734a7b2e78d8fa037",
+        "size_in_bytes": 22789,
+        "sha256_in_prefix": "c9b7f630c91170a6f5557cbc8752ee724fcf905dbd4eaa0734a7b2e78d8fa037"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/coverage_interface.h",
+        "path_type": "hardlink",
+        "sha256": "6313ecc71c8958568bb0bbf35a78933e55f3e2404f7090fad13834e9a79cccc7",
+        "size_in_bytes": 1133,
+        "sha256_in_prefix": "6313ecc71c8958568bb0bbf35a78933e55f3e2404f7090fad13834e9a79cccc7"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/dfsan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "213c5f6712e5a44c1d7472769fcef9c4c60d78d910ecea0257560424f5b86e7d",
+        "size_in_bytes": 10102,
+        "sha256_in_prefix": "213c5f6712e5a44c1d7472769fcef9c4c60d78d910ecea0257560424f5b86e7d"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/hwasan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "04fa77448fb0ac24b70332c7eca1f0d6dcd1e2b21d64ae3ad65a2f3153d23a6e",
+        "size_in_bytes": 5043,
+        "sha256_in_prefix": "04fa77448fb0ac24b70332c7eca1f0d6dcd1e2b21d64ae3ad65a2f3153d23a6e"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/linux_syscall_hooks.h",
+        "path_type": "hardlink",
+        "sha256": "e5907ab5bfec70c2343f957db38b609b297a7663a16bb4727ea5d86dfb65bd5b",
+        "size_in_bytes": 219473,
+        "sha256_in_prefix": "e5907ab5bfec70c2343f957db38b609b297a7663a16bb4727ea5d86dfb65bd5b"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/lsan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "d61859dd521fd4953fb2786e04ce29f1301f5a0194a01528410912ad841a381d",
+        "size_in_bytes": 3993,
+        "sha256_in_prefix": "d61859dd521fd4953fb2786e04ce29f1301f5a0194a01528410912ad841a381d"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/memprof_interface.h",
+        "path_type": "hardlink",
+        "sha256": "039336c2477485861e990d4feca67c9b0b35f17e14a870bb5160e77f80238d3f",
+        "size_in_bytes": 2661,
+        "sha256_in_prefix": "039336c2477485861e990d4feca67c9b0b35f17e14a870bb5160e77f80238d3f"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/msan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "a89c18345406364c6bcd7cebf8ce26e57e0f1307bf55b8e6244a53690a8ce1ca",
+        "size_in_bytes": 5992,
+        "sha256_in_prefix": "a89c18345406364c6bcd7cebf8ce26e57e0f1307bf55b8e6244a53690a8ce1ca"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/netbsd_syscall_hooks.h",
+        "path_type": "hardlink",
+        "sha256": "6b85d7ebed660f83ff11a8e50137fd0a6810085d54c2ff0f80f7afb5ef557a40",
+        "size_in_bytes": 355693,
+        "sha256_in_prefix": "6b85d7ebed660f83ff11a8e50137fd0a6810085d54c2ff0f80f7afb5ef557a40"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/rtsan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "d86bcd545bb0e6c33cd17cd2b2c937620166143b61f93b40adaf3812621ce39f",
+        "size_in_bytes": 2196,
+        "sha256_in_prefix": "d86bcd545bb0e6c33cd17cd2b2c937620166143b61f93b40adaf3812621ce39f"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/scudo_interface.h",
+        "path_type": "hardlink",
+        "sha256": "2bed39576da4d1afb98e8f75f54151c665d1014a153a51b82ecc03fd1389cf1f",
+        "size_in_bytes": 1513,
+        "sha256_in_prefix": "2bed39576da4d1afb98e8f75f54151c665d1014a153a51b82ecc03fd1389cf1f"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/tsan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "f91dbdf74ce69e8b8ae227c5e169a35025b24e0db6dfa31cff33b643bf7d9968",
+        "size_in_bytes": 14952,
+        "sha256_in_prefix": "f91dbdf74ce69e8b8ae227c5e169a35025b24e0db6dfa31cff33b643bf7d9968"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/tsan_interface_atomic.h",
+        "path_type": "hardlink",
+        "sha256": "1d9069134ddb89a573221b9d80cbf3fdeedfd3b9949ba8457f7189d22ae99483",
+        "size_in_bytes": 9745,
+        "sha256_in_prefix": "1d9069134ddb89a573221b9d80cbf3fdeedfd3b9949ba8457f7189d22ae99483"
+      },
+      {
+        "_path": "lib/clang/21/include/sanitizer/ubsan_interface.h",
+        "path_type": "hardlink",
+        "sha256": "669b7c494061ea50c20e5e9e51ab5710eb8052c8c0e27911141b1fb72dd0561f",
+        "size_in_bytes": 1090,
+        "sha256_in_prefix": "669b7c494061ea50c20e5e9e51ab5710eb8052c8c0e27911141b1fb72dd0561f"
+      },
+      {
+        "_path": "lib/clang/21/include/xray/xray_interface.h",
+        "path_type": "hardlink",
+        "sha256": "993ef7fa0fc19671cfc4e45de56cab48452ae44a936da3cb6b91b0edd84201a9",
+        "size_in_bytes": 7619,
+        "sha256_in_prefix": "993ef7fa0fc19671cfc4e45de56cab48452ae44a936da3cb6b91b0edd84201a9"
+      },
+      {
+        "_path": "lib/clang/21/include/xray/xray_log_interface.h",
+        "path_type": "hardlink",
+        "sha256": "3efcbcfea596d61511f4e68ddb1932db502edb4a008e0f26d2cf4e7c15154711",
+        "size_in_bytes": 15991,
+        "sha256_in_prefix": "3efcbcfea596d61511f4e68ddb1932db502edb4a008e0f26d2cf4e7c15154711"
+      },
+      {
+        "_path": "lib/clang/21/include/xray/xray_records.h",
+        "path_type": "hardlink",
+        "sha256": "2baf8d0f8097eee53eb5740196e0d33f0be75f8249ac32e2ca1fb2aa37c456db",
+        "size_in_bytes": 3941,
+        "sha256_in_prefix": "2baf8d0f8097eee53eb5740196e0d33f0be75f8249ac32e2ca1fb2aa37c456db"
+      },
+      {
+        "_path": "lib/clang/21/share/asan_ignorelist.txt",
+        "path_type": "hardlink",
+        "sha256": "f0180e94133315446c6e45287e1801e70ea94de1905a237c974627a732ebeadc",
+        "size_in_bytes": 703,
+        "sha256_in_prefix": "f0180e94133315446c6e45287e1801e70ea94de1905a237c974627a732ebeadc"
+      },
+      {
+        "_path": "lib/clang/21/share/cfi_ignorelist.txt",
+        "path_type": "hardlink",
+        "sha256": "be8abf240e598b5ede59c02f52901c965746476f0dc5eaabdddb0455bfdeb3b1",
+        "size_in_bytes": 590,
+        "sha256_in_prefix": "be8abf240e598b5ede59c02f52901c965746476f0dc5eaabdddb0455bfdeb3b1"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/compiler-rt21-21.1.7-he914875_0",
+    "type": 1
+  }
+}

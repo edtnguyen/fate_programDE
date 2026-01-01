@@ -1,0 +1,33 @@
+{
+  "name": "compiler-rt",
+  "version": "21.1.7",
+  "build": "h694c41f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "compiler-rt-21.1.7-h694c41f_0.conda",
+  "md5": "a92d2129bbd82e698a021e0ecae9bf81",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/compiler-rt-21.1.7-h694c41f_0.conda",
+  "sha256": "c76831997ea84058e9c4f0cefd625bb2d7e483cea68a2a8dc95d53e8373847f8",
+  "depends": [
+    "compiler-rt21 21.1.7 he914875_0"
+  ],
+  "constrains": [
+    "clang 21.1.7"
+  ],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1764723972000,
+  "size": 16015,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/compiler-rt-21.1.7-h694c41f_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/compiler-rt-21.1.7-h694c41f_0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/compiler-rt-21.1.7-h694c41f_0",
+    "type": 1
+  }
+}

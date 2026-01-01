@@ -1,0 +1,36 @@
+{
+  "name": "blas-devel",
+  "version": "3.9.0",
+  "build": "8_mkl",
+  "build_number": 8,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "blas-devel-3.9.0-8_mkl.tar.bz2",
+  "md5": "74132d94cf485ca5426a5bcfb7cfc1d3",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/blas-devel-3.9.0-8_mkl.tar.bz2",
+  "sha256": "223527c511b3b3c6e8c9f60fb5d9e321f41c12ccc7e728bf059d93f2c2e5fc1f",
+  "depends": [
+    "libblas 3.9.0 8_mkl",
+    "libcblas 3.9.0 8_mkl",
+    "liblapack 3.9.0 8_mkl",
+    "liblapacke 3.9.0 8_mkl",
+    "mkl >=2020.4,<2021.0a0",
+    "mkl-devel"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1612394154000,
+  "size": 11392,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/blas-devel-3.9.0-8_mkl.tar.bz2",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/blas-devel-3.9.0-8_mkl",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/blas-devel-3.9.0-8_mkl",
+    "type": 1
+  }
+}

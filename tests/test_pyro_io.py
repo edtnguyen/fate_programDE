@@ -75,24 +75,25 @@ class TestPyroIOHelpers(unittest.TestCase):
 @unittest.skipIf(ad is None, "anndata is not available")
 class TestLoadAdataInputs(unittest.TestCase):
     def test_load_adata_inputs_filters_k(self):
-        obs = pd.DataFrame({"day": ["d0", "d0"], "cell": ["c1", "c2"]})
-        covar = pd.DataFrame({"rep": ["r1", "r1"]})
+        obs = pd.DataFrame({"day": ["d0", "d0"]}, index=["c1", "c2"])
+        covar = pd.DataFrame({"rep": ["r1", "r1"]}, index=obs.index)
         fate = pd.DataFrame(
             {
                 "EC": [0.2, 0.2],
                 "MES": [0.3, 0.3],
                 "NEU": [0.5, 0.5],
-            }
+            },
+            index=obs.index,
         )
         guide = pd.DataFrame(
             {
                 "g1": [1, 1],
                 "g2": [1, 1],
                 "g3": [0, 1],
-            }
+            },
+            index=obs.index,
         )
-        adata = ad.AnnData(X=np.zeros((2, 1)))
-        adata.obs = obs
+        adata = ad.AnnData(X=np.zeros((2, 1)), obs=obs)
         adata.obsm["covar"] = covar
         adata.obsm["fate"] = fate
         adata.obsm["guide"] = guide
@@ -117,7 +118,7 @@ class TestLoadAdataInputs(unittest.TestCase):
             "R": 1,
         }
 
-        with tempfile.TemporaryDirectory() as tmpdir:
+        with tempfile.TemporaryDirectory(dir=ROOT) as tmpdir:
             guide_map_path = Path(tmpdir) / "guide_map.csv"
             guide_map.to_csv(guide_map_path, index=False)
             cell_df, p, guide_ids, mask, _, _, _, _, _ = pyro_io.load_adata_inputs(

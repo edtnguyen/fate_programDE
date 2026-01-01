@@ -1,0 +1,43 @@
+{
+  "name": "pthread-stubs",
+  "version": "0.4",
+  "build": "h00291cd_1002",
+  "build_number": 1002,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "pthread-stubs-0.4-h00291cd_1002.conda",
+  "md5": "8bcf980d2c6b17094961198284b8e862",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/pthread-stubs-0.4-h00291cd_1002.conda",
+  "sha256": "05944ca3445f31614f8c674c560bca02ff05cb51637a96f665cb2bbe496099e5",
+  "depends": [
+    "__osx >=10.13"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1726802331000,
+  "size": 8364,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/pthread-stubs-0.4-h00291cd_1002",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/pthread-stubs-0.4-h00291cd_1002",
+  "files": [
+    "lib/pkgconfig/pthread-stubs.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/pthread-stubs.pc",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/pthread-stubs_1726802204035/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "839eabf03834e7ea0bdf4618fbcd62f4a9ebb2be2cd0fa03bc690800df5eb2df",
+        "size_in_bytes": 490,
+        "sha256_in_prefix": "5172754c52541c81a469bef4a4b96ad6e75bf6c9e65b903fa7a2058e916281c6"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/pthread-stubs-0.4-h00291cd_1002",
+    "type": 1
+  }
+}

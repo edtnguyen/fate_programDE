@@ -13,6 +13,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
 
+from scripts.pyro_io import normalize_config  # noqa: E402
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -21,7 +22,7 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
-    cfg = yaml.safe_load(open(args.config))
+    cfg = normalize_config(yaml.safe_load(open(args.config)))
     dt = pd.read_csv(args.ash)
 
     lfsr_t = cfg["lfsr_thresh"]

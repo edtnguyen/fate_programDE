@@ -1,0 +1,58 @@
+{
+  "name": "libgfortran5",
+  "version": "15.2.0",
+  "build": "hd16e46c_15",
+  "build_number": 15,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libgfortran5-15.2.0-hd16e46c_15.conda",
+  "md5": "c2a6149bf7f82774a0118b9efef966dd",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libgfortran5-15.2.0-hd16e46c_15.conda",
+  "sha256": "456385a7d3357d5fdfc8e11bf18dcdf71753c4016c440f92a2486057524dd59a",
+  "depends": [
+    "libgcc >=15.2.0"
+  ],
+  "constrains": [
+    "libgfortran 15.2.0"
+  ],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "timestamp": 1764839609000,
+  "size": 1061950,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libgfortran5-15.2.0-hd16e46c_15",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libgfortran5-15.2.0-hd16e46c_15",
+  "files": [
+    "lib/libgfortran.5.dylib",
+    "lib/libgfortran.dylib",
+    "share/licenses/libgfortran/RUNTIME.LIBRARY.EXCEPTION"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libgfortran.5.dylib",
+        "path_type": "hardlink",
+        "sha256": "11c2bbc533fd16cf7490e424746911569b83d196187d61152d59b548ece140a2",
+        "size_in_bytes": 3940440,
+        "sha256_in_prefix": "11c2bbc533fd16cf7490e424746911569b83d196187d61152d59b548ece140a2"
+      },
+      {
+        "_path": "lib/libgfortran.dylib",
+        "path_type": "softlink",
+        "sha256": "11c2bbc533fd16cf7490e424746911569b83d196187d61152d59b548ece140a2",
+        "size_in_bytes": 3940440
+      },
+      {
+        "_path": "share/licenses/libgfortran/RUNTIME.LIBRARY.EXCEPTION",
+        "path_type": "hardlink",
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "size_in_bytes": 3324,
+        "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libgfortran5-15.2.0-hd16e46c_15",
+    "type": 1
+  }
+}

@@ -1,3 +1,4 @@
+import importlib.util
 import sys
 import unittest
 from pathlib import Path
@@ -5,14 +6,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
 
-from src.models.pyro_model import resolve_fate_names  # noqa: E402
-from src.models.pyro_model import (  # noqa: E402
-    add_zero_gene_row,
-    add_zero_guide_row,
-    compute_linear_predictor,
-    construct_delta_core,
-    construct_theta_core,
-)
+pyro_model_path = ROOT / "src" / "models" / "pyro_model.py"
+spec = importlib.util.spec_from_file_location("pyro_model", pyro_model_path)
+pyro_model = importlib.util.module_from_spec(spec)
+if spec.loader is None:
+    raise ImportError(f"Unable to load {pyro_model_path}")
+spec.loader.exec_module(pyro_model)
+
+resolve_fate_names = pyro_model.resolve_fate_names
+add_zero_gene_row = pyro_model.add_zero_gene_row
+add_zero_guide_row = pyro_model.add_zero_guide_row
+compute_linear_predictor = pyro_model.compute_linear_predictor
+construct_delta_core = pyro_model.construct_delta_core
+construct_theta_core = pyro_model.construct_theta_core
 
 try:
     import torch

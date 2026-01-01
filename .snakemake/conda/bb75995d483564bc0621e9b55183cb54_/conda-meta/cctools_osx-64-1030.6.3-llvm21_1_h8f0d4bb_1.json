@@ -1,0 +1,52 @@
+{
+  "name": "cctools_osx-64",
+  "version": "1030.6.3",
+  "build": "llvm21_1_h8f0d4bb_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "cctools_osx-64-1030.6.3-llvm21_1_h8f0d4bb_1.conda",
+  "md5": "3401c9a8717e4580daaeaed95c3c7b49",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/cctools_osx-64-1030.6.3-llvm21_1_h8f0d4bb_1.conda",
+  "sha256": "21e5a485472ed08027a1345cbcb6269839e269fe63a53f07f0aa22acde0cb361",
+  "depends": [
+    "cctools_impl_osx-64 1030.6.3 llvm21_1_h81d60ea_1",
+    "ld64_osx-64 956.6 llvm21_1_h2cc85ee_1"
+  ],
+  "constrains": [
+    "cctools 1030.6.3.*"
+  ],
+  "license": "APSL-2.0",
+  "timestamp": 1764351879000,
+  "size": 22755,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/cctools_osx-64-1030.6.3-llvm21_1_h8f0d4bb_1.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/cctools_osx-64-1030.6.3-llvm21_1_h8f0d4bb_1",
+  "files": [
+    "etc/conda/activate.d/activate_cctools_osx-64.sh",
+    "etc/conda/deactivate.d/deactivate_cctools_osx-64.sh"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/activate_cctools_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "57164966ea629133cd0d9675bfb27b536951e8716120c55e6e1583edd692a3a5",
+        "size_in_bytes": 4470,
+        "sha256_in_prefix": "57164966ea629133cd0d9675bfb27b536951e8716120c55e6e1583edd692a3a5"
+      },
+      {
+        "_path": "etc/conda/deactivate.d/deactivate_cctools_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "990048c2e30cf092acff51699d22d7b018839e71c28a62ee8771c58675307c9d",
+        "size_in_bytes": 4479,
+        "sha256_in_prefix": "990048c2e30cf092acff51699d22d7b018839e71c28a62ee8771c58675307c9d"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/cctools_osx-64-1030.6.3-llvm21_1_h8f0d4bb_1",
+    "type": 1
+  }
+}

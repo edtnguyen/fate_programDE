@@ -1,0 +1,107 @@
+{
+  "name": "tapi",
+  "version": "1600.0.11.8",
+  "build": "h8d8e812_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "tapi-1600.0.11.8-h8d8e812_0.conda",
+  "md5": "aae272355bc3f038e403130a5f6f5495",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/tapi-1600.0.11.8-h8d8e812_0.conda",
+  "sha256": "2602632f7923fd59042a897bfb22f050d78f2b5960d53565eae5fa6a79308caa",
+  "depends": [
+    "libcxx >=19.0.0.a0",
+    "__osx >=10.13",
+    "ncurses >=6.5,<7.0a0"
+  ],
+  "constrains": [],
+  "license": "NCSA",
+  "timestamp": 1762535196000,
+  "size": 213480,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/tapi-1600.0.11.8-h8d8e812_0.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/tapi-1600.0.11.8-h8d8e812_0",
+  "files": [
+    "include/tapi/APIVersion.h",
+    "include/tapi/Defines.h",
+    "include/tapi/LinkerInterfaceFile.h",
+    "include/tapi/PackedVersion32.h",
+    "include/tapi/Symbol.h",
+    "include/tapi/Version.h",
+    "include/tapi/Version.inc",
+    "include/tapi/tapi.h",
+    "lib/libtapi.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/tapi/APIVersion.h",
+        "path_type": "hardlink",
+        "sha256": "b688aaf7563c225b715cbc2758b5af294195df5f2462a409b795815881a8938c",
+        "size_in_bytes": 3105,
+        "sha256_in_prefix": "b688aaf7563c225b715cbc2758b5af294195df5f2462a409b795815881a8938c"
+      },
+      {
+        "_path": "include/tapi/Defines.h",
+        "path_type": "hardlink",
+        "sha256": "3e6701ca583b7a2db1337a093b0775e7f82aa7045ed2c9dedb7ba5e67e69b1e7",
+        "size_in_bytes": 914,
+        "sha256_in_prefix": "3e6701ca583b7a2db1337a093b0775e7f82aa7045ed2c9dedb7ba5e67e69b1e7"
+      },
+      {
+        "_path": "include/tapi/LinkerInterfaceFile.h",
+        "path_type": "hardlink",
+        "sha256": "3d8975ab2c866248dea1cc21f3a6b592328fd307ff90b96dc6d3f9b5843656c9",
+        "size_in_bytes": 11323,
+        "sha256_in_prefix": "3d8975ab2c866248dea1cc21f3a6b592328fd307ff90b96dc6d3f9b5843656c9"
+      },
+      {
+        "_path": "include/tapi/PackedVersion32.h",
+        "path_type": "hardlink",
+        "sha256": "81fe436206d10a6a2a43bf2638cbcfff2e188eefe14efeb2d703cea958962b04",
+        "size_in_bytes": 2664,
+        "sha256_in_prefix": "81fe436206d10a6a2a43bf2638cbcfff2e188eefe14efeb2d703cea958962b04"
+      },
+      {
+        "_path": "include/tapi/Symbol.h",
+        "path_type": "hardlink",
+        "sha256": "a703af60857eda46f19646879bc2f79f2b08c600946bccafa5e849864603ec05",
+        "size_in_bytes": 2933,
+        "sha256_in_prefix": "a703af60857eda46f19646879bc2f79f2b08c600946bccafa5e849864603ec05"
+      },
+      {
+        "_path": "include/tapi/Version.h",
+        "path_type": "hardlink",
+        "sha256": "4c1ae5ec21e2c83eb0af4e1884575ae7a68d85324feeb6710f9f1ac539b674c6",
+        "size_in_bytes": 2498,
+        "sha256_in_prefix": "4c1ae5ec21e2c83eb0af4e1884575ae7a68d85324feeb6710f9f1ac539b674c6"
+      },
+      {
+        "_path": "include/tapi/Version.inc",
+        "path_type": "hardlink",
+        "sha256": "48ae66240a928e8e5d188d13229d8466c5411ab78daad84b23831c5732329a81",
+        "size_in_bytes": 122,
+        "sha256_in_prefix": "48ae66240a928e8e5d188d13229d8466c5411ab78daad84b23831c5732329a81"
+      },
+      {
+        "_path": "include/tapi/tapi.h",
+        "path_type": "hardlink",
+        "sha256": "c3699a93d6dc7c980c7007ce162297b9d7c4a30965d05d79602e62d4ec79441b",
+        "size_in_bytes": 931,
+        "sha256_in_prefix": "c3699a93d6dc7c980c7007ce162297b9d7c4a30965d05d79602e62d4ec79441b"
+      },
+      {
+        "_path": "lib/libtapi.dylib",
+        "path_type": "hardlink",
+        "sha256": "2ea47426cf8c5a593cd558581012a0872fc29ed4dceb142e1473f515c3f5b57c",
+        "size_in_bytes": 499024,
+        "sha256_in_prefix": "2ea47426cf8c5a593cd558581012a0872fc29ed4dceb142e1473f515c3f5b57c"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/tapi-1600.0.11.8-h8d8e812_0",
+    "type": 1
+  }
+}

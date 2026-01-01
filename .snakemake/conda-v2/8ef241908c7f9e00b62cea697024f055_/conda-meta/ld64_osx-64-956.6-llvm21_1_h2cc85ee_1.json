@@ -1,0 +1,98 @@
+{
+  "name": "ld64_osx-64",
+  "version": "956.6",
+  "build": "llvm21_1_h2cc85ee_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "ld64_osx-64-956.6-llvm21_1_h2cc85ee_1.conda",
+  "md5": "43e195354e70a809ecd75c5acef8b182",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/ld64_osx-64-956.6-llvm21_1_h2cc85ee_1.conda",
+  "sha256": "af4488994eaf9bf161648f2ed7b327a49313c67a7e13b2a09e1854e540c19d54",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx",
+    "libllvm21 >=21.1.6,<21.2.0a0",
+    "sigtool",
+    "tapi >=1600.0.11.8,<1601.0a0"
+  ],
+  "constrains": [
+    "cctools_impl_osx-64 1030.6.3.*",
+    "clang 21.1.*",
+    "cctools 1030.6.3.*",
+    "ld64 956.6.*"
+  ],
+  "license": "APSL-2.0",
+  "timestamp": 1764351765000,
+  "size": 1115751,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/ld64_osx-64-956.6-llvm21_1_h2cc85ee_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/ld64_osx-64-956.6-llvm21_1_h2cc85ee_1",
+  "files": [
+    "bin/x86_64-apple-darwin13.4.0-ObjectDump",
+    "bin/x86_64-apple-darwin13.4.0-ld",
+    "bin/x86_64-apple-darwin13.4.0-unwinddump",
+    "share/man/man1/x86_64-apple-darwin13.4.0-ld-classic.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-ld.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-ld64.1",
+    "share/man/man1/x86_64-apple-darwin13.4.0-unwinddump.1"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-ObjectDump",
+        "path_type": "hardlink",
+        "sha256": "3883ccf8b68378fe4313fd8a9851b9a55018c8248dfcd51d75f2093bb3f4aba7",
+        "size_in_bytes": 1362440,
+        "sha256_in_prefix": "3883ccf8b68378fe4313fd8a9851b9a55018c8248dfcd51d75f2093bb3f4aba7"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-ld",
+        "path_type": "hardlink",
+        "sha256": "e2cc2a7fc971d00afd4c5eaeda57451455f5baa6d41035df53de40210948f21a",
+        "size_in_bytes": 5633352,
+        "sha256_in_prefix": "e2cc2a7fc971d00afd4c5eaeda57451455f5baa6d41035df53de40210948f21a"
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-unwinddump",
+        "path_type": "hardlink",
+        "sha256": "b46aff4c95aababc6e0e029f95edd6e4bb0294b8ab35681b3a936b0b9a759aaf",
+        "size_in_bytes": 99808,
+        "sha256_in_prefix": "b46aff4c95aababc6e0e029f95edd6e4bb0294b8ab35681b3a936b0b9a759aaf"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-ld-classic.1",
+        "path_type": "hardlink",
+        "sha256": "dd79e17815285bfa174439ff384a9eef07760e6afe6fdbbd40b7c58316fd7d7b",
+        "size_in_bytes": 59054,
+        "sha256_in_prefix": "dd79e17815285bfa174439ff384a9eef07760e6afe6fdbbd40b7c58316fd7d7b"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-ld.1",
+        "path_type": "hardlink",
+        "sha256": "70a4310e496bab6e90aa1f93aa76c547c558f80e81381ed76843ce2652863d74",
+        "size_in_bytes": 22,
+        "sha256_in_prefix": "70a4310e496bab6e90aa1f93aa76c547c558f80e81381ed76843ce2652863d74"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-ld64.1",
+        "path_type": "hardlink",
+        "sha256": "70a4310e496bab6e90aa1f93aa76c547c558f80e81381ed76843ce2652863d74",
+        "size_in_bytes": 22,
+        "sha256_in_prefix": "70a4310e496bab6e90aa1f93aa76c547c558f80e81381ed76843ce2652863d74"
+      },
+      {
+        "_path": "share/man/man1/x86_64-apple-darwin13.4.0-unwinddump.1",
+        "path_type": "hardlink",
+        "sha256": "758829d66a892f6af26ab9cdf14d754df4bdad7dcc40ea51021b9fde9bc90147",
+        "size_in_bytes": 770,
+        "sha256_in_prefix": "758829d66a892f6af26ab9cdf14d754df4bdad7dcc40ea51021b9fde9bc90147"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/ld64_osx-64-956.6-llvm21_1_h2cc85ee_1",
+    "type": 1
+  }
+}

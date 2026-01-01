@@ -1,0 +1,43 @@
+{
+  "name": "clangxx_impl_osx-64",
+  "version": "21.1.7",
+  "build": "hd9a3690_28",
+  "build_number": 28,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "clangxx_impl_osx-64-21.1.7-hd9a3690_28.conda",
+  "md5": "58960a8c00c55cda717854d29631dd9c",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/clangxx_impl_osx-64-21.1.7-hd9a3690_28.conda",
+  "sha256": "fa8f8d76cdde2fdaf0005c334bf9a3bbfd01cb111c4efec8d9b6cef510b924ac",
+  "depends": [
+    "clang_osx-64 21.1.7 h7e5c614_28",
+    "clangxx 21.1.7.*",
+    "libcxx >=21",
+    "libllvm21 >=21.1.7,<21.2.0a0"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1765842147000,
+  "size": 17917,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/clangxx_impl_osx-64-21.1.7-hd9a3690_28.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/clangxx_impl_osx-64-21.1.7-hd9a3690_28",
+  "files": [
+    "bin/x86_64-apple-darwin13.4.0-clang++"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-clang++",
+        "path_type": "softlink",
+        "sha256": "0b358256e3320361ba3376e0c87ac9e1cb0a73a7461861f618808d664fb6dcf3",
+        "size_in_bytes": 144808
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/clangxx_impl_osx-64-21.1.7-hd9a3690_28",
+    "type": 1
+  }
+}

@@ -1,0 +1,5 @@
+#!/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.snakemake/conda-v2/ce1ddba21ac927954a0ff221658a020f_/bin/python3.11
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()

@@ -1,0 +1,41 @@
+{
+  "name": "clangxx",
+  "version": "21.1.7",
+  "build": "default_h1c12a56_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "clangxx-21.1.7-default_h1c12a56_1.conda",
+  "md5": "24c21de1f790ae1d446ba17a7cad441e",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/clangxx-21.1.7-default_h1c12a56_1.conda",
+  "sha256": "2ebad4170eff0cc07d4b2d97785077a9b086b0fe4a06c14e6d4c6a8653d6af09",
+  "depends": [
+    "clang 21.1.7 default_h1323312_1",
+    "libcxx-devel 21.1.*"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1764817709000,
+  "size": 27375,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/clangxx-21.1.7-default_h1c12a56_1.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/clangxx-21.1.7-default_h1c12a56_1",
+  "files": [
+    "bin/clang++"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/clang++",
+        "path_type": "softlink",
+        "sha256": "0b358256e3320361ba3376e0c87ac9e1cb0a73a7461861f618808d664fb6dcf3",
+        "size_in_bytes": 144808
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/clangxx-21.1.7-default_h1c12a56_1",
+    "type": 1
+  }
+}

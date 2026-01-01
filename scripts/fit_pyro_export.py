@@ -17,7 +17,7 @@ sys.path.append(str(ROOT))
 import anndata as ad  # noqa: E402
 import torch  # noqa: E402
 
-from scripts.pyro_io import load_adata_inputs  # noqa: E402
+from scripts.pyro_io import load_adata_inputs, normalize_config  # noqa: E402
 from src.models.pyro_model import export_gene_summary_for_ash, fit_svi, resolve_fate_names  # noqa: E402
 from src.models.pyro_pipeline import make_k_centered, to_torch  # noqa: E402
 
@@ -146,7 +146,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
     logger = logging.getLogger(__name__)
 
-    cfg = yaml.safe_load(open(args.config))
+    cfg = normalize_config(yaml.safe_load(open(args.config)))
     ref_fate = cfg.get("ref_fate", "EC")
     contrast_fate = cfg.get("contrast_fate", "MES")
     _, non_ref_fates, _, _ = resolve_fate_names(cfg["fates"], ref_fate=ref_fate)

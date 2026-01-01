@@ -1,0 +1,43 @@
+{
+  "name": "libclang-cpp21.1",
+  "version": "21.1.7",
+  "build": "default_hc369343_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libclang-cpp21.1-21.1.7-default_hc369343_1.conda",
+  "md5": "209d22430f34b7c781b8906c94df42ef",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libclang-cpp21.1-21.1.7-default_hc369343_1.conda",
+  "sha256": "f37e047809113ebfd4c84b9db9e259e59d2eb96f0140f9690696ef33b5ab8871",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=21.1.7",
+    "libllvm21 >=21.1.7,<21.2.0a0"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1764817168000,
+  "size": 14449707,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libclang-cpp21.1-21.1.7-default_hc369343_1.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libclang-cpp21.1-21.1.7-default_hc369343_1",
+  "files": [
+    "lib/libclang-cpp.21.1.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libclang-cpp.21.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "a764dcc291d3a97daf7373b427750a503ad18656c9bb49c2786d9874c00b9596",
+        "size_in_bytes": 68984528,
+        "sha256_in_prefix": "a764dcc291d3a97daf7373b427750a503ad18656c9bb49c2786d9874c00b9596"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libclang-cpp21.1-21.1.7-default_hc369343_1",
+    "type": 1
+  }
+}

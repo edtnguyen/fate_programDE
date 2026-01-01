@@ -1,0 +1,108 @@
+{
+  "name": "mkl-devel",
+  "version": "2020.4",
+  "build": "h694c41f_302",
+  "build_number": 302,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "mkl-devel-2020.4-h694c41f_302.tar.bz2",
+  "md5": "97dcf72f437b3c03ea2a9e244c9edf95",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/mkl-devel-2020.4-h694c41f_302.tar.bz2",
+  "sha256": "faa5a25bfd41a69d7954b2f511a790e255eecdafac0783174f813946e0516118",
+  "depends": [
+    "mkl 2020.4 h08c4f10_301",
+    "mkl-include 2020.4 h08c4f10_301"
+  ],
+  "constrains": [],
+  "license": "LicenseRef-ProprietaryIntel",
+  "timestamp": 1605034265000,
+  "size": 19201,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/mkl-devel-2020.4-h694c41f_302",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/mkl-devel-2020.4-h694c41f_302",
+  "files": [
+    "about.json",
+    "files",
+    "git",
+    "hash_input.json",
+    "index.json",
+    "licenses/license.txt",
+    "licenses/tpp.txt",
+    "paths.json",
+    "site.cfg"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "about.json",
+        "path_type": "hardlink",
+        "sha256": "c1ca436252bde7da8b6bb7ed72dfd5c56b525d80a6da6ad133263727b9c2c1f5",
+        "size_in_bytes": 3539,
+        "sha256_in_prefix": "c1ca436252bde7da8b6bb7ed72dfd5c56b525d80a6da6ad133263727b9c2c1f5"
+      },
+      {
+        "_path": "files",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "git",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "hash_input.json",
+        "path_type": "hardlink",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "size_in_bytes": 2,
+        "sha256_in_prefix": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "_path": "index.json",
+        "path_type": "hardlink",
+        "sha256": "eb7d9febe14ebc30596b57ca391f10b49ab9f2e6a34fa6c21c424225619aebd0",
+        "size_in_bytes": 340,
+        "sha256_in_prefix": "eb7d9febe14ebc30596b57ca391f10b49ab9f2e6a34fa6c21c424225619aebd0"
+      },
+      {
+        "_path": "licenses/license.txt",
+        "path_type": "hardlink",
+        "sha256": "bfda9286e31251fdc9eaacddb1856c5e73342126efcf6e34a53f1d55ddd54f4b",
+        "size_in_bytes": 4335,
+        "sha256_in_prefix": "bfda9286e31251fdc9eaacddb1856c5e73342126efcf6e34a53f1d55ddd54f4b"
+      },
+      {
+        "_path": "licenses/tpp.txt",
+        "path_type": "hardlink",
+        "sha256": "3bd7ff113625555a5acb7a3bee6d9ed78e705a5d9aa06e926d786b51d5edafec",
+        "size_in_bytes": 41053,
+        "sha256_in_prefix": "3bd7ff113625555a5acb7a3bee6d9ed78e705a5d9aa06e926d786b51d5edafec"
+      },
+      {
+        "_path": "paths.json",
+        "path_type": "hardlink",
+        "sha256": "a0731dccf9e110a03d184ba01467cabe068391cdab188c49a1e7515a17827183",
+        "size_in_bytes": 39,
+        "sha256_in_prefix": "a0731dccf9e110a03d184ba01467cabe068391cdab188c49a1e7515a17827183"
+      },
+      {
+        "_path": "site.cfg",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/intel_repack_1605033288902/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "c289e8f64b9237ddd1f7d46386722e95c224af81aadd82be605e6ceb2767fb6f",
+        "size_in_bytes": 599,
+        "sha256_in_prefix": "d7aabd295efded82ddd67eca7181ced97d6d524dc5f4112b0d0f5e51f0ab540e"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/mkl-devel-2020.4-h694c41f_302",
+    "type": 1
+  }
+}

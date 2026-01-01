@@ -1,0 +1,1832 @@
+{
+  "name": "scanpy",
+  "version": "1.11.5",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "scanpy-1.11.5-pyhd8ed1ab_0.conda",
+  "md5": "8e9d5a835570e7cd76bd7c6cfed487e0",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/scanpy-1.11.5-pyhd8ed1ab_0.conda",
+  "sha256": "42da021bef96f70d6f5af45a0110acf95bdb2dd5087e2c015a4f4f70eb25e48d",
+  "depends": [
+    "anndata >=0.8",
+    "h5py >=3.7.0",
+    "joblib",
+    "legacy-api-wrap >=1.4.1",
+    "matplotlib-base >=3.7.5",
+    "natsort",
+    "networkx >=2.7.1",
+    "numba >=0.57.1",
+    "numpy >=1.24.1",
+    "packaging >=21.3",
+    "pandas >=1.5.3",
+    "patsy !=1.0.0",
+    "pynndescent >=0.5.13",
+    "python >=3.10",
+    "scikit-learn >=1.1.3",
+    "scipy >=1.8.1",
+    "seaborn >=0.13.2",
+    "session-info2",
+    "statsmodels >=0.14.5",
+    "tqdm",
+    "typing-extensions",
+    "umap-learn >=0.5.6"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "BSD-3-Clause",
+  "package_type": "noarch_python",
+  "timestamp": 1761041110000,
+  "size": 1957478,
+  "requested_spec": "scanpy",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/scanpy-1.11.5-pyhd8ed1ab_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/scanpy-1.11.5-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/METADATA",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/RECORD",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/WHEEL",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/entry_points.txt",
+    "lib/python3.11/site-packages/scanpy-1.11.5.dist-info/licenses/LICENSE",
+    "lib/python3.11/site-packages/scanpy/__init__.py",
+    "lib/python3.11/site-packages/scanpy/__main__.py",
+    "lib/python3.11/site-packages/scanpy/_compat.py",
+    "lib/python3.11/site-packages/scanpy/_settings/__init__.py",
+    "lib/python3.11/site-packages/scanpy/_settings/verbosity.py",
+    "lib/python3.11/site-packages/scanpy/_singleton.py",
+    "lib/python3.11/site-packages/scanpy/_types.py",
+    "lib/python3.11/site-packages/scanpy/_utils/__init__.py",
+    "lib/python3.11/site-packages/scanpy/_utils/_doctests.py",
+    "lib/python3.11/site-packages/scanpy/_utils/compute/__init__.py",
+    "lib/python3.11/site-packages/scanpy/_utils/compute/is_constant.py",
+    "lib/python3.11/site-packages/scanpy/_utils/random.py",
+    "lib/python3.11/site-packages/scanpy/cli.py",
+    "lib/python3.11/site-packages/scanpy/datasets/10x_pbmc68k_reduced.h5ad",
+    "lib/python3.11/site-packages/scanpy/datasets/__init__.py",
+    "lib/python3.11/site-packages/scanpy/datasets/_datasets.py",
+    "lib/python3.11/site-packages/scanpy/datasets/_ebi_expression_atlas.py",
+    "lib/python3.11/site-packages/scanpy/datasets/_utils.py",
+    "lib/python3.11/site-packages/scanpy/datasets/krumsiek11.txt",
+    "lib/python3.11/site-packages/scanpy/datasets/toggleswitch.txt",
+    "lib/python3.11/site-packages/scanpy/experimental/__init__.py",
+    "lib/python3.11/site-packages/scanpy/experimental/_docs.py",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/__init__.py",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/_highly_variable_genes.py",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/_normalization.py",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/_recipes.py",
+    "lib/python3.11/site-packages/scanpy/external/__init__.py",
+    "lib/python3.11/site-packages/scanpy/external/exporting.py",
+    "lib/python3.11/site-packages/scanpy/external/pl.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/__init__.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_bbknn.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_dca.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_harmony_integrate.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_hashsolo.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_magic.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_mnn_correct.py",
+    "lib/python3.11/site-packages/scanpy/external/pp/_scanorama_integrate.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/__init__.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_harmony_timeseries.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_palantir.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_phate.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_phenograph.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_pypairs.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_sam.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_trimap.py",
+    "lib/python3.11/site-packages/scanpy/external/tl/_wishbone.py",
+    "lib/python3.11/site-packages/scanpy/get/__init__.py",
+    "lib/python3.11/site-packages/scanpy/get/_aggregated.py",
+    "lib/python3.11/site-packages/scanpy/get/get.py",
+    "lib/python3.11/site-packages/scanpy/logging.py",
+    "lib/python3.11/site-packages/scanpy/metrics/__init__.py",
+    "lib/python3.11/site-packages/scanpy/metrics/_common.py",
+    "lib/python3.11/site-packages/scanpy/metrics/_gearys_c.py",
+    "lib/python3.11/site-packages/scanpy/metrics/_metrics.py",
+    "lib/python3.11/site-packages/scanpy/metrics/_morans_i.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/__init__.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_backends/__init__.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_backends/_common.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_backends/rapids.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_common.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_connectivity.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_doc.py",
+    "lib/python3.11/site-packages/scanpy/neighbors/_types.py",
+    "lib/python3.11/site-packages/scanpy/plotting/__init__.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_anndata.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_baseplot_class.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_docs.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_dotplot.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_matrixplot.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_preprocessing.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_qc.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_rcmod.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_scrublet.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_stacked_violin.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_tools/__init__.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_tools/paga.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_tools/scatterplots.py",
+    "lib/python3.11/site-packages/scanpy/plotting/_utils.py",
+    "lib/python3.11/site-packages/scanpy/plotting/palettes.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__init__.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_combat.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__init__.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/highly_variable_genes.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/sampling.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_distributed.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_docs.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_highly_variable_genes.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_normalization.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__init__.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_pca/_compat.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_pca/_dask.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_qc.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_recipes.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scale.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__init__.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/core.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/pipeline.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/sparse_utils.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_simple.py",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_utils.py",
+    "lib/python3.11/site-packages/scanpy/queries/__init__.py",
+    "lib/python3.11/site-packages/scanpy/queries/_queries.py",
+    "lib/python3.11/site-packages/scanpy/readwrite.py",
+    "lib/python3.11/site-packages/scanpy/sim_models/__init__.py",
+    "lib/python3.11/site-packages/scanpy/sim_models/krumsiek11.txt",
+    "lib/python3.11/site-packages/scanpy/sim_models/krumsiek11_params.txt",
+    "lib/python3.11/site-packages/scanpy/sim_models/toggleswitch.txt",
+    "lib/python3.11/site-packages/scanpy/sim_models/toggleswitch_params.txt",
+    "lib/python3.11/site-packages/scanpy/tools/__init__.py",
+    "lib/python3.11/site-packages/scanpy/tools/_dendrogram.py",
+    "lib/python3.11/site-packages/scanpy/tools/_diffmap.py",
+    "lib/python3.11/site-packages/scanpy/tools/_dpt.py",
+    "lib/python3.11/site-packages/scanpy/tools/_draw_graph.py",
+    "lib/python3.11/site-packages/scanpy/tools/_embedding_density.py",
+    "lib/python3.11/site-packages/scanpy/tools/_ingest.py",
+    "lib/python3.11/site-packages/scanpy/tools/_leiden.py",
+    "lib/python3.11/site-packages/scanpy/tools/_louvain.py",
+    "lib/python3.11/site-packages/scanpy/tools/_marker_gene_overlap.py",
+    "lib/python3.11/site-packages/scanpy/tools/_paga.py",
+    "lib/python3.11/site-packages/scanpy/tools/_rank_genes_groups.py",
+    "lib/python3.11/site-packages/scanpy/tools/_score_genes.py",
+    "lib/python3.11/site-packages/scanpy/tools/_sim.py",
+    "lib/python3.11/site-packages/scanpy/tools/_tsne.py",
+    "lib/python3.11/site-packages/scanpy/tools/_umap.py",
+    "lib/python3.11/site-packages/scanpy/tools/_utils.py",
+    "lib/python3.11/site-packages/scanpy/tools/_utils_clustering.py",
+    "lib/python3.11/site-packages/testing/scanpy/__init__.py",
+    "lib/python3.11/site-packages/testing/scanpy/_helpers/__init__.py",
+    "lib/python3.11/site-packages/testing/scanpy/_helpers/data.py",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/__init__.py",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/fixtures/__init__.py",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/fixtures/data.py",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/marks.py",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/params.py",
+    "lib/python3.11/site-packages/scanpy/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/__main__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/_compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_settings/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_settings/__pycache__/verbosity.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/_singleton.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/_types.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_utils/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_utils/__pycache__/_doctests.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_utils/compute/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_utils/compute/__pycache__/is_constant.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/_utils/__pycache__/random.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/cli.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/datasets/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/datasets/__pycache__/_datasets.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/datasets/__pycache__/_ebi_expression_atlas.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/datasets/__pycache__/_utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/experimental/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/experimental/__pycache__/_docs.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/_highly_variable_genes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/_normalization.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/_recipes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/__pycache__/exporting.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/__pycache__/pl.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_bbknn.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_dca.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_harmony_integrate.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_hashsolo.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_magic.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_mnn_correct.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_scanorama_integrate.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_harmony_timeseries.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_palantir.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_phate.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_phenograph.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_pypairs.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_sam.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_trimap.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_wishbone.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/get/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/get/__pycache__/_aggregated.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/get/__pycache__/get.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/logging.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/metrics/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_common.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_gearys_c.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_metrics.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_morans_i.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/_backends/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/_backends/__pycache__/_common.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/_backends/__pycache__/rapids.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_common.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_connectivity.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_doc.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_types.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_anndata.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_baseplot_class.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_docs.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_dotplot.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_matrixplot.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_preprocessing.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_qc.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_rcmod.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_scrublet.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_stacked_violin.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/_tools/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/_tools/__pycache__/paga.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/_tools/__pycache__/scatterplots.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/plotting/__pycache__/palettes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_combat.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__pycache__/highly_variable_genes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__pycache__/sampling.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_distributed.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_docs.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_highly_variable_genes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_normalization.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__pycache__/_compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__pycache__/_dask.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_qc.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_recipes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_scale.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/core.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/pipeline.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/sparse_utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_simple.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/queries/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/queries/__pycache__/_queries.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/__pycache__/readwrite.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/sim_models/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_dendrogram.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_diffmap.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_dpt.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_draw_graph.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_embedding_density.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_ingest.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_leiden.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_louvain.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_marker_gene_overlap.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_paga.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_rank_genes_groups.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_score_genes.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_sim.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_tsne.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_umap.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/scanpy/tools/__pycache__/_utils_clustering.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_helpers/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_helpers/__pycache__/data.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/fixtures/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/fixtures/__pycache__/data.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/__pycache__/marks.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/scanpy/_pytest/__pycache__/params.cpython-311.pyc",
+    "bin/scanpy"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "1081f909f00807938a544af7da10b1efb3e72b5ff927845c227e04c23fdf5f8a",
+        "size_in_bytes": 9304,
+        "sha256_in_prefix": "1081f909f00807938a544af7da10b1efb3e72b5ff927845c227e04c23fdf5f8a"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "5e8ab5309013537e39eefa641cf5929af5aa1b57e3995903ef2dc37012a59292",
+        "size_in_bytes": 20053,
+        "sha256_in_prefix": "5e8ab5309013537e39eefa641cf5929af5aa1b57e3995903ef2dc37012a59292"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "f271be7d9ef7c3a35c86efbdf0aed915bf3f403b1aa27ccefa5c04b6f5162efd",
+        "size_in_bytes": 102,
+        "sha256_in_prefix": "f271be7d9ef7c3a35c86efbdf0aed915bf3f403b1aa27ccefa5c04b6f5162efd"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "b26581afca96925e86764e0fb661cc5091d0d5b9c435df7b5d95dde5bb0c097c",
+        "size_in_bytes": 51,
+        "sha256_in_prefix": "b26581afca96925e86764e0fb661cc5091d0d5b9c435df7b5d95dde5bb0c097c"
+      },
+      {
+        "_path": "site-packages/scanpy-1.11.5.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "1435eeb7d8618943740178e5b8e14abda6be994f0f0a31894becc20e945ae2bf",
+        "size_in_bytes": 1566,
+        "sha256_in_prefix": "1435eeb7d8618943740178e5b8e14abda6be994f0f0a31894becc20e945ae2bf"
+      },
+      {
+        "_path": "site-packages/scanpy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "97f64852b18e902fc0f0b20347849890b8cd0582d7bfb7c3cbcfd1c0a0d6dd94",
+        "size_in_bytes": 2159,
+        "sha256_in_prefix": "97f64852b18e902fc0f0b20347849890b8cd0582d7bfb7c3cbcfd1c0a0d6dd94"
+      },
+      {
+        "_path": "site-packages/scanpy/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "87b8d2e1f1b14ba61130ce4e69ca3abbea4c2260fc3fdab0b984c02decad9189",
+        "size_in_bytes": 113,
+        "sha256_in_prefix": "87b8d2e1f1b14ba61130ce4e69ca3abbea4c2260fc3fdab0b984c02decad9189"
+      },
+      {
+        "_path": "site-packages/scanpy/_compat.py",
+        "path_type": "hardlink",
+        "sha256": "7585845d29423b0c6cc167750a3b9b5fae5cd1bca8d9185f5fbfd4a60f623944",
+        "size_in_bytes": 6848,
+        "sha256_in_prefix": "7585845d29423b0c6cc167750a3b9b5fae5cd1bca8d9185f5fbfd4a60f623944"
+      },
+      {
+        "_path": "site-packages/scanpy/_settings/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3a94686aba5fa656e35b4ab0bb9c6774ac854d5da4771dd71d4ec875cae90870",
+        "size_in_bytes": 16086,
+        "sha256_in_prefix": "3a94686aba5fa656e35b4ab0bb9c6774ac854d5da4771dd71d4ec875cae90870"
+      },
+      {
+        "_path": "site-packages/scanpy/_settings/verbosity.py",
+        "path_type": "hardlink",
+        "sha256": "c7a0e68750339fcd198ac88e30de9141be65da50f7e1029f20c07b51e31899f1",
+        "size_in_bytes": 2540,
+        "sha256_in_prefix": "c7a0e68750339fcd198ac88e30de9141be65da50f7e1029f20c07b51e31899f1"
+      },
+      {
+        "_path": "site-packages/scanpy/_singleton.py",
+        "path_type": "hardlink",
+        "sha256": "05b8197ad23beaf88855c5fdbfcbd082097399fc27d1f510285c2875ecaa2e3e",
+        "size_in_bytes": 2302,
+        "sha256_in_prefix": "05b8197ad23beaf88855c5fdbfcbd082097399fc27d1f510285c2875ecaa2e3e"
+      },
+      {
+        "_path": "site-packages/scanpy/_types.py",
+        "path_type": "hardlink",
+        "sha256": "e33f6c5facc2d10a261a50f8cc500a76d2232f52f944a825470208871dffc7cd",
+        "size_in_bytes": 166,
+        "sha256_in_prefix": "e33f6c5facc2d10a261a50f8cc500a76d2232f52f944a825470208871dffc7cd"
+      },
+      {
+        "_path": "site-packages/scanpy/_utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "814a712c15a2f8213312f38d22cb8598422bafe8e99a383d78e25d93ef56686b",
+        "size_in_bytes": 34771,
+        "sha256_in_prefix": "814a712c15a2f8213312f38d22cb8598422bafe8e99a383d78e25d93ef56686b"
+      },
+      {
+        "_path": "site-packages/scanpy/_utils/_doctests.py",
+        "path_type": "hardlink",
+        "sha256": "a88f563cd7c10adc665d68e1c6defce77f5809acdfabc43d031eb5081f38d25c",
+        "size_in_bytes": 800,
+        "sha256_in_prefix": "a88f563cd7c10adc665d68e1c6defce77f5809acdfabc43d031eb5081f38d25c"
+      },
+      {
+        "_path": "site-packages/scanpy/_utils/compute/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/scanpy/_utils/compute/is_constant.py",
+        "path_type": "hardlink",
+        "sha256": "88a4db002180d80343c8ed6fb937254d633c1f217a5d09da8d1a26742805ee9e",
+        "size_in_bytes": 4178,
+        "sha256_in_prefix": "88a4db002180d80343c8ed6fb937254d633c1f217a5d09da8d1a26742805ee9e"
+      },
+      {
+        "_path": "site-packages/scanpy/_utils/random.py",
+        "path_type": "hardlink",
+        "sha256": "3db922e53967f21162d8c06dfb0fb3921f17fd1e379a0d4123bf8d33d6042860",
+        "size_in_bytes": 6001,
+        "sha256_in_prefix": "3db922e53967f21162d8c06dfb0fb3921f17fd1e379a0d4123bf8d33d6042860"
+      },
+      {
+        "_path": "site-packages/scanpy/cli.py",
+        "path_type": "hardlink",
+        "sha256": "a174af641fbce1e6da4f3db6d1152ddbe784bc9490aeece8fa5be64963374c78",
+        "size_in_bytes": 4723,
+        "sha256_in_prefix": "a174af641fbce1e6da4f3db6d1152ddbe784bc9490aeece8fa5be64963374c78"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/10x_pbmc68k_reduced.h5ad",
+        "path_type": "hardlink",
+        "sha256": "e71d41e737c941559b7c57c9243bdb3d2c889c2adfdf00e3422ac6b46783676f",
+        "size_in_bytes": 1772368,
+        "sha256_in_prefix": "e71d41e737c941559b7c57c9243bdb3d2c889c2adfdf00e3422ac6b46783676f"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d613cdd08eaeb0be72512ffbfc87928df48ae1c4710524bff79950fe8eaac4fc",
+        "size_in_bytes": 531,
+        "sha256_in_prefix": "d613cdd08eaeb0be72512ffbfc87928df48ae1c4710524bff79950fe8eaac4fc"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/_datasets.py",
+        "path_type": "hardlink",
+        "sha256": "b0ab4bb53d1c9feca79dbc2356c6bb338584a1ea1be1d6b8ef7fcbef09b77552",
+        "size_in_bytes": 19214,
+        "sha256_in_prefix": "b0ab4bb53d1c9feca79dbc2356c6bb338584a1ea1be1d6b8ef7fcbef09b77552"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/_ebi_expression_atlas.py",
+        "path_type": "hardlink",
+        "sha256": "764ea8a23ec811906ec07efaed4e51739292acacfe5dabb345571424c5ccf04b",
+        "size_in_bytes": 5772,
+        "sha256_in_prefix": "764ea8a23ec811906ec07efaed4e51739292acacfe5dabb345571424c5ccf04b"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "13e038560cc1392bc1dd09c8d52f001e93202e06538b8e689ae44840004ed3ca",
+        "size_in_bytes": 1146,
+        "sha256_in_prefix": "13e038560cc1392bc1dd09c8d52f001e93202e06538b8e689ae44840004ed3ca"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/krumsiek11.txt",
+        "path_type": "hardlink",
+        "sha256": "a49c6d04bd77f61028133a9b787222ebf00c4fc02dbf8e2b8edda493a0d5dc93",
+        "size_in_bytes": 59808,
+        "sha256_in_prefix": "a49c6d04bd77f61028133a9b787222ebf00c4fc02dbf8e2b8edda493a0d5dc93"
+      },
+      {
+        "_path": "site-packages/scanpy/datasets/toggleswitch.txt",
+        "path_type": "hardlink",
+        "sha256": "11b70a557b9a9c942ba15f8c89d070d914d373d3e76f91f4472c5d8e14dc74e2",
+        "size_in_bytes": 4200,
+        "sha256_in_prefix": "11b70a557b9a9c942ba15f8c89d070d914d373d3e76f91f4472c5d8e14dc74e2"
+      },
+      {
+        "_path": "site-packages/scanpy/experimental/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "54afe913e78fc9b2022c1c54115ea4768b20453d615a29435fb104f9ae64e34d",
+        "size_in_bytes": 114,
+        "sha256_in_prefix": "54afe913e78fc9b2022c1c54115ea4768b20453d615a29435fb104f9ae64e34d"
+      },
+      {
+        "_path": "site-packages/scanpy/experimental/_docs.py",
+        "path_type": "hardlink",
+        "sha256": "422adb58e8b71ff423063460254078387984ff1b3816d726eeafeb85cd431986",
+        "size_in_bytes": 2787,
+        "sha256_in_prefix": "422adb58e8b71ff423063460254078387984ff1b3816d726eeafeb85cd431986"
+      },
+      {
+        "_path": "site-packages/scanpy/experimental/pp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0e3e97b71e01b3b0dc9e47df61e7d486b69bcaf489c3916d602d3563208bdece",
+        "size_in_bytes": 504,
+        "sha256_in_prefix": "0e3e97b71e01b3b0dc9e47df61e7d486b69bcaf489c3916d602d3563208bdece"
+      },
+      {
+        "_path": "site-packages/scanpy/experimental/pp/_highly_variable_genes.py",
+        "path_type": "hardlink",
+        "sha256": "128f2a5765333efcd9d47bad13f957500e0982c5bf349aef8cd276401d4c7538",
+        "size_in_bytes": 14151,
+        "sha256_in_prefix": "128f2a5765333efcd9d47bad13f957500e0982c5bf349aef8cd276401d4c7538"
+      },
+      {
+        "_path": "site-packages/scanpy/experimental/pp/_normalization.py",
+        "path_type": "hardlink",
+        "sha256": "6e5142c5342e622714609d6cdd2b446f0c5a42551c3d69d8f2511d239a818261",
+        "size_in_bytes": 8270,
+        "sha256_in_prefix": "6e5142c5342e622714609d6cdd2b446f0c5a42551c3d69d8f2511d239a818261"
+      },
+      {
+        "_path": "site-packages/scanpy/experimental/pp/_recipes.py",
+        "path_type": "hardlink",
+        "sha256": "f62bd438fa67a072bb83a3fc7f24558fa427b1f6664b861f89576ae2e24623c9",
+        "size_in_bytes": 5084,
+        "sha256_in_prefix": "f62bd438fa67a072bb83a3fc7f24558fa427b1f6664b861f89576ae2e24623c9"
+      },
+      {
+        "_path": "site-packages/scanpy/external/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "195f40eeadffa5dcfd377a0dc5a6cd98b31a3ea6f4730263723fc71f9cf16489",
+        "size_in_bytes": 294,
+        "sha256_in_prefix": "195f40eeadffa5dcfd377a0dc5a6cd98b31a3ea6f4730263723fc71f9cf16489"
+      },
+      {
+        "_path": "site-packages/scanpy/external/exporting.py",
+        "path_type": "hardlink",
+        "sha256": "0784e32831006e2ded15e895f16085cd89914da7fdd2f40415c1ed7d9b08acae",
+        "size_in_bytes": 21688,
+        "sha256_in_prefix": "0784e32831006e2ded15e895f16085cd89914da7fdd2f40415c1ed7d9b08acae"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pl.py",
+        "path_type": "hardlink",
+        "sha256": "58f017edc88a85fc51c75417b11388fa0b4ae232bcc06a818b457144009e6bfa",
+        "size_in_bytes": 9292,
+        "sha256_in_prefix": "58f017edc88a85fc51c75417b11388fa0b4ae232bcc06a818b457144009e6bfa"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3742ac8989f639c8de976c960aafa481bfc685b600413f56dca63ce8e76e1c9f",
+        "size_in_bytes": 726,
+        "sha256_in_prefix": "3742ac8989f639c8de976c960aafa481bfc685b600413f56dca63ce8e76e1c9f"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_bbknn.py",
+        "path_type": "hardlink",
+        "sha256": "f6765445ac6a26f192abdb8c9e57d5eac5156b2d149bf484bf929bb0ab6fb23d",
+        "size_in_bytes": 6635,
+        "sha256_in_prefix": "f6765445ac6a26f192abdb8c9e57d5eac5156b2d149bf484bf929bb0ab6fb23d"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_dca.py",
+        "path_type": "hardlink",
+        "sha256": "12979ee43422f91c6e0189123874489c569cbbd2136b5dfb70afde60424f2e71",
+        "size_in_bytes": 7231,
+        "sha256_in_prefix": "12979ee43422f91c6e0189123874489c569cbbd2136b5dfb70afde60424f2e71"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_harmony_integrate.py",
+        "path_type": "hardlink",
+        "sha256": "1f011996658694e93501d78c4b054295ef509eabc8c2d436e955a1159e77e8e9",
+        "size_in_bytes": 3225,
+        "sha256_in_prefix": "1f011996658694e93501d78c4b054295ef509eabc8c2d436e955a1159e77e8e9"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_hashsolo.py",
+        "path_type": "hardlink",
+        "sha256": "e2fcd27725caaa880ae7812dfab8b335ae493f8519493e16bdabe3f9ee3ada33",
+        "size_in_bytes": 16681,
+        "sha256_in_prefix": "e2fcd27725caaa880ae7812dfab8b335ae493f8519493e16bdabe3f9ee3ada33"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_magic.py",
+        "path_type": "hardlink",
+        "sha256": "e91044cd06382771fd7bdddf37786eed8c6b04cfa54b46b13977a8c6777491b9",
+        "size_in_bytes": 7390,
+        "sha256_in_prefix": "e91044cd06382771fd7bdddf37786eed8c6b04cfa54b46b13977a8c6777491b9"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_mnn_correct.py",
+        "path_type": "hardlink",
+        "sha256": "794d24e5e6b45e80bef850a2161662887a0e1d99d6437fbc82cda17d0e3233aa",
+        "size_in_bytes": 6021,
+        "sha256_in_prefix": "794d24e5e6b45e80bef850a2161662887a0e1d99d6437fbc82cda17d0e3233aa"
+      },
+      {
+        "_path": "site-packages/scanpy/external/pp/_scanorama_integrate.py",
+        "path_type": "hardlink",
+        "sha256": "184f2a041821aa616c8e918be7784975443e7e1dfd8aba76f26235c479cee7ff",
+        "size_in_bytes": 4664,
+        "sha256_in_prefix": "184f2a041821aa616c8e918be7784975443e7e1dfd8aba76f26235c479cee7ff"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7696251f4525ca9bd700a423092ef36e88b24eaf1644d8f6ee751dd01a99923e",
+        "size_in_bytes": 536,
+        "sha256_in_prefix": "7696251f4525ca9bd700a423092ef36e88b24eaf1644d8f6ee751dd01a99923e"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_harmony_timeseries.py",
+        "path_type": "hardlink",
+        "sha256": "6b38a21180e564f5c33ab23a51fde18771ea5d9f863f06dbec19cac33a8a4046",
+        "size_in_bytes": 6199,
+        "sha256_in_prefix": "6b38a21180e564f5c33ab23a51fde18771ea5d9f863f06dbec19cac33a8a4046"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_palantir.py",
+        "path_type": "hardlink",
+        "sha256": "ab321901422fea7010484cbe148a7d69beb1480bf4cf09b6211259c0dce2af70",
+        "size_in_bytes": 10273,
+        "sha256_in_prefix": "ab321901422fea7010484cbe148a7d69beb1480bf4cf09b6211259c0dce2af70"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_phate.py",
+        "path_type": "hardlink",
+        "sha256": "1448525ac622ddc19963d12c717f71cdc8842533541070010117cc66dc0e9bcf",
+        "size_in_bytes": 5807,
+        "sha256_in_prefix": "1448525ac622ddc19963d12c717f71cdc8842533541070010117cc66dc0e9bcf"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_phenograph.py",
+        "path_type": "hardlink",
+        "sha256": "17027e4347b89deebb13fb420460965a0147f85aa9e1979226d06fad670f7e56",
+        "size_in_bytes": 9358,
+        "sha256_in_prefix": "17027e4347b89deebb13fb420460965a0147f85aa9e1979226d06fad670f7e56"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_pypairs.py",
+        "path_type": "hardlink",
+        "sha256": "d0aceb6f89a7a90239519c3b65de6dfe4e913015abe49e386dcdfa2818aa2e99",
+        "size_in_bytes": 4989,
+        "sha256_in_prefix": "d0aceb6f89a7a90239519c3b65de6dfe4e913015abe49e386dcdfa2818aa2e99"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_sam.py",
+        "path_type": "hardlink",
+        "sha256": "e35e282f41f087c26ddc38a911688b7d7d8da8b834abbb7579b2c469431243fe",
+        "size_in_bytes": 8371,
+        "sha256_in_prefix": "e35e282f41f087c26ddc38a911688b7d7d8da8b834abbb7579b2c469431243fe"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_trimap.py",
+        "path_type": "hardlink",
+        "sha256": "44d55f21e0081810f349a9731c8dbb2b86800bee65a6eb1ac189ce609dc8c570",
+        "size_in_bytes": 4539,
+        "sha256_in_prefix": "44d55f21e0081810f349a9731c8dbb2b86800bee65a6eb1ac189ce609dc8c570"
+      },
+      {
+        "_path": "site-packages/scanpy/external/tl/_wishbone.py",
+        "path_type": "hardlink",
+        "sha256": "8a58ba22d5fed27ae743a09795917c94c56a8cbe98b07b6aa8eada2fb6542f38",
+        "size_in_bytes": 5131,
+        "sha256_in_prefix": "8a58ba22d5fed27ae743a09795917c94c56a8cbe98b07b6aa8eada2fb6542f38"
+      },
+      {
+        "_path": "site-packages/scanpy/get/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c3339d8dc2c4e9d786f74eb6bf0bda3e0a00eac3eb3e2ca6593317fe9d8bace4",
+        "size_in_bytes": 372,
+        "sha256_in_prefix": "c3339d8dc2c4e9d786f74eb6bf0bda3e0a00eac3eb3e2ca6593317fe9d8bace4"
+      },
+      {
+        "_path": "site-packages/scanpy/get/_aggregated.py",
+        "path_type": "hardlink",
+        "sha256": "92c23043046f9dd2dcfce216c067deee6d9fcf6cb9efc437d773f8cc59003262",
+        "size_in_bytes": 14009,
+        "sha256_in_prefix": "92c23043046f9dd2dcfce216c067deee6d9fcf6cb9efc437d773f8cc59003262"
+      },
+      {
+        "_path": "site-packages/scanpy/get/get.py",
+        "path_type": "hardlink",
+        "sha256": "89a22cba01ffe6585865d525560e61f289e6f5b039942f73f0bc8a1320b3d601",
+        "size_in_bytes": 16536,
+        "sha256_in_prefix": "89a22cba01ffe6585865d525560e61f289e6f5b039942f73f0bc8a1320b3d601"
+      },
+      {
+        "_path": "site-packages/scanpy/logging.py",
+        "path_type": "hardlink",
+        "sha256": "4c5803c8e07be0e1b08817167d4dcc696d2c36ea9b4c4d5002be32a5c50668a6",
+        "size_in_bytes": 7202,
+        "sha256_in_prefix": "4c5803c8e07be0e1b08817167d4dcc696d2c36ea9b4c4d5002be32a5c50668a6"
+      },
+      {
+        "_path": "site-packages/scanpy/metrics/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b47a0ec75c98e90abbee210c75bc09c012f62a8cd293a942d555c158c801ef46",
+        "size_in_bytes": 211,
+        "sha256_in_prefix": "b47a0ec75c98e90abbee210c75bc09c012f62a8cd293a942d555c158c801ef46"
+      },
+      {
+        "_path": "site-packages/scanpy/metrics/_common.py",
+        "path_type": "hardlink",
+        "sha256": "cfce5ddfe8ba42a38d5ab94136f584cead54cb07daecfc1f9703dc608758a437",
+        "size_in_bytes": 4455,
+        "sha256_in_prefix": "cfce5ddfe8ba42a38d5ab94136f584cead54cb07daecfc1f9703dc608758a437"
+      },
+      {
+        "_path": "site-packages/scanpy/metrics/_gearys_c.py",
+        "path_type": "hardlink",
+        "sha256": "f82295e74c20b1425b208a727a91404b987bfe710dacc3a7aeed2e90d8a0e368",
+        "size_in_bytes": 8244,
+        "sha256_in_prefix": "f82295e74c20b1425b208a727a91404b987bfe710dacc3a7aeed2e90d8a0e368"
+      },
+      {
+        "_path": "site-packages/scanpy/metrics/_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "54898d0aab27e38bacef5a169a1d3dff68b6c22d63925cb57fea6eec68758679",
+        "size_in_bytes": 2469,
+        "sha256_in_prefix": "54898d0aab27e38bacef5a169a1d3dff68b6c22d63925cb57fea6eec68758679"
+      },
+      {
+        "_path": "site-packages/scanpy/metrics/_morans_i.py",
+        "path_type": "hardlink",
+        "sha256": "b218bd99d69391f0cb048d418f462a3aadac6caf934614e9019381089cb4f1e3",
+        "size_in_bytes": 6036,
+        "sha256_in_prefix": "b218bd99d69391f0cb048d418f462a3aadac6caf934614e9019381089cb4f1e3"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6482f0290983428553f8d5028c4e3d272b9eb9bbf909ba77fe534c0cdce81f27",
+        "size_in_bytes": 34890,
+        "sha256_in_prefix": "6482f0290983428553f8d5028c4e3d272b9eb9bbf909ba77fe534c0cdce81f27"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_backends/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_backends/_common.py",
+        "path_type": "hardlink",
+        "sha256": "dfc666a56d752b1d3acdde33a4443cf97dc13bf050c83c5ea839e86ab666b527",
+        "size_in_bytes": 355,
+        "sha256_in_prefix": "dfc666a56d752b1d3acdde33a4443cf97dc13bf050c83c5ea839e86ab666b527"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_backends/rapids.py",
+        "path_type": "hardlink",
+        "sha256": "b6aa045916275cc36fea107541ba8e69b481d764079647e5f3fdfd602c7f08e0",
+        "size_in_bytes": 2947,
+        "sha256_in_prefix": "b6aa045916275cc36fea107541ba8e69b481d764079647e5f3fdfd602c7f08e0"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_common.py",
+        "path_type": "hardlink",
+        "sha256": "23faf194788a0d980c6b833891ebf29203e49a8181ba51b3a18f62d0b92f975b",
+        "size_in_bytes": 5474,
+        "sha256_in_prefix": "23faf194788a0d980c6b833891ebf29203e49a8181ba51b3a18f62d0b92f975b"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_connectivity.py",
+        "path_type": "hardlink",
+        "sha256": "d842b001e4924a511d3cd115dfbda1be25833a2cde8e9c426942902854d054d8",
+        "size_in_bytes": 4761,
+        "sha256_in_prefix": "d842b001e4924a511d3cd115dfbda1be25833a2cde8e9c426942902854d054d8"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_doc.py",
+        "path_type": "hardlink",
+        "sha256": "2d59260928eab0762c28004e57eddff63facf0c3b56c99b3c21bac337df7da1f",
+        "size_in_bytes": 502,
+        "sha256_in_prefix": "2d59260928eab0762c28004e57eddff63facf0c3b56c99b3c21bac337df7da1f"
+      },
+      {
+        "_path": "site-packages/scanpy/neighbors/_types.py",
+        "path_type": "hardlink",
+        "sha256": "438a69b45d7e2c424e2a6a6a2c5299f7da5e19b7835b4910237f88f07e0737e2",
+        "size_in_bytes": 1540,
+        "sha256_in_prefix": "438a69b45d7e2c424e2a6a6a2c5299f7da5e19b7835b4910237f88f07e0737e2"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c2316e01ba06df4ffc4e649b4966a112416424d48b7b12bbc476622f6d752903",
+        "size_in_bytes": 2611,
+        "sha256_in_prefix": "c2316e01ba06df4ffc4e649b4966a112416424d48b7b12bbc476622f6d752903"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_anndata.py",
+        "path_type": "hardlink",
+        "sha256": "2944b19f0391abcb8ae1032e8ea8ab7cf1fe4478a727694bcde65a76e3ac5930",
+        "size_in_bytes": 91536,
+        "sha256_in_prefix": "2944b19f0391abcb8ae1032e8ea8ab7cf1fe4478a727694bcde65a76e3ac5930"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_baseplot_class.py",
+        "path_type": "hardlink",
+        "sha256": "0af6fd2fb5276e696abb75ee52a32e6076cf5051a53fea5ddb0bc525445e70d9",
+        "size_in_bytes": 32971,
+        "sha256_in_prefix": "0af6fd2fb5276e696abb75ee52a32e6076cf5051a53fea5ddb0bc525445e70d9"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_docs.py",
+        "path_type": "hardlink",
+        "sha256": "1f01e158ad64bd6f20462ba022cc00a42e6ed99306814e6b6fec5b997e3ad9ac",
+        "size_in_bytes": 13608,
+        "sha256_in_prefix": "1f01e158ad64bd6f20462ba022cc00a42e6ed99306814e6b6fec5b997e3ad9ac"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_dotplot.py",
+        "path_type": "hardlink",
+        "sha256": "4f9b530723a46009e82312c8114f061079490d99811da2a3c7baea1372910b80",
+        "size_in_bytes": 37423,
+        "sha256_in_prefix": "4f9b530723a46009e82312c8114f061079490d99811da2a3c7baea1372910b80"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_matrixplot.py",
+        "path_type": "hardlink",
+        "sha256": "bc99c04ae243df4600a4d221e34a9d253502e184a86752a39289dc53807c6748",
+        "size_in_bytes": 14321,
+        "sha256_in_prefix": "bc99c04ae243df4600a4d221e34a9d253502e184a86752a39289dc53807c6748"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_preprocessing.py",
+        "path_type": "hardlink",
+        "sha256": "49cc68e024339d18f7fb9b99a92d7fd7e43b5fe1b385a89ea9d5ae8538a29d53",
+        "size_in_bytes": 4559,
+        "sha256_in_prefix": "49cc68e024339d18f7fb9b99a92d7fd7e43b5fe1b385a89ea9d5ae8538a29d53"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_qc.py",
+        "path_type": "hardlink",
+        "sha256": "33eb60618f3bc23e6bbd29abf1d963cfa113c0909ad30c4965809230a2b14905",
+        "size_in_bytes": 3722,
+        "sha256_in_prefix": "33eb60618f3bc23e6bbd29abf1d963cfa113c0909ad30c4965809230a2b14905"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_rcmod.py",
+        "path_type": "hardlink",
+        "sha256": "f7726f8d7dba323231de20bd29f578c123a40cc68018e009d3f23076627f9973",
+        "size_in_bytes": 1993,
+        "sha256_in_prefix": "f7726f8d7dba323231de20bd29f578c123a40cc68018e009d3f23076627f9973"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_scrublet.py",
+        "path_type": "hardlink",
+        "sha256": "264dff62f8500ec1c4df30c7a120643f69801cc6c49e6b855dd2367035a64c4f",
+        "size_in_bytes": 5036,
+        "sha256_in_prefix": "264dff62f8500ec1c4df30c7a120643f69801cc6c49e6b855dd2367035a64c4f"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_stacked_violin.py",
+        "path_type": "hardlink",
+        "sha256": "c052f4a5d6f03ff5cf38c48bebaa7c09774d3d971edbdc9832df81ef85cedea5",
+        "size_in_bytes": 31014,
+        "sha256_in_prefix": "c052f4a5d6f03ff5cf38c48bebaa7c09774d3d971edbdc9832df81ef85cedea5"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_tools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4c664b418647a1b1918ff13addf78cdf528998f5cd9177123ad237ab81ebe4bc",
+        "size_in_bytes": 51699,
+        "sha256_in_prefix": "4c664b418647a1b1918ff13addf78cdf528998f5cd9177123ad237ab81ebe4bc"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_tools/paga.py",
+        "path_type": "hardlink",
+        "sha256": "0e15b0325068436988d52966230c2295f10a405c7f39f247371bb9492064a985",
+        "size_in_bytes": 48142,
+        "sha256_in_prefix": "0e15b0325068436988d52966230c2295f10a405c7f39f247371bb9492064a985"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_tools/scatterplots.py",
+        "path_type": "hardlink",
+        "sha256": "919cacca8126325989571503862e15fa90ba1ffee67d193c979327049baa98c1",
+        "size_in_bytes": 45094,
+        "sha256_in_prefix": "919cacca8126325989571503862e15fa90ba1ffee67d193c979327049baa98c1"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "0173d4a513fca4eef5a9ae62940a7968cd47b6772b98a44c5fa44e0f6b3d55b3",
+        "size_in_bytes": 38231,
+        "sha256_in_prefix": "0173d4a513fca4eef5a9ae62940a7968cd47b6772b98a44c5fa44e0f6b3d55b3"
+      },
+      {
+        "_path": "site-packages/scanpy/plotting/palettes.py",
+        "path_type": "hardlink",
+        "sha256": "8754406c8b4e3745da97451681286e23e004cfc5d5c71e893297912c4dd05ea5",
+        "size_in_bytes": 4795,
+        "sha256_in_prefix": "8754406c8b4e3745da97451681286e23e004cfc5d5c71e893297912c4dd05ea5"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3aa2a629cddf09a4fde8494c496b144fa628873460ee83107d16e5ef49fa4ed0",
+        "size_in_bytes": 1185,
+        "sha256_in_prefix": "3aa2a629cddf09a4fde8494c496b144fa628873460ee83107d16e5ef49fa4ed0"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_combat.py",
+        "path_type": "hardlink",
+        "sha256": "a1a043d225f1040acb8ebd89b2d102dd8567c363f9ee871f53eef8c9c2d450c2",
+        "size_in_bytes": 11894,
+        "sha256_in_prefix": "a1a043d225f1040acb8ebd89b2d102dd8567c363f9ee871f53eef8c9c2d450c2"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_deprecated/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "00140b40ad628f564d15f1c95f310cc7924e1f9298ff2ec639edafb96f7be28c",
+        "size_in_bytes": 2103,
+        "sha256_in_prefix": "00140b40ad628f564d15f1c95f310cc7924e1f9298ff2ec639edafb96f7be28c"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_deprecated/highly_variable_genes.py",
+        "path_type": "hardlink",
+        "sha256": "29b37cbab39bc7f1a9184ad2c07de962b9505dc4702ea9f0f659c10734c268f7",
+        "size_in_bytes": 10574,
+        "sha256_in_prefix": "29b37cbab39bc7f1a9184ad2c07de962b9505dc4702ea9f0f659c10734c268f7"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_deprecated/sampling.py",
+        "path_type": "hardlink",
+        "sha256": "420e56e06a9a7e2e8cfb42b501930514984f94d02c56f0ae8fb1b78001f80145",
+        "size_in_bytes": 1684,
+        "sha256_in_prefix": "420e56e06a9a7e2e8cfb42b501930514984f94d02c56f0ae8fb1b78001f80145"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_distributed.py",
+        "path_type": "hardlink",
+        "sha256": "1bd91d61e557326f237b1a667a8d9c8752e9274772b9a9aef6f7133d4011f1c1",
+        "size_in_bytes": 1158,
+        "sha256_in_prefix": "1bd91d61e557326f237b1a667a8d9c8752e9274772b9a9aef6f7133d4011f1c1"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_docs.py",
+        "path_type": "hardlink",
+        "sha256": "87aba288fca2824bddaa41f582ff2eae9dfe43050d74efc7cc39a932687bb191",
+        "size_in_bytes": 2826,
+        "sha256_in_prefix": "87aba288fca2824bddaa41f582ff2eae9dfe43050d74efc7cc39a932687bb191"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_highly_variable_genes.py",
+        "path_type": "hardlink",
+        "sha256": "04a04f55e1824d820b3b91e5aaa06041a82a5adb65afb16b08b3de1669effa6b",
+        "size_in_bytes": 28210,
+        "sha256_in_prefix": "04a04f55e1824d820b3b91e5aaa06041a82a5adb65afb16b08b3de1669effa6b"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_normalization.py",
+        "path_type": "hardlink",
+        "sha256": "89f88107256ff788595306e48869115722b273ba2d2f58e77ff3713050a100f3",
+        "size_in_bytes": 10883,
+        "sha256_in_prefix": "89f88107256ff788595306e48869115722b273ba2d2f58e77ff3713050a100f3"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_pca/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c4d7bce9209106e8ced4f4673badc44e55aaf984caa9abf496e37963581e8566",
+        "size_in_bytes": 22079,
+        "sha256_in_prefix": "c4d7bce9209106e8ced4f4673badc44e55aaf984caa9abf496e37963581e8566"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_pca/_compat.py",
+        "path_type": "hardlink",
+        "sha256": "bddd19cf79aa602cd67b184354057313933f29c46a60cb86c37184014614e8c5",
+        "size_in_bytes": 2208,
+        "sha256_in_prefix": "bddd19cf79aa602cd67b184354057313933f29c46a60cb86c37184014614e8c5"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_pca/_dask.py",
+        "path_type": "hardlink",
+        "sha256": "66249bf382afb197e2bc2989b722be3537289353be93b13b8b887f878c9a6013",
+        "size_in_bytes": 7580,
+        "sha256_in_prefix": "66249bf382afb197e2bc2989b722be3537289353be93b13b8b887f878c9a6013"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_qc.py",
+        "path_type": "hardlink",
+        "sha256": "c115e4b0daa5f956425df3d73682cc1b9b9b9dddac4556dcbb43e385773128a0",
+        "size_in_bytes": 15037,
+        "sha256_in_prefix": "c115e4b0daa5f956425df3d73682cc1b9b9b9dddac4556dcbb43e385773128a0"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_recipes.py",
+        "path_type": "hardlink",
+        "sha256": "a6a31ddb7135c8e7f06a8dcdb2607fdeb3769b93694574cb08d481522f2c70ba",
+        "size_in_bytes": 5922,
+        "sha256_in_prefix": "a6a31ddb7135c8e7f06a8dcdb2607fdeb3769b93694574cb08d481522f2c70ba"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_scale.py",
+        "path_type": "hardlink",
+        "sha256": "75ec8656fbcb20f624919ad3c2f308db19688675ea6f963eee94ac8fe90638ca",
+        "size_in_bytes": 9679,
+        "sha256_in_prefix": "75ec8656fbcb20f624919ad3c2f308db19688675ea6f963eee94ac8fe90638ca"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_scrublet/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d9df923602599d6e5783bce75527693079bb8a77308a05beb85e736350343bd0",
+        "size_in_bytes": 21891,
+        "sha256_in_prefix": "d9df923602599d6e5783bce75527693079bb8a77308a05beb85e736350343bd0"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_scrublet/core.py",
+        "path_type": "hardlink",
+        "sha256": "ca7c4a08823d231633d3d10ca65504c21506a9dfede6ef7e4c809ee3767f7ec7",
+        "size_in_bytes": 17293,
+        "sha256_in_prefix": "ca7c4a08823d231633d3d10ca65504c21506a9dfede6ef7e4c809ee3767f7ec7"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_scrublet/pipeline.py",
+        "path_type": "hardlink",
+        "sha256": "dfffbdbbcfe2b0f5211f67e0a6d84b7b99393930e3ab43ef3ac8eb8be702a202",
+        "size_in_bytes": 2753,
+        "sha256_in_prefix": "dfffbdbbcfe2b0f5211f67e0a6d84b7b99393930e3ab43ef3ac8eb8be702a202"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_scrublet/sparse_utils.py",
+        "path_type": "hardlink",
+        "sha256": "43e20bfd6a1d8fffcb33df714c355f6b1e0f22cf1b0b6e186f5b78b5b85066a2",
+        "size_in_bytes": 1884,
+        "sha256_in_prefix": "43e20bfd6a1d8fffcb33df714c355f6b1e0f22cf1b0b6e186f5b78b5b85066a2"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_simple.py",
+        "path_type": "hardlink",
+        "sha256": "74d4fb06da0121cba03fd0f3f0093a0fb9d1f24040272b0bf508768e8a6e53ea",
+        "size_in_bytes": 40122,
+        "sha256_in_prefix": "74d4fb06da0121cba03fd0f3f0093a0fb9d1f24040272b0bf508768e8a6e53ea"
+      },
+      {
+        "_path": "site-packages/scanpy/preprocessing/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "374305ad7f325b0391ac344d15c5f3dd237618a98d0fa3a395afa82ddfb05821",
+        "size_in_bytes": 6444,
+        "sha256_in_prefix": "374305ad7f325b0391ac344d15c5f3dd237618a98d0fa3a395afa82ddfb05821"
+      },
+      {
+        "_path": "site-packages/scanpy/queries/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d4eb0878e7f45febdf132eeacc06467fd52797f50c6c5c9e226d9c80a0b129a0",
+        "size_in_bytes": 298,
+        "sha256_in_prefix": "d4eb0878e7f45febdf132eeacc06467fd52797f50c6c5c9e226d9c80a0b129a0"
+      },
+      {
+        "_path": "site-packages/scanpy/queries/_queries.py",
+        "path_type": "hardlink",
+        "sha256": "08af721a4be68459340d43df0915dccf533dae2abeb417904d3e33c5b45980ed",
+        "size_in_bytes": 9265,
+        "sha256_in_prefix": "08af721a4be68459340d43df0915dccf533dae2abeb417904d3e33c5b45980ed"
+      },
+      {
+        "_path": "site-packages/scanpy/readwrite.py",
+        "path_type": "hardlink",
+        "sha256": "9779a2ddecd5e1afa08c3c43b9b979955e4d5de5e364735287955ec1144ea5b8",
+        "size_in_bytes": 37344,
+        "sha256_in_prefix": "9779a2ddecd5e1afa08c3c43b9b979955e4d5de5e364735287955ec1144ea5b8"
+      },
+      {
+        "_path": "site-packages/scanpy/sim_models/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b9c49f067afcd6c3fc1d424ab538a779957607e56b5e389404e42061b5a86f72",
+        "size_in_bytes": 67,
+        "sha256_in_prefix": "b9c49f067afcd6c3fc1d424ab538a779957607e56b5e389404e42061b5a86f72"
+      },
+      {
+        "_path": "site-packages/scanpy/sim_models/krumsiek11.txt",
+        "path_type": "hardlink",
+        "sha256": "cbed107ba2f8680f037e0bbb7fb3908b139a735a56174606ed6fc79e81601884",
+        "size_in_bytes": 1886,
+        "sha256_in_prefix": "cbed107ba2f8680f037e0bbb7fb3908b139a735a56174606ed6fc79e81601884"
+      },
+      {
+        "_path": "site-packages/scanpy/sim_models/krumsiek11_params.txt",
+        "path_type": "hardlink",
+        "sha256": "3ef8f47ddc63071758dbdf47ed515d35063624dde6bc19ccbacd5426c0dab1c6",
+        "size_in_bytes": 141,
+        "sha256_in_prefix": "3ef8f47ddc63071758dbdf47ed515d35063624dde6bc19ccbacd5426c0dab1c6"
+      },
+      {
+        "_path": "site-packages/scanpy/sim_models/toggleswitch.txt",
+        "path_type": "hardlink",
+        "sha256": "a6a2a81ccc88c951bcb0bc1a8a730e73fae1cc79edf309d0b670bb51b2392484",
+        "size_in_bytes": 438,
+        "sha256_in_prefix": "a6a2a81ccc88c951bcb0bc1a8a730e73fae1cc79edf309d0b670bb51b2392484"
+      },
+      {
+        "_path": "site-packages/scanpy/sim_models/toggleswitch_params.txt",
+        "path_type": "hardlink",
+        "sha256": "2565e1e0a332389846b32dfb3a6527bb1e4489428548e8302ddff59d0d41ff1d",
+        "size_in_bytes": 146,
+        "sha256_in_prefix": "2565e1e0a332389846b32dfb3a6527bb1e4489428548e8302ddff59d0d41ff1d"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d7cf706fa8bc82589c4a9006c6197b4f4d4dd715b3bcd9abeaa13189a08605c3",
+        "size_in_bytes": 1320,
+        "sha256_in_prefix": "d7cf706fa8bc82589c4a9006c6197b4f4d4dd715b3bcd9abeaa13189a08605c3"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_dendrogram.py",
+        "path_type": "hardlink",
+        "sha256": "0cced698e6ed4b2ac08cf8fd2711c0e8476b1d44a758b16d28059545a5426e04",
+        "size_in_bytes": 6697,
+        "sha256_in_prefix": "0cced698e6ed4b2ac08cf8fd2711c0e8476b1d44a758b16d28059545a5426e04"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_diffmap.py",
+        "path_type": "hardlink",
+        "sha256": "6c78ac63fa23b01d304299f0c73493d6c82b6919fc3e9cff023b00436ab6f79a",
+        "size_in_bytes": 3290,
+        "sha256_in_prefix": "6c78ac63fa23b01d304299f0c73493d6c82b6919fc3e9cff023b00436ab6f79a"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_dpt.py",
+        "path_type": "hardlink",
+        "sha256": "94256cf4e0c9b64e0226529cf41cd3e0f3433641298d2e9fe958faa4293e75b3",
+        "size_in_bytes": 50053,
+        "sha256_in_prefix": "94256cf4e0c9b64e0226529cf41cd3e0f3433641298d2e9fe958faa4293e75b3"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_draw_graph.py",
+        "path_type": "hardlink",
+        "sha256": "a8c9581e68d3487d88af9d73245f077f78ea30c71f37e86662d67513446c98cb",
+        "size_in_bytes": 7883,
+        "sha256_in_prefix": "a8c9581e68d3487d88af9d73245f077f78ea30c71f37e86662d67513446c98cb"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_embedding_density.py",
+        "path_type": "hardlink",
+        "sha256": "0325cdf0adb4263a48bec3595106b37018d1b23041abc5e75eb24f11a8c9573b",
+        "size_in_bytes": 6272,
+        "sha256_in_prefix": "0325cdf0adb4263a48bec3595106b37018d1b23041abc5e75eb24f11a8c9573b"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_ingest.py",
+        "path_type": "hardlink",
+        "sha256": "b9330bb61776ea2890999d4700a6cee95592a8f92fff119ed8ff3fd826cc037d",
+        "size_in_bytes": 17902,
+        "sha256_in_prefix": "b9330bb61776ea2890999d4700a6cee95592a8f92fff119ed8ff3fd826cc037d"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_leiden.py",
+        "path_type": "hardlink",
+        "sha256": "e69b2aa18e82ea7bd553018f66e6aa006dfd337498b9149cfa726893a8ea66fd",
+        "size_in_bytes": 8725,
+        "sha256_in_prefix": "e69b2aa18e82ea7bd553018f66e6aa006dfd337498b9149cfa726893a8ea66fd"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_louvain.py",
+        "path_type": "hardlink",
+        "sha256": "1a57c16575f1cea98bf92557d457f495214a98e1a1cf124052ff35592a71ab75",
+        "size_in_bytes": 9297,
+        "sha256_in_prefix": "1a57c16575f1cea98bf92557d457f495214a98e1a1cf124052ff35592a71ab75"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_marker_gene_overlap.py",
+        "path_type": "hardlink",
+        "sha256": "c6c025e7d7125154d768eac8a429682d9cc98d371162a5e1c54974f0143231c9",
+        "size_in_bytes": 10826,
+        "sha256_in_prefix": "c6c025e7d7125154d768eac8a429682d9cc98d371162a5e1c54974f0143231c9"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_paga.py",
+        "path_type": "hardlink",
+        "sha256": "9916a1b22442a4c3cd7a244f2154bfaeb8d52cb0eb55a08dd57ffe3b4d2b9026",
+        "size_in_bytes": 24963,
+        "sha256_in_prefix": "9916a1b22442a4c3cd7a244f2154bfaeb8d52cb0eb55a08dd57ffe3b4d2b9026"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_rank_genes_groups.py",
+        "path_type": "hardlink",
+        "sha256": "cd498aaf0606062fef292fc22a8f12eea11eea4440e397f1075a9a98ca122fbe",
+        "size_in_bytes": 33222,
+        "sha256_in_prefix": "cd498aaf0606062fef292fc22a8f12eea11eea4440e397f1075a9a98ca122fbe"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_score_genes.py",
+        "path_type": "hardlink",
+        "sha256": "1974378ba371cbcd317bda1afb50a3c4ab91db2289cd28c0efa0d4b6c22bab1f",
+        "size_in_bytes": 11045,
+        "sha256_in_prefix": "1974378ba371cbcd317bda1afb50a3c4ab91db2289cd28c0efa0d4b6c22bab1f"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_sim.py",
+        "path_type": "hardlink",
+        "sha256": "3096b0f3c1636628dcf6d9196a78ad73fc0f83cdcd69de8c6716f96892522f78",
+        "size_in_bytes": 46494,
+        "sha256_in_prefix": "3096b0f3c1636628dcf6d9196a78ad73fc0f83cdcd69de8c6716f96892522f78"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_tsne.py",
+        "path_type": "hardlink",
+        "sha256": "ad1781e5e33117fbe479e96a470fdf5ff0fd087229d62c495e56ad5f98933da2",
+        "size_in_bytes": 7428,
+        "sha256_in_prefix": "ad1781e5e33117fbe479e96a470fdf5ff0fd087229d62c495e56ad5f98933da2"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_umap.py",
+        "path_type": "hardlink",
+        "sha256": "58da4b70ecbd16a656eac4189041a0bb699da7ef95843fda2a569cd8e0e8eade",
+        "size_in_bytes": 10355,
+        "sha256_in_prefix": "58da4b70ecbd16a656eac4189041a0bb699da7ef95843fda2a569cd8e0e8eade"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "e674cdd20b90ee4933ccd38595f82798041b00aaf83db85c4d1a26329125a2c9",
+        "size_in_bytes": 3754,
+        "sha256_in_prefix": "e674cdd20b90ee4933ccd38595f82798041b00aaf83db85c4d1a26329125a2c9"
+      },
+      {
+        "_path": "site-packages/scanpy/tools/_utils_clustering.py",
+        "path_type": "hardlink",
+        "sha256": "b099db7356417ccd3f96d4051ab586d3ff1a4e282ae6066eda4220a84f923585",
+        "size_in_bytes": 1573,
+        "sha256_in_prefix": "b099db7356417ccd3f96d4051ab586d3ff1a4e282ae6066eda4220a84f923585"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b3eff2546918a983222377f599fa4004fb16c7f766c2b2fb302e43cb53680cb8",
+        "size_in_bytes": 86,
+        "sha256_in_prefix": "b3eff2546918a983222377f599fa4004fb16c7f766c2b2fb302e43cb53680cb8"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_helpers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "84f88aa6afbbd62642094e3f5a7c2e74b2d92c8b7478ca1d3bf0926e7482a2a1",
+        "size_in_bytes": 6690,
+        "sha256_in_prefix": "84f88aa6afbbd62642094e3f5a7c2e74b2d92c8b7478ca1d3bf0926e7482a2a1"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_helpers/data.py",
+        "path_type": "hardlink",
+        "sha256": "1c13d4316ed9e1c8abc0e6fc380eea3d154a3c8dd66e2e95a2a9b93855a6072d",
+        "size_in_bytes": 1530,
+        "sha256_in_prefix": "1c13d4316ed9e1c8abc0e6fc380eea3d154a3c8dd66e2e95a2a9b93855a6072d"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_pytest/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "78bff4358939831fba22be6001fe6945540ea3b257f8705a35699b73c6e93b63",
+        "size_in_bytes": 4537,
+        "sha256_in_prefix": "78bff4358939831fba22be6001fe6945540ea3b257f8705a35699b73c6e93b63"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_pytest/fixtures/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "be55c18a97303a008ac4e974ce249ecbfe417ea4c3ec208ced5d91672365dd6d",
+        "size_in_bytes": 1689,
+        "sha256_in_prefix": "be55c18a97303a008ac4e974ce249ecbfe417ea4c3ec208ced5d91672365dd6d"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_pytest/fixtures/data.py",
+        "path_type": "hardlink",
+        "sha256": "630fb8f50415b8c538a0b96809179084d8af1167bebf678bd3c7fd270b03ff11",
+        "size_in_bytes": 3688,
+        "sha256_in_prefix": "630fb8f50415b8c538a0b96809179084d8af1167bebf678bd3c7fd270b03ff11"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_pytest/marks.py",
+        "path_type": "hardlink",
+        "sha256": "cece4ddb58442b99d60a7f104f4cd4094f06d78d3bb6fa0b45e4e8e55b67a041",
+        "size_in_bytes": 2588,
+        "sha256_in_prefix": "cece4ddb58442b99d60a7f104f4cd4094f06d78d3bb6fa0b45e4e8e55b67a041"
+      },
+      {
+        "_path": "site-packages/testing/scanpy/_pytest/params.py",
+        "path_type": "hardlink",
+        "sha256": "8d2ad1db4fe1bfab523bbfe8656710450e76e4b82ed46f0cb5b37e0220efc389",
+        "size_in_bytes": 2428,
+        "sha256_in_prefix": "8d2ad1db4fe1bfab523bbfe8656710450e76e4b82ed46f0cb5b37e0220efc389"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/__main__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/_compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_settings/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_settings/__pycache__/verbosity.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/_singleton.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/_types.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_utils/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_utils/__pycache__/_doctests.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_utils/compute/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_utils/compute/__pycache__/is_constant.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/_utils/__pycache__/random.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/cli.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/datasets/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/datasets/__pycache__/_datasets.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/datasets/__pycache__/_ebi_expression_atlas.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/datasets/__pycache__/_utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/experimental/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/experimental/__pycache__/_docs.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/_highly_variable_genes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/_normalization.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/experimental/pp/__pycache__/_recipes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/__pycache__/exporting.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/__pycache__/pl.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_bbknn.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_dca.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_harmony_integrate.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_hashsolo.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_magic.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_mnn_correct.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/pp/__pycache__/_scanorama_integrate.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_harmony_timeseries.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_palantir.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_phate.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_phenograph.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_pypairs.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_sam.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_trimap.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/external/tl/__pycache__/_wishbone.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/get/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/get/__pycache__/_aggregated.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/get/__pycache__/get.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/logging.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/metrics/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_common.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_gearys_c.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_metrics.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/metrics/__pycache__/_morans_i.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/_backends/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/_backends/__pycache__/_common.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/_backends/__pycache__/rapids.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_common.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_connectivity.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_doc.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/neighbors/__pycache__/_types.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_anndata.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_baseplot_class.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_docs.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_dotplot.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_matrixplot.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_preprocessing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_qc.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_rcmod.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_scrublet.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_stacked_violin.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/_tools/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/_tools/__pycache__/paga.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/_tools/__pycache__/scatterplots.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/_utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/plotting/__pycache__/palettes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_combat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__pycache__/highly_variable_genes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_deprecated/__pycache__/sampling.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_distributed.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_docs.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_highly_variable_genes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_normalization.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__pycache__/_compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_pca/__pycache__/_dask.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_qc.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_recipes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_scale.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/core.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/pipeline.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/_scrublet/__pycache__/sparse_utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_simple.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/preprocessing/__pycache__/_utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/queries/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/queries/__pycache__/_queries.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/__pycache__/readwrite.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/sim_models/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_dendrogram.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_diffmap.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_dpt.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_draw_graph.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_embedding_density.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_ingest.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_leiden.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_louvain.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_marker_gene_overlap.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_paga.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_rank_genes_groups.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_score_genes.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_sim.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_tsne.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_umap.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/scanpy/tools/__pycache__/_utils_clustering.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_helpers/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_helpers/__pycache__/data.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_pytest/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_pytest/fixtures/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_pytest/fixtures/__pycache__/data.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_pytest/__pycache__/marks.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/scanpy/_pytest/__pycache__/params.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/scanpy",
+        "path_type": "unix_python_entry_point"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/scanpy-1.11.5-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

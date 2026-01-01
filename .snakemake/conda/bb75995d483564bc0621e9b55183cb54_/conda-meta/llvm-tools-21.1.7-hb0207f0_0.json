@@ -1,0 +1,681 @@
+{
+  "name": "llvm-tools",
+  "version": "21.1.7",
+  "build": "hb0207f0_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "llvm-tools-21.1.7-hb0207f0_0.conda",
+  "md5": "033ea4cb494bc9ca9e05e2dec3309b5a",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/llvm-tools-21.1.7-hb0207f0_0.conda",
+  "sha256": "ae4a8d583160552e7aa406635291aa22e3518891b14e437b65878aed3d42b427",
+  "depends": [
+    "__osx >=10.13",
+    "libllvm21 21.1.7 h56e7563_0",
+    "llvm-tools-21 21.1.7 h879f4bc_0"
+  ],
+  "constrains": [
+    "clang-tools 21.1.7",
+    "llvm 21.1.7",
+    "clang 21.1.7",
+    "llvmdev 21.1.7"
+  ],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1764713075000,
+  "size": 88925,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/llvm-tools-21.1.7-hb0207f0_0.conda",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/llvm-tools-21.1.7-hb0207f0_0",
+  "files": [
+    "bin/bugpoint",
+    "bin/dsymutil",
+    "bin/llc",
+    "bin/lli",
+    "bin/llvm-addr2line",
+    "bin/llvm-ar",
+    "bin/llvm-as",
+    "bin/llvm-bcanalyzer",
+    "bin/llvm-bitcode-strip",
+    "bin/llvm-c-test",
+    "bin/llvm-cat",
+    "bin/llvm-cfi-verify",
+    "bin/llvm-cgdata",
+    "bin/llvm-cov",
+    "bin/llvm-ctxprof-util",
+    "bin/llvm-cvtres",
+    "bin/llvm-cxxdump",
+    "bin/llvm-cxxfilt",
+    "bin/llvm-cxxmap",
+    "bin/llvm-debuginfo-analyzer",
+    "bin/llvm-debuginfod",
+    "bin/llvm-debuginfod-find",
+    "bin/llvm-diff",
+    "bin/llvm-dis",
+    "bin/llvm-dlltool",
+    "bin/llvm-dwarfdump",
+    "bin/llvm-dwarfutil",
+    "bin/llvm-dwp",
+    "bin/llvm-exegesis",
+    "bin/llvm-extract",
+    "bin/llvm-gsymutil",
+    "bin/llvm-ifs",
+    "bin/llvm-install-name-tool",
+    "bin/llvm-jitlink",
+    "bin/llvm-lib",
+    "bin/llvm-libtool-darwin",
+    "bin/llvm-link",
+    "bin/llvm-lipo",
+    "bin/llvm-lto",
+    "bin/llvm-lto2",
+    "bin/llvm-mc",
+    "bin/llvm-mca",
+    "bin/llvm-ml",
+    "bin/llvm-ml64",
+    "bin/llvm-modextract",
+    "bin/llvm-mt",
+    "bin/llvm-nm",
+    "bin/llvm-objcopy",
+    "bin/llvm-objdump",
+    "bin/llvm-opt-report",
+    "bin/llvm-otool",
+    "bin/llvm-pdbutil",
+    "bin/llvm-profdata",
+    "bin/llvm-profgen",
+    "bin/llvm-ranlib",
+    "bin/llvm-rc",
+    "bin/llvm-readelf",
+    "bin/llvm-readobj",
+    "bin/llvm-readtapi",
+    "bin/llvm-reduce",
+    "bin/llvm-remarkutil",
+    "bin/llvm-rtdyld",
+    "bin/llvm-sim",
+    "bin/llvm-size",
+    "bin/llvm-split",
+    "bin/llvm-stress",
+    "bin/llvm-strings",
+    "bin/llvm-strip",
+    "bin/llvm-symbolizer",
+    "bin/llvm-tblgen",
+    "bin/llvm-tli-checker",
+    "bin/llvm-undname",
+    "bin/llvm-windres",
+    "bin/llvm-xray",
+    "bin/opt",
+    "bin/reduce-chunk-list",
+    "bin/sancov",
+    "bin/sanstats",
+    "bin/verify-uselistorder",
+    "share/__pycache__/opt-diff.cpython-314.pyc",
+    "share/__pycache__/opt-stats.cpython-314.pyc",
+    "share/__pycache__/opt-viewer.cpython-314.pyc",
+    "share/__pycache__/optpmap.cpython-314.pyc",
+    "share/__pycache__/optrecord.cpython-314.pyc",
+    "share/opt-diff.py",
+    "share/opt-stats.py",
+    "share/opt-viewer.py",
+    "share/optpmap.py",
+    "share/optrecord.py",
+    "share/style.css"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/bugpoint",
+        "path_type": "softlink",
+        "sha256": "599a74ff031e4c87087b634723fd3699f74e4a8f744459e0d4e8a26ff9873739",
+        "size_in_bytes": 463136
+      },
+      {
+        "_path": "bin/dsymutil",
+        "path_type": "softlink",
+        "sha256": "595f8bbcc72a43ab07917cff21684001b3d3ed2ce7c3dbf7ed1e777c600367d4",
+        "size_in_bytes": 470144
+      },
+      {
+        "_path": "bin/llc",
+        "path_type": "softlink",
+        "sha256": "13215eacd803525afe5f1405618fa4a3bc80a1ddaa9d04f307d87bb3e7095743",
+        "size_in_bytes": 258968
+      },
+      {
+        "_path": "bin/lli",
+        "path_type": "softlink",
+        "sha256": "af1d1d6d308d058cf53a4a643c7129d56e06314a5a5f95f16950f4834b865b0b",
+        "size_in_bytes": 275984
+      },
+      {
+        "_path": "bin/llvm-addr2line",
+        "path_type": "softlink",
+        "sha256": "f8826ce7c36597e4f3849d6716854b1c25bc4eea3a60a652f4295f1411fba96e",
+        "size_in_bytes": 100336
+      },
+      {
+        "_path": "bin/llvm-ar",
+        "path_type": "softlink",
+        "sha256": "a86b339a15c50a41ae5165ce2056dbeea0320de289d56d6591f993ff18f02376",
+        "size_in_bytes": 89456
+      },
+      {
+        "_path": "bin/llvm-as",
+        "path_type": "softlink",
+        "sha256": "de41c9a8e5b94e306309733a7cabab082f7f17ec662252588647b08eb09f536f",
+        "size_in_bytes": 46176
+      },
+      {
+        "_path": "bin/llvm-bcanalyzer",
+        "path_type": "softlink",
+        "sha256": "65d750a12e7d5692c57c8f1ff006281333f408644abfb62a6398d015211d096c",
+        "size_in_bytes": 39456
+      },
+      {
+        "_path": "bin/llvm-bitcode-strip",
+        "path_type": "softlink",
+        "sha256": "21951b1e4edbe470b63883a3603a7c71f1533ca97becafa70d60090cffc903e3",
+        "size_in_bytes": 269224
+      },
+      {
+        "_path": "bin/llvm-c-test",
+        "path_type": "softlink",
+        "sha256": "9e7005c226645bce62aec702826cd4f967faa7653ee41c47cc63b8924cc90b07",
+        "size_in_bytes": 114840
+      },
+      {
+        "_path": "bin/llvm-cat",
+        "path_type": "softlink",
+        "sha256": "49bc5b53ab92cc07c227697efaa1725746d7d4f576a67671911bc59e39da0fe8",
+        "size_in_bytes": 46424
+      },
+      {
+        "_path": "bin/llvm-cfi-verify",
+        "path_type": "softlink",
+        "sha256": "2f908a260d5410b7ae88391e74905fd35bc538739d123164293d434d84e2e4e2",
+        "size_in_bytes": 142480
+      },
+      {
+        "_path": "bin/llvm-cgdata",
+        "path_type": "softlink",
+        "sha256": "3d6843c4c8438700d0fb3eadf505e3dbd96514725e8ec7fd4c64d327b18d6cb6",
+        "size_in_bytes": 41984
+      },
+      {
+        "_path": "bin/llvm-cov",
+        "path_type": "softlink",
+        "sha256": "46634cff0bf4214a17d0cd8985cd9fc40b0d19dc1e2098edd6c5a257a498eef3",
+        "size_in_bytes": 590936
+      },
+      {
+        "_path": "bin/llvm-ctxprof-util",
+        "path_type": "softlink",
+        "sha256": "7df66029fe4bdbe19d09bbf05163bfd642ff1e79197881dba5858f6287fffb4b",
+        "size_in_bytes": 40504
+      },
+      {
+        "_path": "bin/llvm-cvtres",
+        "path_type": "softlink",
+        "sha256": "4b6d898d556c8e6b285c4da0e40337dd5bf664bf6d3d7f7bda4e07f0fb64a98c",
+        "size_in_bytes": 34904
+      },
+      {
+        "_path": "bin/llvm-cxxdump",
+        "path_type": "softlink",
+        "sha256": "8815640a1bda790dbc5296afac0e7746383171354b6cac49a2e1f86b6d957f54",
+        "size_in_bytes": 78024
+      },
+      {
+        "_path": "bin/llvm-cxxfilt",
+        "path_type": "softlink",
+        "sha256": "06240939e2956fa61a60a96ecf6493e7b085f7183d98c257c8974bb7b4f7e3cc",
+        "size_in_bytes": 30752
+      },
+      {
+        "_path": "bin/llvm-cxxmap",
+        "path_type": "softlink",
+        "sha256": "c0b0c6363e65382e9459e6d764d1a78478f11ea6a1950387012892a0ffd2ff90",
+        "size_in_bytes": 43288
+      },
+      {
+        "_path": "bin/llvm-debuginfo-analyzer",
+        "path_type": "softlink",
+        "sha256": "f558fdac8b20f415cf3e78db74ac7d5906353c9923fa76f490f47d16a6d0ca5b",
+        "size_in_bytes": 304184
+      },
+      {
+        "_path": "bin/llvm-debuginfod",
+        "path_type": "softlink",
+        "sha256": "5b3aced0a0d3163ffde67e5f177582aea1f8e9b050720a92abe6904d037db0a1",
+        "size_in_bytes": 120392
+      },
+      {
+        "_path": "bin/llvm-debuginfod-find",
+        "path_type": "softlink",
+        "sha256": "972765d9526715db119b7ca48f666c97a3e6577960bba7942c7e60ed92247720",
+        "size_in_bytes": 65696
+      },
+      {
+        "_path": "bin/llvm-diff",
+        "path_type": "softlink",
+        "sha256": "065819e224da36442a4ec37dfd5e6f6d3a662b3d8a7d5638c0852263d121d9b5",
+        "size_in_bytes": 86904
+      },
+      {
+        "_path": "bin/llvm-dis",
+        "path_type": "softlink",
+        "sha256": "2aa3a9679329289398c92bda1a307c3f641cbf15f8e63e7949fb454bafe7bb72",
+        "size_in_bytes": 66064
+      },
+      {
+        "_path": "bin/llvm-dlltool",
+        "path_type": "softlink",
+        "sha256": "a86b339a15c50a41ae5165ce2056dbeea0320de289d56d6591f993ff18f02376",
+        "size_in_bytes": 89456
+      },
+      {
+        "_path": "bin/llvm-dwarfdump",
+        "path_type": "softlink",
+        "sha256": "29ff113aa77ba4654f0e68b17bd0fc64899247d72206d5e8c815e9b511c21c5f",
+        "size_in_bytes": 270064
+      },
+      {
+        "_path": "bin/llvm-dwarfutil",
+        "path_type": "softlink",
+        "sha256": "62e11cbff0657f0f9706c31a3800c4e51b54db2b293e09f7116158b4cccecf79",
+        "size_in_bytes": 359864
+      },
+      {
+        "_path": "bin/llvm-dwp",
+        "path_type": "softlink",
+        "sha256": "8a3e19d0b3ca8c43b45f5dab013f6a95eb6fbf44e019a39b9a9ee26c71a02be0",
+        "size_in_bytes": 65784
+      },
+      {
+        "_path": "bin/llvm-exegesis",
+        "path_type": "softlink",
+        "sha256": "3f384b0589850c32b3fb50e54698f7c79f2571b3d84cec1a3605d5c134437658",
+        "size_in_bytes": 66927960
+      },
+      {
+        "_path": "bin/llvm-extract",
+        "path_type": "softlink",
+        "sha256": "8b4a94217e25f04b549f67237a14e4eabec7dd5bf97a01363c5d0c9641401962",
+        "size_in_bytes": 105600
+      },
+      {
+        "_path": "bin/llvm-gsymutil",
+        "path_type": "softlink",
+        "sha256": "cefa95c676b12852dbfef6f5650d03ab28c797eab078a09b3a3244f43ae988a7",
+        "size_in_bytes": 93360
+      },
+      {
+        "_path": "bin/llvm-ifs",
+        "path_type": "softlink",
+        "sha256": "cab8412845131008ec8ded8597ef6518d205c036d4e01671b55ed48762435903",
+        "size_in_bytes": 71912
+      },
+      {
+        "_path": "bin/llvm-install-name-tool",
+        "path_type": "softlink",
+        "sha256": "21951b1e4edbe470b63883a3603a7c71f1533ca97becafa70d60090cffc903e3",
+        "size_in_bytes": 269224
+      },
+      {
+        "_path": "bin/llvm-jitlink",
+        "path_type": "softlink",
+        "sha256": "432fb94efff2636be7a218102b991da850b38ce77a02d611a5709c8b2f9a274b",
+        "size_in_bytes": 453792
+      },
+      {
+        "_path": "bin/llvm-lib",
+        "path_type": "softlink",
+        "sha256": "a86b339a15c50a41ae5165ce2056dbeea0320de289d56d6591f993ff18f02376",
+        "size_in_bytes": 89456
+      },
+      {
+        "_path": "bin/llvm-libtool-darwin",
+        "path_type": "softlink",
+        "sha256": "17818d4709d6a1d2ca8b8e3f3c29b5dd4f5b0fbcd45d7726f20c477edaff58b8",
+        "size_in_bytes": 102888
+      },
+      {
+        "_path": "bin/llvm-link",
+        "path_type": "softlink",
+        "sha256": "ef7e19e90b45485f27674be738ab9c49897d3a8b0fc2554d9882e9e052d11d72",
+        "size_in_bytes": 104816
+      },
+      {
+        "_path": "bin/llvm-lipo",
+        "path_type": "softlink",
+        "sha256": "ac9d7da65cdecc2826f3a5ff2ad5e75291df3b3e4148d3daa623c3c15a527364",
+        "size_in_bytes": 86736
+      },
+      {
+        "_path": "bin/llvm-lto",
+        "path_type": "softlink",
+        "sha256": "1d7e378083b04e44e1fb8bd0ba226230e72a1723cc4c77d3d42faef580d3af6b",
+        "size_in_bytes": 190344
+      },
+      {
+        "_path": "bin/llvm-lto2",
+        "path_type": "softlink",
+        "sha256": "5ed3b8895d6780769a759675730d952b8d144688c14e9261884cfa98bc68e83d",
+        "size_in_bytes": 169984
+      },
+      {
+        "_path": "bin/llvm-mc",
+        "path_type": "softlink",
+        "sha256": "1138814ba4a033ba8190e91035b7202ef2bbb98190a8c1ab6c86001f8ae08d4d",
+        "size_in_bytes": 144488
+      },
+      {
+        "_path": "bin/llvm-mca",
+        "path_type": "softlink",
+        "sha256": "4f1be78a4a156d4eee08ea20e6c7f01d08bb4a7e3c290aaf5ff45c74dda4f733",
+        "size_in_bytes": 333744
+      },
+      {
+        "_path": "bin/llvm-ml",
+        "path_type": "softlink",
+        "sha256": "b5b17d6cb3e2f4152c96a79cee4acf384c131a68d762b89c6a89b25ded2ed128",
+        "size_in_bytes": 65120
+      },
+      {
+        "_path": "bin/llvm-ml64",
+        "path_type": "softlink",
+        "sha256": "b5b17d6cb3e2f4152c96a79cee4acf384c131a68d762b89c6a89b25ded2ed128",
+        "size_in_bytes": 65120
+      },
+      {
+        "_path": "bin/llvm-modextract",
+        "path_type": "softlink",
+        "sha256": "374290b3c21a39934e23580b338510073275c743eb77f19a725806898993e3d1",
+        "size_in_bytes": 43232
+      },
+      {
+        "_path": "bin/llvm-mt",
+        "path_type": "softlink",
+        "sha256": "ca812d1eb82e09495f8430d20f6ffa02fab93ba5c8e0b965c37e0fd114e80f03",
+        "size_in_bytes": 28424
+      },
+      {
+        "_path": "bin/llvm-nm",
+        "path_type": "softlink",
+        "sha256": "e6a6fbacf88871d2d2fed9fb055227d3b90c77ef7ec71aa91e3e9914ca1986ea",
+        "size_in_bytes": 160512
+      },
+      {
+        "_path": "bin/llvm-objcopy",
+        "path_type": "softlink",
+        "sha256": "21951b1e4edbe470b63883a3603a7c71f1533ca97becafa70d60090cffc903e3",
+        "size_in_bytes": 269224
+      },
+      {
+        "_path": "bin/llvm-objdump",
+        "path_type": "softlink",
+        "sha256": "b4794a96a1d308f43fb0ff78c6a309cbaa73e295bd9ba1c80e15594b958fb403",
+        "size_in_bytes": 958248
+      },
+      {
+        "_path": "bin/llvm-opt-report",
+        "path_type": "softlink",
+        "sha256": "cdaf4f02c2abc34a7ade2e0f1db325df1ef4a34d438a486aeb26d54b53ec3f7a",
+        "size_in_bytes": 63040
+      },
+      {
+        "_path": "bin/llvm-otool",
+        "path_type": "softlink",
+        "sha256": "b4794a96a1d308f43fb0ff78c6a309cbaa73e295bd9ba1c80e15594b958fb403",
+        "size_in_bytes": 958248
+      },
+      {
+        "_path": "bin/llvm-pdbutil",
+        "path_type": "softlink",
+        "sha256": "594229adfd1b5be4e089243b514f781b3598646db79ade197fd7b52342a1dfe8",
+        "size_in_bytes": 1040032
+      },
+      {
+        "_path": "bin/llvm-profdata",
+        "path_type": "softlink",
+        "sha256": "845ea092d325005846a4bc0f66b1102234189a49435ce4f157a774c64db0e47c",
+        "size_in_bytes": 567432
+      },
+      {
+        "_path": "bin/llvm-profgen",
+        "path_type": "softlink",
+        "sha256": "2b7e09109c2db7f10d668bde580def5e273ee91489d33a965f75824f3e7e2d57",
+        "size_in_bytes": 495168
+      },
+      {
+        "_path": "bin/llvm-ranlib",
+        "path_type": "softlink",
+        "sha256": "a86b339a15c50a41ae5165ce2056dbeea0320de289d56d6591f993ff18f02376",
+        "size_in_bytes": 89456
+      },
+      {
+        "_path": "bin/llvm-rc",
+        "path_type": "softlink",
+        "sha256": "efb53fe29f7c499ac69e2bcb7d1bdcce914b6eda0457aa14fa292e1fba45c1d0",
+        "size_in_bytes": 226016
+      },
+      {
+        "_path": "bin/llvm-readelf",
+        "path_type": "softlink",
+        "sha256": "0b68f42752276fc4a2c16897531fc54accb075582ca4bb34fbb459711bd4c9e7",
+        "size_in_bytes": 2019352
+      },
+      {
+        "_path": "bin/llvm-readobj",
+        "path_type": "softlink",
+        "sha256": "0b68f42752276fc4a2c16897531fc54accb075582ca4bb34fbb459711bd4c9e7",
+        "size_in_bytes": 2019352
+      },
+      {
+        "_path": "bin/llvm-readtapi",
+        "path_type": "softlink",
+        "sha256": "b4b6bae078a7ad4b1efb6a8699babb8134988824e9fe9e598fc512e0e8f63005",
+        "size_in_bytes": 146160
+      },
+      {
+        "_path": "bin/llvm-reduce",
+        "path_type": "softlink",
+        "sha256": "3043fcfac40db5481450b0d789e1b759f4c64d0f4be29ddc63cd254c02f18026",
+        "size_in_bytes": 407144
+      },
+      {
+        "_path": "bin/llvm-remarkutil",
+        "path_type": "softlink",
+        "sha256": "0ed3efb8e570f968a74fb776c9975d9afa7c808f7fc2c345c800738470c174d2",
+        "size_in_bytes": 238808
+      },
+      {
+        "_path": "bin/llvm-rtdyld",
+        "path_type": "softlink",
+        "sha256": "8257408a37362676e1c3952eb1944a29af7a29aa7098ca4c24e7af1d8a93c090",
+        "size_in_bytes": 165984
+      },
+      {
+        "_path": "bin/llvm-sim",
+        "path_type": "softlink",
+        "sha256": "d4e2e037e53fe60c695d9a8d817e09d4ef46badbd89c49de33321f996e0205b8",
+        "size_in_bytes": 34176
+      },
+      {
+        "_path": "bin/llvm-size",
+        "path_type": "softlink",
+        "sha256": "8a0d61c8d7c7aed68bc798d0d316f0b5be063ddc132aaa90d021c528f9ccfe99",
+        "size_in_bytes": 76000
+      },
+      {
+        "_path": "bin/llvm-split",
+        "path_type": "softlink",
+        "sha256": "8b21be9b49c225c02678fb9e09052a2f9c944a2a3a28f76ede5f1b5cc4b24bda",
+        "size_in_bytes": 52056
+      },
+      {
+        "_path": "bin/llvm-stress",
+        "path_type": "softlink",
+        "sha256": "045bc48fb4b84315986b08c43e2806a66a21c077c4bb080dada97389097b0acf",
+        "size_in_bytes": 82312
+      },
+      {
+        "_path": "bin/llvm-strings",
+        "path_type": "softlink",
+        "sha256": "38c7e232e7cf9433230bd172c42f9554ff6d5f7fbe36330e024d7cd94967d9f9",
+        "size_in_bytes": 39088
+      },
+      {
+        "_path": "bin/llvm-strip",
+        "path_type": "softlink",
+        "sha256": "21951b1e4edbe470b63883a3603a7c71f1533ca97becafa70d60090cffc903e3",
+        "size_in_bytes": 269224
+      },
+      {
+        "_path": "bin/llvm-symbolizer",
+        "path_type": "softlink",
+        "sha256": "f8826ce7c36597e4f3849d6716854b1c25bc4eea3a60a652f4295f1411fba96e",
+        "size_in_bytes": 100336
+      },
+      {
+        "_path": "bin/llvm-tblgen",
+        "path_type": "softlink",
+        "sha256": "909d08d21d28700c57a11c7f162332d083771adc8801b47f3717165ce3e0d1cb",
+        "size_in_bytes": 4922256
+      },
+      {
+        "_path": "bin/llvm-tli-checker",
+        "path_type": "softlink",
+        "sha256": "dbdb65354f3aea0e5bc301457d78b46f5e5547ad286ffb8504ce3e9f252c03d4",
+        "size_in_bytes": 42472
+      },
+      {
+        "_path": "bin/llvm-undname",
+        "path_type": "softlink",
+        "sha256": "acc92eb677aa4df1f66b653f92b2b03faeb6e97c5b409e08fe59ecef9c91193d",
+        "size_in_bytes": 48744
+      },
+      {
+        "_path": "bin/llvm-windres",
+        "path_type": "softlink",
+        "sha256": "efb53fe29f7c499ac69e2bcb7d1bdcce914b6eda0457aa14fa292e1fba45c1d0",
+        "size_in_bytes": 226016
+      },
+      {
+        "_path": "bin/llvm-xray",
+        "path_type": "softlink",
+        "sha256": "90a5ace750ba4be2dfa8ac6575ac8fc98d93352b9e6f99ff52ac3fbb300658cb",
+        "size_in_bytes": 584680
+      },
+      {
+        "_path": "bin/opt",
+        "path_type": "softlink",
+        "sha256": "b0a9fe07e626d0398075d86967b3842f5c19100a387412722d1aa594c1189191",
+        "size_in_bytes": 392072
+      },
+      {
+        "_path": "bin/reduce-chunk-list",
+        "path_type": "softlink",
+        "sha256": "4a80fa1ec6a7bdfd98eae298b0a31360d8fd9ed805a2b6b1bee0e22be22f4500",
+        "size_in_bytes": 35024
+      },
+      {
+        "_path": "bin/sancov",
+        "path_type": "softlink",
+        "sha256": "6d819b4ab332ca0449fc413c677c02a69effb60c67cb2c7560662df7962bbf76",
+        "size_in_bytes": 129496
+      },
+      {
+        "_path": "bin/sanstats",
+        "path_type": "softlink",
+        "sha256": "bb4ce4e3ad535491197edccef2a43b498fdef7e2e66ca08f778d30290ee9c335",
+        "size_in_bytes": 35568
+      },
+      {
+        "_path": "bin/verify-uselistorder",
+        "path_type": "softlink",
+        "sha256": "1eb524815de75acc35b8800149dd766fa3474da72936e5cf52bc85665ea1b07d",
+        "size_in_bytes": 61200
+      },
+      {
+        "_path": "share/__pycache__/opt-diff.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0857203e23c41edb0a864af1e6ae8f10214bc9e1ab26284790828841ea19c53",
+        "size_in_bytes": 3649,
+        "sha256_in_prefix": "d0857203e23c41edb0a864af1e6ae8f10214bc9e1ab26284790828841ea19c53"
+      },
+      {
+        "_path": "share/__pycache__/opt-stats.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "43400f9c8f0f97521e0d3f60dcde3e613ee2c31d8035f749ee5172b0ca581c99",
+        "size_in_bytes": 3731,
+        "sha256_in_prefix": "43400f9c8f0f97521e0d3f60dcde3e613ee2c31d8035f749ee5172b0ca581c99"
+      },
+      {
+        "_path": "share/__pycache__/opt-viewer.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "0be1d3e24b40ac489011af5b568fc136028951e65fda38f6e85c24d186eadf87",
+        "size_in_bytes": 17269,
+        "sha256_in_prefix": "0be1d3e24b40ac489011af5b568fc136028951e65fda38f6e85c24d186eadf87"
+      },
+      {
+        "_path": "share/__pycache__/optpmap.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "fdc614c77fab8084a1186597fd3e32c9d50b556112b11bd61b4505b921965bd7",
+        "size_in_bytes": 2564,
+        "sha256_in_prefix": "fdc614c77fab8084a1186597fd3e32c9d50b556112b11bd61b4505b921965bd7"
+      },
+      {
+        "_path": "share/__pycache__/optrecord.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9b12731e02763b015483c9176176a8b6ed2ddf38d006b77a5607ff50ab6d5043",
+        "size_in_bytes": 16986,
+        "sha256_in_prefix": "9b12731e02763b015483c9176176a8b6ed2ddf38d006b77a5607ff50ab6d5043"
+      },
+      {
+        "_path": "share/opt-diff.py",
+        "path_type": "hardlink",
+        "sha256": "348c861a84db6a48c025c4b0122cf9d843874c00efa0fcf2dce911972842a402",
+        "size_in_bytes": 2593,
+        "sha256_in_prefix": "348c861a84db6a48c025c4b0122cf9d843874c00efa0fcf2dce911972842a402"
+      },
+      {
+        "_path": "share/opt-stats.py",
+        "path_type": "hardlink",
+        "sha256": "699d279a7f76a853300d1981e96bdaf1c791c13f4b37035d0a70157457b7d6b5",
+        "size_in_bytes": 2471,
+        "sha256_in_prefix": "699d279a7f76a853300d1981e96bdaf1c791c13f4b37035d0a70157457b7d6b5"
+      },
+      {
+        "_path": "share/opt-viewer.py",
+        "path_type": "hardlink",
+        "sha256": "68b48f0fb40c762b78702a2fc69b0151bb63a8785a9611246620ca49207a9603",
+        "size_in_bytes": 13774,
+        "sha256_in_prefix": "68b48f0fb40c762b78702a2fc69b0151bb63a8785a9611246620ca49207a9603"
+      },
+      {
+        "_path": "share/optpmap.py",
+        "path_type": "hardlink",
+        "sha256": "679baea666f939063ed7ceff5b9476734fdb8e1c92a42716ba52084def47efd9",
+        "size_in_bytes": 1770,
+        "sha256_in_prefix": "679baea666f939063ed7ceff5b9476734fdb8e1c92a42716ba52084def47efd9"
+      },
+      {
+        "_path": "share/optrecord.py",
+        "path_type": "hardlink",
+        "sha256": "90279178a4c13e0f5c7633b16c1997461e900be94db7b63773ef84ffd6b8abf7",
+        "size_in_bytes": 10415,
+        "sha256_in_prefix": "90279178a4c13e0f5c7633b16c1997461e900be94db7b63773ef84ffd6b8abf7"
+      },
+      {
+        "_path": "share/style.css",
+        "path_type": "hardlink",
+        "sha256": "e342f6eba63176ed9e25b0a619811517c8b99562276eff2bcc71f9e59cd0c598",
+        "size_in_bytes": 6386,
+        "sha256_in_prefix": "e342f6eba63176ed9e25b0a619811517c8b99562276eff2bcc71f9e59cd0c598"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/llvm-tools-21.1.7-hb0207f0_0",
+    "type": 1
+  }
+}

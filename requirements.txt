@@ -16,3 +16,4 @@ statsmodels
 torch
 pyro-ppl
 tqdm
+snakemake
