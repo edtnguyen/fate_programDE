@@ -10,5 +10,9 @@ anndata
 matplotlib
 numpy
 pandas
+pyyaml
+scipy
 statsmodels
+torch
+pyro-ppl
 tqdm
