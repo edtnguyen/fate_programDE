@@ -349,6 +349,8 @@ def fit_svi(
     lr: float,
     clip_norm: float,
     num_steps: int,
+    s_time: float = 1.0,
+    s_guide: float = 1.0,
     seed: int = 0,
 ) -> "AutoGuide":
     """
@@ -377,6 +379,8 @@ def fit_svi(
             subsample_size=subsample_size,
             fate_names=fate_names,
             ref_fate=ref_fate,
+            s_time=s_time,
+            s_guide=s_guide,
         )
 
     guide = AutoNormal(model)

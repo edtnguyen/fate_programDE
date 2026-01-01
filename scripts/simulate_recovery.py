@@ -348,6 +348,8 @@ def _write_config(
     lr: float,
     clip_norm: float,
     num_steps: int,
+    s_time: float,
+    s_guide: float,
     num_draws: int,
     seed: int,
 ) -> None:
@@ -370,6 +372,8 @@ def _write_config(
         "lr": lr,
         "clip_norm": clip_norm,
         "num_steps": num_steps,
+        "s_time": s_time,
+        "s_guide": s_guide,
         "num_posterior_draws": num_draws,
         "seed": seed,
         "weights": None,
@@ -396,6 +400,8 @@ def main() -> None:
     ap.add_argument("--batch-size", type=int, default=128)
     ap.add_argument("--lr", type=float, default=1e-3)
     ap.add_argument("--clip-norm", type=float, default=5.0)
+    ap.add_argument("--s-time", type=float, default=1.0)
+    ap.add_argument("--s-guide", type=float, default=1.0)
     ap.add_argument("--num-draws", type=int, default=200)
     ap.add_argument("--out-csv", default=None)
     ap.add_argument("--skip-internal-fit", action="store_true")
@@ -460,12 +466,14 @@ def main() -> None:
             D=args.days,
             R=args.reps,
             Kmax=args.kmax,
-            batch_size=args.batch_size,
-            lr=args.lr,
-            clip_norm=args.clip_norm,
-            num_steps=args.num_steps,
-            seed=args.seed,
-        )
+        batch_size=args.batch_size,
+        lr=args.lr,
+        clip_norm=args.clip_norm,
+        num_steps=args.num_steps,
+        s_time=args.s_time,
+        s_guide=args.s_guide,
+        seed=args.seed,
+    )
 
         summary = export_gene_summary_for_ash(
             guide=guide,
@@ -556,6 +564,8 @@ def main() -> None:
             lr=args.lr,
             clip_norm=args.clip_norm,
             num_steps=args.num_steps,
+            s_time=args.s_time,
+            s_guide=args.s_guide,
             num_draws=args.num_draws,
             seed=args.seed,
         )

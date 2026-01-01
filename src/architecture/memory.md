@@ -6,5 +6,6 @@ Implemented steps 8–10 in `src/models/pyro_model.py`: minibatched SVI via `fit
 Implemented step 11 in `src/models/pyro_model.py`: `reconstruct_theta_samples` draws posterior theta samples and `export_gene_summary_for_ash` computes weighted summaries for a configurable contrast fate; day-weight columns (`w0..w{D-1}`) are added for traceability. Optional stratified bootstrap SE can be enabled in `scripts/fit_pyro_export.py` via `config.yaml`.
 Implemented step 12 in pipeline form: added `scripts/fit_pyro_export.py`, `scripts/run_ash.R`, and `scripts/rank_hits.py`, plus `config.yaml` (now includes ref_fate/contrast_fate), `Snakefile`, and conda env specs in `envs/`.
 Implemented step 13 diagnostics in `scripts/run_diagnostics.py` (holdout cross-entropy for full vs nuisance-only model; optional guide permutation with a Python-only p-value/BH qvalue hit-rate proxy; optional sanity checks for expected gene-direction effects).
+Updated `config.yaml` to include prior scale knobs (`s_time`, `s_guide`) and set them to 0.3 and 0.5 for noisier recovery.
 Removed unused pipeline stubs from `src/models/pyro_pipeline.py`; only shared helpers (`make_k_centered`, `to_torch`) remain.
 Remaining manual/optional items from `src/architecture/pyro_model.md`: manual review of sanity-check outputs (if enabled).

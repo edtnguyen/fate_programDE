@@ -292,6 +292,8 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=diag_steps,
+        s_time=cfg.get("s_time", 1.0),
+        s_guide=cfg.get("s_guide", 1.0),
         seed=cfg.get("diagnostics_seed", 0),
     )
 
@@ -340,6 +342,8 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=diag_steps,
+        s_time=cfg.get("s_time", 1.0),
+        s_guide=cfg.get("s_guide", 1.0),
         seed=cfg.get("diagnostics_seed", 0),
     )
 
@@ -408,6 +412,8 @@ def main() -> None:
             lr=cfg["lr"],
             clip_norm=cfg["clip_norm"],
             num_steps=cfg.get("diagnostics_perm_steps", 500),
+            s_time=cfg.get("s_time", 1.0),
+            s_guide=cfg.get("s_guide", 1.0),
             seed=cfg.get("diagnostics_seed", 0),
         )
 

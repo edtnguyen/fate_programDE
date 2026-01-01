@@ -24,6 +24,29 @@ SIM_LR = config.get("sim_lr", 1e-3)
 SIM_CLIP = config.get("sim_clip_norm", 5.0)
 SIM_DRAWS = config.get("sim_num_draws", 200)
 
+STRESS_SUMMARY = config.get("sim_stress_summary", f"{SIM_OUT}/stress_summary.csv")
+STRESS_DETAIL = config.get("sim_stress_detail", f"{SIM_OUT}/stress_detail.csv")
+
+PRIOR_SWEEP_SUMMARY = config.get("sim_prior_sweep_summary", f"{SIM_OUT}/prior_sweep_summary.csv")
+PRIOR_SWEEP_DETAIL = config.get("sim_prior_sweep_detail", f"{SIM_OUT}/prior_sweep_detail.csv")
+SWEEP_SEEDS = config.get("sim_sweep_seeds", "0,1")
+SWEEP_S_TIME = config.get("sim_sweep_s_time", "1.0,0.5")
+SWEEP_S_GUIDE = config.get("sim_sweep_s_guide", "1.0,0.5")
+SWEEP_CONC = config.get("sim_sweep_concentration", 5.0)
+SWEEP_CELLS = config.get("sim_sweep_cells", 200)
+SWEEP_STEPS = config.get("sim_sweep_num_steps", 300)
+SWEEP_DRAWS = config.get("sim_sweep_num_draws", 200)
+SWEEP_BATCH = config.get("sim_sweep_batch_size", 128)
+SWEEP_LR = config.get("sim_sweep_lr", 1e-3)
+SWEEP_CLIP = config.get("sim_sweep_clip_norm", 5.0)
+SWEEP_GENES = config.get("sim_sweep_genes", SIM_GENES)
+SWEEP_GUIDES = config.get("sim_sweep_guides", SIM_GUIDES)
+SWEEP_DAYS = config.get("sim_sweep_days", SIM_DAYS)
+SWEEP_REPS = config.get("sim_sweep_reps", SIM_REPS)
+SWEEP_KMAX = config.get("sim_sweep_kmax", SIM_KMAX)
+SWEEP_NTC_GUIDES = config.get("sim_sweep_ntc_guides", SIM_NTC_GUIDES)
+SWEEP_NTC_FRAC = config.get("sim_sweep_ntc_frac", SIM_NTC_FRAC)
+
 rule all:
     input:
         f"{OUT}/hits_ranked.csv"
@@ -151,5 +174,60 @@ rule simulate_recovery:
             --out-dir {params.out_dir} \
             --run-export \
             --export-out {output.summary} \
+            --force
+        """
+
+rule sim_stress:
+    output:
+        summary=STRESS_SUMMARY,
+        detail=STRESS_DETAIL
+    params:
+        cfg="config.yaml"
+    conda:
+        "envs/pyro.yaml"
+    threads: 1
+    resources:
+        mem_mb=16000
+    shell:
+        r"""
+        python scripts/simulate_stress.py \
+            --config {params.cfg} \
+            --out-summary {output.summary} \
+            --out-detail {output.detail} \
+            --force
+        """
+
+rule sim_prior_sweep:
+    output:
+        summary=PRIOR_SWEEP_SUMMARY,
+        detail=PRIOR_SWEEP_DETAIL
+    conda:
+        "envs/pyro.yaml"
+    threads: 1
+    resources:
+        mem_mb=16000
+    shell:
+        r"""
+        python scripts/simulate_prior_sweep.py \
+            --seed-data 0 \
+            --seeds "{SWEEP_SEEDS}" \
+            --s-time-values "{SWEEP_S_TIME}" \
+            --s-guide-values "{SWEEP_S_GUIDE}" \
+            --cells {SWEEP_CELLS} \
+            --genes {SWEEP_GENES} \
+            --guides {SWEEP_GUIDES} \
+            --days {SWEEP_DAYS} \
+            --reps {SWEEP_REPS} \
+            --kmax {SWEEP_KMAX} \
+            --ntc-guides {SWEEP_NTC_GUIDES} \
+            --ntc-frac {SWEEP_NTC_FRAC} \
+            --concentration {SWEEP_CONC} \
+            --num-steps {SWEEP_STEPS} \
+            --batch-size {SWEEP_BATCH} \
+            --lr {SWEEP_LR} \
+            --clip-norm {SWEEP_CLIP} \
+            --num-draws {SWEEP_DRAWS} \
+            --out-summary {output.summary} \
+            --out-detail {output.detail} \
             --force
         """

@@ -110,6 +110,8 @@ def _bootstrap_se(
             lr=lr,
             clip_norm=clip_norm,
             num_steps=num_steps,
+            s_time=cfg.get("s_time", 1.0),
+            s_guide=cfg.get("s_guide", 1.0),
             seed=seed + rep + 1,
         )
 
@@ -201,6 +203,8 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=cfg["num_steps"],
+        s_time=cfg.get("s_time", 1.0),
+        s_guide=cfg.get("s_guide", 1.0),
         seed=cfg.get("seed", 0),
     )
 
