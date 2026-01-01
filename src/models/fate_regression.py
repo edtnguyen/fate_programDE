@@ -9,12 +9,12 @@ import pandas as pd
 from statsmodels.stats.multitest import fdrcorrection
 from tqdm.auto import tqdm
 
-from src.features.gene_kd import build_gene_kd_matrix
-from src.features.transforms import logit
-from src.models.fate_preprocessing import (
+from src.features.fate_preprocessing import (
     _build_base_frames,
     aggregate_data_to_guide_level,
+    build_gene_kd_matrix,
 )
+from src.features.transforms import logit
 from src.models.glm_analysis import fit_glm_for_gene_fate
 
 

@@ -10,7 +10,6 @@ import anndata
 import click
 import pandas as pd
 
-from src.models.fate_preprocessing import aggregate_data_to_guide_level
 from src.models.fate_regression import (
     run_day_gene_fate_regressions,
     run_day_gene_fate_regressions_guide_agg,
