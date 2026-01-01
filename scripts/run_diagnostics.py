@@ -7,11 +7,12 @@ import argparse
 import json
 import logging
 from pathlib import Path
-import subprocess
 import sys
+from typing import Sequence
 
 import numpy as np
 import pandas as pd
+from scipy.stats import norm
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +24,7 @@ from pyro.infer import Predictive  # noqa: E402
 
 from scripts.pyro_io import load_adata_inputs  # noqa: E402
 from src.models.pyro_model import compute_linear_predictor, fit_svi  # noqa: E402
-from src.models.pyro_model import export_gene_summary_for_ash  # noqa: E402
+from src.models.pyro_model import export_gene_summary_for_ash, resolve_fate_names  # noqa: E402
 from src.models.pyro_pipeline import make_k_centered, to_torch  # noqa: E402
 
 
@@ -44,6 +45,22 @@ def _split_indices(n: int, holdout_frac: float, seed: int) -> tuple[np.ndarray, 
     test_idx = idx[:n_test]
     train_idx = idx[n_test:]
     return train_idx, test_idx
+
+
+def _bh_qvalues(pvals: np.ndarray) -> np.ndarray:
+    pvals = np.asarray(pvals, dtype=np.float64)
+    pvals = np.where(np.isfinite(pvals), pvals, 1.0)
+    n = pvals.size
+    if n == 0:
+        return pvals
+    order = np.argsort(pvals)
+    ranks = np.arange(1, n + 1, dtype=np.float64)
+    q_sorted = pvals[order] * n / ranks
+    q_sorted = np.minimum.accumulate(q_sorted[::-1])[::-1]
+    q_sorted = np.clip(q_sorted, 0.0, 1.0)
+    qvals = np.empty_like(q_sorted)
+    qvals[order] = q_sorted
+    return qvals
 
 
 def _reconstruct_theta_from_samples(samples: dict, L: int, D: int) -> torch.Tensor:
@@ -85,6 +102,8 @@ def _estimate_mean_loglik(
     mask_test: torch.Tensor,
     gene_of_guide_t: torch.Tensor,
     *,
+    fate_names: Sequence[str],
+    ref_fate: str,
     L: int,
     G: int,
     D: int,
@@ -92,6 +111,9 @@ def _estimate_mean_loglik(
     Kmax: int,
     num_draws: int,
 ) -> float:
+    fate_names, _, _, non_ref_indices = resolve_fate_names(
+        fate_names, ref_fate=ref_fate
+    )
     return_sites = [
         "alpha",
         "b",
@@ -132,8 +154,8 @@ def _estimate_mean_loglik(
             day_t=day_test,
             rep_t=rep_test,
         )
-        eta = torch.zeros((p_test.shape[0], 3), device=p_test.device)
-        eta[:, 1:] = eta_nonref
+        eta = torch.zeros((p_test.shape[0], len(fate_names)), device=p_test.device)
+        eta[:, non_ref_indices] = eta_nonref
         log_pi = torch.log_softmax(eta, dim=-1)
         logp = (p_test * log_pi).sum(-1)
         logliks.append(logp.mean().item())
@@ -175,6 +197,13 @@ def main() -> None:
     logger = logging.getLogger(__name__)
 
     cfg = yaml.safe_load(open(args.config))
+    ref_fate = cfg.get("ref_fate", "EC")
+    contrast_fate = cfg.get("contrast_fate", "MES")
+    _, non_ref_fates, _, _ = resolve_fate_names(cfg["fates"], ref_fate=ref_fate)
+    if contrast_fate not in non_ref_fates:
+        raise ValueError(
+            f"contrast_fate '{contrast_fate}' not in non-reference fates {non_ref_fates}"
+        )
     adata = ad.read_h5ad(args.adata)
 
     (
@@ -242,6 +271,8 @@ def main() -> None:
         gids_t_train,
         mask_t_train,
         gene_of_guide_t,
+        fate_names=cfg["fates"],
+        ref_fate=ref_fate,
         L=L,
         G=G,
         D=cfg["D"],
@@ -264,6 +295,8 @@ def main() -> None:
         gids_t_test,
         mask_t_test,
         gene_of_guide_t,
+        fate_names=cfg["fates"],
+        ref_fate=ref_fate,
         L=L,
         G=G,
         D=cfg["D"],
@@ -286,6 +319,8 @@ def main() -> None:
         gids_t_train_zero,
         mask_t_train_zero,
         gene_of_guide_t,
+        fate_names=cfg["fates"],
+        ref_fate=ref_fate,
         L=L,
         G=G,
         D=cfg["D"],
@@ -308,6 +343,8 @@ def main() -> None:
         gids_t_test_zero,
         mask_t_test_zero,
         gene_of_guide_t,
+        fate_names=cfg["fates"],
+        ref_fate=ref_fate,
         L=L,
         G=G,
         D=cfg["D"],
@@ -348,6 +385,8 @@ def main() -> None:
             gids_t_perm_train,
             mask_t_train,
             gene_of_guide_t,
+            fate_names=cfg["fates"],
+            ref_fate=ref_fate,
             L=L,
             G=G,
             D=cfg["D"],
@@ -378,6 +417,9 @@ def main() -> None:
             guide=guide_perm,
             model_args=model_args_perm,
             gene_names=gene_names,
+            fate_names=cfg["fates"],
+            ref_fate=ref_fate,
+            contrast_fate=contrast_fate,
             L=L,
             D=cfg["D"],
             num_draws=cfg.get("diagnostics_perm_draws", 25),
@@ -387,16 +429,24 @@ def main() -> None:
         )
 
         perm_ash = Path(args.out).with_name("diagnostics_perm_ash.csv")
-        r_script = ROOT / "scripts" / "run_ash.R"
-        subprocess.check_call(
-            ["Rscript", str(r_script), str(perm_summary), str(perm_ash)]
-        )
+        perm_df = pd.read_csv(perm_summary)
 
-        ash_df = pd.read_csv(perm_ash)
-        if "lfsr" not in ash_df.columns or "qvalue" not in ash_df.columns:
-            raise ValueError("ash output missing lfsr or qvalue columns")
-        hits = (ash_df["lfsr"] < cfg["lfsr_thresh"]) & (
-            ash_df["qvalue"] < cfg["qvalue_thresh"]
+        betahat = perm_df["betahat"].to_numpy(dtype=np.float64)
+        sebetahat = perm_df["sebetahat"].to_numpy(dtype=np.float64)
+        valid = (sebetahat > 0) & np.isfinite(sebetahat) & np.isfinite(betahat)
+
+        z = np.zeros_like(betahat)
+        z[valid] = betahat[valid] / sebetahat[valid]
+        # Use two-sided normal p-values as an lfsr proxy for permutation diagnostics.
+        pvals = np.ones_like(z)
+        pvals[valid] = 2.0 * norm.sf(np.abs(z[valid]))
+
+        perm_df["lfsr"] = pvals
+        perm_df["qvalue"] = _bh_qvalues(pvals)
+        perm_df.to_csv(perm_ash, index=False)
+
+        hits = (perm_df["lfsr"] < cfg["lfsr_thresh"]) & (
+            perm_df["qvalue"] < cfg["qvalue_thresh"]
         )
         diagnostics["perm_hit_count"] = int(hits.sum())
         diagnostics["perm_hit_frac"] = float(hits.mean())

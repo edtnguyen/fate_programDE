@@ -17,7 +17,7 @@ import anndata as ad  # noqa: E402
 import torch  # noqa: E402
 
 from scripts.pyro_io import load_adata_inputs  # noqa: E402
-from src.models.pyro_model import export_gene_summary_for_ash, fit_svi  # noqa: E402
+from src.models.pyro_model import export_gene_summary_for_ash, fit_svi, resolve_fate_names  # noqa: E402
 from src.models.pyro_pipeline import make_k_centered, to_torch  # noqa: E402
 
 
@@ -43,6 +43,13 @@ def main() -> None:
     logger = logging.getLogger(__name__)
 
     cfg = yaml.safe_load(open(args.config))
+    ref_fate = cfg.get("ref_fate", "EC")
+    contrast_fate = cfg.get("contrast_fate", "MES")
+    _, non_ref_fates, _, _ = resolve_fate_names(cfg["fates"], ref_fate=ref_fate)
+    if contrast_fate not in non_ref_fates:
+        raise ValueError(
+            f"contrast_fate '{contrast_fate}' not in non-reference fates {non_ref_fates}"
+        )
 
     logger.info("Loading AnnData")
     adata = ad.read_h5ad(args.adata)
@@ -79,6 +86,8 @@ def main() -> None:
         gids_t,
         mask_t,
         gene_of_guide_t,
+        fate_names=cfg["fates"],
+        ref_fate=ref_fate,
         L=L,
         G=G,
         D=cfg["D"],
@@ -97,6 +106,9 @@ def main() -> None:
         guide=guide,
         model_args=model_args,
         gene_names=gene_names,
+        fate_names=cfg["fates"],
+        ref_fate=ref_fate,
+        contrast_fate=contrast_fate,
         L=L,
         D=cfg["D"],
         num_draws=cfg["num_posterior_draws"],

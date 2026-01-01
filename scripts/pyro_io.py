@@ -4,9 +4,13 @@ from __future__ import annotations
 
 from typing import Iterable, Tuple
 
+import logging
+
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
+
+logger = logging.getLogger(__name__)
 
 
 def parse_day_to_int(day_series: pd.Series, D: int) -> np.ndarray:
@@ -126,12 +130,9 @@ def guides_to_padded_from_csr(
 
     indptr = Gmat_csr.indptr
     indices = Gmat_csr.indices
-    data = Gmat_csr.data
-
     for i in range(N):
         start, end = indptr[i], indptr[i + 1]
         cols = indices[start:end]
-        vals = data[start:end]
         if cols.size == 0:
             continue
         if colnames is None:
@@ -143,13 +144,13 @@ def guides_to_padded_from_csr(
         )
         keep = np.array([g is not None for g in gids], dtype=bool)
         cols = cols[keep]
-        vals = vals[keep]
         gids = np.array([int(g) for g in gids[keep]], dtype=np.int64)
         if gids.size == 0:
             continue
         if gids.size > Kmax:
-            topk = np.argpartition(-vals, Kmax - 1)[:Kmax]
-            gids = gids[topk]
+            raise ValueError(
+                f"Cell {i} has {gids.size} guides after mapping; exceeds Kmax={Kmax}."
+            )
 
         m = gids.size
         guide_ids[i, :m] = gids
@@ -187,7 +188,25 @@ def load_adata_inputs(adata, cfg: dict, guide_map_csv: str):
         Gmat = guide_obsm
     Gmat = sp.csr_matrix(Gmat)
 
+    k_raw = np.asarray(Gmat.getnnz(axis=1)).astype(np.int64).ravel()
+    keep = k_raw <= cfg["Kmax"]
+    if not keep.all():
+        dropped = int((~keep).sum())
+        logger.info("Dropping %d cells with k > Kmax (%d).", dropped, cfg["Kmax"])
+        p = p[keep]
+        day_int = day_int[keep]
+        rep_int = rep_int[keep]
+        Gmat = Gmat[keep]
+
     guide_map_df = load_guide_map(guide_map_csv)
+    missing_guides = sorted(set(guide_names) - set(guide_map_df["guide_name"]))
+    if missing_guides:
+        sample = ", ".join(missing_guides[:5])
+        logger.warning(
+            "Guide map missing %d guide names (e.g., %s). These will be ignored.",
+            len(missing_guides),
+            sample,
+        )
     guide_name_to_gid, gid_to_gene, gene_names, L, G = build_id_maps(
         guide_names, guide_map_df
     )
@@ -196,14 +215,11 @@ def load_adata_inputs(adata, cfg: dict, guide_map_csv: str):
         Gmat, guide_names, guide_name_to_gid, Kmax=cfg["Kmax"]
     )
 
-    cell_df = pd.DataFrame({"day": day_int, "rep": rep_int})
     k = mask.sum(axis=1).astype(np.int64)
-    keep = k <= cfg["Kmax"]
-    if not keep.all():
-        cell_df = cell_df.loc[keep].reset_index(drop=True)
-        p = p[keep]
-        guide_ids = guide_ids[keep]
-        mask = mask[keep]
+    if not np.all(k <= cfg["Kmax"]):
+        raise ValueError("Found cells with k > Kmax after filtering; check preprocessing.")
+
+    cell_df = pd.DataFrame({"day": day_int, "rep": rep_int})
 
     day_counts = [
         int((cell_df["day"].to_numpy() == d).sum()) for d in range(cfg["D"])

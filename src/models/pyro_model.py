@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 from typing import Optional, Sequence, TYPE_CHECKING
 
 import numpy as np
@@ -13,41 +12,37 @@ if TYPE_CHECKING:
     from pyro.infer.autoguide import AutoGuide
 
 
-FATE_NAMES = ("EC", "MES", "NEU")
-REF_FATE = "EC"
-NON_REF_FATES = ("MES", "NEU")
+DEFAULT_REF_FATE = "EC"
+DEFAULT_CONTRAST_FATE = "MES"
 
 
-@dataclass(frozen=True)
-class LatentIndex:
-    """Indexing metadata for latent parameters in the fate model."""
+def resolve_fate_names(
+    fate_names: Sequence[str],
+    ref_fate: str = DEFAULT_REF_FATE,
+) -> tuple[tuple[str, ...], list[str], int, list[int]]:
+    """
+    Validate fate names and return non-reference ordering plus indices.
 
-    L: int
-    G: int
-    D: int
-    R: int
-
-    def __post_init__(self) -> None:
-        for name, value in (("L", self.L), ("G", self.G), ("D", self.D), ("R", self.R)):
-            if value <= 0:
-                raise ValueError(f"{name} must be a positive integer (got {value})")
-
-    def fate_to_idx(self) -> dict[str, int]:
-        return {name: idx for idx, name in enumerate(FATE_NAMES)}
-
-    def non_ref_idx(self) -> tuple[int, int]:
-        fate_to_idx = self.fate_to_idx()
-        return (fate_to_idx[NON_REF_FATES[0]], fate_to_idx[NON_REF_FATES[1]])
-
-    def shapes(self) -> dict[str, tuple[int, ...]]:
-        fstar = len(NON_REF_FATES)
-        return {
-            "theta": (self.L + 1, fstar, self.D),
-            "delta": (self.G + 1, fstar),
-            "alpha": (fstar, self.D),
-            "b": (fstar, self.R),
-            "gamma": (fstar,),
-        }
+    Returns
+    -------
+    tuple
+        (fate_names, non_ref_fates, ref_idx, non_ref_indices)
+    """
+    fate_names = tuple(fate_names)
+    if len(fate_names) != len(set(fate_names)):
+        raise ValueError(f"fate_names must be unique (got {fate_names})")
+    if len(fate_names) != 3:
+        raise ValueError(f"Expected exactly 3 fates (got {fate_names})")
+    if ref_fate not in fate_names:
+        raise ValueError(f"ref_fate '{ref_fate}' not found in fate_names={fate_names}")
+    non_ref_fates = [fate for fate in fate_names if fate != ref_fate]
+    if len(non_ref_fates) != 2:
+        raise ValueError(
+            f"Expected 2 non-reference fates (ref_fate={ref_fate}, fate_names={fate_names})"
+        )
+    ref_idx = fate_names.index(ref_fate)
+    non_ref_indices = [fate_names.index(fate) for fate in non_ref_fates]
+    return fate_names, non_ref_fates, ref_idx, non_ref_indices
 
 
 def build_guide_effects(
@@ -125,21 +120,6 @@ def compute_linear_predictor(
     return alpha_by_cell + b_by_cell + gamma_by_cell + guide_sum
 
 
-def primary_contrast_mes_ec(theta_t: "torch.Tensor") -> "torch.Tensor":
-    """
-    Extract the MES–EC primary contrast from theta.
-
-    Returns
-    -------
-    torch.Tensor
-        MES effects with shape (L+1, D), including baseline row 0.
-    """
-    if theta_t.ndim != 3:
-        raise ValueError("theta_t must be 3D: (L+1, F*, D)")
-    mes_idx = 0
-    return theta_t[:, mes_idx, :]
-
-
 def fate_model(
     p_t: "torch.Tensor",
     day_t: "torch.Tensor",
@@ -149,6 +129,8 @@ def fate_model(
     mask_t: "torch.Tensor",
     gene_of_guide_t: "torch.Tensor",
     *,
+    fate_names: Sequence[str],
+    ref_fate: str = DEFAULT_REF_FATE,
     L: int,
     G: int,
     D: int,
@@ -176,18 +158,25 @@ def fate_model(
     import torch
     import torch.nn.functional as F
 
-    if p_t.ndim != 2 or p_t.shape[1] != len(FATE_NAMES):
+    fate_names, non_ref_fates, _, non_ref_indices = resolve_fate_names(
+        fate_names, ref_fate=ref_fate
+    )
+    if p_t.ndim != 2 or p_t.shape[1] != len(fate_names):
         raise ValueError(
-            f"p_t must be (N,{len(FATE_NAMES)}) ordered as {FATE_NAMES}"
+            f"p_t must be (N,{len(fate_names)}) ordered as {fate_names}"
         )
     if day_t.ndim != 1 or rep_t.ndim != 1 or k_t.ndim != 1:
         raise ValueError("day_t, rep_t, and k_t must be 1D tensors")
     if guide_ids_t.shape != mask_t.shape:
         raise ValueError("guide_ids_t and mask_t must have the same shape")
+    if guide_ids_t.shape[1] != Kmax:
+        raise ValueError(
+            f"guide_ids_t second dim {guide_ids_t.shape[1]} does not match Kmax={Kmax}"
+        )
 
     device = p_t.device
     N = p_t.shape[0]
-    fstar = len(NON_REF_FATES)
+    fstar = len(non_ref_fates)
 
     sigma_alpha = pyro.sample(
         "sigma_alpha", dist.HalfNormal(s_alpha).expand([fstar]).to_event(1)
@@ -272,12 +261,13 @@ def fate_model(
             rep_t=rep_batch,
         )
 
-        eta = torch.zeros((p_batch.shape[0], len(FATE_NAMES)), device=device)
-        eta[:, 1:] = eta_nonref
+        eta = torch.zeros((p_batch.shape[0], len(fate_names)), device=device)
+        eta[:, non_ref_indices] = eta_nonref
         log_pi = F.log_softmax(eta, dim=-1)
 
         logp = (p_batch * log_pi).sum(-1)
-        pyro.factor("soft_label_loglik", logp)
+        scale = float(N) / float(logp.shape[0])
+        pyro.factor("soft_label_loglik", logp.sum() * scale)
 
 
 def fit_svi(
@@ -289,6 +279,8 @@ def fit_svi(
     mask_t: "torch.Tensor",
     gene_of_guide_t: "torch.Tensor",
     *,
+    fate_names: Sequence[str],
+    ref_fate: str = DEFAULT_REF_FATE,
     L: int,
     G: int,
     D: int,
@@ -320,7 +312,13 @@ def fit_svi(
     subsample_size = min(batch_size, N) if batch_size else N
 
     def model(*args, **kwargs):
-        return fate_model(*args, **kwargs, subsample_size=subsample_size)
+        return fate_model(
+            *args,
+            **kwargs,
+            subsample_size=subsample_size,
+            fate_names=fate_names,
+            ref_fate=ref_fate,
+        )
 
     guide = AutoNormal(model)
     optim = ClippedAdam({"lr": lr, "clip_norm": clip_norm})
@@ -335,6 +333,8 @@ def fit_svi(
             guide_ids_t,
             mask_t,
             gene_of_guide_t,
+            fate_names=fate_names,
+            ref_fate=ref_fate,
             L=L,
             G=G,
             D=D,
@@ -416,6 +416,9 @@ def export_gene_summary_for_ash(
     guide: "AutoGuide",
     model_args: tuple["torch.Tensor", ...],
     gene_names: Sequence[str],
+    fate_names: Sequence[str],
+    ref_fate: str = DEFAULT_REF_FATE,
+    contrast_fate: str = DEFAULT_CONTRAST_FATE,
     L: int,
     D: int,
     num_draws: int,
@@ -424,7 +427,7 @@ def export_gene_summary_for_ash(
     out_csv: str,
 ) -> pd.DataFrame:
     """
-    Summarize gene effects across days and write an ash-ready CSV.
+    Summarize gene effects across days for the contrast fate and write an ash-ready CSV.
 
     Returns
     -------
@@ -438,6 +441,17 @@ def export_gene_summary_for_ash(
     if D <= 0 or L <= 0:
         raise ValueError("L and D must be positive integers")
 
+    _, non_ref_fates, _, _ = resolve_fate_names(
+        fate_names, ref_fate=ref_fate
+    )
+    if contrast_fate == ref_fate:
+        raise ValueError("contrast_fate must differ from ref_fate")
+    if contrast_fate not in non_ref_fates:
+        raise ValueError(
+            f"contrast_fate '{contrast_fate}' not in non-reference fates {non_ref_fates}"
+        )
+    contrast_idx = non_ref_fates.index(contrast_fate)
+
     theta_samples = reconstruct_theta_samples(
         guide=guide,
         model_args=model_args,
@@ -446,7 +460,7 @@ def export_gene_summary_for_ash(
         num_draws=num_draws,
     )
 
-    mes_samples = theta_samples[:, 1:, 0, :]
+    contrast_samples = theta_samples[:, 1:, contrast_idx, :]
 
     if weights is None:
         weights_arr = np.asarray(day_cell_counts, dtype=np.float64)
@@ -465,7 +479,7 @@ def export_gene_summary_for_ash(
             raise ValueError("weights must sum to a positive value")
         weights_arr = weights_arr / weight_sum
 
-    weighted = np.tensordot(mes_samples, weights_arr, axes=([2], [0]))
+    weighted = np.tensordot(contrast_samples, weights_arr, axes=([2], [0]))
     betahat = weighted.mean(axis=0)
     sebetahat = weighted.std(axis=0, ddof=1)
 

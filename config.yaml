@@ -5,6 +5,8 @@ fate_prob_key: lineages_fwd
 
 # Fate order in that matrix / dataframe:
 fates: ["EC", "MES", "NEU"]
+ref_fate: EC
+contrast_fate: MES
 
 # Guide matrix key
 guide_key: guide
