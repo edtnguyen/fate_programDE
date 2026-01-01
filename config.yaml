@@ -35,6 +35,14 @@ num_steps: 5000
 num_posterior_draws: 1000
 seed: 0
 
+# Optional bootstrap SE (replace VI posterior SD with bootstrap SD)
+bootstrap_se: false
+bootstrap_reps: 20
+bootstrap_frac: 0.5
+bootstrap_num_steps: 1000
+bootstrap_num_draws: 200
+bootstrap_seed: 0
+
 # Across-day summary weights:
 # If null -> weights proportional to day cell counts after filtering
 weights: null
@@ -51,3 +59,8 @@ diagnostics_run_permutation: false
 diagnostics_perm_steps: 500
 diagnostics_perm_draws: 25
 diagnostics_seed: 0
+
+# Sanity checks (optional)
+sanity_check_genes: []
+sanity_num_draws: 200
+sanity_min_abs_effect: 0.0

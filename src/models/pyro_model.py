@@ -424,7 +424,7 @@ def export_gene_summary_for_ash(
     num_draws: int,
     day_cell_counts: Sequence[int],
     weights: Optional[Sequence[float]],
-    out_csv: str,
+    out_csv: str | None,
 ) -> pd.DataFrame:
     """
     Summarize gene effects across days for the contrast fate and write an ash-ready CSV.
@@ -432,7 +432,7 @@ def export_gene_summary_for_ash(
     Returns
     -------
     pd.DataFrame
-        Gene-level summary table written to ``out_csv``.
+        Gene-level summary table, optionally written to ``out_csv`` when provided.
     """
     if len(gene_names) != L:
         raise ValueError(
@@ -492,5 +492,6 @@ def export_gene_summary_for_ash(
     )
     for d in range(D):
         summary_df[f"w{d}"] = float(weights_arr[d])
-    summary_df.to_csv(out_csv, index=False)
+    if out_csv is not None:
+        summary_df.to_csv(out_csv, index=False)
     return summary_df

@@ -63,6 +63,16 @@ def _bh_qvalues(pvals: np.ndarray) -> np.ndarray:
     return qvals
 
 
+def _sanity_ok(beta: float, expected: str, min_abs: float) -> bool:
+    if expected == "positive":
+        return beta > min_abs
+    if expected == "negative":
+        return beta < -min_abs
+    if expected in {"either", "any"}:
+        return abs(beta) >= min_abs
+    raise ValueError(f"Unsupported expected_sign '{expected}'")
+
+
 def _reconstruct_theta_from_samples(samples: dict, L: int, D: int) -> torch.Tensor:
     tau = samples["tau"]
     z0 = samples["z0"]
@@ -249,6 +259,10 @@ def main() -> None:
     k_t_train = torch.tensor(k_train, dtype=torch.float32, device=device)
     k_t_test = torch.tensor(k_test, dtype=torch.float32, device=device)
 
+    day_counts_train = [
+        int((cell_df_train["day"].to_numpy() == d).sum()) for d in range(cfg["D"])
+    ]
+
     model_args_train = (
         p_t_train,
         day_t_train,
@@ -410,9 +424,6 @@ def main() -> None:
         )
 
         perm_summary = Path(args.out).with_name("diagnostics_perm_summary.csv")
-        day_counts_train = [
-            int((cell_df_train["day"].to_numpy() == d).sum()) for d in range(cfg["D"])
-        ]
         export_gene_summary_for_ash(
             guide=guide_perm,
             model_args=model_args_perm,
@@ -450,6 +461,59 @@ def main() -> None:
         )
         diagnostics["perm_hit_count"] = int(hits.sum())
         diagnostics["perm_hit_frac"] = float(hits.mean())
+
+    sanity_genes = cfg.get("sanity_check_genes", [])
+    if sanity_genes:
+        logger.info("Running sanity checks for %d genes", len(sanity_genes))
+        sanity_df = export_gene_summary_for_ash(
+            guide=guide_full,
+            model_args=model_args_train,
+            gene_names=gene_names,
+            fate_names=cfg["fates"],
+            ref_fate=ref_fate,
+            contrast_fate=contrast_fate,
+            L=L,
+            D=cfg["D"],
+            num_draws=cfg.get("sanity_num_draws", 200),
+            day_cell_counts=day_counts_train,
+            weights=cfg.get("weights", None),
+            out_csv=None,
+        )
+        betahat_map = dict(zip(sanity_df["gene"], sanity_df["betahat"]))
+        min_abs = float(cfg.get("sanity_min_abs_effect", 0.0))
+        results = []
+        for entry in sanity_genes:
+            if isinstance(entry, str):
+                gene = entry
+                expected = "either"
+            elif isinstance(entry, dict):
+                gene = entry.get("gene")
+                expected = entry.get("expected_sign", "either")
+            else:
+                raise ValueError(
+                    "sanity_check_genes entries must be strings or dicts with 'gene'."
+                )
+            if not gene:
+                raise ValueError("sanity_check_genes entries must specify a gene name")
+            beta = betahat_map.get(gene)
+            if beta is None:
+                results.append(
+                    {
+                        "gene": gene,
+                        "expected_sign": expected,
+                        "status": "missing",
+                    }
+                )
+                continue
+            results.append(
+                {
+                    "gene": gene,
+                    "expected_sign": expected,
+                    "betahat": float(beta),
+                    "ok": bool(_sanity_ok(float(beta), expected, min_abs)),
+                }
+            )
+        diagnostics["sanity_checks"] = results
 
     with open(args.out, "w", encoding="utf-8") as fh:
         json.dump(diagnostics, fh, indent=2, sort_keys=True)
