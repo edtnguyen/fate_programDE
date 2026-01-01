@@ -6,14 +6,14 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-from pathlib import Path
 import sys
+from pathlib import Path
 from typing import Sequence
 
 import numpy as np
 import pandas as pd
-from scipy.stats import norm
 import yaml
+from scipy.stats import norm
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
@@ -23,8 +23,16 @@ import torch  # noqa: E402
 from pyro.infer import Predictive  # noqa: E402
 
 from scripts.pyro_io import load_adata_inputs  # noqa: E402
-from src.models.pyro_model import compute_linear_predictor, fit_svi  # noqa: E402
-from src.models.pyro_model import export_gene_summary_for_ash, resolve_fate_names  # noqa: E402
+from src.models.pyro_model import (  # noqa: E402
+    add_zero_gene_row,
+    add_zero_guide_row,
+    compute_linear_predictor,
+    construct_delta_core,
+    construct_theta_core,
+    export_gene_summary_for_ash,
+    fit_svi,
+    resolve_fate_names,
+)
 from src.models.pyro_pipeline import make_k_centered, to_torch  # noqa: E402
 
 
@@ -38,7 +46,9 @@ def _select_device(cfg: dict) -> str:
     return requested
 
 
-def _split_indices(n: int, holdout_frac: float, seed: int) -> tuple[np.ndarray, np.ndarray]:
+def _split_indices(
+    n: int, holdout_frac: float, seed: int
+) -> tuple[np.ndarray, np.ndarray]:
     rng = np.random.default_rng(seed)
     idx = rng.permutation(n)
     n_test = max(1, int(n * holdout_frac))
@@ -71,34 +81,6 @@ def _sanity_ok(beta: float, expected: str, min_abs: float) -> bool:
     if expected in {"either", "any"}:
         return abs(beta) >= min_abs
     raise ValueError(f"Unsupported expected_sign '{expected}'")
-
-
-def _reconstruct_theta_from_samples(samples: dict, L: int, D: int) -> torch.Tensor:
-    tau = samples["tau"]
-    z0 = samples["z0"]
-    sigma_time = samples["sigma_time"]
-    fstar = tau.shape[-1]
-
-    theta0 = tau[:, None, :] * z0
-    if D > 1:
-        eps = samples["eps"]
-        increments = sigma_time[:, None, :, None] * eps
-        theta_rest = torch.cumsum(increments, dim=-1) + theta0[..., None]
-        theta_core = torch.cat([theta0[..., None], theta_rest], dim=-1)
-    else:
-        theta_core = theta0[..., None]
-
-    zeros = torch.zeros((theta_core.shape[0], 1, fstar, D), device=theta_core.device)
-    return torch.cat([zeros, theta_core], dim=1)
-
-
-def _reconstruct_delta_from_samples(samples: dict, G: int) -> torch.Tensor:
-    sigma_guide = samples["sigma_guide"]
-    u = samples["u"]
-    fstar = sigma_guide.shape[-1]
-    delta_core = sigma_guide[:, None, :] * u
-    zeros = torch.zeros((delta_core.shape[0], 1, fstar), device=delta_core.device)
-    return torch.cat([zeros, delta_core], dim=1)
 
 
 def _estimate_mean_loglik(
@@ -146,8 +128,16 @@ def _estimate_mean_loglik(
         Kmax=Kmax,
     )
 
-    theta = _reconstruct_theta_from_samples(samples, L=L, D=D)
-    delta = _reconstruct_delta_from_samples(samples, G=G)
+    theta_core = construct_theta_core(
+        tau=samples["tau"],
+        z0=samples["z0"],
+        sigma_time=samples["sigma_time"],
+        eps=samples.get("eps"),
+        D=D,
+    )
+    theta = add_zero_gene_row(theta_core)
+    delta_core = construct_delta_core(sigma_guide=samples["sigma_guide"], u=samples["u"])
+    delta = add_zero_guide_row(delta_core)
 
     logliks = []
     for s in range(theta.shape[0]):
@@ -203,7 +193,9 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    )
     logger = logging.getLogger(__name__)
 
     cfg = yaml.safe_load(open(args.config))
@@ -232,7 +224,9 @@ def main() -> None:
 
     n_cells = len(cell_df)
     train_idx, test_idx = _split_indices(
-        n_cells, cfg.get("diagnostics_holdout_frac", 0.1), cfg.get("diagnostics_seed", 0)
+        n_cells,
+        cfg.get("diagnostics_holdout_frac", 0.1),
+        cfg.get("diagnostics_seed", 0),
     )
 
     device = _select_device(cfg)
@@ -250,8 +244,8 @@ def main() -> None:
     k_train = k_centered[train_idx]
     k_test = k_centered[test_idx]
 
-    p_t_train, day_t_train, rep_t_train, gids_t_train, mask_t_train, gene_of_guide_t = to_torch(
-        cell_df_train, p_train, gids_train, mask_train, gene_of_guide, device
+    p_t_train, day_t_train, rep_t_train, gids_t_train, mask_t_train, gene_of_guide_t = (
+        to_torch(cell_df_train, p_train, gids_train, mask_train, gene_of_guide, device)
     )
     p_t_test, day_t_test, rep_t_test, gids_t_test, mask_t_test, _ = to_torch(
         cell_df_test, p_test, gids_test, mask_test, gene_of_guide, device
@@ -388,7 +382,9 @@ def main() -> None:
         gids_perm_train = gids_perm[train_idx]
         gids_perm_test = gids_perm[test_idx]
 
-        gids_t_perm_train = torch.tensor(gids_perm_train, dtype=torch.long, device=device)
+        gids_t_perm_train = torch.tensor(
+            gids_perm_train, dtype=torch.long, device=device
+        )
         gids_t_perm_test = torch.tensor(gids_perm_test, dtype=torch.long, device=device)
 
         guide_perm = fit_svi(

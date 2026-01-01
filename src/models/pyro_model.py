@@ -120,6 +120,71 @@ def compute_linear_predictor(
     return alpha_by_cell + b_by_cell + gamma_by_cell + guide_sum
 
 
+def construct_theta_core(
+    tau: "torch.Tensor",
+    z0: "torch.Tensor",
+    sigma_time: "torch.Tensor",
+    eps: "torch.Tensor | None",
+    D: int,
+) -> "torch.Tensor":
+    """
+    Construct gene-by-day effects (without the baseline gene row).
+    """
+    import torch
+
+    if D <= 0:
+        raise ValueError("D must be a positive integer")
+
+    theta0 = tau[..., None, :] * z0
+    if D > 1:
+        if eps is None:
+            raise ValueError("eps is required when D > 1")
+        increments = sigma_time[..., None, :, None] * eps
+        theta_rest = torch.cumsum(increments, dim=-1) + theta0[..., None]
+        theta_core = torch.cat([theta0[..., None], theta_rest], dim=-1)
+    else:
+        theta_core = theta0[..., None]
+    return theta_core
+
+
+def add_zero_gene_row(theta_core: "torch.Tensor") -> "torch.Tensor":
+    """
+    Prepend the baseline gene row (index 0) to theta.
+    """
+    import torch
+
+    zeros = torch.zeros(
+        (*theta_core.shape[:-3], 1, theta_core.shape[-2], theta_core.shape[-1]),
+        device=theta_core.device,
+        dtype=theta_core.dtype,
+    )
+    return torch.cat([zeros, theta_core], dim=-3)
+
+
+def construct_delta_core(
+    sigma_guide: "torch.Tensor",
+    u: "torch.Tensor",
+) -> "torch.Tensor":
+    """
+    Construct guide deviations (without the baseline guide row).
+    """
+    return sigma_guide[..., None, :] * u
+
+
+def add_zero_guide_row(delta_core: "torch.Tensor") -> "torch.Tensor":
+    """
+    Prepend the baseline guide row (index 0) to delta.
+    """
+    import torch
+
+    zeros = torch.zeros(
+        (*delta_core.shape[:-2], 1, delta_core.shape[-1]),
+        device=delta_core.device,
+        dtype=delta_core.dtype,
+    )
+    return torch.cat([zeros, delta_core], dim=-2)
+
+
 def fate_model(
     p_t: "torch.Tensor",
     day_t: "torch.Tensor",
@@ -206,24 +271,20 @@ def fate_model(
     z0 = pyro.sample(
         "z0", dist.Normal(0.0, 1.0).expand([L, fstar]).to_event(2)
     )
-    theta0 = tau.view(1, fstar) * z0
 
     sigma_time = pyro.sample(
         "sigma_time", dist.HalfNormal(s_time).expand([fstar]).to_event(1)
     )
+    eps = None
     if D > 1:
         eps = pyro.sample(
             "eps", dist.Normal(0.0, 1.0).expand([L, fstar, D - 1]).to_event(3)
         )
-        increments = sigma_time.view(1, fstar, 1) * eps
-        theta_rest = torch.cumsum(increments, dim=2) + theta0.unsqueeze(-1)
-        theta_core = torch.cat([theta0.unsqueeze(-1), theta_rest], dim=2)
-    else:
-        theta_core = theta0.unsqueeze(-1)
 
-    theta = torch.cat(
-        [torch.zeros((1, fstar, D), device=device), theta_core], dim=0
+    theta_core = construct_theta_core(
+        tau=tau, z0=z0, sigma_time=sigma_time, eps=eps, D=D
     )
+    theta = add_zero_gene_row(theta_core)
 
     sigma_guide = pyro.sample(
         "sigma_guide", dist.HalfNormal(s_guide).expand([fstar]).to_event(1)
@@ -231,10 +292,8 @@ def fate_model(
     u = pyro.sample(
         "u", dist.Normal(0.0, 1.0).expand([G, fstar]).to_event(2)
     )
-    delta_core = sigma_guide.view(1, fstar) * u
-    delta = torch.cat(
-        [torch.zeros((1, fstar), device=device), delta_core], dim=0
-    )
+    delta_core = construct_delta_core(sigma_guide=sigma_guide, u=u)
+    delta = add_zero_guide_row(delta_core)
 
     batch_size = subsample_size if subsample_size is not None else N
     batch_size = min(batch_size, N)
@@ -374,7 +433,9 @@ def reconstruct_theta_samples(
     R = int(rep_t.max().item() + 1)
     Kmax = int(guide_ids_t.shape[1])
 
-    return_sites = ("tau", "z0", "sigma_time", "eps")
+    return_sites = ("tau", "z0", "sigma_time")
+    if D > 1:
+        return_sites = return_sites + ("eps",)
     predictive = Predictive(guide, num_samples=num_draws, return_sites=return_sites)
     samples = predictive(
         p_t,
@@ -391,22 +452,14 @@ def reconstruct_theta_samples(
         Kmax=Kmax,
     )
 
-    tau = samples["tau"]
-    z0 = samples["z0"]
-    sigma_time = samples["sigma_time"]
-    fstar = tau.shape[-1]
-
-    theta0 = tau[:, None, :] * z0
-    if D > 1:
-        eps = samples["eps"]
-        increments = sigma_time[:, None, :, None] * eps
-        theta_rest = torch.cumsum(increments, dim=-1) + theta0[..., None]
-        theta_core = torch.cat([theta0[..., None], theta_rest], dim=-1)
-    else:
-        theta_core = theta0[..., None]
-
-    zeros = torch.zeros((num_draws, 1, fstar, D), device=theta_core.device)
-    theta = torch.cat([zeros, theta_core], dim=1)
+    theta_core = construct_theta_core(
+        tau=samples["tau"],
+        z0=samples["z0"],
+        sigma_time=samples["sigma_time"],
+        eps=samples.get("eps"),
+        D=D,
+    )
+    theta = add_zero_gene_row(theta_core)
 
     return theta.detach().cpu().numpy()
 
