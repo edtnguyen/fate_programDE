@@ -18,7 +18,7 @@ Observed data and indexing:
   $\sum_f p_{i,f}=1$.
 - Day $d_i \in \{0,\dots,D-1\}$ and replicate $r_i \in \{0,\dots,R-1\}$.
 - Guides $g=1,\dots,G$ (non-NTC) and genes $\ell=1,\dots,L$ with map $\ell(g)$.
-- Padded guide lists: $\mathrm{guide\textunderscore ids}{i,m}$ and $\mathrm{mask}_{i,m}$ for $m=1,\dots,K_{\max}$.
+- Padded guide lists: $\mathrm{guide\textunderscore ids}_{i,m}$ and $\mathrm{mask}_{i,m}$ for $m=1,\dots,K_{\max}$.
 - NTC guides map to $g=0$ (real entry, $\mathrm{mask}=1$); padding uses $g=0$
   with $\mathrm{mask}=0$.
 - Guide burden $k_i = \sum_m \mathrm{mask}_{i,m}$, centered within day:
