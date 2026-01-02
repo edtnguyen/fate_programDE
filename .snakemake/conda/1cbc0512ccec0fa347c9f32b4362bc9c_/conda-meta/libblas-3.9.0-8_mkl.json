@@ -1,0 +1,69 @@
+{
+  "name": "libblas",
+  "version": "3.9.0",
+  "build": "8_mkl",
+  "build_number": 8,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libblas-3.9.0-8_mkl.tar.bz2",
+  "md5": "57417543e64fc67a283255d29c6995a7",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libblas-3.9.0-8_mkl.tar.bz2",
+  "sha256": "65df45d425345243e49b050121e09179840ce56f443ce160818314094dee3029",
+  "depends": [
+    "mkl >=2020.4,<2021.0a0"
+  ],
+  "constrains": [
+    "blas * mkl",
+    "libcblas 3.9.0 8_mkl",
+    "liblapack 3.9.0 8_mkl",
+    "liblapacke 3.9.0 8_mkl"
+  ],
+  "track_features": "blas_mkl blas_backport_2",
+  "license": "BSD-3-Clause",
+  "timestamp": 1612394085000,
+  "size": 11854,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libblas-3.9.0-8_mkl",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libblas-3.9.0-8_mkl",
+  "files": [
+    "etc/conda/activate.d/libblas_mkl_activate.sh",
+    "etc/conda/deactivate.d/libblas_mkl_deactivate.sh",
+    "lib/libblas.3.dylib",
+    "lib/libblas.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/libblas_mkl_activate.sh",
+        "path_type": "hardlink",
+        "sha256": "db497627395a99ce7cce993bdd8a0de19eae2daf1245948e0cc2b75f7846d2d6",
+        "size_in_bytes": 99,
+        "sha256_in_prefix": "db497627395a99ce7cce993bdd8a0de19eae2daf1245948e0cc2b75f7846d2d6"
+      },
+      {
+        "_path": "etc/conda/deactivate.d/libblas_mkl_deactivate.sh",
+        "path_type": "hardlink",
+        "sha256": "5583b295f92f9553bcbdd67e32178f316e274b7065137c963fece293169bd76f",
+        "size_in_bytes": 197,
+        "sha256_in_prefix": "5583b295f92f9553bcbdd67e32178f316e274b7065137c963fece293169bd76f"
+      },
+      {
+        "_path": "lib/libblas.3.dylib",
+        "path_type": "softlink",
+        "sha256": "8d3f431d502d55de969ff7ebefec98794fde225ad80a60920f9e5ef75244f737",
+        "size_in_bytes": 10057136
+      },
+      {
+        "_path": "lib/libblas.dylib",
+        "path_type": "softlink",
+        "sha256": "8d3f431d502d55de969ff7ebefec98794fde225ad80a60920f9e5ef75244f737",
+        "size_in_bytes": 10057136
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libblas-3.9.0-8_mkl",
+    "type": 1
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "name": "session-info2",
+  "version": "0.3",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "session-info2-0.3-pyhd8ed1ab_0.conda",
+  "md5": "9b6038d776076b84bfb632c1b39b38e1",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/session-info2-0.3-pyhd8ed1ab_0.conda",
+  "sha256": "ef322e7a334e9335262a7b9837334ead6a383b6051911b4fdd86108f5d0d45fd",
+  "depends": [
+    "python >=3.10"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "MPL-2.0",
+  "package_type": "noarch_python",
+  "timestamp": 1766426338000,
+  "size": 22515,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/session-info2-0.3-pyhd8ed1ab_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/session-info2-0.3-pyhd8ed1ab_0",
+  "files": [
+    "bin/session-info",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/METADATA",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/RECORD",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/WHEEL",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/entry_points.txt",
+    "lib/python3.11/site-packages/session_info2-0.3.dist-info/licenses/LICENSE.rst",
+    "lib/python3.11/site-packages/session_info2/__init__.py",
+    "lib/python3.11/site-packages/session_info2/__main__.py",
+    "lib/python3.11/site-packages/session_info2/_dists.py",
+    "lib/python3.11/site-packages/session_info2/_pu.py",
+    "lib/python3.11/site-packages/session_info2/_repr.py",
+    "lib/python3.11/site-packages/session_info2/_ttl_cache.py",
+    "lib/python3.11/site-packages/session_info2/_widget.py",
+    "lib/python3.11/site-packages/session_info2/cli.py",
+    "lib/python3.11/site-packages/session_info2/py.typed",
+    "lib/python3.11/site-packages/session_info2/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/__main__.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/_dists.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/_pu.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/_repr.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/_ttl_cache.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/_widget.cpython-311.pyc",
+    "lib/python3.11/site-packages/session_info2/__pycache__/cli.cpython-311.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "python-scripts/session-info",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/session-info2_1766426167778/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "8cf357e3dc405fdad3d6542c8696a5e2221e32ad15e84cc06bb46de8aca088d8",
+        "size_in_bytes": 472,
+        "sha256_in_prefix": "249d4e99ad6273dadd5541c4b01bd29301f5df71c1a4cbacd5152b7f2931b1db"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "29d57b250e3db65c31c21f7cf213884667222d0d898bc5f4259147398fe6ba2c",
+        "size_in_bytes": 3530,
+        "sha256_in_prefix": "29d57b250e3db65c31c21f7cf213884667222d0d898bc5f4259147398fe6ba2c"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "cd3441c5edbad4958ec0778b3fe8ddffea69f106e9057312deb7b1836bbfeba7",
+        "size_in_bytes": 1938,
+        "sha256_in_prefix": "cd3441c5edbad4958ec0778b3fe8ddffea69f106e9057312deb7b1836bbfeba7"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "671fcd97818f14ce87b8c05f15dbf8f23651cfdfcb433f1d821dacecb5c64fb9",
+        "size_in_bytes": 109,
+        "sha256_in_prefix": "671fcd97818f14ce87b8c05f15dbf8f23651cfdfcb433f1d821dacecb5c64fb9"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "95e3e11f4124d32f32323b9049298cfadb48f4e45934f2a5a4c76508eed7af9c",
+        "size_in_bytes": 56,
+        "sha256_in_prefix": "95e3e11f4124d32f32323b9049298cfadb48f4e45934f2a5a4c76508eed7af9c"
+      },
+      {
+        "_path": "site-packages/session_info2-0.3.dist-info/licenses/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "4b4e67943fa43c5985a99ed1cc12fc11914ea1314c117f5d186309e8d7ed459c",
+        "size_in_bytes": 15954,
+        "sha256_in_prefix": "4b4e67943fa43c5985a99ed1cc12fc11914ea1314c117f5d186309e8d7ed459c"
+      },
+      {
+        "_path": "site-packages/session_info2/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "68361fa183aaab1310ed3e24a8649ba0663c8d0b1df2c2d83c1ab699d4c9b3ee",
+        "size_in_bytes": 7443,
+        "sha256_in_prefix": "68361fa183aaab1310ed3e24a8649ba0663c8d0b1df2c2d83c1ab699d4c9b3ee"
+      },
+      {
+        "_path": "site-packages/session_info2/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "3ae72d3733258dfb5e637f388d83563009bcadaeccd8c703c4ade5c4785f4857",
+        "size_in_bytes": 113,
+        "sha256_in_prefix": "3ae72d3733258dfb5e637f388d83563009bcadaeccd8c703c4ade5c4785f4857"
+      },
+      {
+        "_path": "site-packages/session_info2/_dists.py",
+        "path_type": "hardlink",
+        "sha256": "b6b9e91d3d31900c559a20d5358c403bdee0a9b7cc17215c996161c1a0208f91",
+        "size_in_bytes": 2032,
+        "sha256_in_prefix": "b6b9e91d3d31900c559a20d5358c403bdee0a9b7cc17215c996161c1a0208f91"
+      },
+      {
+        "_path": "site-packages/session_info2/_pu.py",
+        "path_type": "hardlink",
+        "sha256": "065f3275fc81c3b6a9945912c604266fa889e61c2da34ac0ad1863479f6770ec",
+        "size_in_bytes": 1592,
+        "sha256_in_prefix": "065f3275fc81c3b6a9945912c604266fa889e61c2da34ac0ad1863479f6770ec"
+      },
+      {
+        "_path": "site-packages/session_info2/_repr.py",
+        "path_type": "hardlink",
+        "sha256": "e49275f094a7786d4c45338f37a9c0290421daeb8cf99afa804727bd30413bfa",
+        "size_in_bytes": 6291,
+        "sha256_in_prefix": "e49275f094a7786d4c45338f37a9c0290421daeb8cf99afa804727bd30413bfa"
+      },
+      {
+        "_path": "site-packages/session_info2/_ttl_cache.py",
+        "path_type": "hardlink",
+        "sha256": "05b3ce54c0da8746956debc84fe4392045dc8b75229e806732b5df87e4d5aef6",
+        "size_in_bytes": 1072,
+        "sha256_in_prefix": "05b3ce54c0da8746956debc84fe4392045dc8b75229e806732b5df87e4d5aef6"
+      },
+      {
+        "_path": "site-packages/session_info2/_widget.py",
+        "path_type": "hardlink",
+        "sha256": "1e987bd47b22d92e9a7e907bc4e204718db2db0596b7d874b8581e4031bb426c",
+        "size_in_bytes": 1510,
+        "sha256_in_prefix": "1e987bd47b22d92e9a7e907bc4e204718db2db0596b7d874b8581e4031bb426c"
+      },
+      {
+        "_path": "site-packages/session_info2/cli.py",
+        "path_type": "hardlink",
+        "sha256": "4e0ed6f7e90dfcbc929c57faf95a6f772c586389cce4e6e22bc84a66da431faf",
+        "size_in_bytes": 2339,
+        "sha256_in_prefix": "4e0ed6f7e90dfcbc929c57faf95a6f772c586389cce4e6e22bc84a66da431faf"
+      },
+      {
+        "_path": "site-packages/session_info2/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/__main__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/_dists.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/_pu.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/_repr.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/_ttl_cache.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/_widget.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/session_info2/__pycache__/cli.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/session-info2-0.3-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

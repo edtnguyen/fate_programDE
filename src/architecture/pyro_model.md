@@ -165,10 +165,15 @@ Time smoothing:
 \sigma_{\mathrm{time},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{time}}),
 ]
 [
-\theta_{\ell,f^\star,d} = \theta_{\ell,f^\star,d-1} + \sigma_{\mathrm{time},f^\star},\varepsilon_{\ell,f^\star,d},
+\theta_{\ell,f^\star,d} = \theta_{\ell,f^\star,d-1} + c_d\,\sigma_{\mathrm{time},f^\star}\,\varepsilon_{\ell,f^\star,d},
 \qquad
 \varepsilon_{\ell,f^\star,d}\sim \mathcal{N}(0,1),\ d=1,2,3.
 ]
+
+Fixed time-scale ramp (optional):
+
+* (c_d) is a fixed, positive scale per interval (length (D-1)) set via `time_scale` in config.
+* Use increasing (c_d) when later days show higher heterogeneity; default is all ones if `time_scale` is omitted.
 
 7.5 Guide deviations (time-invariant)
 [
@@ -279,4 +284,3 @@ Hit calling:
   * full model (with guide term)
 * Negative control: permute guides within (day,rep,k-bin) and confirm ash hit rates collapse.
 * Sanity: known regulators show expected MES–EC direction.
-

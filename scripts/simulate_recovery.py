@@ -39,6 +39,15 @@ def _maybe_write(path: Path, force: bool) -> None:
         raise SystemExit(f"{path} exists; pass --force to overwrite.")
 
 
+def _parse_time_scale(value: str | None) -> list[float] | None:
+    if value is None:
+        return None
+    items = [v.strip() for v in value.split(",") if v.strip()]
+    if not items:
+        return []
+    return [float(v) for v in items]
+
+
 def _center_k(k_raw: np.ndarray, day: np.ndarray) -> np.ndarray:
     k_centered = k_raw.astype(np.float32)
     for d in np.unique(day):
@@ -97,6 +106,7 @@ def _simulate_inputs(
     fate_names: tuple[str, ...],
     ref_fate: str,
     concentration: float,
+    time_scale: list[float] | None = None,
 ) -> tuple[
     tuple[torch.Tensor, ...],
     dict[str, np.ndarray],
@@ -144,6 +154,7 @@ def _simulate_inputs(
         z0=torch.tensor(params["z0"]),
         sigma_time=torch.tensor(params["sigma_time"]),
         eps=torch.tensor(params["eps"]) if params["eps"] is not None else None,
+        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -211,6 +222,7 @@ def _true_gene_summary(
     ref_fate: str,
     contrast_fate: str,
     day_counts: list[int],
+    time_scale: list[float] | None = None,
 ) -> np.ndarray:
     _, non_ref_fates, _, _ = resolve_fate_names(fate_names, ref_fate=ref_fate)
     contrast_idx = non_ref_fates.index(contrast_fate)
@@ -220,6 +232,7 @@ def _true_gene_summary(
         z0=torch.tensor(params["z0"]),
         sigma_time=torch.tensor(params["sigma_time"]),
         eps=torch.tensor(params["eps"]) if params["eps"] is not None else None,
+        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core).detach().cpu().numpy()
@@ -350,8 +363,10 @@ def _write_config(
     num_steps: int,
     s_time: float,
     s_guide: float,
+    s_tau: float,
     num_draws: int,
     seed: int,
+    time_scale: list[float] | None = None,
 ) -> None:
     cfg = {
         "adata_path": adata_path,
@@ -374,6 +389,8 @@ def _write_config(
         "num_steps": num_steps,
         "s_time": s_time,
         "s_guide": s_guide,
+        "s_tau": s_tau,
+        "time_scale": time_scale,
         "num_posterior_draws": num_draws,
         "seed": seed,
         "weights": None,
@@ -402,6 +419,12 @@ def main() -> None:
     ap.add_argument("--clip-norm", type=float, default=5.0)
     ap.add_argument("--s-time", type=float, default=1.0)
     ap.add_argument("--s-guide", type=float, default=1.0)
+    ap.add_argument("--s-tau", type=float, default=1.0)
+    ap.add_argument(
+        "--time-scale",
+        default=None,
+        help="Comma-separated per-interval scale (length days-1).",
+    )
     ap.add_argument("--num-draws", type=int, default=200)
     ap.add_argument("--out-csv", default=None)
     ap.add_argument("--skip-internal-fit", action="store_true")
@@ -422,6 +445,16 @@ def main() -> None:
 
     if not (0.0 <= args.ntc_frac <= 1.0):
         raise SystemExit("--ntc-frac must be between 0 and 1")
+
+    time_scale = _parse_time_scale(args.time_scale)
+    if time_scale is not None:
+        if any(v <= 0 for v in time_scale):
+            raise SystemExit("--time-scale values must be positive")
+        if args.days <= 1:
+            if len(time_scale) != 0:
+                raise SystemExit("--time-scale must be empty when --days <= 1")
+        elif len(time_scale) != args.days - 1:
+            raise SystemExit("--time-scale must have length days-1")
 
     pyro.set_rng_seed(args.seed)
     torch.manual_seed(args.seed)
@@ -444,6 +477,7 @@ def main() -> None:
         fate_names=fate_names,
         ref_fate=ref_fate,
         concentration=args.concentration,
+        time_scale=time_scale,
     )
 
     true_betahat = _true_gene_summary(
@@ -454,6 +488,7 @@ def main() -> None:
         ref_fate=ref_fate,
         contrast_fate=contrast_fate,
         day_counts=day_counts,
+        time_scale=time_scale,
     )
 
     if not args.skip_internal_fit:
@@ -466,14 +501,16 @@ def main() -> None:
             D=args.days,
             R=args.reps,
             Kmax=args.kmax,
-        batch_size=args.batch_size,
-        lr=args.lr,
-        clip_norm=args.clip_norm,
-        num_steps=args.num_steps,
-        s_time=args.s_time,
-        s_guide=args.s_guide,
-        seed=args.seed,
-    )
+            batch_size=args.batch_size,
+            lr=args.lr,
+            clip_norm=args.clip_norm,
+            num_steps=args.num_steps,
+            s_time=args.s_time,
+            s_guide=args.s_guide,
+            s_tau=args.s_tau,
+            time_scale=time_scale,
+            seed=args.seed,
+        )
 
         summary = export_gene_summary_for_ash(
             guide=guide,
@@ -485,6 +522,7 @@ def main() -> None:
             L=args.genes,
             D=args.days,
             num_draws=args.num_draws,
+            time_scale=time_scale,
             day_cell_counts=day_counts,
             weights=None,
             out_csv=None,
@@ -566,6 +604,8 @@ def main() -> None:
             num_steps=args.num_steps,
             s_time=args.s_time,
             s_guide=args.s_guide,
+            s_tau=args.s_tau,
+            time_scale=time_scale,
             num_draws=args.num_draws,
             seed=args.seed,
         )

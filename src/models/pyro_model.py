@@ -128,9 +128,12 @@ def construct_theta_core(
     sigma_time: "torch.Tensor",
     eps: "torch.Tensor | None",
     D: int,
+    time_scale: "torch.Tensor | Sequence[float] | None" = None,
 ) -> "torch.Tensor":
     """
     Construct gene-by-day effects (without the baseline gene row).
+
+    time_scale optionally scales per-interval increments (length D-1).
     """
     import torch
 
@@ -138,10 +141,27 @@ def construct_theta_core(
         raise ValueError("D must be a positive integer")
 
     theta0 = tau[..., None, :] * z0
+    time_scale_t = None
+    if time_scale is not None:
+        time_scale_t = torch.as_tensor(
+            time_scale, dtype=theta0.dtype, device=theta0.device
+        ).reshape(-1)
+        if D <= 1:
+            if time_scale_t.numel() != 0:
+                raise ValueError("time_scale must be empty when D <= 1")
+            time_scale_t = None
+        else:
+            if time_scale_t.numel() != D - 1:
+                raise ValueError(f"time_scale must have length D-1={D - 1}")
+            if bool((time_scale_t <= 0).any()):
+                raise ValueError("time_scale entries must be positive")
     if D > 1:
         if eps is None:
             raise ValueError("eps is required when D > 1")
         increments = sigma_time[..., None, :, None] * eps
+        if time_scale_t is not None:
+            scale = time_scale_t.reshape(*([1] * (eps.ndim - 1)), -1)
+            increments = increments * scale
         theta_rest = torch.cumsum(increments, dim=-1) + theta0[..., None]
         theta_core = torch.cat([theta0[..., None], theta_rest], dim=-1)
     else:
@@ -209,6 +229,7 @@ def fate_model(
     s_tau: float = 1.0,
     s_time: float = 1.0,
     s_guide: float = 1.0,
+    time_scale: Sequence[float] | None = None,
     subsample_size: int | None = None,
 ) -> None:
     """
@@ -284,7 +305,12 @@ def fate_model(
         )
 
     theta_core = construct_theta_core(
-        tau=tau, z0=z0, sigma_time=sigma_time, eps=eps, D=D
+        tau=tau,
+        z0=z0,
+        sigma_time=sigma_time,
+        eps=eps,
+        time_scale=time_scale,
+        D=D,
     )
     theta = add_zero_gene_row(theta_core)
 
@@ -349,8 +375,10 @@ def fit_svi(
     lr: float,
     clip_norm: float,
     num_steps: int,
+    s_tau: float = 1.0,
     s_time: float = 1.0,
     s_guide: float = 1.0,
+    time_scale: Sequence[float] | None = None,
     seed: int = 0,
 ) -> "AutoGuide":
     """
@@ -379,8 +407,10 @@ def fit_svi(
             subsample_size=subsample_size,
             fate_names=fate_names,
             ref_fate=ref_fate,
+            s_tau=s_tau,
             s_time=s_time,
             s_guide=s_guide,
+            time_scale=time_scale,
         )
 
     guide = AutoNormal(model)
@@ -413,6 +443,7 @@ def reconstruct_theta_samples(
     L: int,
     D: int,
     num_draws: int,
+    time_scale: Sequence[float] | None = None,
 ) -> np.ndarray:
     """
     Draw posterior samples of gene-by-day effects from the fitted guide.
@@ -459,6 +490,7 @@ def reconstruct_theta_samples(
         z0=samples["z0"],
         sigma_time=samples["sigma_time"],
         eps=samples.get("eps"),
+        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -480,6 +512,7 @@ def export_gene_summary_for_ash(
     day_cell_counts: Sequence[int],
     weights: Optional[Sequence[float]],
     out_csv: str | None,
+    time_scale: Sequence[float] | None = None,
 ) -> pd.DataFrame:
     """
     Summarize gene effects across days for the contrast fate and write an ash-ready CSV.
@@ -509,6 +542,7 @@ def export_gene_summary_for_ash(
         L=L,
         D=D,
         num_draws=num_draws,
+        time_scale=time_scale,
     )
 
     contrast_samples = theta_samples[:, 1:, contrast_idx, :]

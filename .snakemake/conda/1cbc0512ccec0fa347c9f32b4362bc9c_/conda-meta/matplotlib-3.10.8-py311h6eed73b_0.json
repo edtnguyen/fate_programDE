@@ -1,0 +1,34 @@
+{
+  "name": "matplotlib",
+  "version": "3.10.8",
+  "build": "py311h6eed73b_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "matplotlib-3.10.8-py311h6eed73b_0.conda",
+  "md5": "6f7d2d63ebb0b08a3d7c4dcfed613523",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/matplotlib-3.10.8-py311h6eed73b_0.conda",
+  "sha256": "afc86d58dffdf1bdc49beabb3fe98a97cf59001c3ed1994c36b23dad4a117cc7",
+  "depends": [
+    "matplotlib-base >=3.10.8,<3.10.9.0a0",
+    "python >=3.11,<3.12.0a0",
+    "python_abi 3.11.* *_cp311",
+    "tornado >=5"
+  ],
+  "constrains": [],
+  "license": "PSF-2.0",
+  "timestamp": 1763055974000,
+  "size": 17477,
+  "requested_spec": "matplotlib",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/matplotlib-3.10.8-py311h6eed73b_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/matplotlib-3.10.8-py311h6eed73b_0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/matplotlib-3.10.8-py311h6eed73b_0",
+    "type": 1
+  }
+}

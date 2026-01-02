@@ -1,0 +1,524 @@
+{
+  "name": "array-api-compat",
+  "version": "1.13.0",
+  "build": "pyhcf101f3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "array-api-compat-1.13.0-pyhcf101f3_0.conda",
+  "md5": "d96a1a14dd3a7d2ea0427a8fbbae118f",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/array-api-compat-1.13.0-pyhcf101f3_0.conda",
+  "sha256": "02bed57b3026eeb81ec363831c8eb5b8a18a92ed1977825e114a20d37b98d835",
+  "depends": [
+    "python >=3.10",
+    "python"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "MIT",
+  "package_type": "noarch_python",
+  "timestamp": 1766921745000,
+  "size": 46190,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/array-api-compat-1.13.0-pyhcf101f3_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/array-api-compat-1.13.0-pyhcf101f3_0",
+  "files": [
+    "lib/python3.11/site-packages/array_api_compat/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/_internal.py",
+    "lib/python3.11/site-packages/array_api_compat/common/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/common/_aliases.py",
+    "lib/python3.11/site-packages/array_api_compat/common/_fft.py",
+    "lib/python3.11/site-packages/array_api_compat/common/_helpers.py",
+    "lib/python3.11/site-packages/array_api_compat/common/_linalg.py",
+    "lib/python3.11/site-packages/array_api_compat/common/_typing.py",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/cupy/_aliases.py",
+    "lib/python3.11/site-packages/array_api_compat/cupy/_info.py",
+    "lib/python3.11/site-packages/array_api_compat/cupy/_typing.py",
+    "lib/python3.11/site-packages/array_api_compat/cupy/fft.py",
+    "lib/python3.11/site-packages/array_api_compat/cupy/linalg.py",
+    "lib/python3.11/site-packages/array_api_compat/dask/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/_aliases.py",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/_info.py",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/fft.py",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/linalg.py",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/numpy/_aliases.py",
+    "lib/python3.11/site-packages/array_api_compat/numpy/_info.py",
+    "lib/python3.11/site-packages/array_api_compat/numpy/_typing.py",
+    "lib/python3.11/site-packages/array_api_compat/numpy/fft.py",
+    "lib/python3.11/site-packages/array_api_compat/numpy/linalg.py",
+    "lib/python3.11/site-packages/array_api_compat/py.typed",
+    "lib/python3.11/site-packages/array_api_compat/torch/__init__.py",
+    "lib/python3.11/site-packages/array_api_compat/torch/_aliases.py",
+    "lib/python3.11/site-packages/array_api_compat/torch/_info.py",
+    "lib/python3.11/site-packages/array_api_compat/torch/_typing.py",
+    "lib/python3.11/site-packages/array_api_compat/torch/fft.py",
+    "lib/python3.11/site-packages/array_api_compat/torch/linalg.py",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/METADATA",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/RECORD",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/WHEEL",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/licenses/LICENSE",
+    "lib/python3.11/site-packages/array_api_compat-1.13.0.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/array_api_compat/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/__pycache__/_internal.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/common/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_aliases.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_fft.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_helpers.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_linalg.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_typing.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/_aliases.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/_info.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/_typing.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/fft.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/linalg.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/dask/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/_aliases.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/_info.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/fft.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/linalg.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/_aliases.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/_info.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/_typing.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/fft.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/linalg.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/_aliases.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/_info.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/_typing.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/fft.cpython-311.pyc",
+    "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/linalg.cpython-311.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/array_api_compat/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5db841cd1a4c440291b8f9f301f643e24213b97c6381a7c80d7e2f7931ed3be5",
+        "size_in_bytes": 992,
+        "sha256_in_prefix": "5db841cd1a4c440291b8f9f301f643e24213b97c6381a7c80d7e2f7931ed3be5"
+      },
+      {
+        "_path": "site-packages/array_api_compat/_internal.py",
+        "path_type": "hardlink",
+        "sha256": "b582646b123157110b62fa3d24ad9480208904cc34d498959a89932235693395",
+        "size_in_bytes": 2072,
+        "sha256_in_prefix": "b582646b123157110b62fa3d24ad9480208904cc34d498959a89932235693395"
+      },
+      {
+        "_path": "site-packages/array_api_compat/common/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e0870c58fe6b0112d87b6fe98170d612e8f66293347351ba3dbe6991b434412f",
+        "size_in_bytes": 38,
+        "sha256_in_prefix": "e0870c58fe6b0112d87b6fe98170d612e8f66293347351ba3dbe6991b434412f"
+      },
+      {
+        "_path": "site-packages/array_api_compat/common/_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "d1f60bdef1305f4911769b1c258de5ed0dfb9077c09739b152e96423e7bd4b0b",
+        "size_in_bytes": 18988,
+        "sha256_in_prefix": "d1f60bdef1305f4911769b1c258de5ed0dfb9077c09739b152e96423e7bd4b0b"
+      },
+      {
+        "_path": "site-packages/array_api_compat/common/_fft.py",
+        "path_type": "hardlink",
+        "sha256": "724091dae1edcf489a3a472ebea56e9e1cf592121dc5034ab95534c756dfaeaf",
+        "size_in_bytes": 4669,
+        "sha256_in_prefix": "724091dae1edcf489a3a472ebea56e9e1cf592121dc5034ab95534c756dfaeaf"
+      },
+      {
+        "_path": "site-packages/array_api_compat/common/_helpers.py",
+        "path_type": "hardlink",
+        "sha256": "d56141037f075444029bdca2cb746da713f4c08c668b6b1f998872aa0c4c3411",
+        "size_in_bytes": 32556,
+        "sha256_in_prefix": "d56141037f075444029bdca2cb746da713f4c08c668b6b1f998872aa0c4c3411"
+      },
+      {
+        "_path": "site-packages/array_api_compat/common/_linalg.py",
+        "path_type": "hardlink",
+        "sha256": "8eccfb3e9c000f641ea894029d87772f07132e6e98323ca56bdfce97bd227c5e",
+        "size_in_bytes": 6805,
+        "sha256_in_prefix": "8eccfb3e9c000f641ea894029d87772f07132e6e98323ca56bdfce97bd227c5e"
+      },
+      {
+        "_path": "site-packages/array_api_compat/common/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "80583702f92f5d0d1555e899b637a3a5a539578a025e74656c6ccd987a4b3c5b",
+        "size_in_bytes": 4498,
+        "sha256_in_prefix": "80583702f92f5d0d1555e899b637a3a5a539578a025e74656c6ccd987a4b3c5b"
+      },
+      {
+        "_path": "site-packages/array_api_compat/cupy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bbf960390ae9efea48db86d9a7c7cd9b841fae599ca1ca452f67d65fed93bffe",
+        "size_in_bytes": 736,
+        "sha256_in_prefix": "bbf960390ae9efea48db86d9a7c7cd9b841fae599ca1ca452f67d65fed93bffe"
+      },
+      {
+        "_path": "site-packages/array_api_compat/cupy/_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "7a8476955078e5f08cb0bb469b73e77333a2bd4c484b19452762b8c95fda8993",
+        "size_in_bytes": 5122,
+        "sha256_in_prefix": "7a8476955078e5f08cb0bb469b73e77333a2bd4c484b19452762b8c95fda8993"
+      },
+      {
+        "_path": "site-packages/array_api_compat/cupy/_info.py",
+        "path_type": "hardlink",
+        "sha256": "8370f03b9a6ce1b4a5154da973f7f85d368bae4098b920e50b0d10976c2ea8cf",
+        "size_in_bytes": 10125,
+        "sha256_in_prefix": "8370f03b9a6ce1b4a5154da973f7f85d368bae4098b920e50b0d10976c2ea8cf"
+      },
+      {
+        "_path": "site-packages/array_api_compat/cupy/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "2fa454345a32f99c0b8b312a092a8737ee860b97212987d02fcc56e05564b0a0",
+        "size_in_bytes": 607,
+        "sha256_in_prefix": "2fa454345a32f99c0b8b312a092a8737ee860b97212987d02fcc56e05564b0a0"
+      },
+      {
+        "_path": "site-packages/array_api_compat/cupy/fft.py",
+        "path_type": "hardlink",
+        "sha256": "0f91c9eab725140efe08efcd95eb82650cb62f3ec89e416e13c0874ebc6b5dcd",
+        "size_in_bytes": 872,
+        "sha256_in_prefix": "0f91c9eab725140efe08efcd95eb82650cb62f3ec89e416e13c0874ebc6b5dcd"
+      },
+      {
+        "_path": "site-packages/array_api_compat/cupy/linalg.py",
+        "path_type": "hardlink",
+        "sha256": "1b9cc4cdc9aa551bfc06cfcb68e5ddff54243af4909f873782262f084b6ddf0e",
+        "size_in_bytes": 1465,
+        "sha256_in_prefix": "1b9cc4cdc9aa551bfc06cfcb68e5ddff54243af4909f873782262f084b6ddf0e"
+      },
+      {
+        "_path": "site-packages/array_api_compat/dask/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/array_api_compat/dask/array/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "da144002b28d9fa661ebb429439c828dbddc4e726ca26ffce5284214365dcfd0",
+        "size_in_bytes": 677,
+        "sha256_in_prefix": "da144002b28d9fa661ebb429439c828dbddc4e726ca26ffce5284214365dcfd0"
+      },
+      {
+        "_path": "site-packages/array_api_compat/dask/array/_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "7899339edafdff47b0d1214178011edf3775be376c5dbef0a4ffc73aa565fc63",
+        "size_in_bytes": 10432,
+        "sha256_in_prefix": "7899339edafdff47b0d1214178011edf3775be376c5dbef0a4ffc73aa565fc63"
+      },
+      {
+        "_path": "site-packages/array_api_compat/dask/array/_info.py",
+        "path_type": "hardlink",
+        "sha256": "4920a5a8647fd407933a150fbebc93a5425be247b98f290707e2de5f0f604260",
+        "size_in_bytes": 12241,
+        "sha256_in_prefix": "4920a5a8647fd407933a150fbebc93a5425be247b98f290707e2de5f0f604260"
+      },
+      {
+        "_path": "site-packages/array_api_compat/dask/array/fft.py",
+        "path_type": "hardlink",
+        "sha256": "7491005f11ad7cfe59ffea11f0636e88cc071b5f876f06b1d36c3198df794234",
+        "size_in_bytes": 333,
+        "sha256_in_prefix": "7491005f11ad7cfe59ffea11f0636e88cc071b5f876f06b1d36c3198df794234"
+      },
+      {
+        "_path": "site-packages/array_api_compat/dask/array/linalg.py",
+        "path_type": "hardlink",
+        "sha256": "f9810833c73423509489d6f40d34f940c249473a3cecddb0a0f4acd1723c5e1e",
+        "size_in_bytes": 2139,
+        "sha256_in_prefix": "f9810833c73423509489d6f40d34f940c249473a3cecddb0a0f4acd1723c5e1e"
+      },
+      {
+        "_path": "site-packages/array_api_compat/numpy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4b9f95cd1b574baadee5b3b2e31b55dd17d82a4f4043027be2f3218a240ac496",
+        "size_in_bytes": 1064,
+        "sha256_in_prefix": "4b9f95cd1b574baadee5b3b2e31b55dd17d82a4f4043027be2f3218a240ac496"
+      },
+      {
+        "_path": "site-packages/array_api_compat/numpy/_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "dc586e752f56e0fa1f613b6c7fabd31c4b530bf4ff8b679c504e1e04c2f2aab8",
+        "size_in_bytes": 5666,
+        "sha256_in_prefix": "dc586e752f56e0fa1f613b6c7fabd31c4b530bf4ff8b679c504e1e04c2f2aab8"
+      },
+      {
+        "_path": "site-packages/array_api_compat/numpy/_info.py",
+        "path_type": "hardlink",
+        "sha256": "0bb88a2d053c43c0090a47ff003bff51682e9bc51d6da81ec2f2862ff2e64372",
+        "size_in_bytes": 10793,
+        "sha256_in_prefix": "0bb88a2d053c43c0090a47ff003bff51682e9bc51d6da81ec2f2862ff2e64372"
+      },
+      {
+        "_path": "site-packages/array_api_compat/numpy/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "85758b7181e8810707ccad6d47c07d7627f19b750594785451a5c11f276aa721",
+        "size_in_bytes": 605,
+        "sha256_in_prefix": "85758b7181e8810707ccad6d47c07d7627f19b750594785451a5c11f276aa721"
+      },
+      {
+        "_path": "site-packages/array_api_compat/numpy/fft.py",
+        "path_type": "hardlink",
+        "sha256": "831e91de8fde867316a6cbc1236cb4981371c193fd2852d3b90f6e3f8792acc9",
+        "size_in_bytes": 714,
+        "sha256_in_prefix": "831e91de8fde867316a6cbc1236cb4981371c193fd2852d3b90f6e3f8792acc9"
+      },
+      {
+        "_path": "site-packages/array_api_compat/numpy/linalg.py",
+        "path_type": "hardlink",
+        "sha256": "b591dd5e96679966ec6de198b9da431330f0d2eeb9b738b0c9ad8925df66d75d",
+        "size_in_bytes": 3914,
+        "sha256_in_prefix": "b591dd5e96679966ec6de198b9da431330f0d2eeb9b738b0c9ad8925df66d75d"
+      },
+      {
+        "_path": "site-packages/array_api_compat/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/array_api_compat/torch/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f1902ed0543a8e99ba91594d5c3e940c88a0067c8ce270bf2c94da007cfd414d",
+        "size_in_bytes": 633,
+        "sha256_in_prefix": "f1902ed0543a8e99ba91594d5c3e940c88a0067c8ce270bf2c94da007cfd414d"
+      },
+      {
+        "_path": "site-packages/array_api_compat/torch/_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "3d10aa94d7a5e6909a1a67e3fc5c5c084affcd7bd96dd0412a86a07ab3d039bb",
+        "size_in_bytes": 30503,
+        "sha256_in_prefix": "3d10aa94d7a5e6909a1a67e3fc5c5c084affcd7bd96dd0412a86a07ab3d039bb"
+      },
+      {
+        "_path": "site-packages/array_api_compat/torch/_info.py",
+        "path_type": "hardlink",
+        "sha256": "f87db10fdcfd48c7f71a320e5b48de45350ebe1e2cf04f69f6eff82ea6b04593",
+        "size_in_bytes": 11889,
+        "sha256_in_prefix": "f87db10fdcfd48c7f71a320e5b48de45350ebe1e2cf04f69f6eff82ea6b04593"
+      },
+      {
+        "_path": "site-packages/array_api_compat/torch/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "fae0a4b9389ed60f616f8bf03cb2bd7849e2afd669ebbc0086b7da23fa3edf91",
+        "size_in_bytes": 108,
+        "sha256_in_prefix": "fae0a4b9389ed60f616f8bf03cb2bd7849e2afd669ebbc0086b7da23fa3edf91"
+      },
+      {
+        "_path": "site-packages/array_api_compat/torch/fft.py",
+        "path_type": "hardlink",
+        "sha256": "8a35b568968ecacd84324174e21bb7bd231032a77664b5292ef01951065fe0bc",
+        "size_in_bytes": 1833,
+        "sha256_in_prefix": "8a35b568968ecacd84324174e21bb7bd231032a77664b5292ef01951065fe0bc"
+      },
+      {
+        "_path": "site-packages/array_api_compat/torch/linalg.py",
+        "path_type": "hardlink",
+        "sha256": "c7ea867885556cdb2693d64b495e091d6644e1607c1ea19e1e542b84d3cc189b",
+        "size_in_bytes": 4560,
+        "sha256_in_prefix": "c7ea867885556cdb2693d64b495e091d6644e1607c1ea19e1e542b84d3cc189b"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6,
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "1095d9fc28a3cb4802a3999a1ca6b1fe2e017a3138efab87bbf261d4f14ec048",
+        "size_in_bytes": 2482,
+        "sha256_in_prefix": "1095d9fc28a3cb4802a3999a1ca6b1fe2e017a3138efab87bbf261d4f14ec048"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "a3eb199bc09376aeb77e193dbb35bbd191adbdc6606af274b4dc4e8f1e69caa6",
+        "size_in_bytes": 5713,
+        "sha256_in_prefix": "a3eb199bc09376aeb77e193dbb35bbd191adbdc6606af274b4dc4e8f1e69caa6"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b8f601e5d3c054c2854345b0d012f9c61cbce228b6992380c092ccb04d58a553",
+        "size_in_bytes": 127,
+        "sha256_in_prefix": "b8f601e5d3c054c2854345b0d012f9c61cbce228b6992380c092ccb04d58a553"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "4ffd978e3fa18d058d98c66771cfea7ed634aaf7023cf9612b8b55eee9a8f0fe",
+        "size_in_bytes": 1097,
+        "sha256_in_prefix": "4ffd978e3fa18d058d98c66771cfea7ed634aaf7023cf9612b8b55eee9a8f0fe"
+      },
+      {
+        "_path": "site-packages/array_api_compat-1.13.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "2376a17498bf3e53bbb5ac3f385abf54435606bb3febc133fca9c1d39c5d8ad7",
+        "size_in_bytes": 17,
+        "sha256_in_prefix": "2376a17498bf3e53bbb5ac3f385abf54435606bb3febc133fca9c1d39c5d8ad7"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/__pycache__/_internal.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/common/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_aliases.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_fft.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_helpers.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_linalg.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/common/__pycache__/_typing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/_aliases.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/_info.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/_typing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/fft.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/cupy/__pycache__/linalg.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/dask/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/_aliases.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/_info.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/fft.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/dask/array/__pycache__/linalg.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/_aliases.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/_info.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/_typing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/fft.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/numpy/__pycache__/linalg.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/_aliases.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/_info.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/_typing.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/fft.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/array_api_compat/torch/__pycache__/linalg.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/array-api-compat-1.13.0-pyhcf101f3_0",
+    "type": 1
+  }
+}

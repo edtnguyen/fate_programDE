@@ -19,6 +19,10 @@ batch_size: 128
 lr: 0.001
 clip_norm: 5.0
 num_steps: 500
+s_time: 1.0
+s_guide: 1.0
+s_tau: 1.0
+time_scale: null
 num_posterior_draws: 200
 seed: 0
 weights: null

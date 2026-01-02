@@ -1,0 +1,45 @@
+{
+  "name": "libfreetype6",
+  "version": "2.14.1",
+  "build": "h6912278_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libfreetype6-2.14.1-h6912278_0.conda",
+  "md5": "dfbdc8fd781dc3111541e4234c19fdbd",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libfreetype6-2.14.1-h6912278_0.conda",
+  "sha256": "f5f28092e368efc773bcd1c381d123f8b211528385a9353e36f8808d00d11655",
+  "depends": [
+    "__osx >=10.13",
+    "libpng >=1.6.50,<1.7.0a0",
+    "libzlib >=1.3.1,<2.0a0"
+  ],
+  "constrains": [
+    "freetype >=2.14.1"
+  ],
+  "license": "GPL-2.0-only OR FTL",
+  "timestamp": 1757945949000,
+  "size": 374993,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libfreetype6-2.14.1-h6912278_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libfreetype6-2.14.1-h6912278_0",
+  "files": [
+    "lib/libfreetype.6.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libfreetype.6.dylib",
+        "path_type": "hardlink",
+        "sha256": "78a0567d91897991bde3f944f2e4bba5df7196b716b71d91992dd1213560e79a",
+        "size_in_bytes": 797992,
+        "sha256_in_prefix": "78a0567d91897991bde3f944f2e4bba5df7196b716b71d91992dd1213560e79a"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libfreetype6-2.14.1-h6912278_0",
+    "type": 1
+  }
+}

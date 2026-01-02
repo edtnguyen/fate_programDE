@@ -1,0 +1,34 @@
+{
+  "name": "cpython",
+  "version": "3.11.14",
+  "build": "py311hd8ed1ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "cpython-3.11.14-py311hd8ed1ab_2.conda",
+  "md5": "43ed151bed1a0eb7181d305fed7cf051",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/cpython-3.11.14-py311hd8ed1ab_2.conda",
+  "sha256": "c871fe68dcc6b79b322e4fcf9f2b131162094c32a68d48c87aa8582995948a01",
+  "depends": [
+    "python >=3.11,<3.12.0a0",
+    "python_abi * *_cp311"
+  ],
+  "constrains": [],
+  "noarch": "generic",
+  "license": "Python-2.0",
+  "package_type": "noarch_generic",
+  "timestamp": 1761172995000,
+  "size": 47257,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/cpython-3.11.14-py311hd8ed1ab_2",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/cpython-3.11.14-py311hd8ed1ab_2",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/cpython-3.11.14-py311hd8ed1ab_2",
+    "type": 1
+  }
+}

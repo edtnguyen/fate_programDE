@@ -73,6 +73,23 @@ class TestThetaDeltaConstruction(unittest.TestCase):
         expected = torch.tensor([[[3.0], [8.0]]])
         self.assertTrue(torch.allclose(theta_core, expected))
 
+    def test_construct_theta_core_time_scale(self):
+        tau = torch.tensor([1.0])
+        z0 = torch.tensor([[1.0]])
+        sigma_time = torch.tensor([1.0])
+        eps = torch.ones((1, 1, 2))
+
+        theta_core = construct_theta_core(
+            tau=tau,
+            z0=z0,
+            sigma_time=sigma_time,
+            eps=eps,
+            time_scale=[1.0, 2.0],
+            D=3,
+        )
+        expected = torch.tensor([[[1.0, 2.0, 4.0]]])
+        self.assertTrue(torch.allclose(theta_core, expected))
+
     def test_construct_delta_core(self):
         sigma_guide = torch.tensor([0.5, 2.0])
         u = torch.tensor([[2.0, -1.0]])

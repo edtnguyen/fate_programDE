@@ -102,6 +102,7 @@ def _estimate_mean_loglik(
     R: int,
     Kmax: int,
     num_draws: int,
+    time_scale: Sequence[float] | None,
 ) -> float:
     fate_names, _, _, non_ref_indices = resolve_fate_names(
         fate_names, ref_fate=ref_fate
@@ -133,6 +134,7 @@ def _estimate_mean_loglik(
         z0=samples["z0"],
         sigma_time=samples["sigma_time"],
         eps=samples.get("eps"),
+        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -292,8 +294,10 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=diag_steps,
+        s_tau=cfg.get("s_tau", 1.0),
         s_time=cfg.get("s_time", 1.0),
         s_guide=cfg.get("s_guide", 1.0),
+        time_scale=cfg.get("time_scale", None),
         seed=cfg.get("diagnostics_seed", 0),
     )
 
@@ -315,6 +319,7 @@ def main() -> None:
         R=cfg["R"],
         Kmax=cfg["Kmax"],
         num_draws=diag_draws,
+        time_scale=cfg.get("time_scale", None),
     )
 
     logger.info("Fitting nuisance-only model for diagnostics")
@@ -342,8 +347,10 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=diag_steps,
+        s_tau=cfg.get("s_tau", 1.0),
         s_time=cfg.get("s_time", 1.0),
         s_guide=cfg.get("s_guide", 1.0),
+        time_scale=cfg.get("time_scale", None),
         seed=cfg.get("diagnostics_seed", 0),
     )
 
@@ -365,6 +372,7 @@ def main() -> None:
         R=cfg["R"],
         Kmax=cfg["Kmax"],
         num_draws=diag_draws,
+        time_scale=cfg.get("time_scale", None),
     )
 
     diagnostics = {
@@ -412,8 +420,10 @@ def main() -> None:
             lr=cfg["lr"],
             clip_norm=cfg["clip_norm"],
             num_steps=cfg.get("diagnostics_perm_steps", 500),
+            s_tau=cfg.get("s_tau", 1.0),
             s_time=cfg.get("s_time", 1.0),
             s_guide=cfg.get("s_guide", 1.0),
+            time_scale=cfg.get("time_scale", None),
             seed=cfg.get("diagnostics_seed", 0),
         )
 
@@ -438,6 +448,7 @@ def main() -> None:
             L=L,
             D=cfg["D"],
             num_draws=cfg.get("diagnostics_perm_draws", 25),
+            time_scale=cfg.get("time_scale", None),
             day_cell_counts=day_counts_train,
             weights=cfg.get("weights", None),
             out_csv=str(perm_summary),
@@ -479,6 +490,7 @@ def main() -> None:
             L=L,
             D=cfg["D"],
             num_draws=cfg.get("sanity_num_draws", 200),
+            time_scale=cfg.get("time_scale", None),
             day_cell_counts=day_counts_train,
             weights=cfg.get("weights", None),
             out_csv=None,

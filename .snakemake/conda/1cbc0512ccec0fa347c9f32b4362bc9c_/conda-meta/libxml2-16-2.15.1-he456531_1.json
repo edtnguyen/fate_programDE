@@ -1,0 +1,57 @@
+{
+  "name": "libxml2-16",
+  "version": "2.15.1",
+  "build": "he456531_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libxml2-16-2.15.1-he456531_1.conda",
+  "md5": "6cd21078a491bdf3fdb7482e1680ef63",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libxml2-16-2.15.1-he456531_1.conda",
+  "sha256": "eff0894cd82f2e055ea761773eb80bfaacdd13fbdd427a80fe0c5b00bf777762",
+  "depends": [
+    "__osx >=10.13",
+    "icu >=78.1,<79.0a0",
+    "libiconv >=1.18,<2.0a0",
+    "liblzma >=5.8.1,<6.0a0",
+    "libzlib >=1.3.1,<2.0a0"
+  ],
+  "constrains": [
+    "libxml2 2.15.1"
+  ],
+  "license": "MIT",
+  "timestamp": 1766327317000,
+  "size": 494450,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/libxml2-16-2.15.1-he456531_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/libxml2-16-2.15.1-he456531_1",
+  "files": [
+    "etc/conda/activate.d/libxml2-split_activate.sh",
+    "lib/libxml2.16.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/libxml2-split_activate.sh",
+        "path_type": "hardlink",
+        "sha256": "631478a9cfbd337b86ee1df94497c21821cd561312c94892d156e43f499cf5c4",
+        "size_in_bytes": 872,
+        "sha256_in_prefix": "631478a9cfbd337b86ee1df94497c21821cd561312c94892d156e43f499cf5c4"
+      },
+      {
+        "_path": "lib/libxml2.16.dylib",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libxml2-split_1766326908261/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "6243fe243f070ba806f8d4951498c79922147549d05fdbe519749e750bf4c9d6",
+        "size_in_bytes": 1190968,
+        "sha256_in_prefix": "6f20d84366f75b4b783d8368c71b8459fff9469c837ffa0857dadf66c459c30b"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/libxml2-16-2.15.1-he456531_1",
+    "type": 1
+  }
+}

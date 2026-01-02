@@ -7,5 +7,7 @@ Implemented step 11 in `src/models/pyro_model.py`: `reconstruct_theta_samples` d
 Implemented step 12 in pipeline form: added `scripts/fit_pyro_export.py`, `scripts/run_ash.R`, and `scripts/rank_hits.py`, plus `config.yaml` (now includes ref_fate/contrast_fate), `Snakefile`, and conda env specs in `envs/`.
 Implemented step 13 diagnostics in `scripts/run_diagnostics.py` (holdout cross-entropy for full vs nuisance-only model; optional guide permutation with a Python-only p-value/BH qvalue hit-rate proxy; optional sanity checks for expected gene-direction effects).
 Updated `config.yaml` to include prior scale knobs (`s_time`, `s_guide`) and set them to 0.3 and 0.5 for noisier recovery.
+Exposed `s_tau` as a configurable prior scale (passed through `fit_svi` and scripts) and added `scripts/simulate_tau_sweep.py` plus a `sim_tau_sweep` Snakefile target for recovery experiments.
+Added fixed per-interval time scaling (`time_scale`) for the random-walk increments in `src/models/pyro_model.py`, validated in `scripts/pyro_io.py`, threaded through fit/export/diagnostics, and documented in `src/architecture/pyro_model.md`.
 Removed unused pipeline stubs from `src/models/pyro_pipeline.py`; only shared helpers (`make_k_centered`, `to_torch`) remain.
 Remaining manual/optional items from `src/architecture/pyro_model.md`: manual review of sanity-check outputs (if enabled).

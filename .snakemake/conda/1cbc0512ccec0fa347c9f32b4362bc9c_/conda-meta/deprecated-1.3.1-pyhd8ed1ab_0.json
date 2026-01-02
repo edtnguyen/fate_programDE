@@ -1,0 +1,152 @@
+{
+  "name": "deprecated",
+  "version": "1.3.1",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "deprecated-1.3.1-pyhd8ed1ab_0.conda",
+  "md5": "bf74a83f7a0f2a21b5d709997402cac4",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/deprecated-1.3.1-pyhd8ed1ab_0.conda",
+  "sha256": "c994a70449d548dd388768090c71c1da81e1e128a281547ab9022908d46878c5",
+  "depends": [
+    "python >=3.10",
+    "wrapt <2,>=1.10"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "MIT",
+  "package_type": "noarch_python",
+  "timestamp": 1761813872000,
+  "size": 15815,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/deprecated-1.3.1-pyhd8ed1ab_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/deprecated-1.3.1-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/METADATA",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/RECORD",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/WHEEL",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/licenses/LICENSE.rst",
+    "lib/python3.11/site-packages/deprecated-1.3.1.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/deprecated/__init__.py",
+    "lib/python3.11/site-packages/deprecated/classic.py",
+    "lib/python3.11/site-packages/deprecated/params.py",
+    "lib/python3.11/site-packages/deprecated/sphinx.py",
+    "lib/python3.11/site-packages/deprecated/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/deprecated/__pycache__/classic.cpython-311.pyc",
+    "lib/python3.11/site-packages/deprecated/__pycache__/params.cpython-311.pyc",
+    "lib/python3.11/site-packages/deprecated/__pycache__/sphinx.cpython-311.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "409767ac23878c1c694888ce4acc43dab6b37efa2b40499567fb5c7d9dce5852",
+        "size_in_bytes": 5894,
+        "sha256_in_prefix": "409767ac23878c1c694888ce4acc43dab6b37efa2b40499567fb5c7d9dce5852"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "42a4f06cfd74ab79b134329a470d6bb32e00f62bcfa354c973f3a013cba04f35",
+        "size_in_bytes": 1216,
+        "sha256_in_prefix": "42a4f06cfd74ab79b134329a470d6bb32e00f62bcfa354c973f3a013cba04f35"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "24d5a1d459b551dc08415d3be609429f8315b8246cd2ca2d248abe27aadbc425",
+        "size_in_bytes": 109,
+        "sha256_in_prefix": "24d5a1d459b551dc08415d3be609429f8315b8246cd2ca2d248abe27aadbc425"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "5d82c5a11dbf28ed757535c84f33243d51823dfa1ac5a2c1b51812866b931627",
+        "size_in_bytes": 106,
+        "sha256_in_prefix": "5d82c5a11dbf28ed757535c84f33243d51823dfa1ac5a2c1b51812866b931627"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/licenses/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "1e83edd15be419b5d5bde372e325e527ff4f9915f548e7c75314b41f6699e83c",
+        "size_in_bytes": 1081,
+        "sha256_in_prefix": "1e83edd15be419b5d5bde372e325e527ff4f9915f548e7c75314b41f6699e83c"
+      },
+      {
+        "_path": "site-packages/deprecated-1.3.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9c76ce61ac0a3d0404e65425fada140752414498d4ca7fe6fcc6fc4552744630",
+        "size_in_bytes": 11,
+        "sha256_in_prefix": "9c76ce61ac0a3d0404e65425fada140752414498d4ca7fe6fcc6fc4552744630"
+      },
+      {
+        "_path": "site-packages/deprecated/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a303779e3dd462d7bd277dbb34935ffe13504c9a2f97cd771ff43b60a8455fd3",
+        "size_in_bytes": 398,
+        "sha256_in_prefix": "a303779e3dd462d7bd277dbb34935ffe13504c9a2f97cd771ff43b60a8455fd3"
+      },
+      {
+        "_path": "site-packages/deprecated/classic.py",
+        "path_type": "hardlink",
+        "sha256": "bd65bef2756f11e8f1e0ff6c7fbe6f95e13d2566c44da85afd26be05ff417b2a",
+        "size_in_bytes": 10649,
+        "sha256_in_prefix": "bd65bef2756f11e8f1e0ff6c7fbe6f95e13d2566c44da85afd26be05ff417b2a"
+      },
+      {
+        "_path": "site-packages/deprecated/params.py",
+        "path_type": "hardlink",
+        "sha256": "fdb5915cb6468b6a85f849997e05a319ed86d7959969b84e1fff4db6fb78d9c7",
+        "size_in_bytes": 2870,
+        "sha256_in_prefix": "fdb5915cb6468b6a85f849997e05a319ed86d7959969b84e1fff4db6fb78d9c7"
+      },
+      {
+        "_path": "site-packages/deprecated/sphinx.py",
+        "path_type": "hardlink",
+        "sha256": "70e2a75db0f2140c03af93bb1c1129810af1f89faa7e9e7bb1f74afcb69b0f1b",
+        "size_in_bytes": 11109,
+        "sha256_in_prefix": "70e2a75db0f2140c03af93bb1c1129810af1f89faa7e9e7bb1f74afcb69b0f1b"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/deprecated/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/deprecated/__pycache__/classic.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/deprecated/__pycache__/params.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/deprecated/__pycache__/sphinx.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/deprecated-1.3.1-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

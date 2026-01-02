@@ -1,0 +1,282 @@
+{
+  "name": "umap-learn",
+  "version": "0.5.9.post2",
+  "build": "py311h6eed73b_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "umap-learn-0.5.9.post2-py311h6eed73b_1.conda",
+  "md5": "4df2944b2db7ce529b716e9fcc40a729",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/umap-learn-0.5.9.post2-py311h6eed73b_1.conda",
+  "sha256": "a183b69275750a065cbf8f618c773a6d804b9db20428312f472454f63bd4e590",
+  "depends": [
+    "numba >=0.51.2",
+    "numpy >=1.17",
+    "pynndescent >=0.5",
+    "python >=3.11,<3.12.0a0",
+    "python_abi 3.11.* *_cp311",
+    "scikit-learn >=0.22",
+    "scipy >=1.3.1",
+    "setuptools",
+    "tbb >=2019.0",
+    "tqdm"
+  ],
+  "constrains": [],
+  "license": "BSD-2-Clause",
+  "timestamp": 1765401171000,
+  "size": 196377,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/umap-learn-0.5.9.post2-py311h6eed73b_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/umap-learn-0.5.9.post2-py311h6eed73b_1",
+  "files": [
+    "lib/python3.11/site-packages/umap/__init__.py",
+    "lib/python3.11/site-packages/umap/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/aligned_umap.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/distances.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/layouts.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/parametric_umap.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/plot.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/sparse.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/spectral.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/umap_.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/utils.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/__pycache__/validation.cpython-311.pyc",
+    "lib/python3.11/site-packages/umap/aligned_umap.py",
+    "lib/python3.11/site-packages/umap/distances.py",
+    "lib/python3.11/site-packages/umap/layouts.py",
+    "lib/python3.11/site-packages/umap/parametric_umap.py",
+    "lib/python3.11/site-packages/umap/plot.py",
+    "lib/python3.11/site-packages/umap/sparse.py",
+    "lib/python3.11/site-packages/umap/spectral.py",
+    "lib/python3.11/site-packages/umap/umap_.py",
+    "lib/python3.11/site-packages/umap/utils.py",
+    "lib/python3.11/site-packages/umap/validation.py",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/METADATA",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/RECORD",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/WHEEL",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/licenses/LICENSE.txt",
+    "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/top_level.txt"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.11/site-packages/umap/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ff3c7da50cc742c3bc3b8c5faceacbcb476fccdbe65bd582edd4dc98a415f013",
+        "size_in_bytes": 1210,
+        "sha256_in_prefix": "ff3c7da50cc742c3bc3b8c5faceacbcb476fccdbe65bd582edd4dc98a415f013"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "676318d816a3415c3d67308e1d7ebcc109c7d828c4f500b9744b8992f9898e56",
+        "size_in_bytes": 2117,
+        "sha256_in_prefix": "676318d816a3415c3d67308e1d7ebcc109c7d828c4f500b9744b8992f9898e56"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/aligned_umap.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "741a57e0b82642caa5f820627b0603c432d94ae5b83f5f90200dde8522abb7ec",
+        "size_in_bytes": 27365,
+        "sha256_in_prefix": "741a57e0b82642caa5f820627b0603c432d94ae5b83f5f90200dde8522abb7ec"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/distances.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "64097dc20deed9e275f649ae5e14a831edfcc3f24d6bfc86121984b631808d4b",
+        "size_in_bytes": 60878,
+        "sha256_in_prefix": "64097dc20deed9e275f649ae5e14a831edfcc3f24d6bfc86121984b631808d4b"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/layouts.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "ecca1e837a3b151693aecae3dc2e656aa2d6f6097e4f901db020b2e2b1e599b0",
+        "size_in_bytes": 33882,
+        "sha256_in_prefix": "ecca1e837a3b151693aecae3dc2e656aa2d6f6097e4f901db020b2e2b1e599b0"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/parametric_umap.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "69a8b3e98e24369fa4a0b3346fb83932752237d7e8dff94763988ec3f2f8dd07",
+        "size_in_bytes": 53736,
+        "sha256_in_prefix": "69a8b3e98e24369fa4a0b3346fb83932752237d7e8dff94763988ec3f2f8dd07"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/plot.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "8e809c771a05e334b94b47e6ee6d557f5b6f176c3a8c333af3ffa30a994465da",
+        "size_in_bytes": 64939,
+        "sha256_in_prefix": "8e809c771a05e334b94b47e6ee6d557f5b6f176c3a8c333af3ffa30a994465da"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/sparse.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "9bf6045be12f7c41ae5e19f00a4a1489cd1de226fb18a3c7ad7e7dd73e212bde",
+        "size_in_bytes": 23867,
+        "sha256_in_prefix": "9bf6045be12f7c41ae5e19f00a4a1489cd1de226fb18a3c7ad7e7dd73e212bde"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/spectral.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "08ff44febff7300bbf051e4eaf144d60c44a59c3905df7bab6cfaa33dfaac1cd",
+        "size_in_bytes": 21467,
+        "sha256_in_prefix": "08ff44febff7300bbf051e4eaf144d60c44a59c3905df7bab6cfaa33dfaac1cd"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/umap_.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "11a1552825bd5c235bcf9fba63bc46238035581e6a3d023e33b434976782a9e0",
+        "size_in_bytes": 143512,
+        "sha256_in_prefix": "11a1552825bd5c235bcf9fba63bc46238035581e6a3d023e33b434976782a9e0"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/utils.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "809d78c073447158b3e0483cf46ddb21c26ebfaf3f4e053603676a2f4291bb8a",
+        "size_in_bytes": 9369,
+        "sha256_in_prefix": "809d78c073447158b3e0483cf46ddb21c26ebfaf3f4e053603676a2f4291bb8a"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/__pycache__/validation.cpython-311.pyc",
+        "path_type": "hardlink",
+        "sha256": "03be04a2b90d123701783ec72ddb686cd7d4baa6a3625cc726d9f9825c3d35dc",
+        "size_in_bytes": 3889,
+        "sha256_in_prefix": "03be04a2b90d123701783ec72ddb686cd7d4baa6a3625cc726d9f9825c3d35dc"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/aligned_umap.py",
+        "path_type": "hardlink",
+        "sha256": "0ac061cde06b3aac49380d9914a1d742181c4d982ac534daa69beb6261868c6c",
+        "size_in_bytes": 20553,
+        "sha256_in_prefix": "0ac061cde06b3aac49380d9914a1d742181c4d982ac534daa69beb6261868c6c"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/distances.py",
+        "path_type": "hardlink",
+        "sha256": "013289a65fcc834e25d6159273bab25fce70db0f97a592a3e3a5a555fe234faa",
+        "size_in_bytes": 34517,
+        "sha256_in_prefix": "013289a65fcc834e25d6159273bab25fce70db0f97a592a3e3a5a555fe234faa"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/layouts.py",
+        "path_type": "hardlink",
+        "sha256": "8952720e64d31cd41ff88fc1b718e88e53baf542f96b442d1e4789aa7af68263",
+        "size_in_bytes": 34506,
+        "sha256_in_prefix": "8952720e64d31cd41ff88fc1b718e88e53baf542f96b442d1e4789aa7af68263"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/parametric_umap.py",
+        "path_type": "hardlink",
+        "sha256": "8a1e2b3531b906e21aa385d0c1e1c4a162b8133f8c1b6da22cf0c94f216d81ac",
+        "size_in_bytes": 48306,
+        "sha256_in_prefix": "8a1e2b3531b906e21aa385d0c1e1c4a162b8133f8c1b6da22cf0c94f216d81ac"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/plot.py",
+        "path_type": "hardlink",
+        "sha256": "28f7d0bbeaba78f0471db10e94e7e991d50361ce80ca22cd4e3ed0867393b43f",
+        "size_in_bytes": 55582,
+        "sha256_in_prefix": "28f7d0bbeaba78f0471db10e94e7e991d50361ce80ca22cd4e3ed0867393b43f"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/sparse.py",
+        "path_type": "hardlink",
+        "sha256": "6f193a8eef0cee00f3a03c65c77b709542553f7d39c9f98802b5ebf79c59e6e8",
+        "size_in_bytes": 16708,
+        "sha256_in_prefix": "6f193a8eef0cee00f3a03c65c77b709542553f7d39c9f98802b5ebf79c59e6e8"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/spectral.py",
+        "path_type": "hardlink",
+        "sha256": "244efc06cf6026643cd2adbbbfc92f2481210e8f1f4d5ac59c2b3a61b7a9e1f8",
+        "size_in_bytes": 19766,
+        "sha256_in_prefix": "244efc06cf6026643cd2adbbbfc92f2481210e8f1f4d5ac59c2b3a61b7a9e1f8"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/umap_.py",
+        "path_type": "hardlink",
+        "sha256": "6f9eab187af19b20a210e7e5265a940940cea2ede6af3f38da41ebb2edede303",
+        "size_in_bytes": 137883,
+        "sha256_in_prefix": "6f9eab187af19b20a210e7e5265a940940cea2ede6af3f38da41ebb2edede303"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/utils.py",
+        "path_type": "hardlink",
+        "sha256": "fd10eaa1c241e48a043c03d9b1c4e4957233834ecb54e10fe5e79eb2d9dc3c62",
+        "size_in_bytes": 6709,
+        "sha256_in_prefix": "fd10eaa1c241e48a043c03d9b1c4e4957233834ecb54e10fe5e79eb2d9dc3c62"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap/validation.py",
+        "path_type": "hardlink",
+        "sha256": "6e17b3da7448fa35ee40b1144d0caf3dbe7f2fa9d98e39d1131822091f2d94cf",
+        "size_in_bytes": 2460,
+        "sha256_in_prefix": "6e17b3da7448fa35ee40b1144d0caf3dbe7f2fa9d98e39d1131822091f2d94cf"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6fb15f711ffd6128ec2cfe03bba135acdb3065cb1ab9e4e9949aecf27feff63b",
+        "size_in_bytes": 25209,
+        "sha256_in_prefix": "6fb15f711ffd6128ec2cfe03bba135acdb3065cb1ab9e4e9949aecf27feff63b"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "63e923b0e7fc0b6e8a306d81c14e738cd4b6ab5cccb59b91a11bab692b69d78a",
+        "size_in_bytes": 2067,
+        "sha256_in_prefix": "63e923b0e7fc0b6e8a306d81c14e738cd4b6ab5cccb59b91a11bab692b69d78a"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "a0b712715d0495c7c0a6267fa2160075e0491bc460bd096db276fe02a4f92e54",
+        "size_in_bytes": 98,
+        "sha256_in_prefix": "a0b712715d0495c7c0a6267fa2160075e0491bc460bd096db276fe02a4f92e54"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/licenses/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "46fc974145ef85e0992ac3173d03ffe6cdf2611292950e323c5a69b9ca35ff1e",
+        "size_in_bytes": 1514,
+        "sha256_in_prefix": "46fc974145ef85e0992ac3173d03ffe6cdf2611292950e323c5a69b9ca35ff1e"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/umap_learn-0.5.9.post2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "2bf1553a88d436c588e29ed9d91ba6476f61958c39972fbe3b3b4fa890ae8110",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "2bf1553a88d436c588e29ed9d91ba6476f61958c39972fbe3b3b4fa890ae8110"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/umap-learn-0.5.9.post2-py311h6eed73b_1",
+    "type": 1
+  }
+}

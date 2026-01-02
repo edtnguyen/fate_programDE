@@ -1,0 +1,19 @@
+name: fate-pyro
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy<2
+  - pandas
+  - click
+  - matplotlib
+  - scipy
+  - pyyaml
+  - anndata
+  - scanpy
+  - pytorch>=2.2
+  - pip:
+      - pyro-ppl>=1.9

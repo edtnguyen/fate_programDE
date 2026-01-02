@@ -1,0 +1,80 @@
+{
+  "name": "tbb",
+  "version": "2022.3.0",
+  "build": "hf0c99ee_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "tbb-2022.3.0-hf0c99ee_1.conda",
+  "md5": "108a7d3b5f5b08ed346636ac5935a495",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/tbb-2022.3.0-hf0c99ee_1.conda",
+  "sha256": "56e32e8bd8f621ccd30574c2812f8f5bc42cc66a3fda8dd7e1b5e54d3f835faa",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=19",
+    "libhwloc >=2.12.1,<2.12.2.0a0"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0",
+  "timestamp": 1762510382000,
+  "size": 160700,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/tbb-2022.3.0-hf0c99ee_1",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/tbb-2022.3.0-hf0c99ee_1",
+  "files": [
+    "lib/libtbb.12.17.dylib",
+    "lib/libtbb.12.dylib",
+    "lib/libtbbmalloc.2.17.dylib",
+    "lib/libtbbmalloc.2.dylib",
+    "lib/libtbbmalloc_proxy.2.17.dylib",
+    "lib/libtbbmalloc_proxy.2.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libtbb.12.17.dylib",
+        "path_type": "hardlink",
+        "sha256": "e29de96f4e9234baa05186c0e685b8b07ab5b086c4bb3dee105dcfd4e099af19",
+        "size_in_bytes": 471016,
+        "sha256_in_prefix": "e29de96f4e9234baa05186c0e685b8b07ab5b086c4bb3dee105dcfd4e099af19"
+      },
+      {
+        "_path": "lib/libtbb.12.dylib",
+        "path_type": "softlink",
+        "sha256": "e29de96f4e9234baa05186c0e685b8b07ab5b086c4bb3dee105dcfd4e099af19",
+        "size_in_bytes": 471016
+      },
+      {
+        "_path": "lib/libtbbmalloc.2.17.dylib",
+        "path_type": "hardlink",
+        "sha256": "07b82bb954f3f1edffcf279adad7290c19db25125f0cad5ce242b144d4bfed1c",
+        "size_in_bytes": 146640,
+        "sha256_in_prefix": "07b82bb954f3f1edffcf279adad7290c19db25125f0cad5ce242b144d4bfed1c"
+      },
+      {
+        "_path": "lib/libtbbmalloc.2.dylib",
+        "path_type": "softlink",
+        "sha256": "07b82bb954f3f1edffcf279adad7290c19db25125f0cad5ce242b144d4bfed1c",
+        "size_in_bytes": 146640
+      },
+      {
+        "_path": "lib/libtbbmalloc_proxy.2.17.dylib",
+        "path_type": "hardlink",
+        "sha256": "01617a48f1b2fbd8a61e27a5199812ea1d35b72685ab2d6e1e544ce97c0688c7",
+        "size_in_bytes": 20176,
+        "sha256_in_prefix": "01617a48f1b2fbd8a61e27a5199812ea1d35b72685ab2d6e1e544ce97c0688c7"
+      },
+      {
+        "_path": "lib/libtbbmalloc_proxy.2.dylib",
+        "path_type": "softlink",
+        "sha256": "01617a48f1b2fbd8a61e27a5199812ea1d35b72685ab2d6e1e544ce97c0688c7",
+        "size_in_bytes": 20176
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/tbb-2022.3.0-hf0c99ee_1",
+    "type": 1
+  }
+}

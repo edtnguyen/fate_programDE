@@ -34,6 +34,9 @@ _INT_CFG_KEYS = {
 _FLOAT_CFG_KEYS = {
     "lr",
     "clip_norm",
+    "s_time",
+    "s_guide",
+    "s_tau",
     "bootstrap_frac",
     "lfsr_thresh",
     "qvalue_thresh",
@@ -106,6 +109,22 @@ def normalize_config(cfg: dict) -> dict:
             cfg["weights"] = [float(w) for w in weights]
         else:
             raise ValueError("Config 'weights' must be a list of floats or null.")
+
+    time_scale = cfg.get("time_scale", None)
+    if time_scale is not None:
+        if isinstance(time_scale, (list, tuple, np.ndarray)):
+            cfg["time_scale"] = [float(v) for v in time_scale]
+        else:
+            raise ValueError("Config 'time_scale' must be a list of floats or null.")
+        if any(v <= 0 for v in cfg["time_scale"]):
+            raise ValueError("Config 'time_scale' entries must be positive.")
+        D = cfg.get("D", None)
+        if D is not None:
+            if D <= 1:
+                if len(cfg["time_scale"]) != 0:
+                    raise ValueError("Config 'time_scale' must be empty when D <= 1.")
+            elif len(cfg["time_scale"]) != D - 1:
+                raise ValueError(f"Config 'time_scale' must have length D-1={D - 1}.")
 
     return cfg
 

@@ -1,0 +1,146 @@
+{
+  "name": "legacy-api-wrap",
+  "version": "1.5",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "legacy-api-wrap-1.5-pyhd8ed1ab_0.conda",
+  "md5": "0f67063cc1769bcb0e4e5ecbca22f8b6",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/legacy-api-wrap-1.5-pyhd8ed1ab_0.conda",
+  "sha256": "680ae16bf64fc2023601415b5841f297baa269714ee14fff452941d77b73112c",
+  "depends": [
+    "python >=3.10"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "MPL-2.0",
+  "package_type": "noarch_python",
+  "timestamp": 1762187673000,
+  "size": 15868,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/usr/local/Caskroom/miniforge/base/pkgs/legacy-api-wrap-1.5-pyhd8ed1ab_0",
+  "extracted_package_dir": "/usr/local/Caskroom/miniforge/base/pkgs/legacy-api-wrap-1.5-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/METADATA",
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/RECORD",
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/WHEEL",
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/legacy_api_wrap-1.5.dist-info/licenses/LICENSE.rst",
+    "lib/python3.11/site-packages/legacy_api_wrap/__init__.py",
+    "lib/python3.11/site-packages/legacy_api_wrap/py.typed",
+    "lib/python3.11/site-packages/testing/legacy_api_wrap/__init__.py",
+    "lib/python3.11/site-packages/testing/legacy_api_wrap/py.typed",
+    "lib/python3.11/site-packages/testing/legacy_api_wrap/pytest.py",
+    "lib/python3.11/site-packages/legacy_api_wrap/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/legacy_api_wrap/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/testing/legacy_api_wrap/__pycache__/pytest.cpython-311.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b89bb8e7cb4b32d195b813ee937cdf190acda2446caa46ec9817d97d5de52385",
+        "size_in_bytes": 2226,
+        "sha256_in_prefix": "b89bb8e7cb4b32d195b813ee937cdf190acda2446caa46ec9817d97d5de52385"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "9f1ee7a25d5ef11b421fa9f22725145c51853e97d3b652dd2cf07bf4a38b4f9c",
+        "size_in_bytes": 1240,
+        "sha256_in_prefix": "9f1ee7a25d5ef11b421fa9f22725145c51853e97d3b652dd2cf07bf4a38b4f9c"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "e2e0fecf4c65d278a6b2137865cf96210a9ed75a9e0ca515d2825a70643ac6eb",
+        "size_in_bytes": 111,
+        "sha256_in_prefix": "e2e0fecf4c65d278a6b2137865cf96210a9ed75a9e0ca515d2825a70643ac6eb"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap-1.5.dist-info/licenses/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "4b4e67943fa43c5985a99ed1cc12fc11914ea1314c117f5d186309e8d7ed459c",
+        "size_in_bytes": 15954,
+        "sha256_in_prefix": "4b4e67943fa43c5985a99ed1cc12fc11914ea1314c117f5d186309e8d7ed459c"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "18fce14cc68f4605695c42ea605033eb39f945ad3a46044330320d55f6fba441",
+        "size_in_bytes": 4046,
+        "sha256_in_prefix": "18fce14cc68f4605695c42ea605033eb39f945ad3a46044330320d55f6fba441"
+      },
+      {
+        "_path": "site-packages/legacy_api_wrap/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/testing/legacy_api_wrap/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4fd4e4904f0b9553ceb936175ee5f5e3722f3e2ec0317c88086e5296a396fa77",
+        "size_in_bytes": 76,
+        "sha256_in_prefix": "4fd4e4904f0b9553ceb936175ee5f5e3722f3e2ec0317c88086e5296a396fa77"
+      },
+      {
+        "_path": "site-packages/testing/legacy_api_wrap/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/testing/legacy_api_wrap/pytest.py",
+        "path_type": "hardlink",
+        "sha256": "4a7bdabedca93feb012116ae66b71555f9c055054af0f6f15d07f717b357f05f",
+        "size_in_bytes": 974,
+        "sha256_in_prefix": "4a7bdabedca93feb012116ae66b71555f9c055054af0f6f15d07f717b357f05f"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/legacy_api_wrap/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/legacy_api_wrap/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/testing/legacy_api_wrap/__pycache__/pytest.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ]
+  },
+  "link": {
+    "source": "/usr/local/Caskroom/miniforge/base/pkgs/legacy-api-wrap-1.5-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

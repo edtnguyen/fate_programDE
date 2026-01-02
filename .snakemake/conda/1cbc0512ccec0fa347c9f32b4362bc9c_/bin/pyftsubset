@@ -1,0 +1,11 @@
+#!/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.snakemake/conda/1cbc0512ccec0fa347c9f32b4362bc9c_/bin/python
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from fontTools.subset import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
