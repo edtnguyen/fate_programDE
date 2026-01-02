@@ -1,7 +1,7 @@
 fate_programDE
 ==============================
 
-Quantify DE effects of CRISPRi gene KD on fate probabilities
+Quantify Differential Effect (DE) of CRISPRi-based gene KD on fate probabilities
 
 Model (full specification)
 ------------
