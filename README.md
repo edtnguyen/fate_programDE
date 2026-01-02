@@ -38,13 +38,7 @@ $$
 
 Linear predictor (MOI-aware sum over guides):
 
-$$
-\eta_{i,f^\star} =
-\alpha_{f^\star,d_i}
-+ b_{f^\star,r_i}
-+ \gamma_{f^\star}\tilde{k}_i
-+ \sum_{m=1}^{K_{\max}} \mathrm{mask}_{i,m}\,\beta_{\mathrm{guide\_ids}_{i,m},f^\star,d_i}.
-$$
+$$ \eta _{i,f^\star} = \alpha _{f^\star,d _i} b _{f^\star,r _i} \gamma _{f^\star} \tilde{k} _i \sum _{m=1}^{K _{\max}} \mathrm{mask} _{i,m} \beta _{\mathrm{guide\textunderscore ids} _{i,m}, f^\star, d _i} . $$
 
 Softmax mapping to probabilities:
 
