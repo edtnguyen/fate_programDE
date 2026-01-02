@@ -22,7 +22,7 @@ Observed data and indexing:
 - NTC guides map to $g=0$ (real entry, $\mathrm{mask}=1$); padding uses $g=0$
   with $\mathrm{mask}=0$.
 - Guide burden $k_i = \sum_m \mathrm{mask}_{i,m}$, centered within day:
-  $\tilde{k}_i = k_i - \bar{k}_{d_i}$.
+  $\tilde{k} _i = k _i - \bar{k} _{d _i}$.
 
 Guide effect decomposition:
 
