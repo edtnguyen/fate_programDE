@@ -18,12 +18,12 @@ Observed data and indexing:
   $\sum_f p_{i,f}=1$.
 - Day $d_i \in \{0,\dots,D-1\}$ and replicate $r_i \in \{0,\dots,R-1\}$.
 - Guides $g=1,\dots,G$ (non-NTC) and genes $\ell=1,\dots,L$ with map $\ell(g)$.
-- Padded guide lists: $\texttt{guide\\_ids}_{i,m}$ and $\texttt{mask}_{i,m}$
+- Padded guide lists: $\mathrm{guide\_ids}_{i,m}$ and $\mathrm{mask}_{i,m}$
   for $m=1,\dots,K_{\max}$.
-- NTC guides map to $g=0$ (real entry, $\texttt{mask}=1$); padding uses $g=0$
-  with $\texttt{mask}=0$.
-- Guide burden $k_i = \sum_m \texttt{mask}_{i,m}$, centered within day:
-  $\tilde{k}_{i} = k_{i} - \bar{k}_{d_i}$.
+- NTC guides map to $g=0$ (real entry, $\mathrm{mask}=1$); padding uses $g=0$
+  with $\mathrm{mask}=0$.
+- Guide burden $k_i = \sum_m \mathrm{mask}_{i,m}$, centered within day:
+  $\tilde{k}_i = k_i - \bar{k}_{d_i}$.
 
 Guide effect decomposition:
 
@@ -43,8 +43,8 @@ $$
 \eta_{i,f^\star} =
 \alpha_{f^\star,d_i}
 + b_{f^\star,r_i}
-+ \gamma_{f^\star}\tilde{k}_{i}
-+ \sum_{m=1}^{K_{\max}} \texttt{mask}_{i,m}\,\beta_{\texttt{guide\\_ids}_{i,m},f^\star,d_i}.
++ \gamma_{f^\star}\tilde{k}_i
++ \sum_{m=1}^{K_{\max}} \mathrm{mask}_{i,m}\,\beta_{\mathrm{guide\_ids}_{i,m},f^\star,d_i}.
 $$
 
 Softmax mapping to probabilities:
