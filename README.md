@@ -68,14 +68,7 @@ with $\beta_{0,f^\star,d}=0$ for NTC/baseline guides.
 
 **4. Cell-level linear predictor (MOI-aware)**
 
-$$
-\eta_{i,f^\star} =
-\alpha_{f^\star,d_i}
-+ b_{f^\star,r_i}
-+ \gamma_{f^\star}\tilde{k}_i
-+ \sum_{m=1}^{K_{\max}} m_{i,m}\,\beta_{g_{i,m},f^\star,d_i},
-\qquad \eta_{i,\mathrm{EC}}=0.
-$$
+$$ \eta _{i,f^\star} = \alpha _{f^\star,d _i} + b _{f^\star,r _i} + \gamma _{f^\star} \tilde{k} _i + \sum _{m=1}^{K _{\max}} m _{i,m} \beta _{g _{i,m}, f^\star, d _i}, \qquad \eta _{i,\mathrm{EC}}=0. $$
 
 Let $G_i$ denote the set of guides detected in cell $i$; the padded sum above
 is equivalent to $\sum_{g\in G_i}\beta_{g,f^\star,d_i}$.
