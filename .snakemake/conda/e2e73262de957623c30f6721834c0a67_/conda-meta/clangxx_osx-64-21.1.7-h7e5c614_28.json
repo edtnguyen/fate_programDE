@@ -1,0 +1,52 @@
+{
+  "name": "clangxx_osx-64",
+  "version": "21.1.7",
+  "build": "h7e5c614_28",
+  "build_number": 28,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "clangxx_osx-64-21.1.7-h7e5c614_28.conda",
+  "md5": "82e3d4422c096bf98cfa6cadb02de7d8",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/clangxx_osx-64-21.1.7-h7e5c614_28.conda",
+  "sha256": "36017ec231aab4ec61a2df8262e9c16c6c29514815bc9bd7e72bdc9df92ee5d0",
+  "depends": [
+    "cctools_osx-64",
+    "clang_osx-64 21.1.7 h7e5c614_28",
+    "clangxx_impl_osx-64 21.1.7 hd9a3690_28",
+    "sdkroot_env_osx-64"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1765842154000,
+  "size": 19488,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/clangxx_osx-64-21.1.7-h7e5c614_28.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/clangxx_osx-64-21.1.7-h7e5c614_28",
+  "files": [
+    "etc/conda/activate.d/activate_clangxx_osx-64.sh",
+    "etc/conda/deactivate.d/deactivate_clangxx_osx-64.sh"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/activate_clangxx_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "ee2824f9a89782517f24c3e6daaf9947e10564ba78b3da8f9aefc55198237cf4",
+        "size_in_bytes": 5052,
+        "sha256_in_prefix": "ee2824f9a89782517f24c3e6daaf9947e10564ba78b3da8f9aefc55198237cf4"
+      },
+      {
+        "_path": "etc/conda/deactivate.d/deactivate_clangxx_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "feccbca189e3a6846a606764185c310e760b6db1d8cf9e38fe00578123154ba9",
+        "size_in_bytes": 5060,
+        "sha256_in_prefix": "feccbca189e3a6846a606764185c310e760b6db1d8cf9e38fe00578123154ba9"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/clangxx_osx-64-21.1.7-h7e5c614_28",
+    "type": 1
+  }
+}

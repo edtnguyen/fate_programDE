@@ -1,0 +1,69 @@
+{
+  "name": "libllvm21",
+  "version": "21.1.7",
+  "build": "h56e7563_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libllvm21-21.1.7-h56e7563_0.conda",
+  "md5": "eb0738ea663c4bb08f64550c53df9345",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libllvm21-21.1.7-h56e7563_0.conda",
+  "sha256": "75b0fb07f6ec4a36917dac4ff827576a0912788f3ff4dfebf00f3646a5d50a4f",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=19",
+    "libxml2",
+    "libxml2-16 >=2.14.6",
+    "libzlib >=1.3.1,<2.0a0",
+    "zstd >=1.5.7,<1.6.0a0"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1764712642000,
+  "size": 31417011,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libllvm21-21.1.7-h56e7563_0.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libllvm21-21.1.7-h56e7563_0",
+  "files": [
+    "lib/libLLVM-21.dylib",
+    "lib/libLLVM.21.1.dylib",
+    "lib/libLTO.21.1.dylib",
+    "lib/libRemarks.21.1.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libLLVM-21.dylib",
+        "path_type": "softlink",
+        "sha256": "66eaff1adfdc6a47ce0b0c5b4e3429243ef6a441f8d1cfe27f9131cd101ad899",
+        "size_in_bytes": 148400504
+      },
+      {
+        "_path": "lib/libLLVM.21.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "66eaff1adfdc6a47ce0b0c5b4e3429243ef6a441f8d1cfe27f9131cd101ad899",
+        "size_in_bytes": 148400504,
+        "sha256_in_prefix": "66eaff1adfdc6a47ce0b0c5b4e3429243ef6a441f8d1cfe27f9131cd101ad899"
+      },
+      {
+        "_path": "lib/libLTO.21.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "422d650a3e07470c6b39db2d7d1766bb1fbb54e378b4c14efc4802f0ae1ff72e",
+        "size_in_bytes": 73840,
+        "sha256_in_prefix": "422d650a3e07470c6b39db2d7d1766bb1fbb54e378b4c14efc4802f0ae1ff72e"
+      },
+      {
+        "_path": "lib/libRemarks.21.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "5f33b278cd2e150cb50d56a2bda23c9d1d37d13da1057a816063ac9ff68cc930",
+        "size_in_bytes": 4208,
+        "sha256_in_prefix": "5f33b278cd2e150cb50d56a2bda23c9d1d37d13da1057a816063ac9ff68cc930"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libllvm21-21.1.7-h56e7563_0",
+    "type": 1
+  }
+}

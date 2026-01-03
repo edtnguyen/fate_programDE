@@ -247,6 +247,10 @@ override scenarios by editing:
 - `sim_concentration`, `sim_num_steps`, `sim_num_draws`
 - `sim_sweep_*` and `sim_tau_sweep_*` for prior sweeps
 
+Each simulation run writes `out_fate_pipeline_sim/sim_metadata.yaml` with the
+exact inputs used (cells/genes/guides, concentration, seed, day counts, etc.).
+Override the path with `sim_metadata_path` in `config.yaml`.
+
 To disable the forced rerun of simulation, set:
 
 ```
@@ -268,6 +272,7 @@ python scripts/simulate_recovery.py \
   --s-guide 0.5 \
   --s-tau 1.0 \
   --time-scale 1.0,1.3,1.6 \
+  --metadata-out out_fate_pipeline_sim/sim_metadata.yaml \
   --run-export \
   --write-anndata \
   --force
@@ -342,10 +347,11 @@ Project Organization
 
     ├── Snakefile          <- Snakemake workflow (real + simulation targets)
     ├── config.yaml        <- Main config for real-data runs
-    ├── envs/              <- Conda environments (pyro.yaml, ash.yaml)
+    ├── envs/              <- Conda environments (pyro.yaml, ash.yaml, mash.yaml)
     ├── scripts/           <- Pipeline entrypoints + utilities
     │   ├── fit_pyro_export.py
     │   ├── run_ash.R
+    │   ├── run_mashr.R
     │   ├── rank_hits.py
     │   ├── run_diagnostics.py
     │   ├── simulate_recovery.py
@@ -367,7 +373,7 @@ Project Organization
     ├── tests/             <- Unit + integration tests
     ├── data/              <- Input data (adata, guide map) + raw/interim/processed
     ├── out_fate_pipeline/ <- Real-data outputs
-    ├── out_fate_pipeline_sim/ <- Simulation outputs
+    ├── out_fate_pipeline_sim/ <- Simulation outputs (incl. sim_metadata.yaml)
     ├── docs/              <- Sphinx docs (optional)
     ├── notebooks/         <- Jupyter notebooks
     ├── references/        <- Data dictionaries and manuals

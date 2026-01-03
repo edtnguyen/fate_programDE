@@ -1,0 +1,195 @@
+{
+  "name": "r-abind",
+  "version": "1.4_8",
+  "build": "r45hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "r-abind-1.4_8-r45hc72bb7e_1.conda",
+  "md5": "dde4691fe168112a90efba6aaa08f13d",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-abind-1.4_8-r45hc72bb7e_1.conda",
+  "sha256": "5055913d786b82f33a14f493f32945b3b2b5d528ea2f52856ca02b296f6511eb",
+  "depends": [
+    "r-base >=4.5,<4.6.0a0"
+  ],
+  "constrains": [],
+  "noarch": "generic",
+  "license": "LGPL (>= 2)",
+  "package_type": "noarch_generic",
+  "timestamp": 1757460261000,
+  "size": 82526,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-abind-1.4_8-r45hc72bb7e_1.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-abind-1.4_8-r45hc72bb7e_1",
+  "files": [
+    "lib/R/library/abind/DESCRIPTION",
+    "lib/R/library/abind/INDEX",
+    "lib/R/library/abind/LICENSE",
+    "lib/R/library/abind/Meta/Rd.rds",
+    "lib/R/library/abind/Meta/features.rds",
+    "lib/R/library/abind/Meta/hsearch.rds",
+    "lib/R/library/abind/Meta/links.rds",
+    "lib/R/library/abind/Meta/nsInfo.rds",
+    "lib/R/library/abind/Meta/package.rds",
+    "lib/R/library/abind/NAMESPACE",
+    "lib/R/library/abind/R/abind",
+    "lib/R/library/abind/R/abind.rdb",
+    "lib/R/library/abind/R/abind.rdx",
+    "lib/R/library/abind/help/AnIndex",
+    "lib/R/library/abind/help/abind.rdb",
+    "lib/R/library/abind/help/abind.rdx",
+    "lib/R/library/abind/help/aliases.rds",
+    "lib/R/library/abind/help/paths.rds",
+    "lib/R/library/abind/html/00Index.html",
+    "lib/R/library/abind/html/R.css"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/abind/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "8c6d0cc2b4c9d4bc359cb772ae39938f7650af7c2fb71dc78e361123e8e400ca",
+        "size_in_bytes": 872,
+        "sha256_in_prefix": "8c6d0cc2b4c9d4bc359cb772ae39938f7650af7c2fb71dc78e361123e8e400ca"
+      },
+      {
+        "_path": "lib/R/library/abind/INDEX",
+        "path_type": "hardlink",
+        "sha256": "3d2eb24130c617ac0425246a4e1b1749bd066c0661774349880f56eb2cb9c8c8",
+        "size_in_bytes": 352,
+        "sha256_in_prefix": "3d2eb24130c617ac0425246a4e1b1749bd066c0661774349880f56eb2cb9c8c8"
+      },
+      {
+        "_path": "lib/R/library/abind/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "c7a5925c45e5076eaa85d3a64a6193fa3a6cbac4677c79eacb6f482e1f43af86",
+        "size_in_bytes": 52,
+        "sha256_in_prefix": "c7a5925c45e5076eaa85d3a64a6193fa3a6cbac4677c79eacb6f482e1f43af86"
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "baf8d1919be264b80b16ef10d811b490e5b84372c4b3c21bcec229cbfc6900bb",
+        "size_in_bytes": 436,
+        "sha256_in_prefix": "baf8d1919be264b80b16ef10d811b490e5b84372c4b3c21bcec229cbfc6900bb"
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "e2e2554bab86db426a5aadafe1e5d7401ba648de800981a85e996db4318d3a8c",
+        "size_in_bytes": 496,
+        "sha256_in_prefix": "e2e2554bab86db426a5aadafe1e5d7401ba648de800981a85e996db4318d3a8c"
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "ed0e5b42e4e425d5306f6d24ac293243d183e1ae09c3e0318df1b0e7a61f8292",
+        "size_in_bytes": 186,
+        "sha256_in_prefix": "ed0e5b42e4e425d5306f6d24ac293243d183e1ae09c3e0318df1b0e7a61f8292"
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "72dfed2fc9ee0cd1f88ab9bc0e956ab66ebe6a59839c48336eb07a10ae4952bf",
+        "size_in_bytes": 295,
+        "sha256_in_prefix": "72dfed2fc9ee0cd1f88ab9bc0e956ab66ebe6a59839c48336eb07a10ae4952bf"
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "8b13bebe2f93bf6381a48c5e46d87bdb605c4b0b4f6e78a6b321c86a9d7ab89e",
+        "size_in_bytes": 930,
+        "sha256_in_prefix": "8b13bebe2f93bf6381a48c5e46d87bdb605c4b0b4f6e78a6b321c86a9d7ab89e"
+      },
+      {
+        "_path": "lib/R/library/abind/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "a702efbeb34020f57087f45f5d272984adeb10edaaae983b2814d14fffa7198a",
+        "size_in_bytes": 256,
+        "sha256_in_prefix": "a702efbeb34020f57087f45f5d272984adeb10edaaae983b2814d14fffa7198a"
+      },
+      {
+        "_path": "lib/R/library/abind/R/abind",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/abind/R/abind.rdb",
+        "path_type": "hardlink",
+        "sha256": "54e712d2e10270f96be2546f95e35726785b3b5d689f52e69c5116d419eb0744",
+        "size_in_bytes": 33514,
+        "sha256_in_prefix": "54e712d2e10270f96be2546f95e35726785b3b5d689f52e69c5116d419eb0744"
+      },
+      {
+        "_path": "lib/R/library/abind/R/abind.rdx",
+        "path_type": "hardlink",
+        "sha256": "b19bafa0e048fbb79ad0fff2d66bddb29d5d8715ee04e32a6eba8fa1c3575080",
+        "size_in_bytes": 364,
+        "sha256_in_prefix": "b19bafa0e048fbb79ad0fff2d66bddb29d5d8715ee04e32a6eba8fa1c3575080"
+      },
+      {
+        "_path": "lib/R/library/abind/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0ea54d8c9f4b2599ff1d45b78a9250bccd399f8508e424d256840605fca57ad1",
+        "size_in_bytes": 164,
+        "sha256_in_prefix": "0ea54d8c9f4b2599ff1d45b78a9250bccd399f8508e424d256840605fca57ad1"
+      },
+      {
+        "_path": "lib/R/library/abind/help/abind.rdb",
+        "path_type": "hardlink",
+        "sha256": "c1cbb3b0ebcb721f35b90f76de0d156d3e4d387b5d469959abfe0902c41bdd92",
+        "size_in_bytes": 24773,
+        "sha256_in_prefix": "c1cbb3b0ebcb721f35b90f76de0d156d3e4d387b5d469959abfe0902c41bdd92"
+      },
+      {
+        "_path": "lib/R/library/abind/help/abind.rdx",
+        "path_type": "hardlink",
+        "sha256": "c95fecfb4779b8db00cdcad8f7acb620bb2d7fa1f47d539cff6cb07e717941c9",
+        "size_in_bytes": 252,
+        "sha256_in_prefix": "c95fecfb4779b8db00cdcad8f7acb620bb2d7fa1f47d539cff6cb07e717941c9"
+      },
+      {
+        "_path": "lib/R/library/abind/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "8ee044e13ee828bf0bc53419cb7ad85233eb3a5b707def259a2ce571e4a1b302",
+        "size_in_bytes": 151,
+        "sha256_in_prefix": "8ee044e13ee828bf0bc53419cb7ad85233eb3a5b707def259a2ce571e4a1b302"
+      },
+      {
+        "_path": "lib/R/library/abind/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6403259c7782ec04ec9ae7484725711d103511f5695ce0c0528d5d872b500841",
+        "size_in_bytes": 182,
+        "sha256_in_prefix": "6403259c7782ec04ec9ae7484725711d103511f5695ce0c0528d5d872b500841"
+      },
+      {
+        "_path": "lib/R/library/abind/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "e356cd7fe1eff5b93e69c942b6e7e26c6ad6830748118831426c0170faa2fded",
+        "size_in_bytes": 2306,
+        "sha256_in_prefix": "e356cd7fe1eff5b93e69c942b6e7e26c6ad6830748118831426c0170faa2fded"
+      },
+      {
+        "_path": "lib/R/library/abind/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-abind-1.4_8-r45hc72bb7e_1",
+    "type": 1
+  }
+}

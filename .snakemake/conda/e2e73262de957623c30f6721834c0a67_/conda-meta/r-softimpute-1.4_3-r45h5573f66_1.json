@@ -1,0 +1,254 @@
+{
+  "name": "r-softimpute",
+  "version": "1.4_3",
+  "build": "r45h5573f66_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "r-softimpute-1.4_3-r45h5573f66_1.conda",
+  "md5": "7749b2ffde9b989cb4a365599ef8802f",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/r-softimpute-1.4_3-r45h5573f66_1.conda",
+  "sha256": "da6cefc62db5e699b64b6a5acf2f24b901f0496518f70237c0561f1257b38e89",
+  "depends": [
+    "__osx >=10.13",
+    "libgfortran",
+    "libgfortran5 >=14.3.0",
+    "libgfortran5 >=15.1.0",
+    "r-base >=4.5,<4.6.0a0",
+    "r-matrix"
+  ],
+  "constrains": [],
+  "license": "GPL-2",
+  "timestamp": 1758033644000,
+  "size": 498821,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-softimpute-1.4_3-r45h5573f66_1.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-softimpute-1.4_3-r45h5573f66_1",
+  "files": [
+    "lib/R/library/softImpute/CITATION",
+    "lib/R/library/softImpute/DESCRIPTION",
+    "lib/R/library/softImpute/INDEX",
+    "lib/R/library/softImpute/Meta/Rd.rds",
+    "lib/R/library/softImpute/Meta/features.rds",
+    "lib/R/library/softImpute/Meta/hsearch.rds",
+    "lib/R/library/softImpute/Meta/links.rds",
+    "lib/R/library/softImpute/Meta/nsInfo.rds",
+    "lib/R/library/softImpute/Meta/package.rds",
+    "lib/R/library/softImpute/Meta/vignette.rds",
+    "lib/R/library/softImpute/NAMESPACE",
+    "lib/R/library/softImpute/R/softImpute",
+    "lib/R/library/softImpute/R/softImpute.rdb",
+    "lib/R/library/softImpute/R/softImpute.rdx",
+    "lib/R/library/softImpute/bibtex/softImpute.bib",
+    "lib/R/library/softImpute/doc/index.html",
+    "lib/R/library/softImpute/doc/softImpute.R",
+    "lib/R/library/softImpute/doc/softImpute.Rmd",
+    "lib/R/library/softImpute/doc/softImpute.html",
+    "lib/R/library/softImpute/help/AnIndex",
+    "lib/R/library/softImpute/help/aliases.rds",
+    "lib/R/library/softImpute/help/paths.rds",
+    "lib/R/library/softImpute/help/softImpute.rdb",
+    "lib/R/library/softImpute/help/softImpute.rdx",
+    "lib/R/library/softImpute/html/00Index.html",
+    "lib/R/library/softImpute/html/R.css",
+    "lib/R/library/softImpute/libs/softImpute.so"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/softImpute/CITATION",
+        "path_type": "hardlink",
+        "sha256": "0b19a80c76328ebfc23ec1775eef9513bae162339e20b9e906008042ff3a6d5c",
+        "size_in_bytes": 973,
+        "sha256_in_prefix": "0b19a80c76328ebfc23ec1775eef9513bae162339e20b9e906008042ff3a6d5c"
+      },
+      {
+        "_path": "lib/R/library/softImpute/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "4a36457819494f774e6ff103018009f26560d369dac7e4dd6371687dfb883062",
+        "size_in_bytes": 1542,
+        "sha256_in_prefix": "4a36457819494f774e6ff103018009f26560d369dac7e4dd6371687dfb883062"
+      },
+      {
+        "_path": "lib/R/library/softImpute/INDEX",
+        "path_type": "hardlink",
+        "sha256": "641f758bf7951d41f3c3b104b9f5e919687a392c09fcc2de616b36f42101955d",
+        "size_in_bytes": 1471,
+        "sha256_in_prefix": "641f758bf7951d41f3c3b104b9f5e919687a392c09fcc2de616b36f42101955d"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0ab989d29bfde8959c5f6e48cbbdc41e752f9c74a6bbf964f2442e39993850e2",
+        "size_in_bytes": 1123,
+        "sha256_in_prefix": "0ab989d29bfde8959c5f6e48cbbdc41e752f9c74a6bbf964f2442e39993850e2"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "529372c8b4861d44b511a428e5feaa7845a60b1950cf3d7282b50da63aae258d",
+        "size_in_bytes": 1112,
+        "sha256_in_prefix": "529372c8b4861d44b511a428e5feaa7845a60b1950cf3d7282b50da63aae258d"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "2efc8d2323e17b149718d7717026b8d1ce6d354beb896f7971ef32c5062439e8",
+        "size_in_bytes": 546,
+        "sha256_in_prefix": "2efc8d2323e17b149718d7717026b8d1ce6d354beb896f7971ef32c5062439e8"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "948f90cdc3f19515266e6b28700e1c41950d98005202d845d06e57d86a0faeef",
+        "size_in_bytes": 451,
+        "sha256_in_prefix": "948f90cdc3f19515266e6b28700e1c41950d98005202d845d06e57d86a0faeef"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5cb25f6274f01dd1ebcf966543ae9932865d64f6f3c59013726b00120aa21ff7",
+        "size_in_bytes": 1218,
+        "sha256_in_prefix": "5cb25f6274f01dd1ebcf966543ae9932865d64f6f3c59013726b00120aa21ff7"
+      },
+      {
+        "_path": "lib/R/library/softImpute/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "490c6382f4c978b4c4b6daddd0780a4579c5b86d8f4b19eb7d82bc7d95d32a12",
+        "size_in_bytes": 217,
+        "sha256_in_prefix": "490c6382f4c978b4c4b6daddd0780a4579c5b86d8f4b19eb7d82bc7d95d32a12"
+      },
+      {
+        "_path": "lib/R/library/softImpute/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "e2164b638f59a79d3de342d281a430e0ca78d856d4adfa7cb96fc3cbec4c7b1a",
+        "size_in_bytes": 784,
+        "sha256_in_prefix": "e2164b638f59a79d3de342d281a430e0ca78d856d4adfa7cb96fc3cbec4c7b1a"
+      },
+      {
+        "_path": "lib/R/library/softImpute/R/softImpute",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/softImpute/R/softImpute.rdb",
+        "path_type": "hardlink",
+        "sha256": "12a085847c412521c484af4c53183b900197373b8487adcc179697f3628e8119",
+        "size_in_bytes": 314267,
+        "sha256_in_prefix": "12a085847c412521c484af4c53183b900197373b8487adcc179697f3628e8119"
+      },
+      {
+        "_path": "lib/R/library/softImpute/R/softImpute.rdx",
+        "path_type": "hardlink",
+        "sha256": "2076ddb703aa29114803962339dbc9f98d95f040eae87dd6127c7883f5603380",
+        "size_in_bytes": 1536,
+        "sha256_in_prefix": "2076ddb703aa29114803962339dbc9f98d95f040eae87dd6127c7883f5603380"
+      },
+      {
+        "_path": "lib/R/library/softImpute/bibtex/softImpute.bib",
+        "path_type": "hardlink",
+        "sha256": "a5304d44de7a6760cded25b4c35c2ee2a050c53c7f129225629ef9164665838c",
+        "size_in_bytes": 625,
+        "sha256_in_prefix": "a5304d44de7a6760cded25b4c35c2ee2a050c53c7f129225629ef9164665838c"
+      },
+      {
+        "_path": "lib/R/library/softImpute/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "148245d2b9389d0ce1c5aa275a8d38b17f5ab01315351b5a13f280f8a19697d8",
+        "size_in_bytes": 1429,
+        "sha256_in_prefix": "148245d2b9389d0ce1c5aa275a8d38b17f5ab01315351b5a13f280f8a19697d8"
+      },
+      {
+        "_path": "lib/R/library/softImpute/doc/softImpute.R",
+        "path_type": "hardlink",
+        "sha256": "b07eb66dbce13c4eb0a01bf3c04b70f7b23c1d726580432518b21132f9f0c70e",
+        "size_in_bytes": 2973,
+        "sha256_in_prefix": "b07eb66dbce13c4eb0a01bf3c04b70f7b23c1d726580432518b21132f9f0c70e"
+      },
+      {
+        "_path": "lib/R/library/softImpute/doc/softImpute.Rmd",
+        "path_type": "hardlink",
+        "sha256": "0211439e89d190f7fe1e6bb0014509bc1eb72f62e9578966fd16e726738d23e8",
+        "size_in_bytes": 13889,
+        "sha256_in_prefix": "0211439e89d190f7fe1e6bb0014509bc1eb72f62e9578966fd16e726738d23e8"
+      },
+      {
+        "_path": "lib/R/library/softImpute/doc/softImpute.html",
+        "path_type": "hardlink",
+        "sha256": "b39ef5f8e3ed6998d381161a4b559851a12dda6ea5ec4bc286e52d0c4825a0c7",
+        "size_in_bytes": 659248,
+        "sha256_in_prefix": "b39ef5f8e3ed6998d381161a4b559851a12dda6ea5ec4bc286e52d0c4825a0c7"
+      },
+      {
+        "_path": "lib/R/library/softImpute/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "09e43d6453ace982386bf68a3891e738f2634585412195c0ff7bd004782a90d5",
+        "size_in_bytes": 1579,
+        "sha256_in_prefix": "09e43d6453ace982386bf68a3891e738f2634585412195c0ff7bd004782a90d5"
+      },
+      {
+        "_path": "lib/R/library/softImpute/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "123fe4e7f709908724f3e5ffe2ae25f1ea36ffb63c5fa50aad88e18646eff6e0",
+        "size_in_bytes": 437,
+        "sha256_in_prefix": "123fe4e7f709908724f3e5ffe2ae25f1ea36ffb63c5fa50aad88e18646eff6e0"
+      },
+      {
+        "_path": "lib/R/library/softImpute/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6130b9130833de552fe66cfba04100c30fd5a82dac6c7603b49ec8db490f8be2",
+        "size_in_bytes": 325,
+        "sha256_in_prefix": "6130b9130833de552fe66cfba04100c30fd5a82dac6c7603b49ec8db490f8be2"
+      },
+      {
+        "_path": "lib/R/library/softImpute/help/softImpute.rdb",
+        "path_type": "hardlink",
+        "sha256": "3bb952e4da5e7cde65cb892e740fcbf7093ca3d76006a49055da15ce268fb034",
+        "size_in_bytes": 64652,
+        "sha256_in_prefix": "3bb952e4da5e7cde65cb892e740fcbf7093ca3d76006a49055da15ce268fb034"
+      },
+      {
+        "_path": "lib/R/library/softImpute/help/softImpute.rdx",
+        "path_type": "hardlink",
+        "sha256": "b2e1fd03ff98318fc27da7656d5ee410639ad1846ed548ed2e960f8ccde36379",
+        "size_in_bytes": 585,
+        "sha256_in_prefix": "b2e1fd03ff98318fc27da7656d5ee410639ad1846ed548ed2e960f8ccde36379"
+      },
+      {
+        "_path": "lib/R/library/softImpute/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "7304304f0aa2cba522affc068807b779facae0a8d31e38ce1acd800ace93224c",
+        "size_in_bytes": 5602,
+        "sha256_in_prefix": "7304304f0aa2cba522affc068807b779facae0a8d31e38ce1acd800ace93224c"
+      },
+      {
+        "_path": "lib/R/library/softImpute/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      {
+        "_path": "lib/R/library/softImpute/libs/softImpute.so",
+        "path_type": "hardlink",
+        "sha256": "07666dfd7ae971f554c34305685a6fb86fdd3d63937dafd2aabeb2a4a688a269",
+        "size_in_bytes": 12856,
+        "sha256_in_prefix": "07666dfd7ae971f554c34305685a6fb86fdd3d63937dafd2aabeb2a4a688a269"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-softimpute-1.4_3-r45h5573f66_1",
+    "type": 1
+  }
+}

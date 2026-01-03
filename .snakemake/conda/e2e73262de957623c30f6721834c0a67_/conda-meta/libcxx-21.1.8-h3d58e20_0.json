@@ -1,0 +1,71 @@
+{
+  "name": "libcxx",
+  "version": "21.1.8",
+  "build": "h3d58e20_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libcxx-21.1.8-h3d58e20_0.conda",
+  "md5": "9f8a60a77ecafb7966ca961c94f33bd1",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libcxx-21.1.8-h3d58e20_0.conda",
+  "sha256": "cbd8e821e97436d8fc126c24b50df838b05ba4c80494fbb93ccaf2e3b2d109fb",
+  "depends": [
+    "__osx >=10.13"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "timestamp": 1765919624000,
+  "size": 569777,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libcxx-21.1.8-h3d58e20_0.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libcxx-21.1.8-h3d58e20_0",
+  "files": [
+    "lib/libc++.1.0.dylib",
+    "lib/libc++.1.dylib",
+    "lib/libc++.a",
+    "lib/libc++.dylib",
+    "lib/libc++experimental.a"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libc++.1.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "50bde91c6b98d7df282cd19f478c60ccfab4920692d44c510ad75512781ccc01",
+        "size_in_bytes": 1150048,
+        "sha256_in_prefix": "50bde91c6b98d7df282cd19f478c60ccfab4920692d44c510ad75512781ccc01"
+      },
+      {
+        "_path": "lib/libc++.1.dylib",
+        "path_type": "softlink",
+        "sha256": "50bde91c6b98d7df282cd19f478c60ccfab4920692d44c510ad75512781ccc01",
+        "size_in_bytes": 1150048
+      },
+      {
+        "_path": "lib/libc++.a",
+        "path_type": "hardlink",
+        "sha256": "bfaddf0ee8975dce02c4aca151693f304e6cb9e0c02bcb6894905b732152dce7",
+        "size_in_bytes": 1683696,
+        "sha256_in_prefix": "bfaddf0ee8975dce02c4aca151693f304e6cb9e0c02bcb6894905b732152dce7"
+      },
+      {
+        "_path": "lib/libc++.dylib",
+        "path_type": "softlink",
+        "sha256": "50bde91c6b98d7df282cd19f478c60ccfab4920692d44c510ad75512781ccc01",
+        "size_in_bytes": 1150048
+      },
+      {
+        "_path": "lib/libc++experimental.a",
+        "path_type": "hardlink",
+        "sha256": "e19fdb1ab0ddb2ed44c1351ab132e8bab3f6736ca56f494db2ac5d7a07733b42",
+        "size_in_bytes": 338736,
+        "sha256_in_prefix": "e19fdb1ab0ddb2ed44c1351ab132e8bab3f6736ca56f494db2ac5d7a07733b42"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libcxx-21.1.8-h3d58e20_0",
+    "type": 1
+  }
+}

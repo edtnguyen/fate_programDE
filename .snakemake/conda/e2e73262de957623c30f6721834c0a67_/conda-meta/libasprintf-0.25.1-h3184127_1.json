@@ -1,0 +1,42 @@
+{
+  "name": "libasprintf",
+  "version": "0.25.1",
+  "build": "h3184127_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libasprintf-0.25.1-h3184127_1.conda",
+  "md5": "37398594a1ede86a90c0afac95e1ffea",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libasprintf-0.25.1-h3184127_1.conda",
+  "sha256": "44e703d8fe739a71e9f7b89d04b56ccfaf488989f7712256bc0fcaf101e796a4",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=19"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.1-or-later",
+  "timestamp": 1753343931000,
+  "size": 51955,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libasprintf-0.25.1-h3184127_1.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libasprintf-0.25.1-h3184127_1",
+  "files": [
+    "lib/libasprintf.0.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libasprintf.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "e210e4156a8a327f46c870d0d7f329d693d4b0bbc8904baf8b9a0a27f96c4cf2",
+        "size_in_bytes": 105200,
+        "sha256_in_prefix": "e210e4156a8a327f46c870d0d7f329d693d4b0bbc8904baf8b9a0a27f96c4cf2"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libasprintf-0.25.1-h3184127_1",
+    "type": 1
+  }
+}

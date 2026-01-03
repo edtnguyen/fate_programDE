@@ -1,0 +1,49 @@
+{
+  "name": "sdkroot_env_osx-64",
+  "version": "14.5",
+  "build": "hbf94ba6_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "sdkroot_env_osx-64-14.5-hbf94ba6_4.conda",
+  "md5": "bfc192e9093bd93e38185351be812157",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/sdkroot_env_osx-64-14.5-hbf94ba6_4.conda",
+  "sha256": "e0ec582a2ef7eca39fb40b17753e0a4006c02e794e3fc85ab598931d16ba28d5",
+  "depends": [],
+  "constrains": [],
+  "noarch": "generic",
+  "license": "BSD-3-Clause",
+  "package_type": "noarch_generic",
+  "timestamp": 1764616252000,
+  "size": 8900,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/sdkroot_env_osx-64-14.5-hbf94ba6_4.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/sdkroot_env_osx-64-14.5-hbf94ba6_4",
+  "files": [
+    "etc/conda/activate.d/activate_aaaa_sdkroot_env_osx-64.sh",
+    "etc/conda/deactivate.d/deactivate_aaaa_sdkroot_env_osx-64.sh"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/activate_aaaa_sdkroot_env_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "fddf5000e750f84d4100ef3bfc4c206ae83c9044499e9ba2365cf7e18ac06b50",
+        "size_in_bytes": 727,
+        "sha256_in_prefix": "fddf5000e750f84d4100ef3bfc4c206ae83c9044499e9ba2365cf7e18ac06b50"
+      },
+      {
+        "_path": "etc/conda/deactivate.d/deactivate_aaaa_sdkroot_env_osx-64.sh",
+        "path_type": "hardlink",
+        "sha256": "7eeffbb32159d6a168ac6a5a4ec7333ad4302943cc08b2a49c0341856b0717b2",
+        "size_in_bytes": 348,
+        "sha256_in_prefix": "7eeffbb32159d6a168ac6a5a4ec7333ad4302943cc08b2a49c0341856b0717b2"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/sdkroot_env_osx-64-14.5-hbf94ba6_4",
+    "type": 1
+  }
+}

@@ -125,15 +125,12 @@ def compute_linear_predictor(
 def construct_theta_core(
     tau: "torch.Tensor",
     z0: "torch.Tensor",
-    sigma_time: "torch.Tensor",
+    sigma_time: "torch.Tensor | None",
     eps: "torch.Tensor | None",
     D: int,
-    time_scale: "torch.Tensor | Sequence[float] | None" = None,
 ) -> "torch.Tensor":
     """
     Construct gene-by-day effects (without the baseline gene row).
-
-    time_scale optionally scales per-interval increments (length D-1).
     """
     import torch
 
@@ -141,28 +138,13 @@ def construct_theta_core(
         raise ValueError("D must be a positive integer")
 
     theta0 = tau[..., None, :] * z0
-    time_scale_t = None
-    if time_scale is not None:
-        time_scale_t = torch.as_tensor(
-            time_scale, dtype=theta0.dtype, device=theta0.device
-        ).reshape(-1)
-        if D <= 1:
-            if time_scale_t.numel() != 0:
-                raise ValueError("time_scale must be empty when D <= 1")
-            time_scale_t = None
-        else:
-            if time_scale_t.numel() != D - 1:
-                raise ValueError(f"time_scale must have length D-1={D - 1}")
-            if bool((time_scale_t <= 0).any()):
-                raise ValueError("time_scale entries must be positive")
     if D > 1:
         if eps is None:
             raise ValueError("eps is required when D > 1")
-        increments = sigma_time[..., None, :, None] * eps
-        if time_scale_t is not None:
-            scale = time_scale_t.reshape(*([1] * (eps.ndim - 1)), -1)
-            increments = increments * scale
-        theta_rest = torch.cumsum(increments, dim=-1) + theta0[..., None]
+        if sigma_time is None:
+            raise ValueError("sigma_time is required when D > 1")
+        increments = eps * sigma_time.unsqueeze(-3)
+        theta_rest = torch.cumsum(increments, dim=-1) + theta0.unsqueeze(-1)
         theta_core = torch.cat([theta0[..., None], theta_rest], dim=-1)
     else:
         theta_core = theta0[..., None]
@@ -229,7 +211,7 @@ def fate_model(
     s_tau: float = 1.0,
     s_time: float = 1.0,
     s_guide: float = 1.0,
-    time_scale: Sequence[float] | None = None,
+    likelihood_weight: float = 1.0,
     subsample_size: int | None = None,
 ) -> None:
     """
@@ -246,7 +228,7 @@ def fate_model(
     import torch
     import torch.nn.functional as F
 
-    fate_names, non_ref_fates, _, non_ref_indices = resolve_fate_names(
+    fate_names, non_ref_fates, ref_idx, _ = resolve_fate_names(
         fate_names, ref_fate=ref_fate
     )
     if p_t.ndim != 2 or p_t.shape[1] != len(fate_names):
@@ -264,42 +246,27 @@ def fate_model(
     N = p_t.shape[0]
     fstar = len(non_ref_fates)
 
-    sigma_alpha = pyro.sample(
-        "sigma_alpha", dist.HalfNormal(s_alpha).expand([fstar]).to_event(1)
-    )
     alpha = pyro.sample(
-        "alpha",
-        dist.Normal(
-            torch.zeros((fstar, D), device=device), sigma_alpha.unsqueeze(-1)
-        ).to_event(2),
+        "alpha", dist.Normal(0.0, s_alpha).expand([fstar, D]).to_event(2)
     )
 
-    sigma_rep = pyro.sample(
-        "sigma_rep", dist.HalfNormal(s_rep).expand([fstar]).to_event(1)
-    )
     b = pyro.sample(
-        "b",
-        dist.Normal(
-            torch.zeros((fstar, R), device=device), sigma_rep.unsqueeze(-1)
-        ).to_event(2),
+        "b", dist.Normal(0.0, s_rep).expand([fstar, R]).to_event(2)
     )
 
-    sigma_gamma = pyro.sample(
-        "sigma_gamma", dist.HalfNormal(s_gamma).expand([fstar]).to_event(1)
-    )
     gamma = pyro.sample(
-        "gamma",
-        dist.Normal(torch.zeros((fstar,), device=device), sigma_gamma).to_event(1),
+        "gamma", dist.Normal(0.0, s_gamma).expand([fstar]).to_event(1)
     )
 
     tau = pyro.sample("tau", dist.HalfNormal(s_tau).expand([fstar]).to_event(1))
     z0 = pyro.sample("z0", dist.Normal(0.0, 1.0).expand([L, fstar]).to_event(2))
 
-    sigma_time = pyro.sample(
-        "sigma_time", dist.HalfNormal(s_time).expand([fstar]).to_event(1)
-    )
+    sigma_time = None
     eps = None
     if D > 1:
+        sigma_time = pyro.sample(
+            "sigma_time", dist.HalfNormal(s_time).expand([fstar, D - 1]).to_event(2)
+        )
         eps = pyro.sample(
             "eps", dist.Normal(0.0, 1.0).expand([L, fstar, D - 1]).to_event(3)
         )
@@ -309,7 +276,6 @@ def fate_model(
         z0=z0,
         sigma_time=sigma_time,
         eps=eps,
-        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -346,13 +312,21 @@ def fate_model(
             rep_t=rep_batch,
         )
 
-        eta = torch.zeros((p_batch.shape[0], len(fate_names)), device=device)
-        eta[:, non_ref_indices] = eta_nonref
+        zeros = torch.zeros((p_batch.shape[0], 1), device=device)
+        eta_parts = []
+        nonref_col = 0
+        for idx in range(len(fate_names)):
+            if idx == ref_idx:
+                eta_parts.append(zeros)
+            else:
+                eta_parts.append(eta_nonref[:, nonref_col : nonref_col + 1])
+                nonref_col += 1
+        eta = torch.cat(eta_parts, dim=1)
         log_pi = F.log_softmax(eta, dim=-1)
 
         logp = (p_batch * log_pi).sum(-1)
         scale = float(N) / float(logp.shape[0])
-        pyro.factor("soft_label_loglik", logp.sum() * scale)
+        pyro.factor("soft_label_loglik", logp.sum() * scale * likelihood_weight)
 
 
 def fit_svi(
@@ -375,10 +349,13 @@ def fit_svi(
     lr: float,
     clip_norm: float,
     num_steps: int,
+    s_alpha: float = 1.0,
+    s_rep: float = 1.0,
+    s_gamma: float = 1.0,
     s_tau: float = 1.0,
     s_time: float = 1.0,
     s_guide: float = 1.0,
-    time_scale: Sequence[float] | None = None,
+    likelihood_weight: float = 1.0,
     seed: int = 0,
 ) -> "AutoGuide":
     """
@@ -407,10 +384,13 @@ def fit_svi(
             subsample_size=subsample_size,
             fate_names=fate_names,
             ref_fate=ref_fate,
+            s_alpha=s_alpha,
+            s_rep=s_rep,
+            s_gamma=s_gamma,
             s_tau=s_tau,
             s_time=s_time,
             s_guide=s_guide,
-            time_scale=time_scale,
+            likelihood_weight=likelihood_weight,
         )
 
     guide = AutoNormal(model)
@@ -443,7 +423,6 @@ def reconstruct_theta_samples(
     L: int,
     D: int,
     num_draws: int,
-    time_scale: Sequence[float] | None = None,
 ) -> np.ndarray:
     """
     Draw posterior samples of gene-by-day effects from the fitted guide.
@@ -466,9 +445,9 @@ def reconstruct_theta_samples(
     R = int(rep_t.max().item() + 1)
     Kmax = int(guide_ids_t.shape[1])
 
-    return_sites = ("tau", "z0", "sigma_time")
+    return_sites = ("tau", "z0")
     if D > 1:
-        return_sites = return_sites + ("eps",)
+        return_sites = return_sites + ("sigma_time", "eps")
     predictive = Predictive(guide, num_samples=num_draws, return_sites=return_sites)
     samples = predictive(
         p_t,
@@ -488,9 +467,8 @@ def reconstruct_theta_samples(
     theta_core = construct_theta_core(
         tau=samples["tau"],
         z0=samples["z0"],
-        sigma_time=samples["sigma_time"],
+        sigma_time=samples.get("sigma_time"),
         eps=samples.get("eps"),
-        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -512,7 +490,6 @@ def export_gene_summary_for_ash(
     day_cell_counts: Sequence[int],
     weights: Optional[Sequence[float]],
     out_csv: str | None,
-    time_scale: Sequence[float] | None = None,
 ) -> pd.DataFrame:
     """
     Summarize gene effects across days for the contrast fate and write an ash-ready CSV.
@@ -542,7 +519,6 @@ def export_gene_summary_for_ash(
         L=L,
         D=D,
         num_draws=num_draws,
-        time_scale=time_scale,
     )
 
     contrast_samples = theta_samples[:, 1:, contrast_idx, :]
@@ -577,6 +553,63 @@ def export_gene_summary_for_ash(
     )
     for d in range(D):
         summary_df[f"w{d}"] = float(weights_arr[d])
+    if out_csv is not None:
+        summary_df.to_csv(out_csv, index=False)
+    return summary_df
+
+
+def export_gene_summary_for_mash(
+    *,
+    guide: "AutoGuide",
+    model_args: tuple["torch.Tensor", ...],
+    gene_names: Sequence[str],
+    fate_names: Sequence[str],
+    ref_fate: str = DEFAULT_REF_FATE,
+    contrast_fate: str = DEFAULT_CONTRAST_FATE,
+    L: int,
+    D: int,
+    num_draws: int,
+    out_csv: str | None,
+) -> pd.DataFrame:
+    """
+    Export daywise MES–EC gene effects for mashr.
+
+    Returns
+    -------
+    pd.DataFrame
+        Gene-level summary table with daywise betahat/se columns.
+    """
+    if len(gene_names) != L:
+        raise ValueError(f"gene_names length {len(gene_names)} does not match L={L}")
+    if D <= 0 or L <= 0:
+        raise ValueError("L and D must be positive integers")
+
+    _, non_ref_fates, _, _ = resolve_fate_names(fate_names, ref_fate=ref_fate)
+    if contrast_fate == ref_fate:
+        raise ValueError("contrast_fate must differ from ref_fate")
+    if contrast_fate not in non_ref_fates:
+        raise ValueError(
+            f"contrast_fate '{contrast_fate}' not in non-reference fates {non_ref_fates}"
+        )
+    contrast_idx = non_ref_fates.index(contrast_fate)
+
+    theta_samples = reconstruct_theta_samples(
+        guide=guide,
+        model_args=model_args,
+        L=L,
+        D=D,
+        num_draws=num_draws,
+    )
+
+    contrast_samples = theta_samples[:, 1:, contrast_idx, :]
+    betahat = contrast_samples.mean(axis=0)
+    sebetahat = contrast_samples.std(axis=0, ddof=1)
+
+    summary_df = pd.DataFrame({"gene": list(gene_names)})
+    for d in range(D):
+        summary_df[f"betahat_d{d}"] = betahat[:, d]
+    for d in range(D):
+        summary_df[f"se_d{d}"] = sebetahat[:, d]
     if out_csv is not None:
         summary_df.to_csv(out_csv, index=False)
     return summary_df

@@ -1,0 +1,478 @@
+{
+  "name": "r-rcppgsl",
+  "version": "0.3.13",
+  "build": "r45hfb11271_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "r-rcppgsl-0.3.13-r45hfb11271_3.conda",
+  "md5": "34dc915e632362186019cb9fd2d22f6f",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/r-rcppgsl-0.3.13-r45hfb11271_3.conda",
+  "sha256": "4d0112632643bb27af25bf423e95549b5e74d8e0a056b041ca9e6b0e3f5dc285",
+  "depends": [
+    "__osx >=10.13",
+    "gsl >=2.7,<2.8.0a0",
+    "libblas >=3.9.0,<4.0a0",
+    "libcxx >=19",
+    "r-base >=4.5,<4.6.0a0",
+    "r-rcpp >=0.11.0"
+  ],
+  "constrains": [],
+  "license": "GPL-2.0-or-later",
+  "timestamp": 1757585563000,
+  "size": 221447,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-rcppgsl-0.3.13-r45hfb11271_3.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-rcppgsl-0.3.13-r45hfb11271_3",
+  "files": [
+    "lib/R/library/RcppGSL/DESCRIPTION",
+    "lib/R/library/RcppGSL/INDEX",
+    "lib/R/library/RcppGSL/Meta/Rd.rds",
+    "lib/R/library/RcppGSL/Meta/features.rds",
+    "lib/R/library/RcppGSL/Meta/hsearch.rds",
+    "lib/R/library/RcppGSL/Meta/links.rds",
+    "lib/R/library/RcppGSL/Meta/nsInfo.rds",
+    "lib/R/library/RcppGSL/Meta/package.rds",
+    "lib/R/library/RcppGSL/Meta/vignette.rds",
+    "lib/R/library/RcppGSL/NAMESPACE",
+    "lib/R/library/RcppGSL/NEWS.Rd",
+    "lib/R/library/RcppGSL/R/RcppGSL",
+    "lib/R/library/RcppGSL/R/RcppGSL.rdb",
+    "lib/R/library/RcppGSL/R/RcppGSL.rdx",
+    "lib/R/library/RcppGSL/doc/RcppGSL-intro.Rnw",
+    "lib/R/library/RcppGSL/doc/RcppGSL-intro.pdf",
+    "lib/R/library/RcppGSL/doc/index.html",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/DESCRIPTION",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/NAMESPACE",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/R/RcppExports.R",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/R/colNorm.R",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/configure",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/configure.ac",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/man/colNorm.Rd",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/src/Makevars.in",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/src/Makevars.win",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/src/RcppExports.cpp",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/src/colNorm.cpp",
+    "lib/R/library/RcppGSL/examples/RcppGSLExample/src/colNorm_old.cpp",
+    "lib/R/library/RcppGSL/examples/bSpline/bSpline.R",
+    "lib/R/library/RcppGSL/examples/bSpline/bSpline.cpp",
+    "lib/R/library/RcppGSL/help/AnIndex",
+    "lib/R/library/RcppGSL/help/RcppGSL.rdb",
+    "lib/R/library/RcppGSL/help/RcppGSL.rdx",
+    "lib/R/library/RcppGSL/help/aliases.rds",
+    "lib/R/library/RcppGSL/help/paths.rds",
+    "lib/R/library/RcppGSL/html/00Index.html",
+    "lib/R/library/RcppGSL/html/R.css",
+    "lib/R/library/RcppGSL/include/RcppGSL.h",
+    "lib/R/library/RcppGSL/include/RcppGSLForward.h",
+    "lib/R/library/RcppGSL/include/RcppGSL_matrix.h",
+    "lib/R/library/RcppGSL/include/RcppGSL_matrix_view.h",
+    "lib/R/library/RcppGSL/include/RcppGSL_typedef.h",
+    "lib/R/library/RcppGSL/include/RcppGSL_types.h",
+    "lib/R/library/RcppGSL/include/RcppGSL_vector.h",
+    "lib/R/library/RcppGSL/include/RcppGSL_vector_view.h",
+    "lib/R/library/RcppGSL/libs/RcppGSL.so",
+    "lib/R/library/RcppGSL/skeleton/Makevars.in",
+    "lib/R/library/RcppGSL/skeleton/Makevars.win",
+    "lib/R/library/RcppGSL/skeleton/configure",
+    "lib/R/library/RcppGSL/skeleton/configure.win",
+    "lib/R/library/RcppGSL/tinytest/cpp/gsl.cpp",
+    "lib/R/library/RcppGSL/tinytest/test_client_package.R",
+    "lib/R/library/RcppGSL/tinytest/test_fastLm.R",
+    "lib/R/library/RcppGSL/tinytest/test_gsl.R"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/RcppGSL/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "b9c307f325ee13bf96176d1c30c5540c8f0e76d02b6c0e7fd4052e1070bf0711",
+        "size_in_bytes": 1542,
+        "sha256_in_prefix": "b9c307f325ee13bf96176d1c30c5540c8f0e76d02b6c0e7fd4052e1070bf0711"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/INDEX",
+        "path_type": "hardlink",
+        "sha256": "7933c32ee8572f0c44e9e9963631be5c97ec5167e0c1d3e0da311c5eb6c93f85",
+        "size_in_bytes": 233,
+        "sha256_in_prefix": "7933c32ee8572f0c44e9e9963631be5c97ec5167e0c1d3e0da311c5eb6c93f85"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "59fe245168da4a4d03d8e42000b7b530f56c794eefdefd0967d126d149071c74",
+        "size_in_bytes": 418,
+        "sha256_in_prefix": "59fe245168da4a4d03d8e42000b7b530f56c794eefdefd0967d126d149071c74"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "572609f16c0e28b8feb514b74c3daccd8b0dc013777a880535138aae9c37fbfc",
+        "size_in_bytes": 468,
+        "sha256_in_prefix": "572609f16c0e28b8feb514b74c3daccd8b0dc013777a880535138aae9c37fbfc"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "15da91b39c8ec40550aac593e3b01c20b7d1af49bc8f0ffbfea2ba86232df2ef",
+        "size_in_bytes": 182,
+        "sha256_in_prefix": "15da91b39c8ec40550aac593e3b01c20b7d1af49bc8f0ffbfea2ba86232df2ef"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "f443a48fb7428d6c59ddbfaa1a5afda267f56c7e9a12725c655995c4f1b0df2b",
+        "size_in_bytes": 443,
+        "sha256_in_prefix": "f443a48fb7428d6c59ddbfaa1a5afda267f56c7e9a12725c655995c4f1b0df2b"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "39911070bbdab73e70d833b65e0a8916414440d51496d53b01a03334365b4b36",
+        "size_in_bytes": 1254,
+        "sha256_in_prefix": "39911070bbdab73e70d833b65e0a8916414440d51496d53b01a03334365b4b36"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "2deb6d30105b974cfa88e914573ff3075b720c494bcf47d642ef7f39993345ea",
+        "size_in_bytes": 221,
+        "sha256_in_prefix": "2deb6d30105b974cfa88e914573ff3075b720c494bcf47d642ef7f39993345ea"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "00c747d75331859e33418768cf5115a89ca2bf5c8ea247338424ea9db7134daf",
+        "size_in_bytes": 407,
+        "sha256_in_prefix": "00c747d75331859e33418768cf5115a89ca2bf5c8ea247338424ea9db7134daf"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "141dc46e1f313249534e5dc9baf3bd02642a0cee1faa2f6bdc695cc777be9eb4",
+        "size_in_bytes": 9297,
+        "sha256_in_prefix": "141dc46e1f313249534e5dc9baf3bd02642a0cee1faa2f6bdc695cc777be9eb4"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/R/RcppGSL",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/R/RcppGSL.rdb",
+        "path_type": "hardlink",
+        "sha256": "3fad7d4230157910b0f317a94b0cee3ac6d6d16e44ca5c19f4b5d4c24f87cf28",
+        "size_in_bytes": 11962,
+        "sha256_in_prefix": "3fad7d4230157910b0f317a94b0cee3ac6d6d16e44ca5c19f4b5d4c24f87cf28"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/R/RcppGSL.rdx",
+        "path_type": "hardlink",
+        "sha256": "84644940640de6d1174329aeda35006d0dfa1bba8cc526f99bb15c60f1c1fd6a",
+        "size_in_bytes": 501,
+        "sha256_in_prefix": "84644940640de6d1174329aeda35006d0dfa1bba8cc526f99bb15c60f1c1fd6a"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/doc/RcppGSL-intro.Rnw",
+        "path_type": "hardlink",
+        "sha256": "d118fa8bfcb67a38bb1f8d6ef8579512b3eea50b4d5826b40a859e6aafe6fea8",
+        "size_in_bytes": 296,
+        "sha256_in_prefix": "d118fa8bfcb67a38bb1f8d6ef8579512b3eea50b4d5826b40a859e6aafe6fea8"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/doc/RcppGSL-intro.pdf",
+        "path_type": "hardlink",
+        "sha256": "277db3aa252677c33e1c47df4c9e6358d3fafeae93eb7c23abcf97c65132f4f0",
+        "size_in_bytes": 104404,
+        "sha256_in_prefix": "277db3aa252677c33e1c47df4c9e6358d3fafeae93eb7c23abcf97c65132f4f0"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "f81fd1dcf1eb13193f1ee7d30bdb5ea11d29a9b864915c8f2592fa03168cb524",
+        "size_in_bytes": 1336,
+        "sha256_in_prefix": "f81fd1dcf1eb13193f1ee7d30bdb5ea11d29a9b864915c8f2592fa03168cb524"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "28726d2d0270e29e31c3f073bfd58396fc251d36f2241a5a4b3426171eba7375",
+        "size_in_bytes": 458,
+        "sha256_in_prefix": "28726d2d0270e29e31c3f073bfd58396fc251d36f2241a5a4b3426171eba7375"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "5e2cba74a08dcc997534461af0d66a5d2d991cd1300b9ebb299053283ed6bf8d",
+        "size_in_bytes": 68,
+        "sha256_in_prefix": "5e2cba74a08dcc997534461af0d66a5d2d991cd1300b9ebb299053283ed6bf8d"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/R/RcppExports.R",
+        "path_type": "hardlink",
+        "sha256": "d6c3892def89e659144bd7a181386cb8bdc09cb6fc6d9d87a618a332e1643607",
+        "size_in_bytes": 435,
+        "sha256_in_prefix": "d6c3892def89e659144bd7a181386cb8bdc09cb6fc6d9d87a618a332e1643607"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/R/colNorm.R",
+        "path_type": "hardlink",
+        "sha256": "126b6719c8380ad342269dceb03887c3520bfac51ba9ec187ef9fcfec383e4ad",
+        "size_in_bytes": 985,
+        "sha256_in_prefix": "126b6719c8380ad342269dceb03887c3520bfac51ba9ec187ef9fcfec383e4ad"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/configure",
+        "path_type": "hardlink",
+        "sha256": "e24d8ece9ca94192ea4bf5cb345410a9ed0bff4b14ee40d9312c40befa82eeb6",
+        "size_in_bytes": 85275,
+        "sha256_in_prefix": "e24d8ece9ca94192ea4bf5cb345410a9ed0bff4b14ee40d9312c40befa82eeb6"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/configure.ac",
+        "path_type": "hardlink",
+        "sha256": "30172a1485dd8c628eb4c2a1d9d7598973509759cc0e2a7a522463cc639e16c6",
+        "size_in_bytes": 870,
+        "sha256_in_prefix": "30172a1485dd8c628eb4c2a1d9d7598973509759cc0e2a7a522463cc639e16c6"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/man/colNorm.Rd",
+        "path_type": "hardlink",
+        "sha256": "714e2d5c24090722108489920e5a22ecd7ce2f0cedda376ec8fd69df56b61ecb",
+        "size_in_bytes": 1127,
+        "sha256_in_prefix": "714e2d5c24090722108489920e5a22ecd7ce2f0cedda376ec8fd69df56b61ecb"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/src/Makevars.in",
+        "path_type": "hardlink",
+        "sha256": "b1b22e81b592e4f238a052c9dc42fc26011775b9125e5a436f059c8e0db780d8",
+        "size_in_bytes": 164,
+        "sha256_in_prefix": "b1b22e81b592e4f238a052c9dc42fc26011775b9125e5a436f059c8e0db780d8"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/src/Makevars.win",
+        "path_type": "hardlink",
+        "sha256": "be980c5ff384ab96a3dd66780c8c79e49137aefa59f0c7024c857652a6930989",
+        "size_in_bytes": 152,
+        "sha256_in_prefix": "be980c5ff384ab96a3dd66780c8c79e49137aefa59f0c7024c857652a6930989"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/src/RcppExports.cpp",
+        "path_type": "hardlink",
+        "sha256": "bc3bbf137709f4a586fd06de71a0031dc2d67f74ed9b0e2325556ec029e05c72",
+        "size_in_bytes": 1874,
+        "sha256_in_prefix": "bc3bbf137709f4a586fd06de71a0031dc2d67f74ed9b0e2325556ec029e05c72"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/src/colNorm.cpp",
+        "path_type": "hardlink",
+        "sha256": "56584de94ced3f4e5f913813a749a88e35188207edb6965874d1eafb57fe4442",
+        "size_in_bytes": 1589,
+        "sha256_in_prefix": "56584de94ced3f4e5f913813a749a88e35188207edb6965874d1eafb57fe4442"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/RcppGSLExample/src/colNorm_old.cpp",
+        "path_type": "hardlink",
+        "sha256": "bd27e55224388322ff477ecdf59b9ebe61be05173aff84ae967dc753cf77affa",
+        "size_in_bytes": 2820,
+        "sha256_in_prefix": "bd27e55224388322ff477ecdf59b9ebe61be05173aff84ae967dc753cf77affa"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/bSpline/bSpline.R",
+        "path_type": "hardlink",
+        "sha256": "2693af400463d92074eaeb5bb8e47b16c2658f300b2d90abaadbd68c7875b8a1",
+        "size_in_bytes": 1149,
+        "sha256_in_prefix": "2693af400463d92074eaeb5bb8e47b16c2658f300b2d90abaadbd68c7875b8a1"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/examples/bSpline/bSpline.cpp",
+        "path_type": "hardlink",
+        "sha256": "205c2145bcc813f5b7e66111ee8047b2e157a2d995dbd93a4e19ac0b540413f9",
+        "size_in_bytes": 3472,
+        "sha256_in_prefix": "205c2145bcc813f5b7e66111ee8047b2e157a2d995dbd93a4e19ac0b540413f9"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "321200117ad1994a71b7b8e09ee7a46aeaeae46a401a4f65bbde1aec7f7a0a28",
+        "size_in_bytes": 163,
+        "sha256_in_prefix": "321200117ad1994a71b7b8e09ee7a46aeaeae46a401a4f65bbde1aec7f7a0a28"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/help/RcppGSL.rdb",
+        "path_type": "hardlink",
+        "sha256": "fd94fd398819b54f6ef3d2f2696cfaa419eeacbf5e4007e197e329cad662259d",
+        "size_in_bytes": 9647,
+        "sha256_in_prefix": "fd94fd398819b54f6ef3d2f2696cfaa419eeacbf5e4007e197e329cad662259d"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/help/RcppGSL.rdx",
+        "path_type": "hardlink",
+        "sha256": "719ec1047b9eaf7323cc3fcc133d97178ae6b5acb4e6cec360d0fff241db4969",
+        "size_in_bytes": 222,
+        "sha256_in_prefix": "719ec1047b9eaf7323cc3fcc133d97178ae6b5acb4e6cec360d0fff241db4969"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "bb807b1259ba9f67366608e648a619802fdbda57176438ccc8b3d7ad46460ec0",
+        "size_in_bytes": 154,
+        "sha256_in_prefix": "bb807b1259ba9f67366608e648a619802fdbda57176438ccc8b3d7ad46460ec0"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3de98a6e12be2cbee8740d142275727daf5be5cb21d1775e21250918a6c81da5",
+        "size_in_bytes": 184,
+        "sha256_in_prefix": "3de98a6e12be2cbee8740d142275727daf5be5cb21d1775e21250918a6c81da5"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "957476daae3ced5a6f176eb53e8b1d562aca47fd12d8ff254b3654a52598bb74",
+        "size_in_bytes": 2190,
+        "sha256_in_prefix": "957476daae3ced5a6f176eb53e8b1d562aca47fd12d8ff254b3654a52598bb74"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL.h",
+        "path_type": "hardlink",
+        "sha256": "8bdc47c8dd20034f58623f54a5b63336f73593dffae2779987bc4db82c949f12",
+        "size_in_bytes": 1173,
+        "sha256_in_prefix": "8bdc47c8dd20034f58623f54a5b63336f73593dffae2779987bc4db82c949f12"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSLForward.h",
+        "path_type": "hardlink",
+        "sha256": "64d8d1670a499cb902cdf7ba9dd51a4b749e64b7e794d4affc05fe4c30a56b8a",
+        "size_in_bytes": 9864,
+        "sha256_in_prefix": "64d8d1670a499cb902cdf7ba9dd51a4b749e64b7e794d4affc05fe4c30a56b8a"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL_matrix.h",
+        "path_type": "hardlink",
+        "sha256": "18fbf511ad66c6cc54bdaf012b5700926540ace815c9fc2a7667c3acb2ada922",
+        "size_in_bytes": 9604,
+        "sha256_in_prefix": "18fbf511ad66c6cc54bdaf012b5700926540ace815c9fc2a7667c3acb2ada922"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL_matrix_view.h",
+        "path_type": "hardlink",
+        "sha256": "6868333aef6609e78baf72d5370962f115478d307504338529719c6273fd6550",
+        "size_in_bytes": 2386,
+        "sha256_in_prefix": "6868333aef6609e78baf72d5370962f115478d307504338529719c6273fd6550"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL_typedef.h",
+        "path_type": "hardlink",
+        "sha256": "83095542d9ba05d36f5a8b719631483130b268001aaa6975a0a423dad95fd697",
+        "size_in_bytes": 1323,
+        "sha256_in_prefix": "83095542d9ba05d36f5a8b719631483130b268001aaa6975a0a423dad95fd697"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL_types.h",
+        "path_type": "hardlink",
+        "sha256": "06f23983366b5389b6411a6bd09cd247def1852b2a35197082fc0a5ae289db0e",
+        "size_in_bytes": 26921,
+        "sha256_in_prefix": "06f23983366b5389b6411a6bd09cd247def1852b2a35197082fc0a5ae289db0e"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL_vector.h",
+        "path_type": "hardlink",
+        "sha256": "6c5430550ce5fdc3714f1263518909b4bf73ec49de271d7dcac2bbe2d3e56c68",
+        "size_in_bytes": 3219,
+        "sha256_in_prefix": "6c5430550ce5fdc3714f1263518909b4bf73ec49de271d7dcac2bbe2d3e56c68"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/include/RcppGSL_vector_view.h",
+        "path_type": "hardlink",
+        "sha256": "43b0eefa490fdb5b7ce66c6953aec80481389b5eda755ae91092b0f9d29fc58c",
+        "size_in_bytes": 2335,
+        "sha256_in_prefix": "43b0eefa490fdb5b7ce66c6953aec80481389b5eda755ae91092b0f9d29fc58c"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/libs/RcppGSL.so",
+        "path_type": "hardlink",
+        "sha256": "8b056860e76fa156cbc1638dab0d742dea8d180fb2733d650e46d357e66430bb",
+        "size_in_bytes": 88592,
+        "sha256_in_prefix": "8b056860e76fa156cbc1638dab0d742dea8d180fb2733d650e46d357e66430bb"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/skeleton/Makevars.in",
+        "path_type": "hardlink",
+        "sha256": "0df4db41611552e12846800622dc63a31410a48e5325d069be36b4eb50e0c9e3",
+        "size_in_bytes": 168,
+        "sha256_in_prefix": "0df4db41611552e12846800622dc63a31410a48e5325d069be36b4eb50e0c9e3"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/skeleton/Makevars.win",
+        "path_type": "hardlink",
+        "sha256": "c312141f974576b12799e522c8ece9c13be7c8dfff68744170b9097a925242a2",
+        "size_in_bytes": 96,
+        "sha256_in_prefix": "c312141f974576b12799e522c8ece9c13be7c8dfff68744170b9097a925242a2"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/skeleton/configure",
+        "path_type": "hardlink",
+        "sha256": "a5cc63d4dd298f292a08a86ccb2b912a318c010c6b3d2e2e1fa0902cfb1b2bb4",
+        "size_in_bytes": 242,
+        "sha256_in_prefix": "a5cc63d4dd298f292a08a86ccb2b912a318c010c6b3d2e2e1fa0902cfb1b2bb4"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/skeleton/configure.win",
+        "path_type": "hardlink",
+        "sha256": "d186128fc89867e47f4ab5501c187cdacfa8f15a2f9a8ed2149b3968211fb738",
+        "size_in_bytes": 270,
+        "sha256_in_prefix": "d186128fc89867e47f4ab5501c187cdacfa8f15a2f9a8ed2149b3968211fb738"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/tinytest/cpp/gsl.cpp",
+        "path_type": "hardlink",
+        "sha256": "2b650ef3f593bd8b6e72070e02ca415e3a03531107274f153ae1c7dfea897cf8",
+        "size_in_bytes": 13156,
+        "sha256_in_prefix": "2b650ef3f593bd8b6e72070e02ca415e3a03531107274f153ae1c7dfea897cf8"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/tinytest/test_client_package.R",
+        "path_type": "hardlink",
+        "sha256": "7947df5652737b927caa0c82f9a4dd7674dd7f5902d6cc20e2838752bd04f78d",
+        "size_in_bytes": 1957,
+        "sha256_in_prefix": "7947df5652737b927caa0c82f9a4dd7674dd7f5902d6cc20e2838752bd04f78d"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/tinytest/test_fastLm.R",
+        "path_type": "hardlink",
+        "sha256": "6133c8bbdd549ae15da6eb6c2e45bf89f69fc7961a73a6e11009b88d77ebd995",
+        "size_in_bytes": 4195,
+        "sha256_in_prefix": "6133c8bbdd549ae15da6eb6c2e45bf89f69fc7961a73a6e11009b88d77ebd995"
+      },
+      {
+        "_path": "lib/R/library/RcppGSL/tinytest/test_gsl.R",
+        "path_type": "hardlink",
+        "sha256": "a8cdd4cec5bc56ec08cab00d57481ff066a2c3569b3e2909954b422dafd4df91",
+        "size_in_bytes": 6164,
+        "sha256_in_prefix": "a8cdd4cec5bc56ec08cab00d57481ff066a2c3569b3e2909954b422dafd4df91"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-rcppgsl-0.3.13-r45hfb11271_3",
+    "type": 1
+  }
+}

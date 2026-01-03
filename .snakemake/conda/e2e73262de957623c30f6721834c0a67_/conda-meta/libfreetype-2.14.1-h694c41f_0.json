@@ -1,0 +1,31 @@
+{
+  "name": "libfreetype",
+  "version": "2.14.1",
+  "build": "h694c41f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libfreetype-2.14.1-h694c41f_0.conda",
+  "md5": "e0e2edaf5e0c71b843e25a7ecc451cc9",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libfreetype-2.14.1-h694c41f_0.conda",
+  "sha256": "035e23ef87759a245d51890aedba0b494a26636784910c3730d76f3dc4482b1d",
+  "depends": [
+    "libfreetype6 >=2.14.1"
+  ],
+  "constrains": [],
+  "license": "GPL-2.0-only OR FTL",
+  "timestamp": 1757945952000,
+  "size": 7780,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libfreetype-2.14.1-h694c41f_0.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libfreetype-2.14.1-h694c41f_0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libfreetype-2.14.1-h694c41f_0",
+    "type": 1
+  }
+}

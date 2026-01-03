@@ -47,7 +47,7 @@ class TestThetaDeltaConstruction(unittest.TestCase):
     def test_construct_theta_core_d2(self):
         tau = torch.tensor([2.0, 1.0])
         z0 = torch.tensor([[1.0, 3.0]])
-        sigma_time = torch.tensor([0.5, 2.0])
+        sigma_time = torch.tensor([[0.5], [2.0]])
         eps = torch.ones((1, 2, 1))
 
         theta_core = construct_theta_core(
@@ -64,7 +64,7 @@ class TestThetaDeltaConstruction(unittest.TestCase):
     def test_construct_theta_core_d1(self):
         tau = torch.tensor([1.0, 2.0])
         z0 = torch.tensor([[3.0, 4.0]])
-        sigma_time = torch.tensor([0.3, 0.7])
+        sigma_time = torch.zeros((2, 0))
 
         theta_core = construct_theta_core(
             tau=tau, z0=z0, sigma_time=sigma_time, eps=None, D=1
@@ -73,10 +73,10 @@ class TestThetaDeltaConstruction(unittest.TestCase):
         expected = torch.tensor([[[3.0], [8.0]]])
         self.assertTrue(torch.allclose(theta_core, expected))
 
-    def test_construct_theta_core_time_scale(self):
+    def test_construct_theta_core_d3(self):
         tau = torch.tensor([1.0])
         z0 = torch.tensor([[1.0]])
-        sigma_time = torch.tensor([1.0])
+        sigma_time = torch.tensor([[1.0, 2.0]])
         eps = torch.ones((1, 1, 2))
 
         theta_core = construct_theta_core(
@@ -84,7 +84,6 @@ class TestThetaDeltaConstruction(unittest.TestCase):
             z0=z0,
             sigma_time=sigma_time,
             eps=eps,
-            time_scale=[1.0, 2.0],
             D=3,
         )
         expected = torch.tensor([[[1.0, 2.0, 4.0]]])

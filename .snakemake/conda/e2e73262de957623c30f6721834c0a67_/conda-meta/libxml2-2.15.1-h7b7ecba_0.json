@@ -1,0 +1,58 @@
+{
+  "name": "libxml2",
+  "version": "2.15.1",
+  "build": "h7b7ecba_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libxml2-2.15.1-h7b7ecba_0.conda",
+  "md5": "e7ed73b34f9d43d80b7e80eba9bce9f3",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libxml2-2.15.1-h7b7ecba_0.conda",
+  "sha256": "ddf87bf05955d7870a41ca6f0e9fbd7b896b5a26ec1a98cd990883ac0b4f99bb",
+  "depends": [
+    "__osx >=10.13",
+    "icu >=75.1,<76.0a0",
+    "libiconv >=1.18,<2.0a0",
+    "liblzma >=5.8.1,<6.0a0",
+    "libxml2-16 2.15.1 ha1d9b0f_0",
+    "libzlib >=1.3.1,<2.0a0"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1761015935000,
+  "size": 39985,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libxml2-2.15.1-h7b7ecba_0.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libxml2-2.15.1-h7b7ecba_0",
+  "files": [
+    "bin/xmlcatalog",
+    "bin/xmllint"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/xmlcatalog",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libxml2-split_1761015534036/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "5678534d61a7bc356f6014ea973b0a53502e35abbcaab28251542a07cff4cb8b",
+        "size_in_bytes": 19328,
+        "sha256_in_prefix": "f4c8dba1514a98a26eee63d9563466dc9e77f1f2030d3bd847d909e3b99e7543"
+      },
+      {
+        "_path": "bin/xmllint",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libxml2-split_1761015534036/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "9fac68499740bf7507a4334822024dcde5d25dd89d0688c7198849f2d18ac163",
+        "size_in_bytes": 73296,
+        "sha256_in_prefix": "c64b83bbd56b229c81530bf9ae2a02d0cb5513d79586dbc8cdb6d3002f499b4f"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libxml2-2.15.1-h7b7ecba_0",
+    "type": 1
+  }
+}

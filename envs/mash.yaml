@@ -1,0 +1,8 @@
+name: fate-mash
+channels:
+  - conda-forge
+dependencies:
+  - r-base>=4.3
+  - r-data.table
+  - r-ashr
+  - r-mashr

@@ -34,12 +34,17 @@ _INT_CFG_KEYS = {
 _FLOAT_CFG_KEYS = {
     "lr",
     "clip_norm",
+    "s_alpha",
+    "s_rep",
+    "s_gamma",
     "s_time",
     "s_guide",
     "s_tau",
+    "likelihood_weight",
     "bootstrap_frac",
     "lfsr_thresh",
     "qvalue_thresh",
+    "mash_lfsr_thresh",
     "diagnostics_holdout_frac",
     "sanity_min_abs_effect",
 }

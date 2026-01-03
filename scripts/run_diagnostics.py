@@ -102,23 +102,19 @@ def _estimate_mean_loglik(
     R: int,
     Kmax: int,
     num_draws: int,
-    time_scale: Sequence[float] | None,
 ) -> float:
-    fate_names, _, _, non_ref_indices = resolve_fate_names(
-        fate_names, ref_fate=ref_fate
-    )
+    fate_names, _, ref_idx, _ = resolve_fate_names(fate_names, ref_fate=ref_fate)
     return_sites = [
         "alpha",
         "b",
         "gamma",
         "tau",
         "z0",
-        "sigma_time",
         "sigma_guide",
         "u",
     ]
     if D > 1:
-        return_sites.append("eps")
+        return_sites.extend(["sigma_time", "eps"])
     predictive = Predictive(guide, num_samples=num_draws, return_sites=return_sites)
     samples = predictive(
         *model_args_train,
@@ -132,9 +128,8 @@ def _estimate_mean_loglik(
     theta_core = construct_theta_core(
         tau=samples["tau"],
         z0=samples["z0"],
-        sigma_time=samples["sigma_time"],
+        sigma_time=samples.get("sigma_time"),
         eps=samples.get("eps"),
-        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -158,8 +153,16 @@ def _estimate_mean_loglik(
             day_t=day_test,
             rep_t=rep_test,
         )
-        eta = torch.zeros((p_test.shape[0], len(fate_names)), device=p_test.device)
-        eta[:, non_ref_indices] = eta_nonref
+        zeros = torch.zeros((p_test.shape[0], 1), device=p_test.device)
+        eta_parts = []
+        nonref_col = 0
+        for idx in range(len(fate_names)):
+            if idx == ref_idx:
+                eta_parts.append(zeros)
+            else:
+                eta_parts.append(eta_nonref[:, nonref_col : nonref_col + 1])
+                nonref_col += 1
+        eta = torch.cat(eta_parts, dim=1)
         log_pi = torch.log_softmax(eta, dim=-1)
         logp = (p_test * log_pi).sum(-1)
         logliks.append(logp.mean().item())
@@ -294,10 +297,13 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=diag_steps,
+        s_alpha=cfg.get("s_alpha", 1.0),
+        s_rep=cfg.get("s_rep", 1.0),
+        s_gamma=cfg.get("s_gamma", 1.0),
         s_tau=cfg.get("s_tau", 1.0),
         s_time=cfg.get("s_time", 1.0),
         s_guide=cfg.get("s_guide", 1.0),
-        time_scale=cfg.get("time_scale", None),
+        likelihood_weight=cfg.get("likelihood_weight", 1.0),
         seed=cfg.get("diagnostics_seed", 0),
     )
 
@@ -319,7 +325,6 @@ def main() -> None:
         R=cfg["R"],
         Kmax=cfg["Kmax"],
         num_draws=diag_draws,
-        time_scale=cfg.get("time_scale", None),
     )
 
     logger.info("Fitting nuisance-only model for diagnostics")
@@ -347,10 +352,13 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=diag_steps,
+        s_alpha=cfg.get("s_alpha", 1.0),
+        s_rep=cfg.get("s_rep", 1.0),
+        s_gamma=cfg.get("s_gamma", 1.0),
         s_tau=cfg.get("s_tau", 1.0),
         s_time=cfg.get("s_time", 1.0),
         s_guide=cfg.get("s_guide", 1.0),
-        time_scale=cfg.get("time_scale", None),
+        likelihood_weight=cfg.get("likelihood_weight", 1.0),
         seed=cfg.get("diagnostics_seed", 0),
     )
 
@@ -372,7 +380,6 @@ def main() -> None:
         R=cfg["R"],
         Kmax=cfg["Kmax"],
         num_draws=diag_draws,
-        time_scale=cfg.get("time_scale", None),
     )
 
     diagnostics = {
@@ -420,10 +427,13 @@ def main() -> None:
             lr=cfg["lr"],
             clip_norm=cfg["clip_norm"],
             num_steps=cfg.get("diagnostics_perm_steps", 500),
+            s_alpha=cfg.get("s_alpha", 1.0),
+            s_rep=cfg.get("s_rep", 1.0),
+            s_gamma=cfg.get("s_gamma", 1.0),
             s_tau=cfg.get("s_tau", 1.0),
             s_time=cfg.get("s_time", 1.0),
             s_guide=cfg.get("s_guide", 1.0),
-            time_scale=cfg.get("time_scale", None),
+            likelihood_weight=cfg.get("likelihood_weight", 1.0),
             seed=cfg.get("diagnostics_seed", 0),
         )
 
@@ -448,7 +458,6 @@ def main() -> None:
             L=L,
             D=cfg["D"],
             num_draws=cfg.get("diagnostics_perm_draws", 25),
-            time_scale=cfg.get("time_scale", None),
             day_cell_counts=day_counts_train,
             weights=cfg.get("weights", None),
             out_csv=str(perm_summary),
@@ -490,7 +499,6 @@ def main() -> None:
             L=L,
             D=cfg["D"],
             num_draws=cfg.get("sanity_num_draws", 200),
-            time_scale=cfg.get("time_scale", None),
             day_cell_counts=day_counts_train,
             weights=cfg.get("weights", None),
             out_csv=None,

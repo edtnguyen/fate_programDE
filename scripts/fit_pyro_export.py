@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Fit the Pyro fate model and export gene summaries for ash."""
+"""Fit the Pyro fate model and export gene summaries for mashr."""
 
 from __future__ import annotations
 
@@ -18,7 +18,12 @@ import anndata as ad  # noqa: E402
 import torch  # noqa: E402
 
 from scripts.pyro_io import load_adata_inputs, normalize_config  # noqa: E402
-from src.models.pyro_model import export_gene_summary_for_ash, fit_svi, resolve_fate_names  # noqa: E402
+from src.models.pyro_model import (  # noqa: E402
+    export_gene_summary_for_ash,
+    export_gene_summary_for_mash,
+    fit_svi,
+    resolve_fate_names,
+)
 from src.models.pyro_pipeline import make_k_centered, to_torch  # noqa: E402
 
 
@@ -67,10 +72,13 @@ def _bootstrap_se(
     batch_size: int,
     lr: float,
     clip_norm: float,
+    s_alpha: float,
+    s_rep: float,
+    s_gamma: float,
     s_tau: float,
     s_time: float,
     s_guide: float,
-    time_scale: list[float] | None,
+    likelihood_weight: float,
     num_steps: int,
     num_draws: int,
     weights: list[float] | None,
@@ -114,10 +122,13 @@ def _bootstrap_se(
             lr=lr,
             clip_norm=clip_norm,
             num_steps=num_steps,
+            s_alpha=s_alpha,
+            s_rep=s_rep,
+            s_gamma=s_gamma,
             s_tau=s_tau,
             s_time=s_time,
             s_guide=s_guide,
-            time_scale=time_scale,
+            likelihood_weight=likelihood_weight,
             seed=seed + rep + 1,
         )
 
@@ -132,7 +143,6 @@ def _bootstrap_se(
             L=L,
             D=D,
             num_draws=num_draws,
-            time_scale=time_scale,
             day_cell_counts=day_counts_b,
             weights=weights,
             out_csv=None,
@@ -210,16 +220,19 @@ def main() -> None:
         lr=cfg["lr"],
         clip_norm=cfg["clip_norm"],
         num_steps=cfg["num_steps"],
+        s_alpha=cfg.get("s_alpha", 1.0),
+        s_rep=cfg.get("s_rep", 1.0),
+        s_gamma=cfg.get("s_gamma", 1.0),
         s_tau=cfg.get("s_tau", 1.0),
         s_time=cfg.get("s_time", 1.0),
         s_guide=cfg.get("s_guide", 1.0),
-        time_scale=cfg.get("time_scale", None),
+        likelihood_weight=cfg.get("likelihood_weight", 1.0),
         seed=cfg.get("seed", 0),
     )
 
     model_args = (p_t, day_t, rep_t, k_t, gids_t, mask_t, gene_of_guide_t)
-    logger.info("Exporting gene summary for ash")
-    summary_df = export_gene_summary_for_ash(
+    logger.info("Exporting gene summary for mashr")
+    summary_df = export_gene_summary_for_mash(
         guide=guide,
         model_args=model_args,
         gene_names=gene_names,
@@ -229,49 +242,14 @@ def main() -> None:
         L=L,
         D=cfg["D"],
         num_draws=cfg["num_posterior_draws"],
-        time_scale=cfg.get("time_scale", None),
-        day_cell_counts=day_counts,
-        weights=cfg.get("weights", None),
         out_csv=None,
     )
 
     if cfg.get("bootstrap_se", False):
-        logger.info("Running stratified bootstrap SE estimation")
-        bootstrap_se = _bootstrap_se(
-            cell_day=cell_df["day"].to_numpy(),
-            p_t=p_t,
-            day_t=day_t,
-            rep_t=rep_t,
-            k_t=k_t,
-            gids_t=gids_t,
-            mask_t=mask_t,
-            gene_of_guide_t=gene_of_guide_t,
-            gene_names=gene_names,
-            fate_names=cfg["fates"],
-            ref_fate=ref_fate,
-            contrast_fate=contrast_fate,
-            L=L,
-            G=G,
-            D=cfg["D"],
-            R=cfg["R"],
-            Kmax=cfg["Kmax"],
-            batch_size=cfg["batch_size"],
-            lr=cfg["lr"],
-            clip_norm=cfg["clip_norm"],
-            s_tau=cfg.get("s_tau", 1.0),
-            s_time=cfg.get("s_time", 1.0),
-            s_guide=cfg.get("s_guide", 1.0),
-            time_scale=cfg.get("time_scale", None),
-            num_steps=cfg.get("bootstrap_num_steps", cfg["num_steps"]),
-            num_draws=cfg.get("bootstrap_num_draws", cfg["num_posterior_draws"]),
-            weights=cfg.get("weights", None),
-            reps=cfg.get("bootstrap_reps", 20),
-            frac=cfg.get("bootstrap_frac", 0.5),
-            seed=cfg.get("bootstrap_seed", cfg.get("seed", 0)),
-            device=device,
-            logger=logger,
+        logger.warning(
+            "bootstrap_se is configured but mashr export uses posterior SD per day; "
+            "bootstrap SE is skipped for mash output."
         )
-        summary_df["sebetahat"] = bootstrap_se
 
     summary_df.to_csv(args.out, index=False)
     logger.info("Done.")

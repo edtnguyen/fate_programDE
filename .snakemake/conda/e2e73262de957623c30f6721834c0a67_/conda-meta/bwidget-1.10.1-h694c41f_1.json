@@ -1,0 +1,689 @@
+{
+  "name": "bwidget",
+  "version": "1.10.1",
+  "build": "h694c41f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "bwidget-1.10.1-h694c41f_1.conda",
+  "md5": "42abba4764f9d776456ca566e07d8d3a",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/bwidget-1.10.1-h694c41f_1.conda",
+  "sha256": "3c942fbc1d960caa5cc630f3ed4b575b3ae33e70d6476e2feccd3162edc98f1f",
+  "depends": [
+    "tk"
+  ],
+  "constrains": [],
+  "license": "TCL",
+  "timestamp": 1750261608000,
+  "size": 130154,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/bwidget-1.10.1-h694c41f_1.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/bwidget-1.10.1-h694c41f_1",
+  "files": [
+    "lib/tcl8.6/bwidget/CHANGES.txt",
+    "lib/tcl8.6/bwidget/LICENSE.txt",
+    "lib/tcl8.6/bwidget/README.txt",
+    "lib/tcl8.6/bwidget/arrow.tcl",
+    "lib/tcl8.6/bwidget/bitmap.tcl",
+    "lib/tcl8.6/bwidget/button.tcl",
+    "lib/tcl8.6/bwidget/buttonbox.tcl",
+    "lib/tcl8.6/bwidget/color.tcl",
+    "lib/tcl8.6/bwidget/combobox.tcl",
+    "lib/tcl8.6/bwidget/dialog.tcl",
+    "lib/tcl8.6/bwidget/dragsite.tcl",
+    "lib/tcl8.6/bwidget/dropsite.tcl",
+    "lib/tcl8.6/bwidget/dynhelp.tcl",
+    "lib/tcl8.6/bwidget/entry.tcl",
+    "lib/tcl8.6/bwidget/font.tcl",
+    "lib/tcl8.6/bwidget/images/bold.gif",
+    "lib/tcl8.6/bwidget/images/copy.gif",
+    "lib/tcl8.6/bwidget/images/cut.gif",
+    "lib/tcl8.6/bwidget/images/dragfile.gif",
+    "lib/tcl8.6/bwidget/images/dragicon.gif",
+    "lib/tcl8.6/bwidget/images/error.gif",
+    "lib/tcl8.6/bwidget/images/file.gif",
+    "lib/tcl8.6/bwidget/images/folder.gif",
+    "lib/tcl8.6/bwidget/images/hourglass.gif",
+    "lib/tcl8.6/bwidget/images/info.gif",
+    "lib/tcl8.6/bwidget/images/italic.gif",
+    "lib/tcl8.6/bwidget/images/minus.xbm",
+    "lib/tcl8.6/bwidget/images/new.gif",
+    "lib/tcl8.6/bwidget/images/opcopy.xbm",
+    "lib/tcl8.6/bwidget/images/open.gif",
+    "lib/tcl8.6/bwidget/images/openfold.gif",
+    "lib/tcl8.6/bwidget/images/oplink.xbm",
+    "lib/tcl8.6/bwidget/images/opmove.xbm",
+    "lib/tcl8.6/bwidget/images/overstrike.gif",
+    "lib/tcl8.6/bwidget/images/palette.gif",
+    "lib/tcl8.6/bwidget/images/passwd.gif",
+    "lib/tcl8.6/bwidget/images/paste.gif",
+    "lib/tcl8.6/bwidget/images/plus.xbm",
+    "lib/tcl8.6/bwidget/images/print.gif",
+    "lib/tcl8.6/bwidget/images/question.gif",
+    "lib/tcl8.6/bwidget/images/redo.gif",
+    "lib/tcl8.6/bwidget/images/save.gif",
+    "lib/tcl8.6/bwidget/images/target.xbm",
+    "lib/tcl8.6/bwidget/images/underline.gif",
+    "lib/tcl8.6/bwidget/images/undo.gif",
+    "lib/tcl8.6/bwidget/images/warning.gif",
+    "lib/tcl8.6/bwidget/init.tcl",
+    "lib/tcl8.6/bwidget/label.tcl",
+    "lib/tcl8.6/bwidget/labelentry.tcl",
+    "lib/tcl8.6/bwidget/labelframe.tcl",
+    "lib/tcl8.6/bwidget/lang/da.rc",
+    "lib/tcl8.6/bwidget/lang/de.rc",
+    "lib/tcl8.6/bwidget/lang/en.rc",
+    "lib/tcl8.6/bwidget/lang/es.rc",
+    "lib/tcl8.6/bwidget/lang/fr.rc",
+    "lib/tcl8.6/bwidget/lang/hu.rc",
+    "lib/tcl8.6/bwidget/lang/nl.rc",
+    "lib/tcl8.6/bwidget/lang/no.rc",
+    "lib/tcl8.6/bwidget/lang/pl.rc",
+    "lib/tcl8.6/bwidget/listbox.tcl",
+    "lib/tcl8.6/bwidget/mainframe.tcl",
+    "lib/tcl8.6/bwidget/messagedlg.tcl",
+    "lib/tcl8.6/bwidget/notebook.tcl",
+    "lib/tcl8.6/bwidget/pagesmgr.tcl",
+    "lib/tcl8.6/bwidget/panedw.tcl",
+    "lib/tcl8.6/bwidget/panelframe.tcl",
+    "lib/tcl8.6/bwidget/passwddlg.tcl",
+    "lib/tcl8.6/bwidget/pkgIndex.tcl",
+    "lib/tcl8.6/bwidget/progressbar.tcl",
+    "lib/tcl8.6/bwidget/progressdlg.tcl",
+    "lib/tcl8.6/bwidget/scrollframe.tcl",
+    "lib/tcl8.6/bwidget/scrollview.tcl",
+    "lib/tcl8.6/bwidget/scrollw.tcl",
+    "lib/tcl8.6/bwidget/separator.tcl",
+    "lib/tcl8.6/bwidget/spinbox.tcl",
+    "lib/tcl8.6/bwidget/statusbar.tcl",
+    "lib/tcl8.6/bwidget/titleframe.tcl",
+    "lib/tcl8.6/bwidget/tree.tcl",
+    "lib/tcl8.6/bwidget/utils.tcl",
+    "lib/tcl8.6/bwidget/widget.tcl",
+    "lib/tcl8.6/bwidget/wizard.tcl",
+    "lib/tcl8.6/bwidget/xpm2image.tcl"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/tcl8.6/bwidget/CHANGES.txt",
+        "path_type": "hardlink",
+        "sha256": "61755d6820f94fe17c48ed4fcce6abb9b710dd65b0ab27ed26da317d25497842",
+        "size_in_bytes": 8086,
+        "sha256_in_prefix": "61755d6820f94fe17c48ed4fcce6abb9b710dd65b0ab27ed26da317d25497842"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "85a1ea733ced76b106d944fed020545a7e6b106a6c5dadaa84e1fddfaa50846d",
+        "size_in_bytes": 2223,
+        "sha256_in_prefix": "85a1ea733ced76b106d944fed020545a7e6b106a6c5dadaa84e1fddfaa50846d"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/README.txt",
+        "path_type": "hardlink",
+        "sha256": "972925f4735241e6db78f3ad26e9995069e9ff7e4aece3e862b83a910a7fae21",
+        "size_in_bytes": 4570,
+        "sha256_in_prefix": "972925f4735241e6db78f3ad26e9995069e9ff7e4aece3e862b83a910a7fae21"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/arrow.tcl",
+        "path_type": "hardlink",
+        "sha256": "4ebb44725355f539ca630ef1b093cddc670a8ad4b91df3e31d980b8e0104cbc1",
+        "size_in_bytes": 21383,
+        "sha256_in_prefix": "4ebb44725355f539ca630ef1b093cddc670a8ad4b91df3e31d980b8e0104cbc1"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/bitmap.tcl",
+        "path_type": "hardlink",
+        "sha256": "086e86032e73b61a7f22575f470f573ec8d201b476ac2819b718f99da6c586b3",
+        "size_in_bytes": 2663,
+        "sha256_in_prefix": "086e86032e73b61a7f22575f470f573ec8d201b476ac2819b718f99da6c586b3"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/button.tcl",
+        "path_type": "hardlink",
+        "sha256": "1d93f40fa3263bc143490c7e021b9b3f77c87a0ba33fd09345f6bbba1585666c",
+        "size_in_bytes": 13736,
+        "sha256_in_prefix": "1d93f40fa3263bc143490c7e021b9b3f77c87a0ba33fd09345f6bbba1585666c"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/buttonbox.tcl",
+        "path_type": "hardlink",
+        "sha256": "4841365974f1228a6b4b0082e7ccc8570409fe75c1183660fae968b7b1705308",
+        "size_in_bytes": 12578,
+        "sha256_in_prefix": "4841365974f1228a6b4b0082e7ccc8570409fe75c1183660fae968b7b1705308"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/color.tcl",
+        "path_type": "hardlink",
+        "sha256": "fb093afc27dc98f87e84ca4abe20e4f166b91b29e0238d03c0fb4a8228d14f2e",
+        "size_in_bytes": 31457,
+        "sha256_in_prefix": "fb093afc27dc98f87e84ca4abe20e4f166b91b29e0238d03c0fb4a8228d14f2e"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/combobox.tcl",
+        "path_type": "hardlink",
+        "sha256": "e340b01360ad49aab3b8512d099063af22fed345a547ecae9ef1f0a17465876f",
+        "size_in_bytes": 30399,
+        "sha256_in_prefix": "e340b01360ad49aab3b8512d099063af22fed345a547ecae9ef1f0a17465876f"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/dialog.tcl",
+        "path_type": "hardlink",
+        "sha256": "28f7fb62985ef30361b9bab2d5c4a34cb631864ef52281459c08dae9788bf1ea",
+        "size_in_bytes": 11610,
+        "sha256_in_prefix": "28f7fb62985ef30361b9bab2d5c4a34cb631864ef52281459c08dae9788bf1ea"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/dragsite.tcl",
+        "path_type": "hardlink",
+        "sha256": "ea734757f9b5cb106bb55267a10f424db32b02fde3a09387f10a37ce8c243486",
+        "size_in_bytes": 6531,
+        "sha256_in_prefix": "ea734757f9b5cb106bb55267a10f424db32b02fde3a09387f10a37ce8c243486"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/dropsite.tcl",
+        "path_type": "hardlink",
+        "sha256": "f4a32883984e904e024b5f1fbeb03c5fcef560e54fb56bccdadb3c3f17169977",
+        "size_in_bytes": 16039,
+        "sha256_in_prefix": "f4a32883984e904e024b5f1fbeb03c5fcef560e54fb56bccdadb3c3f17169977"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/dynhelp.tcl",
+        "path_type": "hardlink",
+        "sha256": "2c8698ace22d35525526b54d23e1a8dca98ff7459ea5df73a955209de884764d",
+        "size_in_bytes": 24146,
+        "sha256_in_prefix": "2c8698ace22d35525526b54d23e1a8dca98ff7459ea5df73a955209de884764d"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/entry.tcl",
+        "path_type": "hardlink",
+        "sha256": "670581bc52b8189d5ba5ca309ca88f15e97077b7d2e7b465a5f538bbc205bbdc",
+        "size_in_bytes": 18482,
+        "sha256_in_prefix": "670581bc52b8189d5ba5ca309ca88f15e97077b7d2e7b465a5f538bbc205bbdc"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/font.tcl",
+        "path_type": "hardlink",
+        "sha256": "fc0cbf4ea7667c39fa00f1c01648ee0c0df681c2b175ac15c74e8fa013943426",
+        "size_in_bytes": 18948,
+        "sha256_in_prefix": "fc0cbf4ea7667c39fa00f1c01648ee0c0df681c2b175ac15c74e8fa013943426"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/bold.gif",
+        "path_type": "hardlink",
+        "sha256": "92143bdd4fb0398b2d44c4d089c2f9ca0657e0af777da6a1e5b3377abc9912f4",
+        "size_in_bytes": 118,
+        "sha256_in_prefix": "92143bdd4fb0398b2d44c4d089c2f9ca0657e0af777da6a1e5b3377abc9912f4"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/copy.gif",
+        "path_type": "hardlink",
+        "sha256": "bb24d66fade76cc905c70d5bc13f2e2eb8aaab8e032784ac2bed6b83452d72e8",
+        "size_in_bytes": 145,
+        "sha256_in_prefix": "bb24d66fade76cc905c70d5bc13f2e2eb8aaab8e032784ac2bed6b83452d72e8"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/cut.gif",
+        "path_type": "hardlink",
+        "sha256": "cf041de3dc90ec01f814177f65a294cc439a4db1e06df4d71b61690c5bf722c4",
+        "size_in_bytes": 130,
+        "sha256_in_prefix": "cf041de3dc90ec01f814177f65a294cc439a4db1e06df4d71b61690c5bf722c4"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/dragfile.gif",
+        "path_type": "hardlink",
+        "sha256": "9a80a12c9b911c95718a946cd4cd11644c122f022a6715a0f3f1efec9d8b274a",
+        "size_in_bytes": 949,
+        "sha256_in_prefix": "9a80a12c9b911c95718a946cd4cd11644c122f022a6715a0f3f1efec9d8b274a"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/dragicon.gif",
+        "path_type": "hardlink",
+        "sha256": "6ab19693641562a035936bfcb1eede48883999f64c34b56a38722f285e8de97d",
+        "size_in_bytes": 1012,
+        "sha256_in_prefix": "6ab19693641562a035936bfcb1eede48883999f64c34b56a38722f285e8de97d"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/error.gif",
+        "path_type": "hardlink",
+        "sha256": "635ba1471df47c09531060421ce255d0fce3a4fbeedabc5c758212626b8029c7",
+        "size_in_bytes": 259,
+        "sha256_in_prefix": "635ba1471df47c09531060421ce255d0fce3a4fbeedabc5c758212626b8029c7"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/file.gif",
+        "path_type": "hardlink",
+        "sha256": "1ea4d673b1941d6b4698d57c74b9c0f880d2216475896b3698b6a466bd889b39",
+        "size_in_bytes": 860,
+        "sha256_in_prefix": "1ea4d673b1941d6b4698d57c74b9c0f880d2216475896b3698b6a466bd889b39"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/folder.gif",
+        "path_type": "hardlink",
+        "sha256": "db8cd8351aac1cecfe41583e14ca3b3103926b89bb346f93c5c133284741cb25",
+        "size_in_bytes": 139,
+        "sha256_in_prefix": "db8cd8351aac1cecfe41583e14ca3b3103926b89bb346f93c5c133284741cb25"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/hourglass.gif",
+        "path_type": "hardlink",
+        "sha256": "e003617e3e8e6c7e4e801f024cba173c352c61700b492e96d2b3363cec91f65d",
+        "size_in_bytes": 211,
+        "sha256_in_prefix": "e003617e3e8e6c7e4e801f024cba173c352c61700b492e96d2b3363cec91f65d"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/info.gif",
+        "path_type": "hardlink",
+        "sha256": "f20acd4e26f1ce22909486747598f6390c958ad6443c5fcdf307949ae47a8926",
+        "size_in_bytes": 256,
+        "sha256_in_prefix": "f20acd4e26f1ce22909486747598f6390c958ad6443c5fcdf307949ae47a8926"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/italic.gif",
+        "path_type": "hardlink",
+        "sha256": "1e8d7ef46c336644ef47f7db6042ed7b2e655a8a520cf844aa1b70abdca1d82c",
+        "size_in_bytes": 111,
+        "sha256_in_prefix": "1e8d7ef46c336644ef47f7db6042ed7b2e655a8a520cf844aa1b70abdca1d82c"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/minus.xbm",
+        "path_type": "hardlink",
+        "sha256": "00525136c1bedd9dbfb79ffaefb8ffcd7db3950fb545a6e749db7f64588c91c1",
+        "size_in_bytes": 169,
+        "sha256_in_prefix": "00525136c1bedd9dbfb79ffaefb8ffcd7db3950fb545a6e749db7f64588c91c1"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/new.gif",
+        "path_type": "hardlink",
+        "sha256": "4f2e88b6fb8f7f9e403fddbb9073ead65d2e51aea9e30323a35a1223ac72a0ff",
+        "size_in_bytes": 131,
+        "sha256_in_prefix": "4f2e88b6fb8f7f9e403fddbb9073ead65d2e51aea9e30323a35a1223ac72a0ff"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/opcopy.xbm",
+        "path_type": "hardlink",
+        "sha256": "fbe68ca29dd93760d7840b538f674519822b4719574804f2b70c957e071f2f27",
+        "size_in_bytes": 194,
+        "sha256_in_prefix": "fbe68ca29dd93760d7840b538f674519822b4719574804f2b70c957e071f2f27"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/open.gif",
+        "path_type": "hardlink",
+        "sha256": "84fe16ccaa69a576757ebb1d4fb828d715aee0d757857a9803bbe0933d13b981",
+        "size_in_bytes": 139,
+        "sha256_in_prefix": "84fe16ccaa69a576757ebb1d4fb828d715aee0d757857a9803bbe0933d13b981"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/openfold.gif",
+        "path_type": "hardlink",
+        "sha256": "6e53335731c43a10bf1f7cd1af0907eabd6dfc96bf5203a27067635475456617",
+        "size_in_bytes": 146,
+        "sha256_in_prefix": "6e53335731c43a10bf1f7cd1af0907eabd6dfc96bf5203a27067635475456617"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/oplink.xbm",
+        "path_type": "hardlink",
+        "sha256": "3fbb4ea0ea92aa2a2182ec010f9d92c7cf7a9c08322ffef8cf73634f9bd8ea80",
+        "size_in_bytes": 194,
+        "sha256_in_prefix": "3fbb4ea0ea92aa2a2182ec010f9d92c7cf7a9c08322ffef8cf73634f9bd8ea80"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/opmove.xbm",
+        "path_type": "hardlink",
+        "sha256": "802952b22fbc2a169254cfccefe1b36902ec0e39c7b5ca8b445d02783b8f4bf9",
+        "size_in_bytes": 194,
+        "sha256_in_prefix": "802952b22fbc2a169254cfccefe1b36902ec0e39c7b5ca8b445d02783b8f4bf9"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/overstrike.gif",
+        "path_type": "hardlink",
+        "sha256": "8b031d512293777aa01c959cea8966fa1af4d5fc9f5fdbe9836246a181e38dbf",
+        "size_in_bytes": 119,
+        "sha256_in_prefix": "8b031d512293777aa01c959cea8966fa1af4d5fc9f5fdbe9836246a181e38dbf"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/palette.gif",
+        "path_type": "hardlink",
+        "sha256": "62888a09e4e8a7e42203b8f1fcf3a2fcd9c8c0a234427fe23e56c771f77d088c",
+        "size_in_bytes": 151,
+        "sha256_in_prefix": "62888a09e4e8a7e42203b8f1fcf3a2fcd9c8c0a234427fe23e56c771f77d088c"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/passwd.gif",
+        "path_type": "hardlink",
+        "sha256": "63c1c8679becfbc7561180ff62a2dc376ee7d9569c2d15333325aeecd9e798be",
+        "size_in_bytes": 481,
+        "sha256_in_prefix": "63c1c8679becfbc7561180ff62a2dc376ee7d9569c2d15333325aeecd9e798be"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/paste.gif",
+        "path_type": "hardlink",
+        "sha256": "db5e14f24477bb0587bb99fb0b46c3434c7a24944b8b8288142fda38a043ded4",
+        "size_in_bytes": 159,
+        "sha256_in_prefix": "db5e14f24477bb0587bb99fb0b46c3434c7a24944b8b8288142fda38a043ded4"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/plus.xbm",
+        "path_type": "hardlink",
+        "sha256": "1e5275371ca1a5b987b611cb1a1c3867a1862026ee2e256bc58fad70dcc0ab6e",
+        "size_in_bytes": 166,
+        "sha256_in_prefix": "1e5275371ca1a5b987b611cb1a1c3867a1862026ee2e256bc58fad70dcc0ab6e"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/print.gif",
+        "path_type": "hardlink",
+        "sha256": "1b6ef0258fb1d14a454777ded89b10ec37aa69d70535ef0828ccdb1b3d25e6d7",
+        "size_in_bytes": 140,
+        "sha256_in_prefix": "1b6ef0258fb1d14a454777ded89b10ec37aa69d70535ef0828ccdb1b3d25e6d7"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/question.gif",
+        "path_type": "hardlink",
+        "sha256": "817bb6515fc2ac4d89a9f6d338211099fcd588701d58cd5966b6a437e697d140",
+        "size_in_bytes": 265,
+        "sha256_in_prefix": "817bb6515fc2ac4d89a9f6d338211099fcd588701d58cd5966b6a437e697d140"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/redo.gif",
+        "path_type": "hardlink",
+        "sha256": "7c7a874f5fac6ffaf7ba5299486dfc9976fd9503c68bffc8146899648905deda",
+        "size_in_bytes": 70,
+        "sha256_in_prefix": "7c7a874f5fac6ffaf7ba5299486dfc9976fd9503c68bffc8146899648905deda"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/save.gif",
+        "path_type": "hardlink",
+        "sha256": "ff0df325486257b67de5c9e54bf1f1dc63370a6589a5070be64e9072616bc420",
+        "size_in_bytes": 138,
+        "sha256_in_prefix": "ff0df325486257b67de5c9e54bf1f1dc63370a6589a5070be64e9072616bc420"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/target.xbm",
+        "path_type": "hardlink",
+        "sha256": "078605de1291f197fc5351fb40c997a7d7c8fbb26cf5b4e929e4d5c83ebfca9e",
+        "size_in_bytes": 539,
+        "sha256_in_prefix": "078605de1291f197fc5351fb40c997a7d7c8fbb26cf5b4e929e4d5c83ebfca9e"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/underline.gif",
+        "path_type": "hardlink",
+        "sha256": "7b9abebb405a496d9413e2bf1c78147bcd9a963546ac5e1744adef8cb362ccd3",
+        "size_in_bytes": 119,
+        "sha256_in_prefix": "7b9abebb405a496d9413e2bf1c78147bcd9a963546ac5e1744adef8cb362ccd3"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/undo.gif",
+        "path_type": "hardlink",
+        "sha256": "fcdaaa71a22fc71dae185eee1a63bfc6dc7561d82b6015c8561c6539df2c2448",
+        "size_in_bytes": 115,
+        "sha256_in_prefix": "fcdaaa71a22fc71dae185eee1a63bfc6dc7561d82b6015c8561c6539df2c2448"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/images/warning.gif",
+        "path_type": "hardlink",
+        "sha256": "b6f8ab075ca453977b29043d2086c7752385d81d362d6ff5fa5f14d7f8137f7e",
+        "size_in_bytes": 254,
+        "sha256_in_prefix": "b6f8ab075ca453977b29043d2086c7752385d81d362d6ff5fa5f14d7f8137f7e"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/init.tcl",
+        "path_type": "hardlink",
+        "sha256": "d20433e6d73951ee09d9aec233b553929044d86a555ee79ae23eb4e86e02f81f",
+        "size_in_bytes": 1678,
+        "sha256_in_prefix": "d20433e6d73951ee09d9aec233b553929044d86a555ee79ae23eb4e86e02f81f"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/label.tcl",
+        "path_type": "hardlink",
+        "sha256": "eceeaaef64589276b598743549ddc3b2684a519804c534d84f0c4571663ae4e3",
+        "size_in_bytes": 10861,
+        "sha256_in_prefix": "eceeaaef64589276b598743549ddc3b2684a519804c534d84f0c4571663ae4e3"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/labelentry.tcl",
+        "path_type": "hardlink",
+        "sha256": "a0b4b0b6bcad0bbdd56f9f9893cbe91b11a2ab96b47b0192de2e1d27347515f9",
+        "size_in_bytes": 3767,
+        "sha256_in_prefix": "a0b4b0b6bcad0bbdd56f9f9893cbe91b11a2ab96b47b0192de2e1d27347515f9"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/labelframe.tcl",
+        "path_type": "hardlink",
+        "sha256": "7d0dab342b9801c6c7fbb44e39789e1121e74b550d3d7f85a0f890cb295f40ef",
+        "size_in_bytes": 5912,
+        "sha256_in_prefix": "7d0dab342b9801c6c7fbb44e39789e1121e74b550d3d7f85a0f890cb295f40ef"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/da.rc",
+        "path_type": "hardlink",
+        "sha256": "56ecc7aee4c9b4ef4f431935a8abcc23f78049b0c5b3af962bd58cb2957915ca",
+        "size_in_bytes": 2847,
+        "sha256_in_prefix": "56ecc7aee4c9b4ef4f431935a8abcc23f78049b0c5b3af962bd58cb2957915ca"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/de.rc",
+        "path_type": "hardlink",
+        "sha256": "0a5482e228ce9b3af0666cba740922b239990594e5732233abde65f383404110",
+        "size_in_bytes": 2667,
+        "sha256_in_prefix": "0a5482e228ce9b3af0666cba740922b239990594e5732233abde65f383404110"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/en.rc",
+        "path_type": "hardlink",
+        "sha256": "c173324ccc8d196d5c52f57c004d6f29d4c2a948f1bb9a54a5af7f5b725b245b",
+        "size_in_bytes": 3155,
+        "sha256_in_prefix": "c173324ccc8d196d5c52f57c004d6f29d4c2a948f1bb9a54a5af7f5b725b245b"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/es.rc",
+        "path_type": "hardlink",
+        "sha256": "49781c49884e8a220ca64247c3957c785ae997f981bca8c48f811c32923759e4",
+        "size_in_bytes": 3365,
+        "sha256_in_prefix": "49781c49884e8a220ca64247c3957c785ae997f981bca8c48f811c32923759e4"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/fr.rc",
+        "path_type": "hardlink",
+        "sha256": "27f103c64a5eda4541c1d4f94b3ca72df6eef9a087969450670a88b9b645a22e",
+        "size_in_bytes": 3354,
+        "sha256_in_prefix": "27f103c64a5eda4541c1d4f94b3ca72df6eef9a087969450670a88b9b645a22e"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/hu.rc",
+        "path_type": "hardlink",
+        "sha256": "674110ac469db58e1a56632f234aeb2f8775771ad66533e8abfc19fc5807485a",
+        "size_in_bytes": 3232,
+        "sha256_in_prefix": "674110ac469db58e1a56632f234aeb2f8775771ad66533e8abfc19fc5807485a"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/nl.rc",
+        "path_type": "hardlink",
+        "sha256": "0d61c8dd84e693f7139ceedf115e99c903623c9b5df7a6dc2a2f4121e99500ac",
+        "size_in_bytes": 3144,
+        "sha256_in_prefix": "0d61c8dd84e693f7139ceedf115e99c903623c9b5df7a6dc2a2f4121e99500ac"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/no.rc",
+        "path_type": "hardlink",
+        "sha256": "c64a87fa98ecc11b535b50a8d399b898ba76bb4de0057c81b438a835d1a9ff27",
+        "size_in_bytes": 3179,
+        "sha256_in_prefix": "c64a87fa98ecc11b535b50a8d399b898ba76bb4de0057c81b438a835d1a9ff27"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/lang/pl.rc",
+        "path_type": "hardlink",
+        "sha256": "57c94d8eb82c027dbf26b3be8a42a32990249670894078647ec1cb721604b4ea",
+        "size_in_bytes": 3219,
+        "sha256_in_prefix": "57c94d8eb82c027dbf26b3be8a42a32990249670894078647ec1cb721604b4ea"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/listbox.tcl",
+        "path_type": "hardlink",
+        "sha256": "d5484f46373f0d0fcb02d3c738d65d6de9f5416a36a1f3282c58230175659978",
+        "size_in_bytes": 57856,
+        "sha256_in_prefix": "d5484f46373f0d0fcb02d3c738d65d6de9f5416a36a1f3282c58230175659978"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/mainframe.tcl",
+        "path_type": "hardlink",
+        "sha256": "db029dfe3a973149f950c684a3b305598bbc3c0c156db160f9b9c8051949b259",
+        "size_in_bytes": 28599,
+        "sha256_in_prefix": "db029dfe3a973149f950c684a3b305598bbc3c0c156db160f9b9c8051949b259"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/messagedlg.tcl",
+        "path_type": "hardlink",
+        "sha256": "cfc30c628f5856aa9c49a34f13fd8c25c8953c6c0797ebcb4904b38f420c3e79",
+        "size_in_bytes": 4546,
+        "sha256_in_prefix": "cfc30c628f5856aa9c49a34f13fd8c25c8953c6c0797ebcb4904b38f420c3e79"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/notebook.tcl",
+        "path_type": "hardlink",
+        "sha256": "568e4d42482498800f364893d4a7fb3b93ac371fd8d5683d5d8a59bfa9f7cdbd",
+        "size_in_bytes": 41305,
+        "sha256_in_prefix": "568e4d42482498800f364893d4a7fb3b93ac371fd8d5683d5d8a59bfa9f7cdbd"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/pagesmgr.tcl",
+        "path_type": "hardlink",
+        "sha256": "4fa2817cbbeb04eb46e18d02ac2bffd0d3d295eadef7ceac26362de48f014790",
+        "size_in_bytes": 9056,
+        "sha256_in_prefix": "4fa2817cbbeb04eb46e18d02ac2bffd0d3d295eadef7ceac26362de48f014790"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/panedw.tcl",
+        "path_type": "hardlink",
+        "sha256": "747700e6187f520c4d76c75904dfadd1a9a9920f56977831ab04b24b02875577",
+        "size_in_bytes": 13356,
+        "sha256_in_prefix": "747700e6187f520c4d76c75904dfadd1a9a9920f56977831ab04b24b02875577"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/panelframe.tcl",
+        "path_type": "hardlink",
+        "sha256": "945d2e7160ad289a5741ab45ce6cb2438a40eec86bef49c36bed52c5dbc152a8",
+        "size_in_bytes": 7602,
+        "sha256_in_prefix": "945d2e7160ad289a5741ab45ce6cb2438a40eec86bef49c36bed52c5dbc152a8"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/passwddlg.tcl",
+        "path_type": "hardlink",
+        "sha256": "e04d5f5bff3d12687676e291b3fbf06eda5f685406c1bc2292ba6679cada261e",
+        "size_in_bytes": 6383,
+        "sha256_in_prefix": "e04d5f5bff3d12687676e291b3fbf06eda5f685406c1bc2292ba6679cada261e"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/pkgIndex.tcl",
+        "path_type": "hardlink",
+        "sha256": "ee286e2224a1b79249e6231ddbbe79c5202f293d263d1f75e29ccc686330fedd",
+        "size_in_bytes": 3317,
+        "sha256_in_prefix": "ee286e2224a1b79249e6231ddbbe79c5202f293d263d1f75e29ccc686330fedd"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/progressbar.tcl",
+        "path_type": "hardlink",
+        "sha256": "e476433d2d655dbe8849f25bf57a72dc26bdcfb61ad3c86896693f25ba7efc83",
+        "size_in_bytes": 7296,
+        "sha256_in_prefix": "e476433d2d655dbe8849f25bf57a72dc26bdcfb61ad3c86896693f25ba7efc83"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/progressdlg.tcl",
+        "path_type": "hardlink",
+        "sha256": "7792ed408ac5fd985078bb9fd4914162accee035cafd044d606f565123ac1b9d",
+        "size_in_bytes": 3184,
+        "sha256_in_prefix": "7792ed408ac5fd985078bb9fd4914162accee035cafd044d606f565123ac1b9d"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/scrollframe.tcl",
+        "path_type": "hardlink",
+        "sha256": "f8063e97d4856561556d10f9174632d5505b55032564e64877db9939929484bc",
+        "size_in_bytes": 9644,
+        "sha256_in_prefix": "f8063e97d4856561556d10f9174632d5505b55032564e64877db9939929484bc"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/scrollview.tcl",
+        "path_type": "hardlink",
+        "sha256": "cf8bcd8f4b762fe6f6ef0432381117ca0f58fa5a534fba4b8f8fc73f6c0f48f3",
+        "size_in_bytes": 9502,
+        "sha256_in_prefix": "cf8bcd8f4b762fe6f6ef0432381117ca0f58fa5a534fba4b8f8fc73f6c0f48f3"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/scrollw.tcl",
+        "path_type": "hardlink",
+        "sha256": "385b9cb105548e1026916c5910e3d44fe58fd8e071c6e46142bc812bcd0d6b71",
+        "size_in_bytes": 9782,
+        "sha256_in_prefix": "385b9cb105548e1026916c5910e3d44fe58fd8e071c6e46142bc812bcd0d6b71"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/separator.tcl",
+        "path_type": "hardlink",
+        "sha256": "9d618193ef7eb24d1e7e12483fa95d41f24eaa64a3d78e800829e3e4bda16ab4",
+        "size_in_bytes": 2516,
+        "sha256_in_prefix": "9d618193ef7eb24d1e7e12483fa95d41f24eaa64a3d78e800829e3e4bda16ab4"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/spinbox.tcl",
+        "path_type": "hardlink",
+        "sha256": "f3daaedd314537b12ddb899891f9cbc2379c1bb26dc3e9e6d5d20bd3f8e64420",
+        "size_in_bytes": 12293,
+        "sha256_in_prefix": "f3daaedd314537b12ddb899891f9cbc2379c1bb26dc3e9e6d5d20bd3f8e64420"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/statusbar.tcl",
+        "path_type": "hardlink",
+        "sha256": "f4227807e6ae255217ffe7c0a6210c13f9836e887eecb7ad1d2ccff0224347ee",
+        "size_in_bytes": 13160,
+        "sha256_in_prefix": "f4227807e6ae255217ffe7c0a6210c13f9836e887eecb7ad1d2ccff0224347ee"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/titleframe.tcl",
+        "path_type": "hardlink",
+        "sha256": "8c5eb069f4f91cc5d0dfdf2fa46d59aba302f915f32fe17bb913c073c9680e74",
+        "size_in_bytes": 6064,
+        "sha256_in_prefix": "8c5eb069f4f91cc5d0dfdf2fa46d59aba302f915f32fe17bb913c073c9680e74"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/tree.tcl",
+        "path_type": "hardlink",
+        "sha256": "abc942cef73fd4cb3792c1fe6956f82dc136d18daf198847aa7ce4b63d006e8d",
+        "size_in_bytes": 72740,
+        "sha256_in_prefix": "abc942cef73fd4cb3792c1fe6956f82dc136d18daf198847aa7ce4b63d006e8d"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/utils.tcl",
+        "path_type": "hardlink",
+        "sha256": "cb41798ce5b8c31a203acd1e7926f0a1d4f16697f0711fc5148652520428a0f8",
+        "size_in_bytes": 22547,
+        "sha256_in_prefix": "cb41798ce5b8c31a203acd1e7926f0a1d4f16697f0711fc5148652520428a0f8"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/widget.tcl",
+        "path_type": "hardlink",
+        "sha256": "14b9f1c4628eecc2e23ba3a42bfbaa3686e138e4b62ebf6101234530d595f655",
+        "size_in_bytes": 56020,
+        "sha256_in_prefix": "14b9f1c4628eecc2e23ba3a42bfbaa3686e138e4b62ebf6101234530d595f655"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/wizard.tcl",
+        "path_type": "hardlink",
+        "sha256": "8231ffce07daa6baaa644667673c689c75a89bb37510d8da90ab43386c07029a",
+        "size_in_bytes": 31464,
+        "sha256_in_prefix": "8231ffce07daa6baaa644667673c689c75a89bb37510d8da90ab43386c07029a"
+      },
+      {
+        "_path": "lib/tcl8.6/bwidget/xpm2image.tcl",
+        "path_type": "hardlink",
+        "sha256": "52dd23fed613e141ebf35f8e447230133903553c61451a4732fbbb7fa556f09b",
+        "size_in_bytes": 5367,
+        "sha256_in_prefix": "52dd23fed613e141ebf35f8e447230133903553c61451a4732fbbb7fa556f09b"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/bwidget-1.10.1-h694c41f_1",
+    "type": 1
+  }
+}

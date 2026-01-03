@@ -1,0 +1,51 @@
+{
+  "name": "clang_impl_osx-64",
+  "version": "21.1.7",
+  "build": "h850ca3a_28",
+  "build_number": 28,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "clang_impl_osx-64-21.1.7-h850ca3a_28.conda",
+  "md5": "86e5cdd9eb7e4afca8abda57b1d92cde",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/clang_impl_osx-64-21.1.7-h850ca3a_28.conda",
+  "sha256": "331e686f706677ce76e00eaebb2530bec9525e1cf638ba44cc7cb0fa15ef077a",
+  "depends": [
+    "cctools_impl_osx-64",
+    "clang 21.1.7.*",
+    "compiler-rt 21.1.7.*",
+    "ld64_osx-64",
+    "llvm-tools 21.1.7.*"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1765842087000,
+  "size": 17833,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/clang_impl_osx-64-21.1.7-h850ca3a_28.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/clang_impl_osx-64-21.1.7-h850ca3a_28",
+  "files": [
+    "bin/x86_64-apple-darwin13.4.0-clang",
+    "bin/x86_64-apple-darwin13.4.0-clang-cpp"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-clang",
+        "path_type": "softlink",
+        "sha256": "0b358256e3320361ba3376e0c87ac9e1cb0a73a7461861f618808d664fb6dcf3",
+        "size_in_bytes": 144808
+      },
+      {
+        "_path": "bin/x86_64-apple-darwin13.4.0-clang-cpp",
+        "path_type": "softlink",
+        "sha256": "0b358256e3320361ba3376e0c87ac9e1cb0a73a7461861f618808d664fb6dcf3",
+        "size_in_bytes": 144808
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/clang_impl_osx-64-21.1.7-h850ca3a_28",
+    "type": 1
+  }
+}

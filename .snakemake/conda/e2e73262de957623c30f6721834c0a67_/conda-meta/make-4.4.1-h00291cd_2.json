@@ -1,0 +1,89 @@
+{
+  "name": "make",
+  "version": "4.4.1",
+  "build": "h00291cd_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "make-4.4.1-h00291cd_2.conda",
+  "md5": "59b4ad97bbb36ef5315500d5bde4bcfc",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/make-4.4.1-h00291cd_2.conda",
+  "sha256": "5a5ab3ee828309185e0a76ca80f5da85f31d8480d923abb508ca00fe194d1b5a",
+  "depends": [
+    "__osx >=10.13"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-or-later",
+  "timestamp": 1727801765000,
+  "size": 278910,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/make-4.4.1-h00291cd_2.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/make-4.4.1-h00291cd_2",
+  "files": [
+    "bin/make",
+    "include/gnumake.h",
+    "share/info/make.info",
+    "share/info/make.info-1",
+    "share/info/make.info-2",
+    "share/info/make.info-3",
+    "share/man/man1/make.1"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/make",
+        "path_type": "hardlink",
+        "sha256": "b995b8b65d8b242c4ef707958d48d25082ed563be80c3f1a322b7cd8da2f269e",
+        "size_in_bytes": 247552,
+        "sha256_in_prefix": "b995b8b65d8b242c4ef707958d48d25082ed563be80c3f1a322b7cd8da2f269e"
+      },
+      {
+        "_path": "include/gnumake.h",
+        "path_type": "hardlink",
+        "sha256": "3e38df96688ba32938ece2070219684616bd157750c8ba5042ccb790a49dcacc",
+        "size_in_bytes": 2913,
+        "sha256_in_prefix": "3e38df96688ba32938ece2070219684616bd157750c8ba5042ccb790a49dcacc"
+      },
+      {
+        "_path": "share/info/make.info",
+        "path_type": "hardlink",
+        "sha256": "f1c94cd2eaeacdd0825396e4f336701434380da93f8402b2eb64bd5249035a48",
+        "size_in_bytes": 6518,
+        "sha256_in_prefix": "f1c94cd2eaeacdd0825396e4f336701434380da93f8402b2eb64bd5249035a48"
+      },
+      {
+        "_path": "share/info/make.info-1",
+        "path_type": "hardlink",
+        "sha256": "50b1810947f3053d81dc1b5349369c31cc30c90d1bd8886f62ca9b360bbced55",
+        "size_in_bytes": 301118,
+        "sha256_in_prefix": "50b1810947f3053d81dc1b5349369c31cc30c90d1bd8886f62ca9b360bbced55"
+      },
+      {
+        "_path": "share/info/make.info-2",
+        "path_type": "hardlink",
+        "sha256": "388254c7ed632acd86c4b6b65dd6eef4fb6cf62f982e526e78367d5236632399",
+        "size_in_bytes": 325102,
+        "sha256_in_prefix": "388254c7ed632acd86c4b6b65dd6eef4fb6cf62f982e526e78367d5236632399"
+      },
+      {
+        "_path": "share/info/make.info-3",
+        "path_type": "hardlink",
+        "sha256": "a80fbec33f1a6964cec008024032eafea729723a68485425b52b78e9cafaa714",
+        "size_in_bytes": 19654,
+        "sha256_in_prefix": "a80fbec33f1a6964cec008024032eafea729723a68485425b52b78e9cafaa714"
+      },
+      {
+        "_path": "share/man/man1/make.1",
+        "path_type": "hardlink",
+        "sha256": "6cfb2259badbd3c770e1943e9a9950742fd6e9405596d69aadee325faf83726d",
+        "size_in_bytes": 11853,
+        "sha256_in_prefix": "6cfb2259badbd3c770e1943e9a9950742fd6e9405596d69aadee325faf83726d"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/make-4.4.1-h00291cd_2",
+    "type": 1
+  }
+}

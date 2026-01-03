@@ -1,0 +1,54 @@
+{
+  "name": "libblas",
+  "version": "3.11.0",
+  "build": "5_he492b99_openblas",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "libblas-3.11.0-5_he492b99_openblas.conda",
+  "md5": "36d2e68a156692cbae776b75d6ca6eae",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libblas-3.11.0-5_he492b99_openblas.conda",
+  "sha256": "4754de83feafa6c0b41385f8dab1b13f13476232e16f524564a340871a9fc3bc",
+  "depends": [
+    "libopenblas >=0.3.30,<0.3.31.0a0",
+    "libopenblas >=0.3.30,<1.0a0"
+  ],
+  "constrains": [
+    "liblapack 3.11.0 5*_openblas",
+    "blas 2.305 openblas",
+    "libcblas 3.11.0 5*_openblas",
+    "mkl <2026",
+    "liblapacke 3.11.0 5*_openblas"
+  ],
+  "license": "BSD-3-Clause",
+  "timestamp": 1765819054000,
+  "size": 18476,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libblas-3.11.0-5_he492b99_openblas.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libblas-3.11.0-5_he492b99_openblas",
+  "files": [
+    "lib/libblas.3.dylib",
+    "lib/libblas.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libblas.3.dylib",
+        "path_type": "softlink",
+        "sha256": "9d173f1f9c2914537b8f5590aeefba8c5d3f44c239e766bc61493639f8f21a2a",
+        "size_in_bytes": 69334368
+      },
+      {
+        "_path": "lib/libblas.dylib",
+        "path_type": "softlink",
+        "sha256": "9d173f1f9c2914537b8f5590aeefba8c5d3f44c239e766bc61493639f8f21a2a",
+        "size_in_bytes": 69334368
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/libblas-3.11.0-5_he492b99_openblas",
+    "type": 1
+  }
+}

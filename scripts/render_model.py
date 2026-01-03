@@ -73,7 +73,7 @@ def _dummy_inputs(
         "s_tau": cfg.get("s_tau", 1.0),
         "s_time": cfg.get("s_time", 1.0),
         "s_guide": cfg.get("s_guide", 1.0),
-        "time_scale": cfg.get("time_scale", None),
+        "likelihood_weight": cfg.get("likelihood_weight", 1.0),
     }
 
     return model_args, model_kwargs

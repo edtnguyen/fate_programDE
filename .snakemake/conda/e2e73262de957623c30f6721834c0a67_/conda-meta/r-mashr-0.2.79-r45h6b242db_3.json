@@ -1,0 +1,513 @@
+{
+  "name": "r-mashr",
+  "version": "0.2.79",
+  "build": "r45h6b242db_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "r-mashr-0.2.79-r45h6b242db_3.conda",
+  "md5": "819a3ea5b7974e3c17cb0f0520d97631",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/r-mashr-0.2.79-r45h6b242db_3.conda",
+  "sha256": "d8e23d29d78b3e1e27e143323b5d16c916ec0e181e6a44641e8c62a18b97f106",
+  "depends": [
+    "__osx >=10.13",
+    "gsl >=2.7,<2.8.0a0",
+    "libblas >=3.9.0,<4.0a0",
+    "libcxx >=19",
+    "liblapack >=3.9.0,<4.0a0",
+    "llvm-openmp >=19.1.7",
+    "r-abind",
+    "r-ashr >=2.2_22",
+    "r-assertthat",
+    "r-base >=4.5,<4.6.0a0",
+    "r-mvtnorm",
+    "r-plyr",
+    "r-rcpp >=1.0.8",
+    "r-rcpparmadillo",
+    "r-rcppgsl >=0.3.8",
+    "r-rmeta",
+    "r-softimpute"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1759103437000,
+  "size": 633048,
+  "requested_spec": "r-mashr",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-mashr-0.2.79-r45h6b242db_3.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-mashr-0.2.79-r45h6b242db_3",
+  "files": [
+    "lib/R/library/mashr/CITATION",
+    "lib/R/library/mashr/COPYRIGHTS",
+    "lib/R/library/mashr/DESCRIPTION",
+    "lib/R/library/mashr/INDEX",
+    "lib/R/library/mashr/LICENSE",
+    "lib/R/library/mashr/Meta/Rd.rds",
+    "lib/R/library/mashr/Meta/features.rds",
+    "lib/R/library/mashr/Meta/hsearch.rds",
+    "lib/R/library/mashr/Meta/links.rds",
+    "lib/R/library/mashr/Meta/nsInfo.rds",
+    "lib/R/library/mashr/Meta/package.rds",
+    "lib/R/library/mashr/Meta/vignette.rds",
+    "lib/R/library/mashr/NAMESPACE",
+    "lib/R/library/mashr/R/mashr",
+    "lib/R/library/mashr/R/mashr.rdb",
+    "lib/R/library/mashr/R/mashr.rdx",
+    "lib/R/library/mashr/code/compare_ed_vs_teem.Rmd",
+    "lib/R/library/mashr/code/get_est_null_cor.R",
+    "lib/R/library/mashr/code/test1.R",
+    "lib/R/library/mashr/code/test_lik.R",
+    "lib/R/library/mashr/code/test_post.R",
+    "lib/R/library/mashr/doc/eQTL_outline.R",
+    "lib/R/library/mashr/doc/eQTL_outline.Rmd",
+    "lib/R/library/mashr/doc/eQTL_outline.html",
+    "lib/R/library/mashr/doc/index.html",
+    "lib/R/library/mashr/doc/intro_correlations.R",
+    "lib/R/library/mashr/doc/intro_correlations.Rmd",
+    "lib/R/library/mashr/doc/intro_correlations.html",
+    "lib/R/library/mashr/doc/intro_mash.R",
+    "lib/R/library/mashr/doc/intro_mash.Rmd",
+    "lib/R/library/mashr/doc/intro_mash.html",
+    "lib/R/library/mashr/doc/intro_mash_dd.R",
+    "lib/R/library/mashr/doc/intro_mash_dd.Rmd",
+    "lib/R/library/mashr/doc/intro_mash_dd.html",
+    "lib/R/library/mashr/doc/intro_mashbaselinemean.R",
+    "lib/R/library/mashr/doc/intro_mashbaselinemean.Rmd",
+    "lib/R/library/mashr/doc/intro_mashbaselinemean.html",
+    "lib/R/library/mashr/doc/intro_mashcommonbaseline.R",
+    "lib/R/library/mashr/doc/intro_mashcommonbaseline.Rmd",
+    "lib/R/library/mashr/doc/intro_mashcommonbaseline.html",
+    "lib/R/library/mashr/doc/mash_sampling.R",
+    "lib/R/library/mashr/doc/mash_sampling.Rmd",
+    "lib/R/library/mashr/doc/mash_sampling.html",
+    "lib/R/library/mashr/doc/simulate_noncanon.R",
+    "lib/R/library/mashr/doc/simulate_noncanon.Rmd",
+    "lib/R/library/mashr/doc/simulate_noncanon.html",
+    "lib/R/library/mashr/help/AnIndex",
+    "lib/R/library/mashr/help/aliases.rds",
+    "lib/R/library/mashr/help/mashr.rdb",
+    "lib/R/library/mashr/help/mashr.rdx",
+    "lib/R/library/mashr/help/paths.rds",
+    "lib/R/library/mashr/html/00Index.html",
+    "lib/R/library/mashr/html/R.css",
+    "lib/R/library/mashr/libs/mashr.so",
+    "lib/R/library/mashr/misc/LICENSE-extreme-deconvolution",
+    "lib/R/library/mashr/misc/post-commit.sh",
+    "lib/R/library/mashr/misc/pre-commit.sh",
+    "lib/R/library/mashr/misc/uncrustify_default.cfg"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/mashr/CITATION",
+        "path_type": "hardlink",
+        "sha256": "a497b35a40247268f246276b0e1c3252d0938a620b1ecb2921ac83d1af16a6ab",
+        "size_in_bytes": 878,
+        "sha256_in_prefix": "a497b35a40247268f246276b0e1c3252d0938a620b1ecb2921ac83d1af16a6ab"
+      },
+      {
+        "_path": "lib/R/library/mashr/COPYRIGHTS",
+        "path_type": "hardlink",
+        "sha256": "e32c8bfc0f4c66a3fe7bd356b5988befebcca32dcbc9bea8c7b7c38f9335977c",
+        "size_in_bytes": 1754,
+        "sha256_in_prefix": "e32c8bfc0f4c66a3fe7bd356b5988befebcca32dcbc9bea8c7b7c38f9335977c"
+      },
+      {
+        "_path": "lib/R/library/mashr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "596352ccd91924be9c3475a7b6b3e79c1b113979c7f97af808ec5dc782344ab9",
+        "size_in_bytes": 2120,
+        "sha256_in_prefix": "596352ccd91924be9c3475a7b6b3e79c1b113979c7f97af808ec5dc782344ab9"
+      },
+      {
+        "_path": "lib/R/library/mashr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "798b37a5e4829188c4b9d5ee5fc3a9fdab1e16942acbe2f0abce4402324fa5d4",
+        "size_in_bytes": 3103,
+        "sha256_in_prefix": "798b37a5e4829188c4b9d5ee5fc3a9fdab1e16942acbe2f0abce4402324fa5d4"
+      },
+      {
+        "_path": "lib/R/library/mashr/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "782bc0c892629aa08c2b7b39075c24989b17de6acb1b91a766f689ca99b1fde7",
+        "size_in_bytes": 164,
+        "sha256_in_prefix": "782bc0c892629aa08c2b7b39075c24989b17de6acb1b91a766f689ca99b1fde7"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "fa4208183374c8d0cd9e98a80f57aac6e798fba680b4104c202c677f636b5456",
+        "size_in_bytes": 2541,
+        "sha256_in_prefix": "fa4208183374c8d0cd9e98a80f57aac6e798fba680b4104c202c677f636b5456"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "74c99bc146d10b1940c176ea31675c13c1687b8bd77ceca5c3436832641a4eaa",
+        "size_in_bytes": 2278,
+        "sha256_in_prefix": "74c99bc146d10b1940c176ea31675c13c1687b8bd77ceca5c3436832641a4eaa"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "ac9b88d51127992c740ea6220d9f895bf4fa717ff7e599c06bcc691d122c46f7",
+        "size_in_bytes": 944,
+        "sha256_in_prefix": "ac9b88d51127992c740ea6220d9f895bf4fa717ff7e599c06bcc691d122c46f7"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "82a82f82892f09a3628f9aaf60e3d77e10508c61ce9a53a540fc5c025938cd48",
+        "size_in_bytes": 746,
+        "sha256_in_prefix": "82a82f82892f09a3628f9aaf60e3d77e10508c61ce9a53a540fc5c025938cd48"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7fbe469aa83208123508279aedaea331e0a3d2c2dcf01ad4b46e44b09e8a80b2",
+        "size_in_bytes": 1738,
+        "sha256_in_prefix": "7fbe469aa83208123508279aedaea331e0a3d2c2dcf01ad4b46e44b09e8a80b2"
+      },
+      {
+        "_path": "lib/R/library/mashr/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "efe3aff758b6e4537e42374633315eeee969feaea8a0aa05bd833fd89a06d209",
+        "size_in_bytes": 463,
+        "sha256_in_prefix": "efe3aff758b6e4537e42374633315eeee969feaea8a0aa05bd833fd89a06d209"
+      },
+      {
+        "_path": "lib/R/library/mashr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "0056454e64f7a4d1c17a3ffb1b19acbd836a7f0d086803edfacaf2e19e9fd3bd",
+        "size_in_bytes": 1566,
+        "sha256_in_prefix": "0056454e64f7a4d1c17a3ffb1b19acbd836a7f0d086803edfacaf2e19e9fd3bd"
+      },
+      {
+        "_path": "lib/R/library/mashr/R/mashr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/mashr/R/mashr.rdb",
+        "path_type": "hardlink",
+        "sha256": "0feff1bc7449d3ed8844ab0fa758ee70a2a1fbc66477f74ede6c50f6c5085d0b",
+        "size_in_bytes": 112753,
+        "sha256_in_prefix": "0feff1bc7449d3ed8844ab0fa758ee70a2a1fbc66477f74ede6c50f6c5085d0b"
+      },
+      {
+        "_path": "lib/R/library/mashr/R/mashr.rdx",
+        "path_type": "hardlink",
+        "sha256": "636d58da3fd0c6ac20c7e1399affd9ef09161535b22eb2bf983496dff66f5b96",
+        "size_in_bytes": 1660,
+        "sha256_in_prefix": "636d58da3fd0c6ac20c7e1399affd9ef09161535b22eb2bf983496dff66f5b96"
+      },
+      {
+        "_path": "lib/R/library/mashr/code/compare_ed_vs_teem.Rmd",
+        "path_type": "hardlink",
+        "sha256": "e32b1cfd717ba7e174e1148ef4dc7ae7ce43956dc4772977b6d9582bb73c9ffe",
+        "size_in_bytes": 3102,
+        "sha256_in_prefix": "e32b1cfd717ba7e174e1148ef4dc7ae7ce43956dc4772977b6d9582bb73c9ffe"
+      },
+      {
+        "_path": "lib/R/library/mashr/code/get_est_null_cor.R",
+        "path_type": "hardlink",
+        "sha256": "7de4911f6a4dca9e19e0751590948e58324c0d2fbaecd192281ed85e03e0043b",
+        "size_in_bytes": 524,
+        "sha256_in_prefix": "7de4911f6a4dca9e19e0751590948e58324c0d2fbaecd192281ed85e03e0043b"
+      },
+      {
+        "_path": "lib/R/library/mashr/code/test1.R",
+        "path_type": "hardlink",
+        "sha256": "41fd2eb3897f4038f3786feb5fc0447e11adef9dca919cad9b8ec870178452ee",
+        "size_in_bytes": 1228,
+        "sha256_in_prefix": "41fd2eb3897f4038f3786feb5fc0447e11adef9dca919cad9b8ec870178452ee"
+      },
+      {
+        "_path": "lib/R/library/mashr/code/test_lik.R",
+        "path_type": "hardlink",
+        "sha256": "43e20a016deef9ecc48e9bee8c984ae71fa226241a29d113e7719e5e7edbda31",
+        "size_in_bytes": 1187,
+        "sha256_in_prefix": "43e20a016deef9ecc48e9bee8c984ae71fa226241a29d113e7719e5e7edbda31"
+      },
+      {
+        "_path": "lib/R/library/mashr/code/test_post.R",
+        "path_type": "hardlink",
+        "sha256": "9b842f22348829ed7ddf37617884122969eb7ad9eb2611d499ea2a972354d474",
+        "size_in_bytes": 1426,
+        "sha256_in_prefix": "9b842f22348829ed7ddf37617884122969eb7ad9eb2611d499ea2a972354d474"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/eQTL_outline.R",
+        "path_type": "hardlink",
+        "sha256": "69e6b6b6f86817429a6285b1db2ef5565f79ca27bd2e614c1055ba149a1c55bc",
+        "size_in_bytes": 1648,
+        "sha256_in_prefix": "69e6b6b6f86817429a6285b1db2ef5565f79ca27bd2e614c1055ba149a1c55bc"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/eQTL_outline.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1b4a89d09241eeb9f36d4ecf1846be6724d6adf532a0d552ff15d60a4a9267b8",
+        "size_in_bytes": 5764,
+        "sha256_in_prefix": "1b4a89d09241eeb9f36d4ecf1846be6724d6adf532a0d552ff15d60a4a9267b8"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/eQTL_outline.html",
+        "path_type": "hardlink",
+        "sha256": "2ba95937e91bde49412c0f49547327a8b58e9b002f591a50bfce3a355a2138f5",
+        "size_in_bytes": 20240,
+        "sha256_in_prefix": "2ba95937e91bde49412c0f49547327a8b58e9b002f591a50bfce3a355a2138f5"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "657402f53559b762b1e4611af9fb7737220a053bb0ae38e8f952906d659cf39b",
+        "size_in_bytes": 5407,
+        "sha256_in_prefix": "657402f53559b762b1e4611af9fb7737220a053bb0ae38e8f952906d659cf39b"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_correlations.R",
+        "path_type": "hardlink",
+        "sha256": "701c5a1d39fdc9668c7093e2e2738fd8249cddd5d16671f56b63ef191baa39c5",
+        "size_in_bytes": 2691,
+        "sha256_in_prefix": "701c5a1d39fdc9668c7093e2e2738fd8249cddd5d16671f56b63ef191baa39c5"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_correlations.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1dec9fd04da772c6733ae0fbaf9f48e69565384f6e27e27031ada68ac60ad482",
+        "size_in_bytes": 5368,
+        "sha256_in_prefix": "1dec9fd04da772c6733ae0fbaf9f48e69565384f6e27e27031ada68ac60ad482"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_correlations.html",
+        "path_type": "hardlink",
+        "sha256": "e5c832189224f531f2eb952e233ec20fccc9e7acb890d914b36e9dbd6828fd8d",
+        "size_in_bytes": 22459,
+        "sha256_in_prefix": "e5c832189224f531f2eb952e233ec20fccc9e7acb890d914b36e9dbd6828fd8d"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mash.R",
+        "path_type": "hardlink",
+        "sha256": "b7b33dcf40ff533392fee356ff9691c0c90d5ad772e8b22a47dd92da4f199b0d",
+        "size_in_bytes": 1892,
+        "sha256_in_prefix": "b7b33dcf40ff533392fee356ff9691c0c90d5ad772e8b22a47dd92da4f199b0d"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mash.Rmd",
+        "path_type": "hardlink",
+        "sha256": "4a636009bb6b69309181c5a9f24ccd29f92504d2294c969eb5b1c21ea34b4c22",
+        "size_in_bytes": 7831,
+        "sha256_in_prefix": "4a636009bb6b69309181c5a9f24ccd29f92504d2294c969eb5b1c21ea34b4c22"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mash.html",
+        "path_type": "hardlink",
+        "sha256": "4a693c956af506a6d361347f2e02867d87908c0dc692330d0b91f79fb63ef5cd",
+        "size_in_bytes": 73983,
+        "sha256_in_prefix": "4a693c956af506a6d361347f2e02867d87908c0dc692330d0b91f79fb63ef5cd"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mash_dd.R",
+        "path_type": "hardlink",
+        "sha256": "874b70b452e7c54ff70cd426d5a9a269582acf0ca2655a2f3b1d9813e39b4064",
+        "size_in_bytes": 1326,
+        "sha256_in_prefix": "874b70b452e7c54ff70cd426d5a9a269582acf0ca2655a2f3b1d9813e39b4064"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mash_dd.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b4d4a7b1f451b50916928c8c27332dfd5b43783c0f5104443187991311b31dde",
+        "size_in_bytes": 5346,
+        "sha256_in_prefix": "b4d4a7b1f451b50916928c8c27332dfd5b43783c0f5104443187991311b31dde"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mash_dd.html",
+        "path_type": "hardlink",
+        "sha256": "c04a0d3fc9ac7ef6e37dc83bdfc2b3f83748ba50ef85cf76bad632f3c2988895",
+        "size_in_bytes": 17954,
+        "sha256_in_prefix": "c04a0d3fc9ac7ef6e37dc83bdfc2b3f83748ba50ef85cf76bad632f3c2988895"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mashbaselinemean.R",
+        "path_type": "hardlink",
+        "sha256": "0029c2e69e19927bb2b72e3fd89a2252ecd3ee38a6b53c64ea3d686065ef7631",
+        "size_in_bytes": 2460,
+        "sha256_in_prefix": "0029c2e69e19927bb2b72e3fd89a2252ecd3ee38a6b53c64ea3d686065ef7631"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mashbaselinemean.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3a8a57b7562dd690b406a97b4cf4a614af7558409abec18b21d246d3824adbd3",
+        "size_in_bytes": 3987,
+        "sha256_in_prefix": "3a8a57b7562dd690b406a97b4cf4a614af7558409abec18b21d246d3824adbd3"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mashbaselinemean.html",
+        "path_type": "hardlink",
+        "sha256": "42b1d3553f87bbc8106cb1583a016f7ebb9152ba9bfa54668d2da0b65e260e5d",
+        "size_in_bytes": 21201,
+        "sha256_in_prefix": "42b1d3553f87bbc8106cb1583a016f7ebb9152ba9bfa54668d2da0b65e260e5d"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mashcommonbaseline.R",
+        "path_type": "hardlink",
+        "sha256": "d2268b5056b568875fce1f5d72ba7b0035ca7eed9e381dbf0dc5a67c4e0f2d3f",
+        "size_in_bytes": 1329,
+        "sha256_in_prefix": "d2268b5056b568875fce1f5d72ba7b0035ca7eed9e381dbf0dc5a67c4e0f2d3f"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mashcommonbaseline.Rmd",
+        "path_type": "hardlink",
+        "sha256": "506e111b8fc4d91cee647e436db76c8c1fc119b70bbd055c251b5be9bb67bbde",
+        "size_in_bytes": 4492,
+        "sha256_in_prefix": "506e111b8fc4d91cee647e436db76c8c1fc119b70bbd055c251b5be9bb67bbde"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/intro_mashcommonbaseline.html",
+        "path_type": "hardlink",
+        "sha256": "bf655c1321984044e97b9702279afd70fd6625214fa19d51160a71c3e3024691",
+        "size_in_bytes": 16998,
+        "sha256_in_prefix": "bf655c1321984044e97b9702279afd70fd6625214fa19d51160a71c3e3024691"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/mash_sampling.R",
+        "path_type": "hardlink",
+        "sha256": "c52760233202b7f744e305132629a4f99e01bc16b692ef56fa6f3ae71d0307b6",
+        "size_in_bytes": 1828,
+        "sha256_in_prefix": "c52760233202b7f744e305132629a4f99e01bc16b692ef56fa6f3ae71d0307b6"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/mash_sampling.Rmd",
+        "path_type": "hardlink",
+        "sha256": "23a724e3f3eaf4e184b3fd21e598e7b6e9a7503552e3677a583f77611a36982a",
+        "size_in_bytes": 4171,
+        "sha256_in_prefix": "23a724e3f3eaf4e184b3fd21e598e7b6e9a7503552e3677a583f77611a36982a"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/mash_sampling.html",
+        "path_type": "hardlink",
+        "sha256": "dd5daf636d87c85c135a360c2c318528ab1669ae71de468bf2fb63cad115a334",
+        "size_in_bytes": 218542,
+        "sha256_in_prefix": "dd5daf636d87c85c135a360c2c318528ab1669ae71de468bf2fb63cad115a334"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/simulate_noncanon.R",
+        "path_type": "hardlink",
+        "sha256": "e790b3501fec25aea1920a8717573bd321bf3cd3bcde5bbdcd064eb64380caa8",
+        "size_in_bytes": 1309,
+        "sha256_in_prefix": "e790b3501fec25aea1920a8717573bd321bf3cd3bcde5bbdcd064eb64380caa8"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/simulate_noncanon.Rmd",
+        "path_type": "hardlink",
+        "sha256": "a87e4ec4566584f1faafa826a25630b98d0f7965164660cc1309852e3c3a816a",
+        "size_in_bytes": 2006,
+        "sha256_in_prefix": "a87e4ec4566584f1faafa826a25630b98d0f7965164660cc1309852e3c3a816a"
+      },
+      {
+        "_path": "lib/R/library/mashr/doc/simulate_noncanon.html",
+        "path_type": "hardlink",
+        "sha256": "008840f781e7a5e5eb6b224e59fc6eec729fbb7bccaaae6a6b0a08e5be30c5d9",
+        "size_in_bytes": 15458,
+        "sha256_in_prefix": "008840f781e7a5e5eb6b224e59fc6eec729fbb7bccaaae6a6b0a08e5be30c5d9"
+      },
+      {
+        "_path": "lib/R/library/mashr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "19707a4ad000946140f2adb8b98e428d5f128e0d20ecc9af493c1f81c903bcd7",
+        "size_in_bytes": 2178,
+        "sha256_in_prefix": "19707a4ad000946140f2adb8b98e428d5f128e0d20ecc9af493c1f81c903bcd7"
+      },
+      {
+        "_path": "lib/R/library/mashr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "fcf9a530ae20198516eea16438bf8655525edd91c808853317eb914528ab75b9",
+        "size_in_bytes": 616,
+        "sha256_in_prefix": "fcf9a530ae20198516eea16438bf8655525edd91c808853317eb914528ab75b9"
+      },
+      {
+        "_path": "lib/R/library/mashr/help/mashr.rdb",
+        "path_type": "hardlink",
+        "sha256": "e714abd462717a2a91d7a201996de70b0304cec919a22d043eeef94e32de0d14",
+        "size_in_bytes": 109564,
+        "sha256_in_prefix": "e714abd462717a2a91d7a201996de70b0304cec919a22d043eeef94e32de0d14"
+      },
+      {
+        "_path": "lib/R/library/mashr/help/mashr.rdx",
+        "path_type": "hardlink",
+        "sha256": "fd2a31c64e507cb81bb143f80a4c375553b3e96051b82a068b5dbba6231fbd26",
+        "size_in_bytes": 1513,
+        "sha256_in_prefix": "fd2a31c64e507cb81bb143f80a4c375553b3e96051b82a068b5dbba6231fbd26"
+      },
+      {
+        "_path": "lib/R/library/mashr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "98405aba4e1693209986d871cf17b370642ad2c9c1147a3b1245b852dfecceba",
+        "size_in_bytes": 731,
+        "sha256_in_prefix": "98405aba4e1693209986d871cf17b370642ad2c9c1147a3b1245b852dfecceba"
+      },
+      {
+        "_path": "lib/R/library/mashr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "bbc1e7ccf29201677485f2e1216b736bd5672f8ac39bf0432fe3118f056d5132",
+        "size_in_bytes": 5615,
+        "sha256_in_prefix": "bbc1e7ccf29201677485f2e1216b736bd5672f8ac39bf0432fe3118f056d5132"
+      },
+      {
+        "_path": "lib/R/library/mashr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      {
+        "_path": "lib/R/library/mashr/libs/mashr.so",
+        "path_type": "hardlink",
+        "sha256": "42c562c7b4cde467423206231c0f8af26674a9b64d4700597b4c47b1258463a6",
+        "size_in_bytes": 545328,
+        "sha256_in_prefix": "42c562c7b4cde467423206231c0f8af26674a9b64d4700597b4c47b1258463a6"
+      },
+      {
+        "_path": "lib/R/library/mashr/misc/LICENSE-extreme-deconvolution",
+        "path_type": "hardlink",
+        "sha256": "e52808797a9bd901b30bbd0a42d2189090f9390803fa8102c1afbb9919f3c18e",
+        "size_in_bytes": 1464,
+        "sha256_in_prefix": "e52808797a9bd901b30bbd0a42d2189090f9390803fa8102c1afbb9919f3c18e"
+      },
+      {
+        "_path": "lib/R/library/mashr/misc/post-commit.sh",
+        "path_type": "hardlink",
+        "sha256": "2401dd4dd0c68dee192b10bb13f4e410e2ef69f18b5bd43c2e989f3923246a4b",
+        "size_in_bytes": 706,
+        "sha256_in_prefix": "2401dd4dd0c68dee192b10bb13f4e410e2ef69f18b5bd43c2e989f3923246a4b"
+      },
+      {
+        "_path": "lib/R/library/mashr/misc/pre-commit.sh",
+        "path_type": "hardlink",
+        "sha256": "aac89e41f64d5a23cbf16655d86fd115698e9e702cf6bfe56fcc52f0912f8366",
+        "size_in_bytes": 1478,
+        "sha256_in_prefix": "aac89e41f64d5a23cbf16655d86fd115698e9e702cf6bfe56fcc52f0912f8366"
+      },
+      {
+        "_path": "lib/R/library/mashr/misc/uncrustify_default.cfg",
+        "path_type": "hardlink",
+        "sha256": "ac8a21d1fef7774105eb6a1f0f54992b60a68b1cc7f3f1b482944db4f2f3a737",
+        "size_in_bytes": 122731,
+        "sha256_in_prefix": "ac8a21d1fef7774105eb6a1f0f54992b60a68b1cc7f3f1b482944db4f2f3a737"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-mashr-0.2.79-r45h6b242db_3",
+    "type": 1
+  }
+}

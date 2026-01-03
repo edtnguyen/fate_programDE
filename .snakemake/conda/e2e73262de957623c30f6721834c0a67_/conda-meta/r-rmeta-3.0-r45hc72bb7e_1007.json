@@ -1,0 +1,211 @@
+{
+  "name": "r-rmeta",
+  "version": "3.0",
+  "build": "r45hc72bb7e_1007",
+  "build_number": 1007,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "r-rmeta-3.0-r45hc72bb7e_1007.conda",
+  "md5": "bca84386c92ad5a5d5cd273e92aa1841",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-rmeta-3.0-r45hc72bb7e_1007.conda",
+  "sha256": "ac8e16dd13e61fdee5617d4a97970d67cd1bcd3b32841efb83ee28d605204fbf",
+  "depends": [
+    "r-base >=4.5,<4.6.0a0"
+  ],
+  "constrains": [],
+  "noarch": "generic",
+  "license": "GPL-2.0-only",
+  "package_type": "noarch_generic",
+  "timestamp": 1758115783000,
+  "size": 126283,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-rmeta-3.0-r45hc72bb7e_1007.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-rmeta-3.0-r45hc72bb7e_1007",
+  "files": [
+    "lib/R/library/rmeta/DESCRIPTION",
+    "lib/R/library/rmeta/INDEX",
+    "lib/R/library/rmeta/Meta/Rd.rds",
+    "lib/R/library/rmeta/Meta/data.rds",
+    "lib/R/library/rmeta/Meta/features.rds",
+    "lib/R/library/rmeta/Meta/hsearch.rds",
+    "lib/R/library/rmeta/Meta/links.rds",
+    "lib/R/library/rmeta/Meta/nsInfo.rds",
+    "lib/R/library/rmeta/Meta/package.rds",
+    "lib/R/library/rmeta/NAMESPACE",
+    "lib/R/library/rmeta/R/rmeta",
+    "lib/R/library/rmeta/R/rmeta.rdb",
+    "lib/R/library/rmeta/R/rmeta.rdx",
+    "lib/R/library/rmeta/data/catheter.rda",
+    "lib/R/library/rmeta/data/cochrane.rda",
+    "lib/R/library/rmeta/help/AnIndex",
+    "lib/R/library/rmeta/help/aliases.rds",
+    "lib/R/library/rmeta/help/paths.rds",
+    "lib/R/library/rmeta/help/rmeta.rdb",
+    "lib/R/library/rmeta/help/rmeta.rdx",
+    "lib/R/library/rmeta/html/00Index.html",
+    "lib/R/library/rmeta/html/R.css"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/rmeta/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "164978668ff148ca14a74d6bd190cb7fcdfbd806745cffcc1e9de00dced7912f",
+        "size_in_bytes": 607,
+        "sha256_in_prefix": "164978668ff148ca14a74d6bd190cb7fcdfbd806745cffcc1e9de00dced7912f"
+      },
+      {
+        "_path": "lib/R/library/rmeta/INDEX",
+        "path_type": "hardlink",
+        "sha256": "ea66324b1a194ee17ebd2643ef915c831111462f70bef1e102975cb9a2681d64",
+        "size_in_bytes": 586,
+        "sha256_in_prefix": "ea66324b1a194ee17ebd2643ef915c831111462f70bef1e102975cb9a2681d64"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "3022ceac712664fb23c0a051390c2073c220c63293519c3084da6f524cc457c2",
+        "size_in_bytes": 696,
+        "sha256_in_prefix": "3022ceac712664fb23c0a051390c2073c220c63293519c3084da6f524cc457c2"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "4fbd7402b6a70656c79076800f493a078db548b67060d08f3a3c8dba0171365f",
+        "size_in_bytes": 159,
+        "sha256_in_prefix": "4fbd7402b6a70656c79076800f493a078db548b67060d08f3a3c8dba0171365f"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "e62fadb7ac8007a4fe796a6ce8cb87dd9e2cb1c6c2dae7589a8479b4ade95233",
+        "size_in_bytes": 748,
+        "sha256_in_prefix": "e62fadb7ac8007a4fe796a6ce8cb87dd9e2cb1c6c2dae7589a8479b4ade95233"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7b6cd01068b3d731f42aff1a659bbd503b8a7f12af4f15da9f34c0f2c6c125eb",
+        "size_in_bytes": 345,
+        "sha256_in_prefix": "7b6cd01068b3d731f42aff1a659bbd503b8a7f12af4f15da9f34c0f2c6c125eb"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "5da78295f441dd6b09379b900b50cce59a25da6740e4333235ecb024bf4e6da9",
+        "size_in_bytes": 373,
+        "sha256_in_prefix": "5da78295f441dd6b09379b900b50cce59a25da6740e4333235ecb024bf4e6da9"
+      },
+      {
+        "_path": "lib/R/library/rmeta/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2009072958f79fa078708e5fd6640771002d4d1752e4b714854106fdd45d43f1",
+        "size_in_bytes": 722,
+        "sha256_in_prefix": "2009072958f79fa078708e5fd6640771002d4d1752e4b714854106fdd45d43f1"
+      },
+      {
+        "_path": "lib/R/library/rmeta/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "aa9c510de6a82c143580217458dcc40ff0eb2e14f2578793603c900a022ce070",
+        "size_in_bytes": 788,
+        "sha256_in_prefix": "aa9c510de6a82c143580217458dcc40ff0eb2e14f2578793603c900a022ce070"
+      },
+      {
+        "_path": "lib/R/library/rmeta/R/rmeta",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/rmeta/R/rmeta.rdb",
+        "path_type": "hardlink",
+        "sha256": "a8b9b9bfda9f947942967f94a1f2e998722cbbccc2200b0b9eec58bc857fb0ca",
+        "size_in_bytes": 65012,
+        "sha256_in_prefix": "a8b9b9bfda9f947942967f94a1f2e998722cbbccc2200b0b9eec58bc857fb0ca"
+      },
+      {
+        "_path": "lib/R/library/rmeta/R/rmeta.rdx",
+        "path_type": "hardlink",
+        "sha256": "d365abc9f099d0a22f35e3d58b20abacec33181ee2c51a4e2530e56e66e43e23",
+        "size_in_bytes": 617,
+        "sha256_in_prefix": "d365abc9f099d0a22f35e3d58b20abacec33181ee2c51a4e2530e56e66e43e23"
+      },
+      {
+        "_path": "lib/R/library/rmeta/data/catheter.rda",
+        "path_type": "hardlink",
+        "sha256": "d81c8f96bab7567fb09c86f3be77efbf5f59e2f329954cadb194912b3d7bc8f2",
+        "size_in_bytes": 527,
+        "sha256_in_prefix": "d81c8f96bab7567fb09c86f3be77efbf5f59e2f329954cadb194912b3d7bc8f2"
+      },
+      {
+        "_path": "lib/R/library/rmeta/data/cochrane.rda",
+        "path_type": "hardlink",
+        "sha256": "cd11fb6920340fe4e385908c0a02ee4f45764adfef3ab6f148b09c647a0e6190",
+        "size_in_bytes": 348,
+        "sha256_in_prefix": "cd11fb6920340fe4e385908c0a02ee4f45764adfef3ab6f148b09c647a0e6190"
+      },
+      {
+        "_path": "lib/R/library/rmeta/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "a6bd9a8336fe657ac28a4583a768667fbcc5804839cf1003254fa00eea41b31b",
+        "size_in_bytes": 818,
+        "sha256_in_prefix": "a6bd9a8336fe657ac28a4583a768667fbcc5804839cf1003254fa00eea41b31b"
+      },
+      {
+        "_path": "lib/R/library/rmeta/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "9e705ed4ba292292129b4f1459a7d2d3bfc1c442943dac261f9e6ce9ce194642",
+        "size_in_bytes": 286,
+        "sha256_in_prefix": "9e705ed4ba292292129b4f1459a7d2d3bfc1c442943dac261f9e6ce9ce194642"
+      },
+      {
+        "_path": "lib/R/library/rmeta/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "b5364f0577f8f2a57b751a09601d1b8df5904752e8461a45ff3b9dcd02a93778",
+        "size_in_bytes": 238,
+        "sha256_in_prefix": "b5364f0577f8f2a57b751a09601d1b8df5904752e8461a45ff3b9dcd02a93778"
+      },
+      {
+        "_path": "lib/R/library/rmeta/help/rmeta.rdb",
+        "path_type": "hardlink",
+        "sha256": "f90d80c388100b26a99305b73e51bf28b03419ace931cbbde3221b49fa34bf2d",
+        "size_in_bytes": 36830,
+        "sha256_in_prefix": "f90d80c388100b26a99305b73e51bf28b03419ace931cbbde3221b49fa34bf2d"
+      },
+      {
+        "_path": "lib/R/library/rmeta/help/rmeta.rdx",
+        "path_type": "hardlink",
+        "sha256": "97bc5f62a3ebfcef6cb999a58aead730b78213001654e0e6381ccf859349e7c3",
+        "size_in_bytes": 374,
+        "sha256_in_prefix": "97bc5f62a3ebfcef6cb999a58aead730b78213001654e0e6381ccf859349e7c3"
+      },
+      {
+        "_path": "lib/R/library/rmeta/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b9a9fd5a28e69dde9f21e28b82f8caae88c57381ac9f1eb613179532cd8c3a37",
+        "size_in_bytes": 5026,
+        "sha256_in_prefix": "b9a9fd5a28e69dde9f21e28b82f8caae88c57381ac9f1eb613179532cd8c3a37"
+      },
+      {
+        "_path": "lib/R/library/rmeta/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-rmeta-3.0-r45hc72bb7e_1007",
+    "type": 1
+  }
+}

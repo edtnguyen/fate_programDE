@@ -1,0 +1,250 @@
+{
+  "name": "r-ashr",
+  "version": "2.2_63",
+  "build": "r45ha730edb_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "r-ashr-2.2_63-r45ha730edb_3.conda",
+  "md5": "aef1ad0f6d6078c2efe8f07427020dbb",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/r-ashr-2.2_63-r45ha730edb_3.conda",
+  "sha256": "9fd700c6ee9aa257111d5eee45cd05b5c312c03de77f28646121317e0f8e9c2c",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=19",
+    "r-base >=4.5,<4.6.0a0",
+    "r-etrunct",
+    "r-invgamma",
+    "r-matrix",
+    "r-mixsqp",
+    "r-rcpp >=0.10.5",
+    "r-squarem",
+    "r-truncnorm"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-or-later",
+  "timestamp": 1758116971000,
+  "size": 1125894,
+  "requested_spec": "r-ashr",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-ashr-2.2_63-r45ha730edb_3.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-ashr-2.2_63-r45ha730edb_3",
+  "files": [
+    "lib/R/library/ashr/DESCRIPTION",
+    "lib/R/library/ashr/INDEX",
+    "lib/R/library/ashr/Meta/Rd.rds",
+    "lib/R/library/ashr/Meta/features.rds",
+    "lib/R/library/ashr/Meta/hsearch.rds",
+    "lib/R/library/ashr/Meta/links.rds",
+    "lib/R/library/ashr/Meta/nsInfo.rds",
+    "lib/R/library/ashr/Meta/package.rds",
+    "lib/R/library/ashr/Meta/vignette.rds",
+    "lib/R/library/ashr/NAMESPACE",
+    "lib/R/library/ashr/NEWS.md",
+    "lib/R/library/ashr/R/ashr",
+    "lib/R/library/ashr/R/ashr.rdb",
+    "lib/R/library/ashr/R/ashr.rdx",
+    "lib/R/library/ashr/doc/adaptive_shrinkage.R",
+    "lib/R/library/ashr/doc/adaptive_shrinkage.Rmd",
+    "lib/R/library/ashr/doc/adaptive_shrinkage.html",
+    "lib/R/library/ashr/doc/index.html",
+    "lib/R/library/ashr/help/AnIndex",
+    "lib/R/library/ashr/help/aliases.rds",
+    "lib/R/library/ashr/help/ashr.rdb",
+    "lib/R/library/ashr/help/ashr.rdx",
+    "lib/R/library/ashr/help/paths.rds",
+    "lib/R/library/ashr/html/00Index.html",
+    "lib/R/library/ashr/html/R.css",
+    "lib/R/library/ashr/libs/ashr.so"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/R/library/ashr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "60aa56cc3424755b81f1f671a6c64f1cd2b5df66ab711d5614d973753a103e38",
+        "size_in_bytes": 2360,
+        "sha256_in_prefix": "60aa56cc3424755b81f1f671a6c64f1cd2b5df66ab711d5614d973753a103e38"
+      },
+      {
+        "_path": "lib/R/library/ashr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "3a3e0c61be32af0478bf366823f01ce1fae1bfa5b723b92ba278f89834c1d0ad",
+        "size_in_bytes": 6829,
+        "sha256_in_prefix": "3a3e0c61be32af0478bf366823f01ce1fae1bfa5b723b92ba278f89834c1d0ad"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "2aefe9d7d6ff61c7be8794da72eb1cec05b5f2b724cbaaec93ed33889bc36925",
+        "size_in_bytes": 2743,
+        "sha256_in_prefix": "2aefe9d7d6ff61c7be8794da72eb1cec05b5f2b724cbaaec93ed33889bc36925"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d",
+        "size_in_bytes": 123,
+        "sha256_in_prefix": "b93acb524dc15de6489965f64f7b2f78fb786471c4b44abbed873873df97ce3d"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "0d5b27e86f0bd03b08725a0cebc15ed6239a0307b498ed974d4034a75a56925e",
+        "size_in_bytes": 2277,
+        "sha256_in_prefix": "0d5b27e86f0bd03b08725a0cebc15ed6239a0307b498ed974d4034a75a56925e"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "25452a34c4010bee604fecff3207a2346db31b1e920a9eef4322092aecd51dad",
+        "size_in_bytes": 1280,
+        "sha256_in_prefix": "25452a34c4010bee604fecff3207a2346db31b1e920a9eef4322092aecd51dad"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "1ddcbb735e4aae0a705f18ad89ccbcaf6bc4b05766d025728d23fbf82b2823e4",
+        "size_in_bytes": 1021,
+        "sha256_in_prefix": "1ddcbb735e4aae0a705f18ad89ccbcaf6bc4b05766d025728d23fbf82b2823e4"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "993dc42f55f404f654285345293f53241c9c3b600f21c2df5f149d120729ed9b",
+        "size_in_bytes": 1730,
+        "sha256_in_prefix": "993dc42f55f404f654285345293f53241c9c3b600f21c2df5f149d120729ed9b"
+      },
+      {
+        "_path": "lib/R/library/ashr/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "71f030b81856c0fa22b71a0da77b9ee9f8611eacbcdc0b4533b981db7453bfee",
+        "size_in_bytes": 228,
+        "sha256_in_prefix": "71f030b81856c0fa22b71a0da77b9ee9f8611eacbcdc0b4533b981db7453bfee"
+      },
+      {
+        "_path": "lib/R/library/ashr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "566295ccb9b6a3931f3490dff3084399a7a5bbc3879ccc9f2b0a4ed40d4bbe36",
+        "size_in_bytes": 3848,
+        "sha256_in_prefix": "566295ccb9b6a3931f3490dff3084399a7a5bbc3879ccc9f2b0a4ed40d4bbe36"
+      },
+      {
+        "_path": "lib/R/library/ashr/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "14843d57ebe06d0f6c79296cc355ba3b3a1750004e9abe73ebdb9f1815d9894f",
+        "size_in_bytes": 1376,
+        "sha256_in_prefix": "14843d57ebe06d0f6c79296cc355ba3b3a1750004e9abe73ebdb9f1815d9894f"
+      },
+      {
+        "_path": "lib/R/library/ashr/R/ashr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058,
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+      },
+      {
+        "_path": "lib/R/library/ashr/R/ashr.rdb",
+        "path_type": "hardlink",
+        "sha256": "802f087ecc7b982409799f3076e852cf2c94ff862346151f2ab2f1cb72679aca",
+        "size_in_bytes": 171394,
+        "sha256_in_prefix": "802f087ecc7b982409799f3076e852cf2c94ff862346151f2ab2f1cb72679aca"
+      },
+      {
+        "_path": "lib/R/library/ashr/R/ashr.rdx",
+        "path_type": "hardlink",
+        "sha256": "8f459c67fd3c3b6c736718b7a4e380b97b3e19d75afd914679a779b46dd16dd4",
+        "size_in_bytes": 2976,
+        "sha256_in_prefix": "8f459c67fd3c3b6c736718b7a4e380b97b3e19d75afd914679a779b46dd16dd4"
+      },
+      {
+        "_path": "lib/R/library/ashr/doc/adaptive_shrinkage.R",
+        "path_type": "hardlink",
+        "sha256": "49849852703bbefee6ade3dab838090727d5895661a9a0a7db85c5a5b8279135",
+        "size_in_bytes": 4572,
+        "sha256_in_prefix": "49849852703bbefee6ade3dab838090727d5895661a9a0a7db85c5a5b8279135"
+      },
+      {
+        "_path": "lib/R/library/ashr/doc/adaptive_shrinkage.Rmd",
+        "path_type": "hardlink",
+        "sha256": "82589f20a6c869f368c070e2d96ecc7516ffe5b0abcb277f4e6938acd7ccb70f",
+        "size_in_bytes": 6993,
+        "sha256_in_prefix": "82589f20a6c869f368c070e2d96ecc7516ffe5b0abcb277f4e6938acd7ccb70f"
+      },
+      {
+        "_path": "lib/R/library/ashr/doc/adaptive_shrinkage.html",
+        "path_type": "hardlink",
+        "sha256": "a11853e31a18393bd9cdf58ed77359128685dc8a0af1b568b3db5c86cea0ec34",
+        "size_in_bytes": 1431637,
+        "sha256_in_prefix": "a11853e31a18393bd9cdf58ed77359128685dc8a0af1b568b3db5c86cea0ec34"
+      },
+      {
+        "_path": "lib/R/library/ashr/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "d325dac900a4be47b607b70b7b07b49fdd7092c38d1ba79ca713a1958bd60f4e",
+        "size_in_bytes": 1438,
+        "sha256_in_prefix": "d325dac900a4be47b607b70b7b07b49fdd7092c38d1ba79ca713a1958bd60f4e"
+      },
+      {
+        "_path": "lib/R/library/ashr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "3c278f94a76b5e8c3ce66b108e759ed2b00b642e51783e480eb33249d35ec6c3",
+        "size_in_bytes": 2697,
+        "sha256_in_prefix": "3c278f94a76b5e8c3ce66b108e759ed2b00b642e51783e480eb33249d35ec6c3"
+      },
+      {
+        "_path": "lib/R/library/ashr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "cb0a8b1b1db8b83bb34876073d6bd992e7c5744071e6607f59a7c1f1066273d3",
+        "size_in_bytes": 776,
+        "sha256_in_prefix": "cb0a8b1b1db8b83bb34876073d6bd992e7c5744071e6607f59a7c1f1066273d3"
+      },
+      {
+        "_path": "lib/R/library/ashr/help/ashr.rdb",
+        "path_type": "hardlink",
+        "sha256": "4c7156b366bda55ae60f51b59b436eb8bcd7ec3c7652d6c481806adf9b086d47",
+        "size_in_bytes": 149674,
+        "sha256_in_prefix": "4c7156b366bda55ae60f51b59b436eb8bcd7ec3c7652d6c481806adf9b086d47"
+      },
+      {
+        "_path": "lib/R/library/ashr/help/ashr.rdx",
+        "path_type": "hardlink",
+        "sha256": "68d63ea6d35cad8ddec06f3ad33c9db4bee6a041b05b0de9b996b6c09bfa5f8d",
+        "size_in_bytes": 2079,
+        "sha256_in_prefix": "68d63ea6d35cad8ddec06f3ad33c9db4bee6a041b05b0de9b996b6c09bfa5f8d"
+      },
+      {
+        "_path": "lib/R/library/ashr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "1051bcbdb887e9126767c3dc8d64e1919154b4553c4313cb867b52a864424a0e",
+        "size_in_bytes": 841,
+        "sha256_in_prefix": "1051bcbdb887e9126767c3dc8d64e1919154b4553c4313cb867b52a864424a0e"
+      },
+      {
+        "_path": "lib/R/library/ashr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "da700333ed684f77fd57a84a6cc2753f534ed210cc1dc44375c1fbc5b5bd5a8b",
+        "size_in_bytes": 16687,
+        "sha256_in_prefix": "da700333ed684f77fd57a84a6cc2753f534ed210cc1dc44375c1fbc5b5bd5a8b"
+      },
+      {
+        "_path": "lib/R/library/ashr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844,
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      {
+        "_path": "lib/R/library/ashr/libs/ashr.so",
+        "path_type": "hardlink",
+        "sha256": "c8aac6bc12580638294a42d501d482f484b8aff8a4da201245bb497518a92c7b",
+        "size_in_bytes": 135432,
+        "sha256_in_prefix": "c8aac6bc12580638294a42d501d482f484b8aff8a4da201245bb497518a92c7b"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/r-ashr-2.2_63-r45ha730edb_3",
+    "type": 1
+  }
+}

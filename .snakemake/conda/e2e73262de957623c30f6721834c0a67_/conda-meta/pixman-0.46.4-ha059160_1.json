@@ -1,0 +1,83 @@
+{
+  "name": "pixman",
+  "version": "0.46.4",
+  "build": "ha059160_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "subdir": "osx-64",
+  "fn": "pixman-0.46.4-ha059160_1.conda",
+  "md5": "742a8552e51029585a32b6024e9f57b4",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/pixman-0.46.4-ha059160_1.conda",
+  "sha256": "ff8b679079df25aa3ed5daf3f4e3a9c7ee79e7d4b2bd8a21de0f8e7ec7207806",
+  "depends": [
+    "__osx >=10.13",
+    "libcxx >=19"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1754665233000,
+  "size": 390942,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/pixman-0.46.4-ha059160_1.conda",
+  "extracted_package_dir": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/pixman-0.46.4-ha059160_1",
+  "files": [
+    "include/pixman-1/pixman-version.h",
+    "include/pixman-1/pixman.h",
+    "lib/libpixman-1.0.dylib",
+    "lib/libpixman-1.a",
+    "lib/libpixman-1.dylib",
+    "lib/pkgconfig/pixman-1.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/pixman-1/pixman-version.h",
+        "path_type": "hardlink",
+        "sha256": "eebbff4b66cbcc98b3ffa16c68a919d4a16dfcffb86cd1fb85faea4f07bcd76b",
+        "size_in_bytes": 1786,
+        "sha256_in_prefix": "eebbff4b66cbcc98b3ffa16c68a919d4a16dfcffb86cd1fb85faea4f07bcd76b"
+      },
+      {
+        "_path": "include/pixman-1/pixman.h",
+        "path_type": "hardlink",
+        "sha256": "af49363cee8b2340a215e1ea477761c2c867905c17abe129e5778bfc65033f53",
+        "size_in_bytes": 55372,
+        "sha256_in_prefix": "af49363cee8b2340a215e1ea477761c2c867905c17abe129e5778bfc65033f53"
+      },
+      {
+        "_path": "lib/libpixman-1.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "b8b1f535b1c334e51755934985159a2fcd7cf1aecaf6a3348ac2c550b19e24d7",
+        "size_in_bytes": 822512,
+        "sha256_in_prefix": "b8b1f535b1c334e51755934985159a2fcd7cf1aecaf6a3348ac2c550b19e24d7"
+      },
+      {
+        "_path": "lib/libpixman-1.a",
+        "path_type": "hardlink",
+        "sha256": "d81051084455bccb6c053e1715e93cec71aee1c1ce3bd18f70988889721daa8d",
+        "size_in_bytes": 1010152,
+        "sha256_in_prefix": "d81051084455bccb6c053e1715e93cec71aee1c1ce3bd18f70988889721daa8d"
+      },
+      {
+        "_path": "lib/libpixman-1.dylib",
+        "path_type": "softlink",
+        "sha256": "b8b1f535b1c334e51755934985159a2fcd7cf1aecaf6a3348ac2c550b19e24d7",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/pkgconfig/pixman-1.pc",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/bld/rattler-build_pixman_1754665233/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "cd900f5274af2ba8154d04985aaaccd67663c5cf11454df0075573557bcd31a0",
+        "size_in_bytes": 467,
+        "sha256_in_prefix": "52de35ad8387404bc47551249bbfb50b20b552d92d55db026fd625c3ae0c0488"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/juliannguyen/Library/CloudStorage/OneDrive-Personal/CodeBase/PyDir/Projects/iPSC_EC_300/program2fate/fate_programDE/.tmp/conda_pkgs/pixman-0.46.4-ha059160_1",
+    "type": 1
+  }
+}

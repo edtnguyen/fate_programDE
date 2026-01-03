@@ -78,7 +78,10 @@ def _simulate_parameters(
     params["gamma"] = rng.normal(0.0, 0.1, size=(fstar,)).astype(np.float32)
 
     params["tau"] = np.full((fstar,), 0.3, dtype=np.float32)
-    params["sigma_time"] = np.full((fstar,), 0.15, dtype=np.float32)
+    if D > 1:
+        params["sigma_time"] = np.full((fstar, D - 1), 0.15, dtype=np.float32)
+    else:
+        params["sigma_time"] = np.zeros((fstar, 0), dtype=np.float32)
     params["sigma_guide"] = np.full((fstar,), 0.2, dtype=np.float32)
 
     params["z0"] = rng.normal(0.0, 1.0, size=(L, fstar)).astype(np.float32)
@@ -149,12 +152,14 @@ def _simulate_inputs(
     gene_of_guide = _make_gene_of_guide(G, L)
 
     params = _simulate_parameters(rng, L=L, G=G, D=D, R=R, fstar=fstar)
+    if time_scale is not None and D > 1:
+        scale = np.asarray(time_scale, dtype=np.float32)
+        params["sigma_time"] = params["sigma_time"] * scale[None, :]
     theta_core = construct_theta_core(
         tau=torch.tensor(params["tau"]),
         z0=torch.tensor(params["z0"]),
         sigma_time=torch.tensor(params["sigma_time"]),
         eps=torch.tensor(params["eps"]) if params["eps"] is not None else None,
-        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core)
@@ -222,7 +227,6 @@ def _true_gene_summary(
     ref_fate: str,
     contrast_fate: str,
     day_counts: list[int],
-    time_scale: list[float] | None = None,
 ) -> np.ndarray:
     _, non_ref_fates, _, _ = resolve_fate_names(fate_names, ref_fate=ref_fate)
     contrast_idx = non_ref_fates.index(contrast_fate)
@@ -232,7 +236,6 @@ def _true_gene_summary(
         z0=torch.tensor(params["z0"]),
         sigma_time=torch.tensor(params["sigma_time"]),
         eps=torch.tensor(params["eps"]) if params["eps"] is not None else None,
-        time_scale=time_scale,
         D=D,
     )
     theta = add_zero_gene_row(theta_core).detach().cpu().numpy()
@@ -361,11 +364,15 @@ def _write_config(
     lr: float,
     clip_norm: float,
     num_steps: int,
+    s_alpha: float,
+    s_rep: float,
+    s_gamma: float,
     s_time: float,
     s_guide: float,
     s_tau: float,
     num_draws: int,
     seed: int,
+    likelihood_weight: float,
     time_scale: list[float] | None = None,
 ) -> None:
     cfg = {
@@ -387,10 +394,14 @@ def _write_config(
         "lr": lr,
         "clip_norm": clip_norm,
         "num_steps": num_steps,
+        "s_alpha": s_alpha,
+        "s_rep": s_rep,
+        "s_gamma": s_gamma,
         "s_time": s_time,
         "s_guide": s_guide,
         "s_tau": s_tau,
         "time_scale": time_scale,
+        "likelihood_weight": likelihood_weight,
         "num_posterior_draws": num_draws,
         "seed": seed,
         "weights": None,
@@ -399,6 +410,53 @@ def _write_config(
     }
     with path.open("w") as fh:
         yaml.safe_dump(cfg, fh, sort_keys=False)
+
+
+def _write_sim_metadata(
+    path: Path,
+    *,
+    args: argparse.Namespace,
+    fate_names: tuple[str, ...],
+    ref_fate: str,
+    contrast_fate: str,
+    day_counts: list[int],
+    sim_payload: dict[str, np.ndarray],
+    time_scale: list[float] | None,
+) -> None:
+    k_raw = sim_payload["k_raw"]
+    rep_counts = np.bincount(sim_payload["rep"], minlength=args.reps)
+    metadata = {
+        "seed": args.seed,
+        "cells": args.cells,
+        "genes": args.genes,
+        "guides_non_ntc": args.guides,
+        "guides_ntc": args.ntc_guides,
+        "guides_total": args.guides + args.ntc_guides,
+        "days": args.days,
+        "reps": args.reps,
+        "kmax": args.kmax,
+        "ntc_frac": args.ntc_frac,
+        "concentration": args.concentration,
+        "s_time": args.s_time,
+        "s_guide": args.s_guide,
+        "s_tau": args.s_tau,
+        "time_scale": time_scale,
+        "fates": list(fate_names),
+        "ref_fate": ref_fate,
+        "contrast_fate": contrast_fate,
+        "day_counts": {f"d{d}": int(c) for d, c in enumerate(day_counts)},
+        "rep_counts": {f"r{r}": int(c) for r, c in enumerate(rep_counts)},
+        "k_summary": {
+            "min": int(k_raw.min()) if k_raw.size else 0,
+            "max": int(k_raw.max()) if k_raw.size else 0,
+            "mean": float(k_raw.mean()) if k_raw.size else 0.0,
+        },
+        "adata_path": args.adata_out,
+        "guide_map_csv": args.guide_map_out,
+        "out_dir": args.out_dir,
+    }
+    with path.open("w") as fh:
+        yaml.safe_dump(metadata, fh, sort_keys=False)
 
 
 def main() -> None:
@@ -432,6 +490,7 @@ def main() -> None:
     ap.add_argument("--adata-out", default="data/sim_adata.h5ad")
     ap.add_argument("--guide-map-out", default="data/sim_guide_map.csv")
     ap.add_argument("--config-out", default=None)
+    ap.add_argument("--metadata-out", default=None)
     ap.add_argument("--out-dir", default="out_fate_pipeline_sim")
     ap.add_argument("--run-export", action="store_true")
     ap.add_argument("--export-out", default=None)
@@ -488,7 +547,6 @@ def main() -> None:
         ref_fate=ref_fate,
         contrast_fate=contrast_fate,
         day_counts=day_counts,
-        time_scale=time_scale,
     )
 
     if not args.skip_internal_fit:
@@ -508,7 +566,6 @@ def main() -> None:
             s_time=args.s_time,
             s_guide=args.s_guide,
             s_tau=args.s_tau,
-            time_scale=time_scale,
             seed=args.seed,
         )
 
@@ -522,7 +579,6 @@ def main() -> None:
             L=args.genes,
             D=args.days,
             num_draws=args.num_draws,
-            time_scale=time_scale,
             day_cell_counts=day_counts,
             weights=None,
             out_csv=None,
@@ -542,7 +598,12 @@ def main() -> None:
             out.to_csv(out_path, index=False)
             print("Wrote:", out_path)
 
-    should_write = args.write_anndata or args.run_export or args.config_out is not None
+    should_write = (
+        args.write_anndata
+        or args.run_export
+        or args.config_out is not None
+        or args.metadata_out is not None
+    )
     if should_write:
         adata_path = Path(args.adata_out)
         guide_map_path = Path(args.guide_map_out)
@@ -578,6 +639,25 @@ def main() -> None:
         print("Wrote:", adata_path)
         print("Wrote:", guide_map_path)
 
+        metadata_out = (
+            Path(args.metadata_out)
+            if args.metadata_out
+            else Path(args.out_dir) / "sim_metadata.yaml"
+        )
+        _ensure_parent(metadata_out)
+        _maybe_write(metadata_out, args.force)
+        _write_sim_metadata(
+            metadata_out,
+            args=args,
+            fate_names=fate_names,
+            ref_fate=ref_fate,
+            contrast_fate=contrast_fate,
+            day_counts=day_counts,
+            sim_payload=sim_payload,
+            time_scale=time_scale,
+        )
+        print("Wrote:", metadata_out)
+
     if args.run_export:
         config_out = Path(args.config_out) if args.config_out else Path(args.out_dir) / "sim_config.yaml"
         _ensure_parent(config_out)
@@ -602,16 +682,20 @@ def main() -> None:
             lr=args.lr,
             clip_norm=args.clip_norm,
             num_steps=args.num_steps,
+            s_alpha=1.0,
+            s_rep=1.0,
+            s_gamma=1.0,
             s_time=args.s_time,
             s_guide=args.s_guide,
             s_tau=args.s_tau,
+            likelihood_weight=1.0,
             time_scale=time_scale,
             num_draws=args.num_draws,
             seed=args.seed,
         )
         print("Wrote:", config_out)
 
-        export_out = Path(args.export_out) if args.export_out else Path(args.out_dir) / "gene_summary_for_ash.csv"
+        export_out = Path(args.export_out) if args.export_out else Path(args.out_dir) / "gene_summary_for_mash.csv"
         _ensure_parent(export_out)
         cmd = [
             sys.executable,
@@ -631,9 +715,15 @@ def main() -> None:
         exported = pd.read_csv(export_out)
         true_map = dict(zip(gene_names, true_betahat))
         exported["true_betahat"] = exported["gene"].map(true_map)
-        metrics = _compute_metrics(
-            exported["betahat"].to_numpy(), exported["true_betahat"].to_numpy()
-        )
+        betahat_cols = [c for c in exported.columns if c.startswith("betahat_d")]
+        betahat_cols = sorted(betahat_cols, key=lambda c: int(c.split("d")[1]))
+        if not betahat_cols:
+            raise SystemExit("Exported mash summary missing betahat_d* columns.")
+        weights = np.asarray(day_counts, dtype=np.float64)
+        weights = weights / weights.sum()
+        betahat_matrix = exported[betahat_cols].to_numpy()
+        est_betahat = betahat_matrix @ weights
+        metrics = _compute_metrics(est_betahat, exported["true_betahat"].to_numpy())
         _print_metrics("Exported fit", metrics)
 
 

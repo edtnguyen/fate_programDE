@@ -9,9 +9,12 @@ SIM_ADATA = config.get("sim_adata_path", "data/sim_adata.h5ad")
 SIM_GUIDE_MAP = config.get("sim_guide_map_csv", "data/sim_guide_map.csv")
 SIM_CONFIG = config.get("sim_config_path", f"{SIM_OUT}/sim_config.yaml")
 SIM_RECOVERY = config.get("sim_recovery_csv", f"{SIM_OUT}/sim_recovery.csv")
-SIM_EXPORT = config.get("sim_export_csv", f"{SIM_OUT}/gene_summary_for_ash.csv")
+SIM_EXPORT = config.get("sim_export_csv", f"{SIM_OUT}/gene_summary_for_mash.csv")
+SIM_EXPORT_ASH = config.get("sim_export_ash_csv", f"{SIM_OUT}/gene_summary_for_ash.csv")
+SIM_MASH = config.get("sim_mash_csv", f"{SIM_OUT}/gene_summary_mash_out.csv")
 SIM_ASH = config.get("sim_ash_csv", f"{SIM_OUT}/gene_summary_ash_out.csv")
 SIM_HITS = config.get("sim_hits_csv", f"{SIM_OUT}/hits_ranked.csv")
+SIM_META = config.get("sim_metadata_path", f"{SIM_OUT}/sim_metadata.yaml")
 
 SIM_CELLS = config.get("sim_cells", 200)
 SIM_GENES = config.get("sim_genes", 30)
@@ -88,7 +91,7 @@ rule fit_pyro_export:
         adata=config["adata_path"],
         guide_map=config["guide_map_csv"]
     output:
-        summary=f"{OUT}/gene_summary_for_ash.csv"
+        summary=f"{OUT}/gene_summary_for_mash.csv"
     params:
         cfg="config.yaml"
     conda:
@@ -105,6 +108,21 @@ rule fit_pyro_export:
             --adata {input.adata} \
             --guide-map {input.guide_map} \
             --out {output.summary}
+        """
+
+rule run_mashr:
+    input:
+        summary=f"{OUT}/gene_summary_for_mash.csv"
+    output:
+        mash=f"{OUT}/gene_summary_mash_out.csv"
+    conda:
+        "envs/mash.yaml"
+    threads: 1
+    resources:
+        mem_mb=16000
+    shell:
+        r"""
+        Rscript scripts/run_mashr.R {input.summary} {output.mash}
         """
 
 rule run_ash:
@@ -124,7 +142,7 @@ rule run_ash:
 
 rule rank_hits:
     input:
-        ash=f"{OUT}/gene_summary_ash_out.csv"
+        mash=f"{OUT}/gene_summary_mash_out.csv"
     output:
         hits=f"{OUT}/hits_ranked.csv"
     params:
@@ -138,7 +156,7 @@ rule rank_hits:
         r"""
         python scripts/rank_hits.py \
             --config {params.cfg} \
-            --ash {input.ash} \
+            --mash {input.mash} \
             --out {output.hits}
         """
 
@@ -174,7 +192,8 @@ rule simulate_recovery:
         guide_map=SIM_GUIDE_MAP,
         config=SIM_CONFIG,
         summary=SIM_EXPORT,
-        recovery=SIM_RECOVERY
+        recovery=SIM_RECOVERY,
+        metadata=SIM_META
     params:
         out_dir=SIM_OUT
     conda:
@@ -205,6 +224,7 @@ rule simulate_recovery:
             --adata-out {output.adata} \
             --guide-map-out {output.guide_map} \
             --config-out {output.config} \
+            --metadata-out {output.metadata} \
             --out-dir {params.out_dir} \
             --run-export \
             --export-out {output.summary} \
@@ -222,7 +242,7 @@ if SIM_ALWAYS_RUN:
 
 rule sim_run_ash:
     input:
-        summary=SIM_EXPORT
+        summary=SIM_EXPORT_ASH
     output:
         ash=SIM_ASH
     conda:
@@ -235,9 +255,24 @@ rule sim_run_ash:
         Rscript scripts/run_ash.R {input.summary} {output.ash}
         """
 
+rule sim_run_mashr:
+    input:
+        summary=SIM_EXPORT
+    output:
+        mash=SIM_MASH
+    conda:
+        "envs/mash.yaml"
+    threads: 1
+    resources:
+        mem_mb=16000
+    shell:
+        r"""
+        Rscript scripts/run_mashr.R {input.summary} {output.mash}
+        """
+
 rule sim_rank_hits:
     input:
-        ash=SIM_ASH,
+        mash=SIM_MASH,
         cfg=SIM_CONFIG
     output:
         hits=SIM_HITS
@@ -250,7 +285,7 @@ rule sim_rank_hits:
         r"""
         python scripts/rank_hits.py \
             --config {input.cfg} \
-            --ash {input.ash} \
+            --mash {input.mash} \
             --out {output.hits}
         """
 
