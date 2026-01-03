@@ -3,6 +3,15 @@ fate_programDE
 
 Quantify Differential Effect (DE) of CRISPRi-based gene KD on fate probabilities
 
+Setup
+------------
+
+Install the repo in editable mode (from the repo root) so `src` imports resolve:
+
+```bash
+pip install -e .
+```
+
 Model (full specification)
 ------------
 
@@ -12,12 +21,14 @@ This section consolidates all steps from `src/architecture/pyro_model.md` and
 **1. Observed data (after filtering)**
 
 - Cells $i=1,\dots,N$ after filtering to $k_i \le K_{\max}$, where $k_i$ is the
-  number of detected guides in cell $i$.
-- Days $d_i \in \{0,\dots,D-1\}$ and replicates $r_i \in \{0,\dots,R-1\}$.
+  number of detected guides in cell $i$ ($K_{\max}=20$ in current runs).
+- Days $d_i \in \{0,\dots,D-1\}$ and replicates $r_i \in \{0,\dots,R-1\}$
+  ($D=4$ for d0--d3; $R=2$ in current data).
 - CellRank fate probabilities
   $p_i=(p_{i,\mathrm{EC}},p_{i,\mathrm{MES}},p_{i,\mathrm{NEU}})$ with
   $\sum_f p_{i,f}=1$.
-- Guides $g=1,\dots,G$ (non-NTC), genes $\ell=1,\dots,L$, and map $\ell(g)$.
+- Guides $g=1,\dots,G$ (non-NTC), genes $\ell=1,\dots,L$, and map $\ell(g)$
+  (current data: $G=2000$, $L=300$).
 - Embedding-sum representation per cell: define $g_{i,m}$ and $m_{i,m}$ for
   $m=1,\dots,K_{\max}$, where $g_{i,m}$ is `guide_ids[i,m]` and $m_{i,m}$ is
   `mask[i,m]` with $m_{i,m}\in\{0,1\}$ indicating real vs padding.
@@ -64,6 +75,9 @@ $$
  + \sum_{m=1}^{K_{\max}} m_{i,m}\,\beta_{g_{i,m},f^\star,d_i},
 \qquad \eta_{i,\mathrm{EC}}=0.
 $$
+
+Let $G_i$ denote the set of guides detected in cell $i$; the padded sum above
+is equivalent to $\sum_{g\in G_i}\beta_{g,f^\star,d_i}$.
 
 This embedding-sum is the MOI correction: each guide’s effect is estimated
 conditional on other guides co-occurring in the same cell.
