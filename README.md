@@ -3,83 +3,112 @@ fate_programDE
 
 Quantify Differential Effect (DE) of CRISPRi-based gene KD on fate probabilities
 
-Model
+Model (full specification)
 ------------
 
-We model how CRISPRi guide content in high-MOI cells shifts CellRank fate
-probabilities across three terminal fates (EC, MES, NEU). EC is the reference
-fate, and $f^\star \in \{\mathrm{MES}, \mathrm{NEU}\}$ denotes non-reference
-fates.
+This section consolidates all steps from `src/architecture/pyro_model.md` and
+`src/architecture/pyro_context.md`.
 
-Observed data and indexing:
+**1. Observed data (after filtering)**
 
-- Cells $i=1,\dots,N$ with fate probabilities
-  $p_i=(p_{i,\mathrm{EC}},p_{i,\mathrm{MES}},p_{i,\mathrm{NEU}})$ and
+- Cells $i=1,\dots,N$ after filtering to $k_i \le K_{\max}$, where $k_i$ is the
+  number of detected guides in cell $i$.
+- Days $d_i \in \{0,\dots,D-1\}$ and replicates $r_i \in \{0,\dots,R-1\}$.
+- CellRank fate probabilities
+  $p_i=(p_{i,\mathrm{EC}},p_{i,\mathrm{MES}},p_{i,\mathrm{NEU}})$ with
   $\sum_f p_{i,f}=1$.
-- Day $d_i \in \{0,\dots,D-1\}$ and replicate $r_i \in \{0,\dots,R-1\}$.
-- Guides $g=1,\dots,G$ (non-NTC) and genes $\ell=1,\dots,L$ with map $\ell(g)$.
-- Padded guide lists: $\mathrm{guide\textunderscore ids} _{i,m}$ and $\mathrm{mask} _{i,m}$ for $m=1,\dots,K _{\max}$.
-- NTC guides map to $g=0$ (real entry, $\mathrm{mask}=1$); padding uses $g=0$
-  with $\mathrm{mask}=0$.
-- Guide burden $k_i = \sum_m \mathrm{mask}_{i,m}$, centered within day:
-  $\tilde{k} _i = k _i - \bar{k} _{d _i}$.
+- Guides $g=1,\dots,G$ (non-NTC), genes $\ell=1,\dots,L$, and map $\ell(g)$.
+- Embedding-sum representation per cell: define $g_{i,m}$ and $m_{i,m}$ for
+  $m=1,\dots,K_{\max}$, where $g_{i,m}$ is `guide_ids[i,m]` and $m_{i,m}$ is
+  `mask[i,m]` with $m_{i,m}\in\{0,1\}$ indicating real vs padding.
+- Hard-zero convention: NTC guides map to $g=0$ (real entry, $m_{i,m}=1$);
+  padding uses $g=0$ with $m_{i,m}=0$. Define `gene_of_guide[0]=0` and
+  `gene_of_guide[g]=\ell(g)` for $g\ge 1$.
+- Guide burden:
 
-Guide effect decomposition:
+$$
+k_i = \sum_{m=1}^{K_{\max}} m_{i,m}.
+$$
+
+- Centered guide burden:
+
+$$
+\tilde{k}_i = k_i - \bar{k}_{d_i}.
+$$
+
+**2. Latent parameters and indexing**
+
+- Reference fate: EC. Non-reference fates:
+  $\mathcal{F}^\star = \{\mathrm{MES}, \mathrm{NEU}\}$, indexed by $f^\star$.
+- Gene-by-day effects $\theta_{\ell,f^\star,d}$ and guide deviations
+  $\delta_{g,f^\star}$ (time-invariant, shared across days).
+- Nuisance: day intercepts $\alpha_{f^\star,d}$, replicate effects
+  $b_{f^\star,r}$, burden slope $\gamma_{f^\star}$.
+- Hard-zero baseline rows: $\theta_{0,f^\star,d}=0$ and $\delta_{0,f^\star}=0$.
+
+**3. Guide-level effect decomposition**
 
 $$
 \beta_{g,f^\star,d} = \theta_{\ell(g),f^\star,d} + \delta_{g,f^\star},\quad g \ge 1
 $$
 
-with hard-zero baselines:
+with $\beta_{0,f^\star,d}=0$ for NTC/baseline guides.
+
+**4. Cell-level linear predictor (MOI-aware)**
 
 $$
-\theta_{0,f^\star,d} = 0,\quad \delta_{0,f^\star} = 0,\quad \beta_{0,f^\star,d}=0.
+\eta_{i,f^\star} =
+\alpha_{f^\star,d_i}
+ + b_{f^\star,r_i}
+ + \gamma_{f^\star}\tilde{k}_i
+ + \sum_{m=1}^{K_{\max}} m_{i,m}\,\beta_{g_{i,m},f^\star,d_i},
+\qquad \eta_{i,\mathrm{EC}}=0.
 $$
 
-Linear predictor (MOI-aware sum over guides):
+This embedding-sum is the MOI correction: each guide’s effect is estimated
+conditional on other guides co-occurring in the same cell.
 
-$$ \eta _{i,f^\star} = \alpha _{f^\star,d _i} + b _{f^\star,r _i} + \gamma _{f^\star} \tilde{k} _i  +\sum _{m=1}^{K _{\max}} \mathrm{mask} _{i,m} \beta _{\mathrm{guide\textunderscore ids} _{i,m}, f^\star, d _i} . $$
-
-Softmax mapping to probabilities:
+**5. Softmax mapping**
 
 $$
-\eta_{i,\mathrm{EC}}=0,\quad \pi_i = \mathrm{softmax}(\eta_i).
+\pi_i = \mathrm{softmax}(\eta_i),\quad
+\pi_{i,f}=\frac{\exp(\eta_{i,f})}{\sum_{f'\in\{\mathrm{EC,MES,NEU}\}}\exp(\eta_{i,f'})}.
 $$
 
-Likelihood (soft-label cross-entropy):
+**6. Likelihood (soft-label cross-entropy)**
 
 $$
 \log L = \sum_{i=1}^N \sum_{f\in\{\mathrm{EC,MES,NEU}\}} p_{i,f}\,\log \pi_{i,f}.
 $$
 
-Priors (weakly regularizing):
+**7. Priors (weakly regularizing)**
 
 $$
-\sigma_{\alpha,f^\star} \sim \mathrm{HalfNormal}(s_\alpha),\quad
-\alpha_{f^\star,d} \sim \mathcal{N}(0,\sigma_{\alpha,f^\star}^2)
-$$
-
-$$
-\sigma_{\mathrm{rep},f^\star} \sim \mathrm{HalfNormal}(s_{\mathrm{rep}}),\quad
-b_{f^\star,r} \sim \mathcal{N}(0,\sigma_{\mathrm{rep},f^\star}^2)
+\alpha_{f^\star,d}\sim \mathcal{N}(0,\sigma_{\alpha,f^\star}^2),\quad
+\sigma_{\alpha,f^\star}\sim \mathrm{HalfNormal}(s_\alpha)
 $$
 
 $$
-\sigma_{\gamma,f^\star} \sim \mathrm{HalfNormal}(s_\gamma),\quad
-\gamma_{f^\star} \sim \mathcal{N}(0,\sigma_{\gamma,f^\star}^2)
+b_{f^\star,r}\sim \mathcal{N}(0,\sigma_{\mathrm{rep},f^\star}^2),\quad
+\sigma_{\mathrm{rep},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{rep}})
+$$
+
+$$
+\gamma_{f^\star}\sim \mathcal{N}(0,\sigma_{\gamma,f^\star}^2),\quad
+\sigma_{\gamma,f^\star}\sim \mathrm{HalfNormal}(s_\gamma)
 $$
 
 Gene effects (random walk with optional fixed time scale):
 
 $$
-\tau_{f^\star} \sim \mathrm{HalfNormal}(s_\tau),\quad
-z_{\ell,f^\star} \sim \mathcal{N}(0,1),\quad
-\theta_{\ell,f^\star,0} = \tau_{f^\star} z_{\ell,f^\star}
+\tau_{f^\star}\sim \mathrm{HalfNormal}(s_\tau),\quad
+z_{\ell,f^\star,0}\sim \mathcal{N}(0,1),\quad
+\theta_{\ell,f^\star,0} = \tau_{f^\star} z_{\ell,f^\star,0}
 $$
 
 $$
-\sigma_{\mathrm{time},f^\star} \sim \mathrm{HalfNormal}(s_{\mathrm{time}}),\quad
-\varepsilon_{\ell,f^\star,d} \sim \mathcal{N}(0,1)
+\sigma_{\mathrm{time},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{time}}),\quad
+\varepsilon_{\ell,f^\star,d}\sim \mathcal{N}(0,1)
 $$
 
 $$
@@ -88,29 +117,79 @@ $$
 c_d\,\sigma_{\mathrm{time},f^\star}\,\varepsilon_{\ell,f^\star,d},\quad d=1,\dots,D-1.
 $$
 
-Here $c_d$ is a fixed per-interval scale from `time_scale` (length $D-1$). If
-`time_scale` is omitted, we use $c_d=1$ for all intervals.
+Here $c_d$ is a fixed per-interval scale from `time_scale` (length $D-1$).
+If omitted, $c_d=1$ for all intervals.
 
 Guide deviations:
 
 $$
-\sigma_{\mathrm{guide},f^\star} \sim \mathrm{HalfNormal}(s_{\mathrm{guide}}),\quad
-u_{g,f^\star} \sim \mathcal{N}(0,1),\quad
-\delta_{g,f^\star} = \sigma_{\mathrm{guide},f^\star} u_{g,f^\star}.
+\sigma_{\mathrm{guide},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{guide}}),\quad
+u_{g,f^\star}\sim \mathcal{N}(0,1),\quad
+\delta_{g,f^\star}= \sigma_{\mathrm{guide},f^\star} u_{g,f^\star}.
 $$
 
-Fitting and reporting:
+**8. Non-centered parameterization**
 
-- Fit with SVI (minibatches over cells).
-- Define day-specific MES–EC gene effects $\Delta_\ell(d)=\theta_{\ell,\mathrm{MES},d}$.
-- Summarize across days with weights $w_d$ (default $w_d \propto n_d$):
+We fit non-centered latents $(z,\varepsilon,u)$ and scales
+$(\tau,\sigma_{\mathrm{time}},\sigma_{\mathrm{guide}})$, then deterministically
+construct $(\theta,\delta)$. This improves SVI stability.
+
+**9. SVI training objective with minibatching**
+
+For minibatch $S$ of size $B$:
 
 $$
-\Delta^{\mathrm{sum}}_\ell = \sum_{d=0}^{D-1} w_d\,\Delta_\ell(d),\quad \sum_d w_d = 1.
+\log p(p\mid\phi) \approx \frac{N}{B}\sum_{i\in S}\sum_f p_{i,f}\log \pi_{i,f}(\phi).
 $$
 
-- Report posterior mean and uncertainty for $\Delta^{\mathrm{sum}}_\ell$ and apply
-  adaptive shrinkage (ash) to compute lfsr/q-values for hit calling.
+Implementation uses `pyro.plate("cells", N, subsample_size=B)` and scales the
+log-likelihood by $N/B$ with `ClippedAdam`.
+
+**10. Primary contrast (MES–EC)**
+
+$$
+\Delta_\ell(d) \equiv \theta_{\ell,\mathrm{MES},d}.
+$$
+
+**11. Gene summary across days**
+
+Choose weights $w_d \ge 0$, $\sum_d w_d=1$ (default $w_d \propto n_d$):
+
+$$
+\Delta^{\mathrm{sum}}_\ell = \sum_{d=0}^{D-1} w_d\,\Delta_\ell(d).
+$$
+
+Compute posterior mean and SD from VI draws; optionally replace SD with a
+small stratified bootstrap SE.
+
+**12. Empirical Bayes shrinkage + hit calling (ash)**
+
+Observation model:
+
+$$
+\widehat{\Delta}^{\mathrm{sum}}_\ell \mid \Delta_\ell
+\approx \mathcal{N}(\Delta_\ell,\mathrm{se}_\ell^2).
+$$
+
+Across genes:
+
+$$
+\Delta_\ell \sim g(\cdot),\quad g(\Delta)=\sum_k \pi_k f_k(\Delta).
+$$
+
+Recommended settings (TRADE-style for enriched gene sets):
+
+- `pointmass = FALSE`
+- `mixcompdist = "halfuniform"` (flexible EB prior, allows asymmetric effects)
+- use posterior mean, `lfsr`, and `qvalue` for ranking/calling hits.
+- Primary hit calling: low `lfsr` (e.g., < 0.05), optionally with a minimum
+  effect size threshold on the shrunk posterior mean or tail probability.
+
+**13. Minimal diagnostics (recommended)**
+
+- Held-out cross-entropy: full model vs nuisance-only.
+- Negative control: permute guides within (day, rep, k-bin) and confirm hits collapse.
+- Sanity checks: known regulators show expected MES–EC direction.
 
 Pipeline and usage
 ------------
@@ -128,6 +207,8 @@ Configuration:
 
 - `config.yaml` controls input paths, model sizes, priors, and diagnostics.
 - `time_scale` (optional) must have length `D-1` and positive entries.
+- If you see `ModuleNotFoundError: No module named 'src'` when running scripts,
+  install the repo in editable mode: `pip install -e .`
 
 Required inputs:
 
