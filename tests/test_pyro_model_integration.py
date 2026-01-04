@@ -62,6 +62,10 @@ class TestPyroModelFlow(unittest.TestCase):
 
         gene_of_guide = np.array([0, 1, 1, 2], dtype=np.int64)
         gene_of_guide_t = torch.tensor(gene_of_guide, dtype=torch.long)
+        guide_to_gene = gene_of_guide[1:] - 1
+        n_guides_per_gene = np.bincount(guide_to_gene, minlength=L).astype(np.int64)
+        guide_to_gene_t = torch.tensor(guide_to_gene, dtype=torch.long)
+        n_guides_per_gene_t = torch.tensor(n_guides_per_gene, dtype=torch.long)
 
         k_t = torch.tensor(mask.sum(axis=1), dtype=torch.float32)
 
@@ -73,6 +77,8 @@ class TestPyroModelFlow(unittest.TestCase):
             gids_t,
             mask_t,
             gene_of_guide_t,
+            guide_to_gene_t,
+            n_guides_per_gene_t,
             fate_names=("EC", "MES", "NEU"),
             ref_fate="EC",
             L=L,
@@ -89,7 +95,17 @@ class TestPyroModelFlow(unittest.TestCase):
 
         summary = pyro_model.export_gene_summary_for_ash(
             guide=guide,
-            model_args=(p_t, day_t, rep_t, k_t, gids_t, mask_t, gene_of_guide_t),
+            model_args=(
+                p_t,
+                day_t,
+                rep_t,
+                k_t,
+                gids_t,
+                mask_t,
+                gene_of_guide_t,
+                guide_to_gene_t,
+                n_guides_per_gene_t,
+            ),
             gene_names=["GeneA", "GeneB"],
             fate_names=("EC", "MES", "NEU"),
             ref_fate="EC",

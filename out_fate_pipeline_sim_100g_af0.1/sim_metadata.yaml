@@ -1,0 +1,36 @@
+seed: 0
+cells: 25000
+genes: 100
+guides_non_ntc: 600
+guides_ntc: 1
+guides_total: 601
+days: 4
+reps: 2
+kmax: 9
+ntc_frac: 0.2
+concentration: 50.0
+s_time: 1.0
+s_guide: 1.0
+s_tau: 1.0
+time_scale: null
+fates:
+- EC
+- MES
+- NEU
+ref_fate: EC
+contrast_fate: MES
+day_counts:
+  d0: 6301
+  d1: 6228
+  d2: 6228
+  d3: 6243
+rep_counts:
+  r0: 12544
+  r1: 12456
+k_summary:
+  min: 1
+  max: 9
+  mean: 5.0046
+adata_path: sim_adata_100genes_af0.1.h5ad
+guide_map_csv: data/sim_guide_map_100genes_af0.1.csv
+out_dir: out_fate_pipeline_sim_100g_af0.1

@@ -332,6 +332,11 @@ def load_adata_inputs(adata, cfg: dict, guide_map_csv: str):
         guide_names, guide_map_df
     )
 
+    guide_to_gene = gid_to_gene[1:] - 1
+    if np.any(guide_to_gene < 0):
+        raise ValueError("Found guides without a gene assignment in guide_map.")
+    n_guides_per_gene = np.bincount(guide_to_gene, minlength=L).astype(np.int64)
+
     guide_ids, mask = guides_to_padded_from_csr(
         Gmat, guide_names, guide_name_to_gid, Kmax=cfg["Kmax"]
     )
@@ -346,4 +351,16 @@ def load_adata_inputs(adata, cfg: dict, guide_map_csv: str):
         int((cell_df["day"].to_numpy() == d).sum()) for d in range(cfg["D"])
     ]
 
-    return cell_df, p, guide_ids, mask, gid_to_gene, gene_names, L, G, day_counts
+    return (
+        cell_df,
+        p,
+        guide_ids,
+        mask,
+        gid_to_gene,
+        guide_to_gene,
+        n_guides_per_gene,
+        gene_names,
+        L,
+        G,
+        day_counts,
+    )

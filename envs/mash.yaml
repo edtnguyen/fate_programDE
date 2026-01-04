@@ -4,5 +4,7 @@ channels:
 dependencies:
   - r-base>=4.3
   - r-data.table
+  - r-matrix
   - r-ashr
   - r-mashr
+  - r-yaml

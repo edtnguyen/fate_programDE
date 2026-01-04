@@ -134,7 +134,10 @@ def _estimate_mean_loglik(
     )
     theta = add_zero_gene_row(theta_core)
     delta_core = construct_delta_core(
-        sigma_guide=samples["sigma_guide"], u=samples["u"]
+        sigma_guide=samples["sigma_guide"],
+        u=samples["u"],
+        guide_to_gene=guide_to_gene_t,
+        n_guides_per_gene=n_guides_per_gene_t,
     )
     delta = add_zero_guide_row(delta_core)
 
@@ -221,6 +224,8 @@ def main() -> None:
         guide_ids,
         mask,
         gene_of_guide,
+        guide_to_gene,
+        n_guides_per_gene,
         gene_names,
         L,
         G,
@@ -251,11 +256,43 @@ def main() -> None:
     k_train = k_centered[train_idx]
     k_test = k_centered[test_idx]
 
-    p_t_train, day_t_train, rep_t_train, gids_t_train, mask_t_train, gene_of_guide_t = (
-        to_torch(cell_df_train, p_train, gids_train, mask_train, gene_of_guide, device)
+    (
+        p_t_train,
+        day_t_train,
+        rep_t_train,
+        gids_t_train,
+        mask_t_train,
+        gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
+    ) = to_torch(
+        cell_df_train,
+        p_train,
+        gids_train,
+        mask_train,
+        gene_of_guide,
+        guide_to_gene,
+        n_guides_per_gene,
+        device,
     )
-    p_t_test, day_t_test, rep_t_test, gids_t_test, mask_t_test, _ = to_torch(
-        cell_df_test, p_test, gids_test, mask_test, gene_of_guide, device
+    (
+        p_t_test,
+        day_t_test,
+        rep_t_test,
+        gids_t_test,
+        mask_t_test,
+        _,
+        _,
+        _,
+    ) = to_torch(
+        cell_df_test,
+        p_test,
+        gids_test,
+        mask_test,
+        gene_of_guide,
+        guide_to_gene,
+        n_guides_per_gene,
+        device,
     )
     k_t_train = torch.tensor(k_train, dtype=torch.float32, device=device)
     k_t_test = torch.tensor(k_test, dtype=torch.float32, device=device)
@@ -272,6 +309,8 @@ def main() -> None:
         gids_t_train,
         mask_t_train,
         gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
     )
 
     diag_steps = cfg.get("diagnostics_num_steps", 1000)
@@ -286,6 +325,8 @@ def main() -> None:
         gids_t_train,
         mask_t_train,
         gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
         fate_names=cfg["fates"],
         ref_fate=ref_fate,
         L=L,
@@ -341,6 +382,8 @@ def main() -> None:
         gids_t_train_zero,
         mask_t_train_zero,
         gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
         fate_names=cfg["fates"],
         ref_fate=ref_fate,
         L=L,
@@ -416,6 +459,8 @@ def main() -> None:
             gids_t_perm_train,
             mask_t_train,
             gene_of_guide_t,
+            guide_to_gene_t,
+            n_guides_per_gene_t,
             fate_names=cfg["fates"],
             ref_fate=ref_fate,
             L=L,
@@ -445,6 +490,8 @@ def main() -> None:
             gids_t_perm_train,
             mask_t_train,
             gene_of_guide_t,
+            guide_to_gene_t,
+            n_guides_per_gene_t,
         )
 
         perm_summary = Path(args.out).with_name("diagnostics_perm_summary.csv")

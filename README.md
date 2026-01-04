@@ -16,9 +16,6 @@ pip install -e .
 Model (full specification)
 ------------
 
-This section consolidates all steps from `src/architecture/pyro_model.md` and
-`src/architecture/pyro_context.md`.
-
 **1. Observed data (after filtering)**
 
 - Cells $i=1,\dots,N$ after filtering to $k_i \le K_{\max}$, where $k_i$ is the
@@ -54,6 +51,8 @@ $$
   $\mathcal{F}^\star = \{\mathrm{MES}, \mathrm{NEU}\}$, indexed by $f^\star$.
 - Gene-by-day effects $\theta_{\ell,f^\star,d}$ and guide deviations
   $\delta_{g,f^\star}$ (time-invariant, shared across days).
+- Mean-zero constraint within each gene: for each gene $\ell$ and fate $f^\star$,
+  $\frac{1}{|G_\ell|}\sum_{g\in G_\ell}\delta_{g,f^\star}=0$ (enforced by centering).
 - Nuisance: day intercepts $\alpha_{f^\star,d}$, replicate effects
   $b_{f^\star,r}$, burden slope $\gamma_{f^\star}$.
 - Hard-zero baseline rows: $\theta_{0,f^\star,d}=0$ and $\delta_{0,f^\star}=0$.
@@ -65,6 +64,9 @@ $$
 $$
 
 with $\beta_{0,f^\star,d}=0$ for NTC/baseline guides.
+
+Because $\delta$ is centered within each gene, the guide-mean effect equals the
+gene effect: $\frac{1}{|G_\ell|}\sum_{g\in G_\ell}\beta_{g,f^\star,d}=\theta_{\ell,f^\star,d}$.
 
 **4. Cell-level linear predictor (MOI-aware)**
 
@@ -89,51 +91,48 @@ $$
 \log L = \sum_{i=1}^N \sum_{f\in\{\mathrm{EC,MES,NEU}\}} p_{i,f}\,\log \pi_{i,f}.
 $$
 
-**7. Priors (weakly regularizing)**
+**7. Priors (fixed-scale, weakly regularizing)**
+
+Day/rep/burden effects:
 
 $$
-\alpha_{f^\star,d}\sim \mathcal{N}(0,\sigma_{\alpha,f^\star}^2),\quad
-\sigma_{\alpha,f^\star}\sim \mathrm{HalfNormal}(s_\alpha)
+\alpha_{f^\star,d}\sim \mathcal{N}(0, s_\alpha),\quad
+b_{f^\star,r}\sim \mathcal{N}(0, s_{\mathrm{rep}}),\quad
+\gamma_{f^\star}\sim \mathcal{N}(0, s_\gamma).
 $$
 
-$$
-b_{f^\star,r}\sim \mathcal{N}(0,\sigma_{\mathrm{rep},f^\star}^2),\quad
-\sigma_{\mathrm{rep},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{rep}})
-$$
-
-$$
-\gamma_{f^\star}\sim \mathcal{N}(0,\sigma_{\gamma,f^\star}^2),\quad
-\sigma_{\gamma,f^\star}\sim \mathrm{HalfNormal}(s_\gamma)
-$$
-
-Gene effects (random walk with optional fixed time scale):
+Gene effects (random walk with per-interval scales):
 
 $$
 \tau_{f^\star}\sim \mathrm{HalfNormal}(s_\tau),\quad
 z_{\ell,f^\star,0}\sim \mathcal{N}(0,1),\quad
-\theta_{\ell,f^\star,0} = \tau_{f^\star} z_{\ell,f^\star,0}
+\theta_{\ell,f^\star,0} = \tau_{f^\star} z_{\ell,f^\star,0}.
 $$
 
+For intervals $d=1,\dots,D-1$:
+
 $$
-\sigma_{\mathrm{time},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{time}}),\quad
-\varepsilon_{\ell,f^\star,d}\sim \mathcal{N}(0,1)
+\sigma_{\mathrm{time},f^\star,d}\sim \mathrm{HalfNormal}(s_{\mathrm{time}}),\quad
+\varepsilon_{\ell,f^\star,d}\sim \mathcal{N}(0,1),
 $$
 
 $$
 \theta_{\ell,f^\star,d} =
 \theta_{\ell,f^\star,d-1} +
- c_d\,\sigma_{\mathrm{time},f^\star}\,\varepsilon_{\ell,f^\star,d},\quad d=1,\dots,D-1.
+\sigma_{\mathrm{time},f^\star,d}\,\varepsilon_{\ell,f^\star,d}.
 $$
 
-Here $c_d$ is a fixed per-interval scale from `time_scale` (length $D-1$).
-If omitted, $c_d=1$ for all intervals.
-
-Guide deviations:
+Guide deviations (mean-zero within gene):
 
 $$
 \sigma_{\mathrm{guide},f^\star}\sim \mathrm{HalfNormal}(s_{\mathrm{guide}}),\quad
 u_{g,f^\star}\sim \mathcal{N}(0,1),\quad
-\delta_{g,f^\star}= \sigma_{\mathrm{guide},f^\star} u_{g,f^\star}.
+\delta^{\mathrm{raw}}_{g,f^\star}= \sigma_{\mathrm{guide},f^\star} u_{g,f^\star}.
+$$
+
+$$
+\delta_{g,f^\star} = \delta^{\mathrm{raw}}_{g,f^\star} -
+\frac{1}{|G_{\ell(g)}|}\sum_{g'\in G_{\ell(g)}} \delta^{\mathrm{raw}}_{g',f^\star}.
 $$
 
 **8. Non-centered parameterization**
@@ -147,11 +146,11 @@ construct $(\theta,\delta)$. This improves SVI stability.
 For minibatch $S$ of size $B$:
 
 $$
-\log p(p\mid\phi) \approx \frac{N}{B}\sum_{i\in S}\sum_f p_{i,f}\log \pi_{i,f}(\phi).
+\log p(p\mid\phi) \approx w\frac{N}{B}\sum_{i\in S}\sum_f p_{i,f}\log \pi_{i,f}(\phi).
 $$
 
 Implementation uses `pyro.plate("cells", N, subsample_size=B)` and scales the
-log-likelihood by $N/B$ with `ClippedAdam`.
+log-likelihood by $N/B$ with `ClippedAdam`; $w$ is `likelihood_weight`.
 
 **10. Primary contrast (MES-EC)**
 
@@ -159,39 +158,51 @@ $$
 \Delta_\ell(d) \equiv \theta_{\ell,\mathrm{MES},d}.
 $$
 
-**11. Gene summary across days**
+**11. Posterior summaries + exports (theta/beta)**
 
-Choose weights $w_d \ge 0$, $\sum_d w_d=1$ (default $w_d \propto n_d$):
+Draw $S$ posterior samples from the VI guide. For the MES contrast:
+
+- Gene/day summaries (theta only):
+  $\hat{\theta}_{\ell,d}=\frac{1}{S}\sum_s \theta^{(s)}_{\ell,\mathrm{MES},d}$ and
+  $\mathrm{sd}_{\ell,d}$ computed across draws (ddof=0).
+- Guide/day summaries (beta):
+  $\beta^{(s)}_{g,d}=\theta^{(s)}_{\ell(g),\mathrm{MES},d}+\delta^{(s)}_{g,\mathrm{MES}}$,
+  with mean/sd across draws.
+
+Exports:
+
+- `gene_daywise_for_mash.csv`: `gene`, `betahat_d*`, `se_d*` from $\theta$ only.
+- `guide_daywise_for_mash.csv`: `guide`, `gene`, `betahat_d*`, `se_d*` from $\beta$.
+- `theta_posterior_summary.npz` and `delta_posterior_summary.npz`.
+- QC: `qc_delta_mean_by_gene.csv` (mean $\delta$ per gene) and
+  `qc_theta_beta_offset_by_gene.csv` (mean over guides of $\beta$ minus $\theta$
+  across days), both expected near 0.
+
+Optional across-day summary (legacy ash):
 
 $$
-\Delta^{\mathrm{sum}}_\ell = \sum_{d=0}^{D-1} w_d\,\Delta_\ell(d).
+\Delta^{\mathrm{sum}}_\ell = \sum_{d=0}^{D-1} w_d\,\Delta_\ell(d),
 $$
 
-Compute posterior mean and SD from VI draws; optionally replace SD with a
-small stratified bootstrap SE.
+with $w_d\ge 0$ and $\sum_d w_d=1$ (default $w_d \propto n_d$).
 
-**12. Empirical Bayes shrinkage + hit calling (ash)**
+**12. Empirical Bayes shrinkage + hit calling (mashr two-mode + aggregation)**
 
-Observation model:
+- Run mashr on `gene_daywise_for_mash.csv` and `guide_daywise_for_mash.csv` in
+  two modes (conservative/enriched).
+- Aggregate guide-level mash outputs to gene-level meta-fixed estimates
+  (`gene_from_guide_mash_*.csv`) with daywise postmean/postsd/lfsr and
+  `active_days`.
+- Default discovery uses the gene-theta mash output (`mash_gene_*.csv`).
 
-$$
-\widehat{\Delta}^{\mathrm{sum}}_\ell \mid \Delta_\ell
-\approx \mathcal{N}(\Delta_\ell,\mathrm{se}_\ell^2).
-$$
+Daywise call at day $d$ if:
 
-Across genes:
+- `lfsr_d < mash_lfsr_thresh_day`, and
+- $P(|\mathrm{effect}_d|\ge \epsilon)\ge \mathrm{effect\_prob\_large\_min}$,
+  where the tail probability is computed from a Normal(postmean, postsd).
 
-$$
-\Delta_\ell \sim g(\cdot),\quad g(\Delta)=\sum_k \pi_k f_k(\Delta).
-$$
-
-Recommended settings (TRADE-style for enriched gene sets):
-
-- `pointmass = FALSE`
-- `mixcompdist = "halfuniform"` (flexible EB prior, allows asymmetric effects)
-- use posterior mean, `lfsr`, and `qvalue` for ranking/calling hits.
-- Primary hit calling: low `lfsr` (e.g., < 0.05), optionally with a minimum
-  effect size threshold on the shrunk posterior mean or tail probability.
+Any-day call uses the configured correction (bonferroni by default) and
+requires `min_active_days_for_hit_anyday` active days.
 
 **13. Minimal diagnostics (recommended)**
 
@@ -205,7 +216,9 @@ Pipeline and usage
 Primary entrypoints:
 
 - Fit + export: `scripts/fit_pyro_export.py`
-- Shrinkage: `scripts/run_ash.R`
+- Shrinkage (mashr two-mode): `scripts/run_mashr_two_mode.R`
+- Guide→gene aggregation: `scripts/aggregate_guides_to_genes.py`
+- Mode comparison: `scripts/compare_mash_modes.py`
 - Rank hits: `scripts/rank_hits.py`
 - Diagnostics: `scripts/run_diagnostics.py`
 - Simulation: `scripts/simulate_recovery.py`
@@ -214,7 +227,7 @@ Primary entrypoints:
 Configuration:
 
 - `config.yaml` controls input paths, model sizes, priors, and diagnostics.
-- `time_scale` (optional) must have length `D-1` and positive entries.
+- `time_scale` is deprecated in the current model (per-interval $\sigma_{\mathrm{time}}$ is learned).
 
 Required inputs:
 
@@ -231,10 +244,11 @@ End-to-end on real data (uses `config.yaml`):
 snakemake --use-conda --cores 1
 ```
 
-This runs: `fit_pyro_export` → `run_ash` → `rank_hits` to produce
-`out_fate_pipeline/hits_ranked.csv`.
+This runs: `fit_pyro_export` → mashr (gene + guide, both modes) → guide aggregation →
+`rank_hits` (default mode) and produces `out_fate_pipeline/hits_ranked.csv`
+plus `out_fate_pipeline/mash_mode_comparison.csv`.
 
-Simulation (full chain, including ash + ranking):
+Simulation (full chain, including mashr + aggregation + ranking):
 
 ```bash
 snakemake --use-conda --cores 1 sim_all
@@ -284,6 +298,16 @@ Common simulation knobs:
 - `--cells` and `--num-steps`: control sample size and optimization effort.
 - `--s-time`, `--s-guide`, `--s-tau`: prior scales.
 - `--time-scale`: per-interval random-walk scaling (length `days-1`).
+
+Daywise recovery evaluation (sim outputs):
+
+```bash
+python scripts/eval_daywise_hits.py \
+  --hits out_fate_pipeline_sim/hits_ranked.csv \
+  --truth out_fate_pipeline_sim/sim_recovery.csv \
+  --lfsr-thresh 0.05 \
+  --truth-thresh 0.2
+```
 
 Tests
 ------------
@@ -352,8 +376,12 @@ Project Organization
     │   ├── fit_pyro_export.py
     │   ├── run_ash.R
     │   ├── run_mashr.R
+    │   ├── run_mashr_two_mode.R
+    │   ├── aggregate_guides_to_genes.py
+    │   ├── compare_mash_modes.py
     │   ├── rank_hits.py
     │   ├── run_diagnostics.py
+    │   ├── eval_daywise_hits.py
     │   ├── simulate_recovery.py
     │   ├── simulate_prior_sweep.py
     │   ├── simulate_tau_sweep.py

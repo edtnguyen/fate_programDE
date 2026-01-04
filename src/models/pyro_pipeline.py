@@ -39,8 +39,12 @@ def to_torch(
     guide_ids: np.ndarray,
     mask: np.ndarray,
     gene_of_guide: np.ndarray,
+    guide_to_gene: np.ndarray,
+    n_guides_per_gene: np.ndarray,
     device: str,
 ) -> Tuple[
+    "torch.Tensor",
+    "torch.Tensor",
     "torch.Tensor",
     "torch.Tensor",
     "torch.Tensor",
@@ -54,7 +58,8 @@ def to_torch(
     Returns
     -------
     tuple
-        Torch tensors (p_t, day_t, rep_t, guide_ids_t, mask_t, gene_of_guide_t).
+        Torch tensors (p_t, day_t, rep_t, guide_ids_t, mask_t, gene_of_guide_t,
+        guide_to_gene_t, n_guides_per_gene_t).
     """
     if "day" not in cell_df.columns or "rep" not in cell_df.columns:
         raise KeyError("cell_df must contain 'day' and 'rep' columns")
@@ -67,4 +72,15 @@ def to_torch(
     guide_ids_t = torch.tensor(guide_ids, dtype=torch.long, device=device)
     mask_t = torch.tensor(mask, dtype=torch.float32, device=device)
     gene_of_guide_t = torch.tensor(gene_of_guide, dtype=torch.long, device=device)
-    return p_t, day_t, rep_t, guide_ids_t, mask_t, gene_of_guide_t
+    guide_to_gene_t = torch.tensor(guide_to_gene, dtype=torch.long, device=device)
+    n_guides_per_gene_t = torch.tensor(n_guides_per_gene, dtype=torch.long, device=device)
+    return (
+        p_t,
+        day_t,
+        rep_t,
+        guide_ids_t,
+        mask_t,
+        gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
+    )

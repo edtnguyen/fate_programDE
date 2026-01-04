@@ -17,7 +17,7 @@ import torch  # noqa: E402
 import pyro  # noqa: E402
 
 from scripts import simulate_recovery as sim  # noqa: E402
-from src.models.pyro_model import export_gene_summary_for_ash, fit_svi  # noqa: E402
+from src.models.pyro_model import export_gene_summary_for_mash, fit_svi  # noqa: E402
 
 
 def _parse_list(value: str, cast=float) -> list:
@@ -69,7 +69,7 @@ def main() -> None:
     ref_fate = "EC"
     contrast_fate = "MES"
 
-    model_args, params, gene_names, day_counts, _ = sim._simulate_inputs(
+    model_args, params, gene_names, _, _ = sim._simulate_inputs(
         rng,
         N=args.cells,
         L=args.genes,
@@ -84,14 +84,13 @@ def main() -> None:
         concentration=args.concentration,
     )
 
-    true_betahat = sim._true_gene_summary(
+    true_betahat = sim._true_gene_daywise(
         params,
         L=args.genes,
         D=args.days,
         fate_names=fate_names,
         ref_fate=ref_fate,
         contrast_fate=contrast_fate,
-        day_counts=day_counts,
     )
 
     detail_rows = []
@@ -123,7 +122,7 @@ def main() -> None:
                 seed=seed,
             )
 
-            summary = export_gene_summary_for_ash(
+            summary = export_gene_summary_for_mash(
                 guide=guide,
                 model_args=model_args,
                 gene_names=gene_names,
@@ -133,12 +132,14 @@ def main() -> None:
                 L=args.genes,
                 D=args.days,
                 num_draws=args.num_draws,
-                day_cell_counts=day_counts,
-                weights=None,
                 out_csv=None,
             )
 
-            est_betahat = summary["betahat"].to_numpy()
+            betahat_cols = [c for c in summary.columns if c.startswith("betahat_d")]
+            betahat_cols = sorted(betahat_cols, key=lambda c: int(c.split("d")[1]))
+            if len(betahat_cols) != args.days:
+                raise SystemExit("Daywise summary missing betahat_d* columns.")
+            est_betahat = summary[betahat_cols].to_numpy()
             metrics = sim._compute_metrics(est_betahat, true_betahat)
             seed_metrics.append(metrics)
             betahat_list.append(est_betahat)

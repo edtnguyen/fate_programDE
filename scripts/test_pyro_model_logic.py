@@ -42,7 +42,7 @@ def generate_mock_inputs(
     mask = np.zeros((num_cells, Kmax), dtype=bool)
     for i in range(num_cells):
         num_guides_for_cell = k_t[i].item()
-        guides = np.random.choice(G, num_guides_for_cell, replace=False)
+        guides = np.random.choice(G, num_guides_for_cell, replace=False) + 1
         guide_ids[i, :num_guides_for_cell] = guides
         mask[i, :num_guides_for_cell] = True
 
@@ -51,9 +51,13 @@ def generate_mock_inputs(
 
     # Generate gene_of_guide
     # Last guide is NTC, maps to gene 0 (baseline)
-    gene_of_guide = np.random.randint(1, L + 1, G + 1)
+    gene_of_guide = (np.arange(G + 1) % L) + 1
     gene_of_guide[0] = 0  # baseline guide
     gene_of_guide_t = torch.tensor(gene_of_guide, dtype=torch.long)
+    guide_to_gene = gene_of_guide[1:] - 1
+    n_guides_per_gene = np.bincount(guide_to_gene, minlength=L).astype(np.int64)
+    guide_to_gene_t = torch.tensor(guide_to_gene, dtype=torch.long)
+    n_guides_per_gene_t = torch.tensor(n_guides_per_gene, dtype=torch.long)
 
     model_args = (
         p_t,
@@ -63,6 +67,8 @@ def generate_mock_inputs(
         guide_ids_t,
         mask_t,
         gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
     )
 
     fit_svi_args = {
@@ -97,4 +103,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

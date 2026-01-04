@@ -28,6 +28,8 @@ def _dummy_inputs(
     guide_map_df = load_guide_map(guide_map_csv)
     guide_names = guide_map_df["guide_name"].tolist()
     _, gene_of_guide, _, L, G = build_id_maps(guide_names, guide_map_df)
+    guide_to_gene = gene_of_guide[1:] - 1
+    n_guides_per_gene = np.bincount(guide_to_gene, minlength=L).astype(np.int64)
 
     D = cfg["D"]
     R = cfg["R"]
@@ -57,6 +59,8 @@ def _dummy_inputs(
         torch.tensor(guide_ids, dtype=torch.long),
         torch.tensor(mask, dtype=torch.float32),
         torch.tensor(gene_of_guide, dtype=torch.long),
+        torch.tensor(guide_to_gene, dtype=torch.long),
+        torch.tensor(n_guides_per_gene, dtype=torch.long),
     )
 
     model_kwargs = {

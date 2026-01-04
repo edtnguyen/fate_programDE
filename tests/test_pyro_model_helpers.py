@@ -90,14 +90,26 @@ class TestThetaDeltaConstruction(unittest.TestCase):
         self.assertTrue(torch.allclose(theta_core, expected))
 
     def test_construct_delta_core(self):
-        sigma_guide = torch.tensor([0.5, 2.0])
-        u = torch.tensor([[2.0, -1.0]])
-        delta_core = construct_delta_core(sigma_guide=sigma_guide, u=u)
-        expected = torch.tensor([[1.0, -2.0]])
+        sigma_guide = torch.tensor([2.0])
+        u = torch.tensor([[1.0], [3.0], [-2.0]])
+        guide_to_gene = torch.tensor([0, 0, 1])
+        n_guides_per_gene = torch.tensor([2, 1])
+
+        delta_core = construct_delta_core(
+            sigma_guide=sigma_guide,
+            u=u,
+            guide_to_gene=guide_to_gene,
+            n_guides_per_gene=n_guides_per_gene,
+        )
+        expected = torch.tensor([[-2.0], [2.0], [0.0]])
         self.assertTrue(torch.allclose(delta_core, expected))
 
+        for gene in [0, 1]:
+            idx = guide_to_gene == gene
+            self.assertTrue(torch.allclose(delta_core[idx].mean(), torch.tensor(0.0)))
+
         delta = add_zero_guide_row(delta_core)
-        self.assertEqual(delta.shape, (2, 2))
+        self.assertEqual(delta.shape, (4, 1))
         self.assertTrue(torch.allclose(delta[0], torch.zeros_like(delta[0])))
 
     def test_compute_linear_predictor(self):

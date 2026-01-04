@@ -1,0 +1,2 @@
+mode_a,mode_b,hits_a,hits_b,median_lfsr_min_a,median_lfsr_min_b,jaccard_hits,top50_overlap
+gene_from_guide_mash_conservative.csv,gene_from_guide_mash_enriched.csv,23,28,0.00035194440352703544,4.478612632944213e-05,0.8214285714285714,30

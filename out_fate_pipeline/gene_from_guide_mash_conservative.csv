@@ -1,0 +1,4 @@
+gene,n_guides,best_day,best_day_among_active,active_days,hit_anyday,max_abs_postmean,min_lfsr,min_lfsr_among_active,guide_min_lfsr_min,median_guide_lfsr_min,gene_postmean_d0,gene_postsd_d0,gene_lfsr_d0,gene_postmean_d1,gene_postsd_d1,gene_lfsr_d1,gene_postmean_d2,gene_postsd_d2,gene_lfsr_d2,gene_postmean_d3,gene_postsd_d3,gene_lfsr_d3
+GeneA,1,0,,,False,0.0,0.5,,1.0,1.0,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5
+GeneB,1,0,,,False,0.0,0.5,,1.0,1.0,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5
+GeneC,1,0,,,False,0.0,0.5,,1.0,1.0,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5,0.0,1.0000000000000002e-08,0.5

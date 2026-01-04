@@ -1,0 +1,2 @@
+mode_a,mode_b,hits_a,hits_b,median_score_a,median_score_b,median_active_days_a,median_active_days_b,jaccard_hits,top50_overlap
+gene_from_guide_mash_conservative.csv,gene_from_guide_mash_enriched.csv,36,37,0.0,0.0,1.0,1.0,0.972972972972973,50

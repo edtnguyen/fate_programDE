@@ -168,11 +168,46 @@ def add_zero_gene_row(theta_core: "torch.Tensor") -> "torch.Tensor":
 def construct_delta_core(
     sigma_guide: "torch.Tensor",
     u: "torch.Tensor",
+    guide_to_gene: "torch.Tensor",
+    n_guides_per_gene: "torch.Tensor",
 ) -> "torch.Tensor":
     """
     Construct guide deviations (without the baseline guide row).
     """
-    return sigma_guide[..., None, :] * u
+    import torch
+
+    if sigma_guide.ndim < 1:
+        raise ValueError("sigma_guide must have at least 1 dimension")
+    if u.ndim < 2:
+        raise ValueError("u must have at least 2 dimensions")
+    if guide_to_gene.ndim != 1:
+        raise ValueError("guide_to_gene must be 1D: (G,)")
+    if n_guides_per_gene.ndim != 1:
+        raise ValueError("n_guides_per_gene must be 1D: (L,)")
+    if guide_to_gene.shape[0] != u.shape[-2]:
+        raise ValueError("guide_to_gene length must match G")
+    if u.shape[-1] != sigma_guide.shape[-1]:
+        raise ValueError("u last dim must match F*")
+    if u.shape[:-2] != sigma_guide.shape[:-1]:
+        raise ValueError("sigma_guide leading dims must match u leading dims")
+
+    fstar = sigma_guide.shape[-1]
+    L = n_guides_per_gene.shape[0]
+
+    u_t = u.transpose(-1, -2)
+    guide_to_gene_exp = guide_to_gene.view(
+        *([1] * (u_t.ndim - 1)), u_t.shape[-1]
+    )
+    guide_to_gene_exp = guide_to_gene_exp.expand(*u_t.shape)
+    sum_u = torch.zeros((*u_t.shape[:-1], L), device=u.device, dtype=u.dtype)
+    sum_u = sum_u.scatter_add(-1, guide_to_gene_exp, u_t)
+    denom = n_guides_per_gene.to(u.dtype).clamp(min=1)
+    denom = denom.view(*([1] * (sum_u.ndim - 1)), L)
+    mean_u = sum_u / denom
+    u_centered = u_t - mean_u.gather(-1, guide_to_gene_exp)
+    sigma_exp = sigma_guide.unsqueeze(-1)
+    delta_core = (sigma_exp * u_centered).transpose(-1, -2)
+    return delta_core
 
 
 def add_zero_guide_row(delta_core: "torch.Tensor") -> "torch.Tensor":
@@ -197,6 +232,8 @@ def fate_model(
     guide_ids_t: "torch.Tensor",
     mask_t: "torch.Tensor",
     gene_of_guide_t: "torch.Tensor",
+    guide_to_gene_t: "torch.Tensor",
+    n_guides_per_gene_t: "torch.Tensor",
     *,
     fate_names: Sequence[str],
     ref_fate: str = DEFAULT_REF_FATE,
@@ -250,13 +287,9 @@ def fate_model(
         "alpha", dist.Normal(0.0, s_alpha).expand([fstar, D]).to_event(2)
     )
 
-    b = pyro.sample(
-        "b", dist.Normal(0.0, s_rep).expand([fstar, R]).to_event(2)
-    )
+    b = pyro.sample("b", dist.Normal(0.0, s_rep).expand([fstar, R]).to_event(2))
 
-    gamma = pyro.sample(
-        "gamma", dist.Normal(0.0, s_gamma).expand([fstar]).to_event(1)
-    )
+    gamma = pyro.sample("gamma", dist.Normal(0.0, s_gamma).expand([fstar]).to_event(1))
 
     tau = pyro.sample("tau", dist.HalfNormal(s_tau).expand([fstar]).to_event(1))
     z0 = pyro.sample("z0", dist.Normal(0.0, 1.0).expand([L, fstar]).to_event(2))
@@ -284,7 +317,12 @@ def fate_model(
         "sigma_guide", dist.HalfNormal(s_guide).expand([fstar]).to_event(1)
     )
     u = pyro.sample("u", dist.Normal(0.0, 1.0).expand([G, fstar]).to_event(2))
-    delta_core = construct_delta_core(sigma_guide=sigma_guide, u=u)
+    delta_core = construct_delta_core(
+        sigma_guide=sigma_guide,
+        u=u,
+        guide_to_gene=guide_to_gene_t,
+        n_guides_per_gene=n_guides_per_gene_t,
+    )
     delta = add_zero_guide_row(delta_core)
 
     batch_size = subsample_size if subsample_size is not None else N
@@ -337,6 +375,8 @@ def fit_svi(
     guide_ids_t: "torch.Tensor",
     mask_t: "torch.Tensor",
     gene_of_guide_t: "torch.Tensor",
+    guide_to_gene_t: "torch.Tensor",
+    n_guides_per_gene_t: "torch.Tensor",
     *,
     fate_names: Sequence[str],
     ref_fate: str = DEFAULT_REF_FATE,
@@ -406,6 +446,8 @@ def fit_svi(
             guide_ids_t,
             mask_t,
             gene_of_guide_t,
+            guide_to_gene_t,
+            n_guides_per_gene_t,
             L=L,
             G=G,
             D=D,
@@ -440,7 +482,17 @@ def reconstruct_theta_samples(
     if num_draws <= 0:
         raise ValueError("num_draws must be a positive integer")
 
-    p_t, day_t, rep_t, k_t, guide_ids_t, mask_t, gene_of_guide_t = model_args
+    (
+        p_t,
+        day_t,
+        rep_t,
+        k_t,
+        guide_ids_t,
+        mask_t,
+        gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
+    ) = model_args
     G = int(gene_of_guide_t.shape[0] - 1)
     R = int(rep_t.max().item() + 1)
     Kmax = int(guide_ids_t.shape[1])
@@ -457,6 +509,8 @@ def reconstruct_theta_samples(
         guide_ids_t,
         mask_t,
         gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
         L=L,
         G=G,
         D=D,
@@ -474,6 +528,75 @@ def reconstruct_theta_samples(
     theta = add_zero_gene_row(theta_core)
 
     return theta.detach().cpu().numpy()
+
+
+def reconstruct_delta_samples(
+    guide: "AutoGuide",
+    model_args: tuple["torch.Tensor", ...],
+    *,
+    L: int,
+    D: int,
+    num_draws: int,
+) -> np.ndarray:
+    """
+    Draw posterior samples of guide deviations from the fitted guide.
+
+    Returns
+    -------
+    np.ndarray
+        Array of sampled delta values with shape (S, G+1, F*).
+    """
+    import torch
+    from pyro.infer import Predictive
+
+    if D <= 0 or L <= 0:
+        raise ValueError("L and D must be positive integers")
+    if num_draws <= 0:
+        raise ValueError("num_draws must be a positive integer")
+
+    (
+        p_t,
+        day_t,
+        rep_t,
+        k_t,
+        guide_ids_t,
+        mask_t,
+        gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
+    ) = model_args
+    G = int(gene_of_guide_t.shape[0] - 1)
+    R = int(rep_t.max().item() + 1)
+    Kmax = int(guide_ids_t.shape[1])
+
+    return_sites = ("sigma_guide", "u")
+    predictive = Predictive(guide, num_samples=num_draws, return_sites=return_sites)
+    samples = predictive(
+        p_t,
+        day_t,
+        rep_t,
+        k_t,
+        guide_ids_t,
+        mask_t,
+        gene_of_guide_t,
+        guide_to_gene_t,
+        n_guides_per_gene_t,
+        L=L,
+        G=G,
+        D=D,
+        R=R,
+        Kmax=Kmax,
+    )
+
+    delta_core = construct_delta_core(
+        sigma_guide=samples["sigma_guide"],
+        u=samples["u"],
+        guide_to_gene=guide_to_gene_t,
+        n_guides_per_gene=n_guides_per_gene_t,
+    )
+    delta = add_zero_guide_row(delta_core)
+
+    return delta.detach().cpu().numpy()
 
 
 def export_gene_summary_for_ash(
@@ -603,7 +726,7 @@ def export_gene_summary_for_mash(
 
     contrast_samples = theta_samples[:, 1:, contrast_idx, :]
     betahat = contrast_samples.mean(axis=0)
-    sebetahat = contrast_samples.std(axis=0, ddof=1)
+    sebetahat = contrast_samples.std(axis=0, ddof=0)
 
     summary_df = pd.DataFrame({"gene": list(gene_names)})
     for d in range(D):

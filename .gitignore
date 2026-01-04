@@ -90,3 +90,7 @@ target/
 
 # Local temp directories
 .tmp/
+.snakemake/
+.snakemake/
+sim_adata_100genes.h5ad
+*.h5ad

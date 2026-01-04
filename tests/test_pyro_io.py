@@ -121,9 +121,19 @@ class TestLoadAdataInputs(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT) as tmpdir:
             guide_map_path = Path(tmpdir) / "guide_map.csv"
             guide_map.to_csv(guide_map_path, index=False)
-            cell_df, p, guide_ids, mask, _, _, _, _, _ = pyro_io.load_adata_inputs(
-                adata, cfg, guide_map_csv=str(guide_map_path)
-            )
+            (
+                cell_df,
+                p,
+                guide_ids,
+                mask,
+                _,
+                _,
+                _,
+                _,
+                _,
+                _,
+                _,
+            ) = pyro_io.load_adata_inputs(adata, cfg, guide_map_csv=str(guide_map_path))
         self.assertEqual(len(cell_df), 1)
         self.assertEqual(p.shape[0], 1)
         self.assertEqual(guide_ids.shape[0], 1)

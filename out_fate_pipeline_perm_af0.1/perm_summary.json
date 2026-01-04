@@ -1,0 +1,21 @@
+{
+  "total_genes": 100,
+  "n_hits": 0,
+  "active_day_counts": {
+    "1": 100
+  },
+  "hit_active_day_counts": {},
+  "max_abs_postmean": {
+    "hit": {
+      "mean": NaN,
+      "median": NaN,
+      "p95": NaN
+    },
+    "non_hit": {
+      "mean": 0.035058014496657686,
+      "median": 0.0346366706043221,
+      "p95": 0.06155201562949131
+    }
+  },
+  "suggestion": "ok"
+}
