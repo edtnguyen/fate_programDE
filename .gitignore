@@ -94,3 +94,4 @@ target/
 .snakemake/
 sim_adata_100genes.h5ad
 *.h5ad
+*.h5ad
