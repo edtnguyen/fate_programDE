@@ -206,7 +206,10 @@ with $w_d\ge 0$ and $\sum_d w_d=1$ (default $w_d \propto n_d$).
 Daywise call at day $d$ if:
 
 - `lfsr_d < mash_lfsr_thresh_day`, and
-- $P(|\mathrm{effect}_d|\ge \epsilon)\ge \mathrm{effect\_prob\_large\_min}$,
+
+```math
+  P(|\mathrm{effect}_d|\ge \epsilon)\ge \mathrm{effect\_prob\_large\_min}
+```
   where the tail probability is computed from a Normal(postmean, postsd).
 
 Any-day call uses the configured correction (bonferroni by default) and
