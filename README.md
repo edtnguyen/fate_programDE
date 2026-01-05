@@ -163,8 +163,10 @@ $$
 Draw $S$ posterior samples from the VI guide. For the MES contrast:
 
 - Gene/day summaries (theta only):
-  ```md
-  $\hat{\theta}_{\ell,d}=\frac{1}{S}\sum_{s=1}^{S}\theta^{(s)}_{\ell,\mathrm{MES},d}$ and
+```math
+\hat{\theta}_{\ell,d}=\frac{1}{S}\sum_{s=1}^{S}\theta^{(s)}_{\ell,\mathrm{MES},d}
+```
+  and
   $\mathrm{sd}_{\ell,d}$ computed across draws (ddof=0).
 - Guide/day summaries (beta):
   $\beta^{(s)}_{g,d}=\theta^{(s)}_{\ell(g),\mathrm{MES},d}+\delta^{(s)}_{g,\mathrm{MES}}$,
