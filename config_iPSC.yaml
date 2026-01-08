@@ -1,0 +1,122 @@
+adata_path: /oak/stanford/groups/engreitz/Users/tri/Perturb-Seq/analysis/240307_eTN5_iPSC-EC_DA_hits/WT/adata_pre_fate_regress.h5ad
+
+# Where are CellRank fate probabilities stored?
+fate_prob_key: fateprob
+
+# Fate order in that matrix / dataframe:
+fates: ["neu", "mes", "ec"]
+ref_fate: ec
+contrast_fate: mes
+
+# Guide matrix key
+guide_key: guide
+covar_key: covar
+rep_key: rep
+day_key: day
+
+# Guide-to-gene mapping file (must align with guide columns)
+# Required columns:
+#   guide_name, gene_name, is_ntc (0/1)
+guide_map_csv: data/sim_guide_map.csv
+
+# Output dir
+out_dir: out_fate_pipeline_iPSC
+
+# Model sizes
+Kmax: 20
+# Number of time points
+D: 4
+# Number of replicates
+R: 2
+
+# SVI
+batch_size: 8192
+lr: 0.001
+clip_norm: 5.0
+num_steps: 10000
+num_posterior_draws: 2000
+seed: 0
+
+# Prior scales (regularization)
+s_alpha: 2.5
+s_rep: 0.8
+s_gamma: 0.8
+s_tau: 4.0
+s_time: 0.8
+s_guide: 1.5
+
+# Likelihood weight multiplier (default 1.0)
+likelihood_weight: 1.0
+
+# Optional fixed per-interval scaling of the random-walk increments (length D-1).
+time_scale: [1.0, 1.3, 1.6]
+
+# Optional bootstrap SE (replace VI posterior SD with bootstrap SD)
+bootstrap_se: false
+bootstrap_reps: 20
+bootstrap_frac: 0.5
+bootstrap_num_steps: 1000
+bootstrap_num_draws: 200
+bootstrap_seed: 0
+
+# Across-day summary weights:
+# If null -> weights proportional to day cell counts after filtering
+weights: null
+
+# ash thresholds for final "hit" label
+lfsr_thresh: 0.05
+qvalue_thresh: 0.10
+
+# mashr thresholds (daywise)
+mash_lfsr_thresh: 0.05
+mash_lfsr_thresh_day: 0.05
+mash_anyday_correction: "bonferroni"
+mash_lfsr_thresh_anyday: null
+
+# mashr modes and enrichment knobs
+mash_modes: ["conservative", "enriched"]
+mash_default_mode: "conservative"
+mash_enriched_prior: "uniform"
+mash_enriched_nullweight: 3
+mash_enriched_usepointmass: true
+mash_add_datadriven_cov: true
+mash_cov_pca_npc: 2
+mash_strong_lfsr_for_cov: 0.1
+mash_estimate_V: true
+mash_min_strong_for_cov: 50
+mash_se_inflate: 1.5
+mash_se_floor: 0.02
+mash_v_eig_floor: 1e-6
+mash_v_shrink_rho: 0.05
+
+# guide-to-gene aggregation
+guide_to_gene_agg_method: "meta_fixed"
+
+# discovery source-of-truth (theta-based gene mash)
+discovery_source: "gene_theta"
+
+# practical effect threshold (logit scale) + probabilistic gate
+effect_size_eps: 0.20
+effect_prob_large_min: 0.90
+min_active_days_for_hit_anyday: 1
+
+# Diagnostics (step 13)
+diagnostics_holdout_frac: 0.1
+diagnostics_num_steps: 1000
+diagnostics_num_draws: 25
+diagnostics_run_permutation: false
+diagnostics_perm_steps: 500
+diagnostics_perm_draws: 25
+diagnostics_seed: 0
+
+# Sanity checks (optional)
+sanity_check_genes: []
+sanity_num_draws: 200
+sanity_min_abs_effect: 0.0
+
+# Permutation calibration (optional)
+perm_out_dir: out_fate_pipeline_perm
+perm_adata_path: null
+perm_k_bin_mode: "bins"
+perm_k_bins: "1-2,3-5,6-10,11-20"
+perm_seed: 0
