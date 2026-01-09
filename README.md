@@ -263,6 +263,12 @@ PYRO_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/sc-dl-gpu"
 R_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/scrnaR"
 ```
 
+Then run Snakemake normally with `--use-conda` (it will activate those envs):
+
+```bash
+snakemake --use-conda --cores 1
+```
+
 This runs: `fit_pyro_export` → mashr (gene + guide, both modes) → guide aggregation →
 `rank_hits` (default mode) and produces `out_fate_pipeline/hits_ranked.csv`
 plus `out_fate_pipeline/mash_mode_comparison.csv`.
