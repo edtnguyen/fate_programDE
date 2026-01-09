@@ -191,6 +191,9 @@ def construct_delta_core(
     if u.shape[:-2] != sigma_guide.shape[:-1]:
         raise ValueError("sigma_guide leading dims must match u leading dims")
 
+    guide_to_gene = guide_to_gene.to(device=u.device, dtype=torch.long)
+    n_guides_per_gene = n_guides_per_gene.to(device=u.device)
+
     fstar = sigma_guide.shape[-1]
     L = n_guides_per_gene.shape[0]
 
