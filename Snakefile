@@ -12,6 +12,7 @@ CPU_PARTITION = "engreitz"
 GPU_PARTITION = "gpu"
 CPU_TIME = "02:00:00"
 GPU_TIME = "08:00:00"
+GPU_GRES = "gpu:1"
 MEM_SMALL_MB = 8000
 MEM_MED_MB = 16000
 MEM_GPU_MB = 128000
@@ -157,7 +158,7 @@ rule fit_pyro_export:
         slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
-        gpu=1,
+        slurm_gres=GPU_GRES,
         mem_mb=MEM_GPU_MB
     shell:
         r"""
@@ -309,7 +310,7 @@ rule diagnostics:
         slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
-        gpu=1,
+        slurm_gres=GPU_GRES,
         mem_mb=MEM_GPU_MB
     shell:
         r"""
@@ -360,7 +361,7 @@ rule perm_fit_export:
         slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
-        gpu=1,
+        slurm_gres=GPU_GRES,
         mem_mb=MEM_GPU_MB
     shell:
         r"""
@@ -508,7 +509,7 @@ if not SIM_USE_EXISTING:
             slurm_partition=GPU_PARTITION,
             partition=GPU_PARTITION,
             time=GPU_TIME,
-            gpu=1,
+            slurm_gres=GPU_GRES,
             mem_mb=MEM_GPU_MB
         shell:
             r"""
