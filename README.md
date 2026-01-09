@@ -276,8 +276,8 @@ snakemake --use-conda --jobs 50 \
   --cluster "sbatch -p {resources.partition} -t {resources.time} -c {threads} --mem={resources.mem_mb}"
 ```
 
-Override resources for specific rules on the CLI (example: more memory/time for
-`fit_pyro_export` and more threads):
+Override resources for specific rules on the CLI (example: increase memory/time
+and threads for `fit_pyro_export`):
 
 ```bash
 snakemake --use-conda --jobs 50 \
