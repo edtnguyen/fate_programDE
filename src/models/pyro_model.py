@@ -199,9 +199,7 @@ def construct_delta_core(
     L = n_guides_per_gene.shape[0]
 
     u_t = u.transpose(-1, -2)
-    guide_to_gene_exp = guide_to_gene.view(
-        *([1] * (u_t.ndim - 1)), u_t.shape[-1]
-    )
+    guide_to_gene_exp = guide_to_gene.view(*([1] * (u_t.ndim - 1)), u_t.shape[-1])
     guide_to_gene_exp = guide_to_gene_exp.expand(*u_t.shape)
     sum_u = torch.zeros((*u_t.shape[:-1], L), device=u.device, dtype=u.dtype)
     sum_u = sum_u.scatter_add(-1, guide_to_gene_exp, u_t)
