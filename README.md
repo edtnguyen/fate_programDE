@@ -255,6 +255,14 @@ End-to-end on real data (uses `config.yaml`):
 snakemake --use-conda --cores 1
 ```
 
+Using existing conda envs on an HPC (skip YAML env creation): edit the env
+paths at the top of `Snakefile`:
+
+```python
+PYRO_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/sc-dl-gpu"
+R_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/scrnaR"
+```
+
 This runs: `fit_pyro_export` → mashr (gene + guide, both modes) → guide aggregation →
 `rank_hits` (default mode) and produces `out_fate_pipeline/hits_ranked.csv`
 plus `out_fate_pipeline/mash_mode_comparison.csv`.

@@ -4,6 +4,10 @@ configfile: "config.yaml"
 
 OUT = config["out_dir"]
 
+# Use pre-installed conda envs on Sherlock (Pyro + R/mash/ash).
+PYRO_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/sc-dl-gpu"
+R_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/scrnaR"
+
 MASH_MODES = config.get("mash_modes", ["conservative", "enriched"])
 MASH_DEFAULT_MODE = config.get("mash_default_mode", "enriched")
 if MASH_DEFAULT_MODE not in MASH_MODES:
@@ -139,7 +143,7 @@ rule fit_pyro_export:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 4
     resources:
         gpu=1,
@@ -163,7 +167,7 @@ rule run_mash_gene:
     params:
         cfg="config.yaml"
     conda:
-        "envs/mash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -180,7 +184,7 @@ rule run_mash_guide:
     params:
         cfg="config.yaml"
     conda:
-        "envs/mash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -197,7 +201,7 @@ rule aggregate_gene:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -215,7 +219,7 @@ rule compare_modes:
     output:
         compare=MASH_COMPARE
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -232,7 +236,7 @@ rule run_ash:
     output:
         ash=f"{OUT}/gene_summary_ash_out.csv"
     conda:
-        "envs/ash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -249,7 +253,7 @@ rule rank_hits:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -270,7 +274,7 @@ rule diagnostics:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 4
     resources:
         gpu=1,
@@ -293,7 +297,7 @@ rule permute_guides:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -315,7 +319,7 @@ rule perm_fit_export:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 4
     resources:
         gpu=1,
@@ -339,7 +343,7 @@ rule perm_run_mash_gene:
     params:
         cfg="config.yaml"
     conda:
-        "envs/mash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -356,7 +360,7 @@ rule perm_run_mash_guide:
     params:
         cfg="config.yaml"
     conda:
-        "envs/mash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -373,7 +377,7 @@ rule perm_aggregate_gene:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -393,7 +397,7 @@ rule perm_rank_hits:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -413,7 +417,7 @@ rule perm_summary:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -445,7 +449,7 @@ if not SIM_USE_EXISTING:
         params:
             out_dir=SIM_OUT
         conda:
-            "envs/pyro.yaml"
+            PYRO_ENV
         threads: 4
         resources:
             gpu=1,
@@ -498,7 +502,7 @@ else:
             gene=SIM_GENE_EXPORT,
             guide=SIM_GUIDE_EXPORT
         conda:
-            "envs/pyro.yaml"
+            PYRO_ENV
         threads: 1
         resources:
             mem_mb=16000
@@ -518,7 +522,7 @@ rule sim_run_ash:
     output:
         ash=SIM_ASH
     conda:
-        "envs/ash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -535,7 +539,7 @@ rule sim_run_mash_gene:
     params:
         cfg=SIM_CONFIG
     conda:
-        "envs/mash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -552,7 +556,7 @@ rule sim_run_mash_guide:
     params:
         cfg=SIM_CONFIG
     conda:
-        "envs/mash.yaml"
+        R_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -569,7 +573,7 @@ rule sim_aggregate_gene:
     params:
         cfg=SIM_CONFIG
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -587,7 +591,7 @@ rule sim_compare_modes:
     output:
         compare=SIM_MASH_COMPARE
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -605,7 +609,7 @@ rule sim_rank_hits:
     output:
         hits=SIM_HITS
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=8000
@@ -636,7 +640,7 @@ rule sim_stress:
     params:
         cfg="config.yaml"
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -654,7 +658,7 @@ rule sim_prior_sweep:
         summary=PRIOR_SWEEP_SUMMARY,
         detail=PRIOR_SWEEP_DETAIL
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=16000
@@ -689,7 +693,7 @@ rule sim_tau_sweep:
         summary=TAU_SWEEP_SUMMARY,
         detail=TAU_SWEEP_DETAIL
     conda:
-        "envs/pyro.yaml"
+        PYRO_ENV
     threads: 1
     resources:
         mem_mb=16000
