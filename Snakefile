@@ -158,7 +158,7 @@ rule fit_pyro_export:
         slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
-        slurm_gpus=GPU_GPUS,
+        gpus=GPU_GPUS,
         mem_mb=MEM_GPU_MB
     shell:
         r"""
@@ -310,7 +310,7 @@ rule diagnostics:
         slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
-        slurm_gpus=GPU_GPUS,
+        gpus=GPU_GPUS,
         mem_mb=MEM_GPU_MB
     shell:
         r"""
@@ -361,7 +361,7 @@ rule perm_fit_export:
         slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
-        slurm_gpus=GPU_GPUS,
+        gpus=GPU_GPUS,
         mem_mb=MEM_GPU_MB
     shell:
         r"""
@@ -509,7 +509,7 @@ if not SIM_USE_EXISTING:
             slurm_partition=GPU_PARTITION,
             partition=GPU_PARTITION,
             time=GPU_TIME,
-            slurm_gpus=GPU_GPUS,
+            gpus=GPU_GPUS,
             mem_mb=MEM_GPU_MB
         shell:
             r"""
