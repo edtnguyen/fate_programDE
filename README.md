@@ -282,8 +282,7 @@ For the newer Slurm executor, the Snakefile sets `slurm_partition` per rule. Run
 snakemake --use-conda --executor slurm --jobs 50
 ```
 
-If your cluster requires `--gpus=1` on the gpu partition, use the provided
-profile to inject that flag for GPU rules:
+Use the provided profile to run with the Slurm executor:
 
 ```bash
 snakemake --profile profiles/slurm
@@ -298,6 +297,9 @@ snakemake --use-conda --jobs 50 \
   --set-resources fit_pyro_export:mem_mb=200000,fit_pyro_export:time=12:00:00 \
   --set-threads fit_pyro_export=8
 ```
+
+GPU requests are taken from the rule resources (see `GPU_GPUS` at the top of
+`Snakefile`) and mapped to `--gpus` by the slurm executor.
 
 For the slurm executor, override the partition key directly:
 
