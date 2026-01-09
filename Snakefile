@@ -1,12 +1,20 @@
 import time
 
-configfile: "config.yaml"
+CONFIG_PATH = "config_iPSC.yaml"
+configfile: CONFIG_PATH
 
 OUT = config["out_dir"]
 
 # Use pre-installed conda envs on Sherlock (Pyro + R/mash/ash).
 PYRO_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/sc-dl-gpu"
 R_ENV = "/oak/stanford/groups/engreitz/Users/tri/envs/scrnaR"
+CPU_PARTITION = "engreitz"
+GPU_PARTITION = "gpu"
+CPU_TIME = "02:00:00"
+GPU_TIME = "08:00:00"
+MEM_SMALL_MB = 8000
+MEM_MED_MB = 16000
+MEM_GPU_MB = 128000
 
 MASH_MODES = config.get("mash_modes", ["conservative", "enriched"])
 MASH_DEFAULT_MODE = config.get("mash_default_mode", "enriched")
@@ -31,7 +39,7 @@ SIM_GUIDE_MAP = config.get("sim_guide_map_csv", "data/sim_guide_map.csv")
 SIM_USE_EXISTING = config.get("sim_use_existing", False)
 SIM_CONFIG = config.get("sim_config_path")
 if SIM_CONFIG is None:
-    SIM_CONFIG = "config.yaml" if SIM_USE_EXISTING else f"{SIM_OUT}/sim_config.yaml"
+    SIM_CONFIG = CONFIG_PATH if SIM_USE_EXISTING else f"{SIM_OUT}/sim_config.yaml"
 
 if not SIM_USE_EXISTING:
     ruleorder: fit_pyro_export > simulate_recovery
@@ -141,13 +149,15 @@ rule fit_pyro_export:
         gene=GENE_MASH_IN,
         guide=GUIDE_MASH_IN
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
-    threads: 4
+    threads: 8
     resources:
+        partition=GPU_PARTITION,
+        time=GPU_TIME,
         gpu=1,
-        mem_mb=64000
+        mem_mb=MEM_GPU_MB
     shell:
         r"""
         mkdir -p {OUT}
@@ -165,12 +175,14 @@ rule run_mash_gene:
     output:
         mash=MASH_GENE
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_mashr_two_mode.R {input.gene} {output.mash} {wildcards.mode} {params.cfg}
@@ -182,12 +194,14 @@ rule run_mash_guide:
     output:
         mash=MASH_GUIDE
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_mashr_two_mode.R {input.guide} {output.mash} {wildcards.mode} {params.cfg}
@@ -199,12 +213,14 @@ rule aggregate_gene:
     output:
         agg=AGG_GENE
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/aggregate_guides_to_genes.py \
@@ -222,7 +238,9 @@ rule compare_modes:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/compare_mash_modes.py \
@@ -239,7 +257,9 @@ rule run_ash:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_ash.R {input.summary} {output.ash}
@@ -251,12 +271,14 @@ rule rank_hits:
     output:
         hits=f"{OUT}/hits_ranked.csv"
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/rank_hits.py \
@@ -272,13 +294,15 @@ rule diagnostics:
     output:
         diag=f"{OUT}/diagnostics.json"
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 4
     resources:
+        partition=GPU_PARTITION,
+        time=GPU_TIME,
         gpu=1,
-        mem_mb=64000
+        mem_mb=MEM_GPU_MB
     shell:
         r"""
         mkdir -p {OUT}
@@ -295,12 +319,14 @@ rule permute_guides:
     output:
         adata=PERM_ADATA
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         python scripts/make_permuted_guides.py \
@@ -317,13 +343,15 @@ rule perm_fit_export:
         gene=PERM_GENE_EXPORT,
         guide=PERM_GUIDE_EXPORT
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 4
     resources:
+        partition=GPU_PARTITION,
+        time=GPU_TIME,
         gpu=1,
-        mem_mb=64000
+        mem_mb=MEM_GPU_MB
     shell:
         r"""
         mkdir -p {PERM_OUT}
@@ -341,12 +369,14 @@ rule perm_run_mash_gene:
     output:
         mash=PERM_MASH_GENE
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_mashr_two_mode.R {input.gene} {output.mash} {PERM_MODE} {params.cfg}
@@ -358,12 +388,14 @@ rule perm_run_mash_guide:
     output:
         mash=PERM_MASH_GUIDE
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_mashr_two_mode.R {input.guide} {output.mash} {PERM_MODE} {params.cfg}
@@ -375,12 +407,14 @@ rule perm_aggregate_gene:
     output:
         agg=PERM_AGG_GENE
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/aggregate_guides_to_genes.py \
@@ -395,12 +429,14 @@ rule perm_rank_hits:
     output:
         hits=PERM_HITS
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/rank_hits.py \
@@ -415,12 +451,14 @@ rule perm_summary:
     output:
         summary=PERM_SUMMARY
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/perm_summary.py \
@@ -452,8 +490,10 @@ if not SIM_USE_EXISTING:
             PYRO_ENV
         threads: 4
         resources:
+            partition=GPU_PARTITION,
+            time=GPU_TIME,
             gpu=1,
-            mem_mb=64000
+            mem_mb=MEM_GPU_MB
         shell:
             r"""
             python scripts/simulate_recovery.py \
@@ -505,7 +545,9 @@ else:
             PYRO_ENV
         threads: 1
         resources:
-            mem_mb=16000
+            partition=CPU_PARTITION,
+            time=CPU_TIME,
+            mem_mb=MEM_MED_MB
         shell:
             r"""
             python scripts/fit_pyro_export.py \
@@ -525,7 +567,9 @@ rule sim_run_ash:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_ash.R {input.summary} {output.ash}
@@ -542,7 +586,9 @@ rule sim_run_mash_gene:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_mashr_two_mode.R {input.gene} {output.mash} {wildcards.mode} {params.cfg}
@@ -559,7 +605,9 @@ rule sim_run_mash_guide:
         R_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         Rscript scripts/run_mashr_two_mode.R {input.guide} {output.mash} {wildcards.mode} {params.cfg}
@@ -576,7 +624,9 @@ rule sim_aggregate_gene:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/aggregate_guides_to_genes.py \
@@ -594,7 +644,9 @@ rule sim_compare_modes:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/compare_mash_modes.py \
@@ -612,7 +664,9 @@ rule sim_rank_hits:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=8000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_SMALL_MB
     shell:
         r"""
         python scripts/rank_hits.py \
@@ -638,12 +692,14 @@ rule sim_stress:
         summary=STRESS_SUMMARY,
         detail=STRESS_DETAIL
     params:
-        cfg="config.yaml"
+        cfg=CONFIG_PATH
     conda:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         python scripts/simulate_stress.py \
@@ -661,7 +717,9 @@ rule sim_prior_sweep:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         python scripts/simulate_prior_sweep.py \
@@ -696,7 +754,9 @@ rule sim_tau_sweep:
         PYRO_ENV
     threads: 1
     resources:
-        mem_mb=16000
+        partition=CPU_PARTITION,
+        time=CPU_TIME,
+        mem_mb=MEM_MED_MB
     shell:
         r"""
         python scripts/simulate_tau_sweep.py \

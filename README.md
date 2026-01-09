@@ -269,6 +269,23 @@ Then run Snakemake normally with `--use-conda` (it will activate those envs):
 snakemake --use-conda --cores 1
 ```
 
+To submit to Slurm and use the per-rule `mem_mb` values from the Snakefile:
+
+```bash
+snakemake --use-conda --jobs 50 \
+  --cluster "sbatch -p {resources.partition} -t {resources.time} -c {threads} --mem={resources.mem_mb}"
+```
+
+Override resources for specific rules on the CLI (example: more memory/time for
+`fit_pyro_export` and more threads):
+
+```bash
+snakemake --use-conda --jobs 50 \
+  --cluster "sbatch -p {resources.partition} -t {resources.time} -c {threads} --mem={resources.mem_mb}" \
+  --set-resources fit_pyro_export:mem_mb=200000,fit_pyro_export:time=12:00:00 \
+  --set-threads fit_pyro_export=8
+```
+
 This runs: `fit_pyro_export` → mashr (gene + guide, both modes) → guide aggregation →
 `rank_hits` (default mode) and produces `out_fate_pipeline/hits_ranked.csv`
 plus `out_fate_pipeline/mash_mode_comparison.csv`.
