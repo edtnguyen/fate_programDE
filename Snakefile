@@ -12,6 +12,7 @@ CPU_PARTITION = "engreitz"
 GPU_PARTITION = "gpu"
 CPU_TIME = "02:00:00"
 GPU_TIME = "08:00:00"
+# GPU requests are injected via profiles/slurm/config.yaml (slurm_extra=--gpus=1).
 GPU_GPUS = 1
 MEM_SMALL_MB = 8000
 MEM_MED_MB = 16000

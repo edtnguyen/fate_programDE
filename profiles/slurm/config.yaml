@@ -1,0 +1,13 @@
+executor: slurm
+jobs: 50
+use-conda: true
+printshellcmds: true
+set-resources:
+  fit_pyro_export:
+    slurm_extra: "--gpus=1"
+  diagnostics:
+    slurm_extra: "--gpus=1"
+  perm_fit_export:
+    slurm_extra: "--gpus=1"
+  simulate_recovery:
+    slurm_extra: "--gpus=1"
