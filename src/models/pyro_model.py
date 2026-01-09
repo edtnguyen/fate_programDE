@@ -67,6 +67,7 @@ def build_guide_effects(
     if gene_of_guide_t.ndim != 1:
         raise ValueError("gene_of_guide_t must be 1D: (G+1,)")
 
+    gene_of_guide_t = gene_of_guide_t.to(device=theta_t.device, dtype=torch.long)
     theta_by_guide = theta_t[gene_of_guide_t]
     beta_t = theta_by_guide + delta_t.unsqueeze(-1)
 
@@ -287,24 +288,38 @@ def fate_model(
     fstar = len(non_ref_fates)
 
     alpha = pyro.sample(
-        "alpha", dist.Normal(0.0, s_alpha).expand([fstar, D]).to_event(2)
+        "alpha",
+        dist.Normal(torch.zeros(fstar, D, device=device), s_alpha).to_event(2),
     )
 
-    b = pyro.sample("b", dist.Normal(0.0, s_rep).expand([fstar, R]).to_event(2))
+    b = pyro.sample(
+        "b", dist.Normal(torch.zeros(fstar, R, device=device), s_rep).to_event(2)
+    )
 
-    gamma = pyro.sample("gamma", dist.Normal(0.0, s_gamma).expand([fstar]).to_event(1))
+    gamma = pyro.sample(
+        "gamma", dist.Normal(torch.zeros(fstar, device=device), s_gamma).to_event(1)
+    )
 
-    tau = pyro.sample("tau", dist.HalfNormal(s_tau).expand([fstar]).to_event(1))
-    z0 = pyro.sample("z0", dist.Normal(0.0, 1.0).expand([L, fstar]).to_event(2))
+    tau = pyro.sample(
+        "tau",
+        dist.HalfNormal(torch.full((fstar,), s_tau, device=device)).to_event(1),
+    )
+    z0 = pyro.sample(
+        "z0", dist.Normal(torch.zeros(L, fstar, device=device), 1.0).to_event(2)
+    )
 
     sigma_time = None
     eps = None
     if D > 1:
         sigma_time = pyro.sample(
-            "sigma_time", dist.HalfNormal(s_time).expand([fstar, D - 1]).to_event(2)
+            "sigma_time",
+            dist.HalfNormal(torch.full((fstar, D - 1), s_time, device=device)).to_event(
+                2
+            ),
         )
         eps = pyro.sample(
-            "eps", dist.Normal(0.0, 1.0).expand([L, fstar, D - 1]).to_event(3)
+            "eps",
+            dist.Normal(torch.zeros(L, fstar, D - 1, device=device), 1.0).to_event(3),
         )
 
     theta_core = construct_theta_core(
@@ -317,9 +332,12 @@ def fate_model(
     theta = add_zero_gene_row(theta_core)
 
     sigma_guide = pyro.sample(
-        "sigma_guide", dist.HalfNormal(s_guide).expand([fstar]).to_event(1)
+        "sigma_guide",
+        dist.HalfNormal(torch.full((fstar,), s_guide, device=device)).to_event(1),
     )
-    u = pyro.sample("u", dist.Normal(0.0, 1.0).expand([G, fstar]).to_event(2))
+    u = pyro.sample(
+        "u", dist.Normal(torch.zeros(G, fstar, device=device), 1.0).to_event(2)
+    )
     delta_core = construct_delta_core(
         sigma_guide=sigma_guide,
         u=u,
