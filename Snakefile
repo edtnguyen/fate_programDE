@@ -154,6 +154,7 @@ rule fit_pyro_export:
         PYRO_ENV
     threads: 8
     resources:
+        slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
         gpu=1,
@@ -180,6 +181,7 @@ rule run_mash_gene:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -199,6 +201,7 @@ rule run_mash_guide:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -218,6 +221,7 @@ rule aggregate_gene:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -238,6 +242,7 @@ rule compare_modes:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -257,6 +262,7 @@ rule run_ash:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -276,6 +282,7 @@ rule rank_hits:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -299,6 +306,7 @@ rule diagnostics:
         PYRO_ENV
     threads: 4
     resources:
+        slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
         gpu=1,
@@ -324,6 +332,7 @@ rule permute_guides:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -348,6 +357,7 @@ rule perm_fit_export:
         PYRO_ENV
     threads: 4
     resources:
+        slurm_partition=GPU_PARTITION,
         partition=GPU_PARTITION,
         time=GPU_TIME,
         gpu=1,
@@ -374,6 +384,7 @@ rule perm_run_mash_gene:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -393,6 +404,7 @@ rule perm_run_mash_guide:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -412,6 +424,7 @@ rule perm_aggregate_gene:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -434,6 +447,7 @@ rule perm_rank_hits:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -456,6 +470,7 @@ rule perm_summary:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -490,6 +505,7 @@ if not SIM_USE_EXISTING:
             PYRO_ENV
         threads: 4
         resources:
+            slurm_partition=GPU_PARTITION,
             partition=GPU_PARTITION,
             time=GPU_TIME,
             gpu=1,
@@ -545,6 +561,7 @@ else:
             PYRO_ENV
         threads: 1
         resources:
+            slurm_partition=CPU_PARTITION,
             partition=CPU_PARTITION,
             time=CPU_TIME,
             mem_mb=MEM_MED_MB
@@ -567,6 +584,7 @@ rule sim_run_ash:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -586,6 +604,7 @@ rule sim_run_mash_gene:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -605,6 +624,7 @@ rule sim_run_mash_guide:
         R_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -624,6 +644,7 @@ rule sim_aggregate_gene:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -644,6 +665,7 @@ rule sim_compare_modes:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -664,6 +686,7 @@ rule sim_rank_hits:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_SMALL_MB
@@ -697,6 +720,7 @@ rule sim_stress:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -717,6 +741,7 @@ rule sim_prior_sweep:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB
@@ -754,6 +779,7 @@ rule sim_tau_sweep:
         PYRO_ENV
     threads: 1
     resources:
+        slurm_partition=CPU_PARTITION,
         partition=CPU_PARTITION,
         time=CPU_TIME,
         mem_mb=MEM_MED_MB

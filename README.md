@@ -276,6 +276,12 @@ snakemake --use-conda --jobs 50 \
   --cluster "sbatch -p {resources.partition} -t {resources.time} -c {threads} --mem={resources.mem_mb}"
 ```
 
+For the newer Slurm executor, the Snakefile sets `slurm_partition` per rule. Run:
+
+```bash
+snakemake --use-conda --executor slurm --jobs 50
+```
+
 Override resources for specific rules on the CLI (example: increase memory/time
 and threads for `fit_pyro_export`):
 
@@ -284,6 +290,13 @@ snakemake --use-conda --jobs 50 \
   --cluster "sbatch -p {resources.partition} -t {resources.time} -c {threads} --mem={resources.mem_mb}" \
   --set-resources fit_pyro_export:mem_mb=200000,fit_pyro_export:time=12:00:00 \
   --set-threads fit_pyro_export=8
+```
+
+For the slurm executor, override the partition key directly:
+
+```bash
+snakemake --use-conda --executor slurm --jobs 50 \
+  --set-resources fit_pyro_export:slurm_partition=gpu
 ```
 
 This runs: `fit_pyro_export` → mashr (gene + guide, both modes) → guide aggregation →
