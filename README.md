@@ -1,7 +1,7 @@
 fate_programDE
 ==============================
 
-Quantify Differential Effect (DE) of CRISPRi-based gene KD on fate probabilities
+We treat CellRank output as probabilistic fate surrogate and quantify Differential Effect (DE) of CRISPRi-based gene KD on fate bias from a time-course Perturb-seq experiment applied on an iPSC differentiation system.
 
 Setup
 ------------
